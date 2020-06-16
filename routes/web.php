@@ -31,53 +31,74 @@ Route::get('/admin', function () {
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+
 Route::get('/', 'HomeController@index')->name('home');
 
 
-Route::get('/owner/shops', 'ShopController@indexForOwner')->name('shops.index');
-
-Route::get('/shops/create', 'ShopController@create')->name('shops.create');
-Route::post('/shops/create', 'ShopController@store')->name('shops.store');
 
 
-Route::get('/shops/{shop_name}', 'ShopController@show')->name('shops.show');
+Route::get('/shops/lists/index', 'ShopController@shopIndex')->name('shops.index');
 
+Route::get('/shops/lists/show/{shop_id}', 'ShopController@shopShow')->name('shops.show');
 
-Route::get('/shops/{shop_name}/edit', 'ShopController@edit')->name('shops.edit');
-Route::post('/shops/{shop_name}/edit', 'ShopController@update')->name('shops.update');
+Route::get('/shops/lists/create', 'ShopController@shopCreate')->name('shops.create');
+Route::post('/shops/lists/create', 'ShopController@shopStore')->name('shops.store');
 
-Route::post('/shops/{shop_name}/', 'ShopController@delete')->name('shops.delete'); 
+Route::get('/shops/lists/{shop_id}/edit', 'ShopController@shopEdit')->name('shops.edit');
+Route::post('/shops/lists/{shop_id}/edit', 'ShopController@shopUpdate')->name('shops.update');
 
-
-
-Route::get('/shops/{shop_name}/menus', 'MenuController@index')->name('menus.index');
-
-Route::get('/{shop_name}/menus/create', 'MenuController@create')->name('menus.create');
-Route::post('/{shop_name}/menus/create', 'MenuController@store')->name('menus.store');
-
-Route::get('/{menu_name}', 'MenuController@show')->name('menus.show');
-
-
-Route::get('/{menu_name}/edit', 'MenuController@edit')->name('menus.edit');
-Route::post('/{menu_name}/edit', 'MenuController@update')->name('menus.update');
-
-Route::post('/{menu_name}', 'MenuController@delete')->name('menus.delete');
+Route::post('/shops/lists/{shop_id}/delete', 'ShopController@shopDelete')->name('shops.delete'); 
 
 
 
+// Route::get('/shop_stock/index', 'ShopController@stockIndex')->name('shop_stock.index');
+
+// Route::get('/shop_stock/show/{shop_id}', 'ShopController@stockShow')->name('shop_stock.show');
+
+// Route::get('/shop_stock/create', 'ShopController@stockCreate')->name('shop_stock.create');
+// Route::post('/shop_stock/create', 'ShopController@stockStore')->name('shop_stock.store');
+
+// Route::get('/shop_stock/{shop_id}/edit', 'ShopController@stockEdit')->name('shop_stock.edit');
+// Route::post('/shop_stock/{shop_id}/edit', 'ShopController@stockUpdate')->name('shop_stock.update');
+
+// Route::post('/shop_stock/{shop_id}/', 'ShopController@stockDelete')->name('shop_stock.delete'); 
 
 
-Route::get('/{user_name}/orders', 'OrderController@indexForUser')->name('orders.indexforuser');
 
-Route::get('/{shop_name}/orders', 'OrderController@indexForShop')->name('orders.indexforshop');
+Route::get('/shop/orders/index', 'ShopController@orderIndex')->name('shop_orders.index');
+
+Route::get('/shop/orders/show/{shop_id}', 'ShopController@orderShow')->name('shop_orders.show');
+
+Route::get('/shop/orders/create', 'ShopController@orderCreate')->name('shop_orders.create');
+Route::post('/shop/orders/create', 'ShopController@orderStore')->name('shop_orders.store');
+
+Route::get('/shop/orders/{shop_id}/edit/{shop_order_id}', 'ShopController@orderEdit')->name('shop_orders.edit');
+Route::post('/shop/orders/{shop_id}/edit/{shop_order_id}', 'ShopController@orderUpdate')->name('shop_orders.update');
+
+Route::post('/shop/orders/{shop_id}/delete/{shop_order_id}', 'ShopController@orderDelete')->name('shop_orders.delete'); 
 
 
-Route::get('/order/{order_id}/detail', 'OrderController@show')->name('orders.show');
 
-Route::get('/orders//{menu_id}create', 'OrderController@create')->name('orders.create');
-Route::post('/orders//{menu_id}create', 'OrderController@store')->name('orders.store');
 
-Route::get('/order/{order_id}/edit', 'OrderController@edit')->name('orders.edit');
-Route::post('/order//{order_id}/edit', 'OrderController@update')->name('orders.update');
+Route::get('/corporations/clients/index', 'CorporationController@clientIndex')->name('corporation_client.index');
 
-Route::post('/order/{order_id}', 'OrderController@delete')->name('orders.delete');
+Route::get('/corporations/clients/show/{corporation_id}', 'CorporationController@clientShow')->name('corporation_client.show');
+
+Route::get('/corporations/clients/create', 'CorporationController@clientCreate')->name('corporation_client.create');
+Route::post('/shops/create', 'CorporationController@clientStore')->name('corporation_client.store');
+
+Route::get('/corporations/clients/{corporation_id}/edit', 'CorporationController@clientEdit')->name('corporation_client.edit');
+Route::post('/corporations/clients/{corporation_id}/edit', 'CorporationController@clientUpdate')->name('corporation_client.update');
+
+Route::post('/corporations/clients/{corporation_id}/delete', 'CorporationController@clientDelete')->name('corporation_client.delete'); 
+
+
+
+
+
+
+
+
+
+
+

@@ -12,11 +12,11 @@
   <title>Stork</title>
 
   <!-- Custom fonts for this template-->
-  <link href="sb_admin_2/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="/sb_admin_2/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="sb_admin_2/css/sb-admin-2.css" rel="stylesheet">
+  <link href="/sb_admin_2/css/sb-admin-2.css" rel="stylesheet">
   @yield('styles')
 </head>
 
@@ -41,7 +41,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="admin">
+        <a class="nav-link" href="/admin">
           <i class="fas fa-fw fa-home"></i>
           <span>管理画面</span></a>
       </li>
@@ -64,10 +64,9 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">業務選択:</h6>
-            <a class="collapse-item" href="#">店舗マスタ</a>
-            <a class="collapse-item" href="#">予算管理</a>
+            <a class="collapse-item" href="/shops/lists/index">店舗マスタ</a>
             <a class="collapse-item" href="#">在庫管理</a>
-            <a class="collapse-item" href="#">客注管理</a>
+            <a class="collapse-item" href="/shops/orders/index">客注管理</a>
           </div>
         </div>
       </li>
@@ -81,9 +80,8 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">業務選択:</h6>
-            <a class="collapse-item" href="#">法人マスタ</a>
+            <a class="collapse-item" href="/corporations/clients/index">法人マスタ</a>
             <a class="collapse-item" href="#">予算管理</a>
-            <a class="collapse-item" href="#">在庫管理</a>
             <a class="collapse-item" href="#">出荷管理</a>
             <a class="collapse-item" href="#">請求管理</a>
           </div>
@@ -100,6 +98,7 @@
             <h6 class="collapse-header">業務選択:</h6>
             <a class="collapse-item" href="#">予算管理</a>
             <a class="collapse-item" href="#">在庫管理</a>
+            <a class="collapse-item" href="#">注文管理</a>
             <a class="collapse-item" href="#">出荷管理</a>
           </div>
         </div>
@@ -162,7 +161,7 @@
       </div>
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-calendar-plus"></i>
           <span>販促マスタ</span></a>
       </li>
@@ -441,22 +440,22 @@
   
   @yield('scripts')
   <!-- Bootstrap core JavaScript-->
-  <script src="sb_admin_2/vendor/jquery/jquery.min.js"></script>
-  <script src="sb_admin_2/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="/sb_admin_2/vendor/jquery/jquery.js"></script>
+  <script src="/sb_admin_2/vendor/bootstrap/js/bootstrap.bundle.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="sb_admin_2/vendor/jquery-easing/jquery.easing.js"></script>
+  <script src="/sb_admin_2/vendor/jquery-easing/jquery.easing.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.js"></script>
+  <script src="/js/sb-admin-2.js"></script>
 
   <!-- Page level plugins -->
-  <script src="sb_admin_2/vendor/chart.js/Chart.js"></script>
+  <script src="/sb_admin_2/vendor/chart.js/Chart.js"></script>
 
   <!-- Page level custom scripts -->
-  <script src="sb_admin_2/js/demo/chart-area-demo.js"></script>
-  <script src="sb_admin_2/js/demo/chart-pie-demo.js"></script>
-  <script src="sb_admin_2/js/demo/chart-bar-demo.js"></script>
+  <script src="/sb_admin_2/js/demo/chart-area-demo.js"></script>
+  <script src="/sb_admin_2/js/demo/chart-pie-demo.js"></script>
+  <script src="/sb_admin_2/js/demo/chart-bar-demo.js"></script>
 
 </body>
 
