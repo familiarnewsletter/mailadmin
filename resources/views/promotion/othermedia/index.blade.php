@@ -14,27 +14,27 @@
   <ul class="tab-list" id="tab-1">
  
     <li class="tab-item is-open">
-      <a href="#invoice_index" data-toggle>請求一覧</a>
+      <a href="#media_index" data-toggle>掲載一覧</a>
     </li>
     <li class="tab-item">
-      <a href="#invoice_create" data-toggle>請求書発行</a>
+      <a href="#result_index" data-toggle>効果分析</a>
     </li>
     <li class="tab-item">
-      <a href="#bankaccount_create" data-toggle>口座設定</a>
+      <a href="#media_create" data-toggle>掲載リクエスト</a>
     </li>
  
   </ul>
 
-  <div class="tab-content is-open" id="invoice_index">
+ 　<div class="tab-content is-open" id="media_index">
    
   </div>
-  <div class="tab-content" id="invoice_create">
+  <div class="tab-content" id="result_index">
+   
+  </div>
+  <div class="tab-content" id="media_create">
      <p>ワン<br />にゃー<br />にゃー</p>
   </div>
-  <div class="tab-content" id="bankaccount_create">
-     <p>ぴー<br />ぴー<br />ぴー</p>
-  </div>
- 
+
     <div class="row">
 
             
@@ -51,8 +51,6 @@
 @endsection
 
 @section('scripts')
-
-
 
 
 @endsection

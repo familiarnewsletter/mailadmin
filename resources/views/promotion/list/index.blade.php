@@ -14,13 +14,13 @@
   <ul class="tab-list" id="tab-1">
  
     <li class="tab-item is-open">
-      <a href="#clients_index" data-toggle>法人一覧</a>
+      <a href="#promotion_index" data-toggle>販促一覧</a>
     </li>
     <li class="tab-item">
-      <a href="#clients_create" data-toggle>法人登録</a>
+      <a href="#promotion_create" data-toggle>販促登録</a>
     </li>
     <li class="tab-item">
-      <a href="#meetinglog_index" data-toggle>商談ログ</a>
+      <a href="#log_index" data-toggle>企画ログ</a>
     </li>
     <li class="tab-item">
       <a href="#budget_index" data-toggle>予算設定</a>
@@ -28,13 +28,13 @@
  
   </ul>
 
-  <div class="tab-content is-open" id="clients_index">
+  <div class="tab-content is-open" id="promotion_index">
    
   </div>
-  <div class="tab-content" id="clients_create">
+  <div class="tab-content" id="promotion_create">
   	 <p>ワン<br />にゃー<br />にゃー</p>
   </div>
-  <div class="tab-content" id="meetinglog_index">
+  <div class="tab-content" id="log_index">
   	 <p>ぴー<br />ぴー<br />ぴー</p>
   </div>
   <div class="tab-content" id="budget_index">

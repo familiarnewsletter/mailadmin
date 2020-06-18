@@ -43,7 +43,7 @@
       <li class="nav-item active">
         <a class="nav-link" href="/admin">
           <i class="fas fa-fw fa-home"></i>
-          <span>管理画面</span></a>
+          <span>ホーム</span></a>
       </li>
 
       <!-- Divider -->
@@ -64,7 +64,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">業務選択:</h6>
-            <a class="collapse-item" href="/shops/lists/index">店舗マスタ</a>
+            <a class="collapse-item" href="/shops/list/index">店舗マスタ</a>
             <a class="collapse-item" href="#">在庫管理</a>
             <a class="collapse-item" href="/shops/orders/index">客注管理</a>
           </div>
@@ -81,9 +81,8 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">業務選択:</h6>
             <a class="collapse-item" href="/corporations/clients/index">法人マスタ</a>
-            <a class="collapse-item" href="#">予算管理</a>
-            <a class="collapse-item" href="#">出荷管理</a>
-            <a class="collapse-item" href="#">請求管理</a>
+            <a class="collapse-item" href="/corporations/orders/index">出荷管理</a>
+            <a class="collapse-item" href="/corporations/invoices/index">請求管理</a>
           </div>
         </div>
       </li>
@@ -109,20 +108,21 @@
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        生産部門
+        商品部門
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage1" aria-expanded="true" aria-controls="collapsePage1">
           <i class="fas fa-fw fa-tshirt"></i>
-          <span>生産管理</span>
+          <span>商品管理</span>
         </a>
         <div id="collapsePage1" class="collapse" aria-labelledby="headingPage1" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="#">商品マスタ</a>
-            <a class="collapse-item" href="#">生産管理</a>
-            <a class="collapse-item" href="#">出荷管理</a>
+            <h6 class="collapse-header">業務選択:</h6>
+            <a class="collapse-item" href="/products/list/index">商品マスタ</a>
+            <a class="collapse-item" href="/products/process/index">生産管理</a>
+            <a class="collapse-item" href="/products/delivery/index">出荷管理</a>
         </div>
       </li>
 
@@ -140,9 +140,9 @@
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">チャネル別:</h6>
-            <a class="collapse-item" href="#">EC分析</a>
             <a class="collapse-item" href="#">店舗分析</a>
             <a class="collapse-item" href="#">法人分析</a>
+            <a class="collapse-item" href="#">EC分析</a>
             <div class="collapse-divider"></div><br>
             <h6 class="collapse-header">カテゴリ別:</h6>
             <a class="collapse-item" href="#">プロモーション効果分析</a>
@@ -159,19 +159,23 @@
       <div class="sidebar-heading">
         販促部門
       </div>
-      <!-- Nav Item - Charts -->
+
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage3" aria-expanded="true" aria-controls="collapsePage3">
           <i class="fas fa-fw fa-calendar-plus"></i>
-          <span>販促マスタ</span></a>
-      </li>
-
-
-      <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fas fa-fw fa-sticky-note"></i>
-          <span>アクションログ</span></a>
+          <span>プロモーション管理</span>
+        </a>
+        <div id="collapsePage3" class="collapse" aria-labelledby="headingPage3" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">業務選択:</h6>
+            <a class="collapse-item" href="/promotion/list/index">販促マスタ</a>
+            <a class="collapse-item" href="/promotion/log/index">アクションログ</a>
+            <a class="collapse-item" href="/promotion/homepage/index">HP分析</a>
+            <a class="collapse-item" href="/promotion/newsletter/index">ニュースレター分析</a>
+            <a class="collapse-item" href="/promotion/sns/index">SNS分析</a>
+            <a class="collapse-item" href="/promotion/blog/index">ブログ分析</a>
+            <a class="collapse-item" href="/promotion/othermedia/index">その他媒体分析</a>
+        </div>
       </li>
 
             <!-- Heading -->
@@ -181,11 +185,11 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage3" aria-expanded="true" aria-controls="collapsePage3">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage4" aria-expanded="true" aria-controls="collapsePage4">
           <i class="fas fa-fw fa-user"></i>
           <span>ユーザー設定</span>
         </a>
-        <div id="collapsePage3" class="collapse" aria-labelledby="headingPage3" data-parent="#accordionSidebar">
+        <div id="collapsePage4" class="collapse" aria-labelledby="headingPage4" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">業務選択:</h6>
             <a class="collapse-item" href="#">ユーザー管理</a>

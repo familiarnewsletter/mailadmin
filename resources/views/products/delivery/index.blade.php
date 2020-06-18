@@ -14,30 +14,30 @@
   <ul class="tab-list" id="tab-1">
  
     <li class="tab-item is-open">
-      <a href="#clients_index" data-toggle>法人一覧</a>
+      <a href="#deliverylist_index" data-toggle>出荷履歴一覧</a>
     </li>
     <li class="tab-item">
-      <a href="#clients_create" data-toggle>法人登録</a>
+      <a href="#deliverylist_create" data-toggle>出荷リスト作成</a>
     </li>
     <li class="tab-item">
-      <a href="#meetinglog_index" data-toggle>商談ログ</a>
+      <a href="#collection_index" data-toggle>回収リスト一覧</a>
     </li>
     <li class="tab-item">
-      <a href="#budget_index" data-toggle>予算設定</a>
+      <a href="#collection_create" data-toggle>回収リスト作成</a>
     </li>
  
   </ul>
 
-  <div class="tab-content is-open" id="clients_index">
+  <div class="tab-content is-open" id="deliverylist_index">
    
   </div>
-  <div class="tab-content" id="clients_create">
+  <div class="tab-content" id="deliverylist_create">
   	 <p>ワン<br />にゃー<br />にゃー</p>
   </div>
-  <div class="tab-content" id="meetinglog_index">
+  <div class="tab-content" id="collection_index">
   	 <p>ぴー<br />ぴー<br />ぴー</p>
   </div>
-  <div class="tab-content" id="budget_index">
+  <div class="tab-content" id="collection_create">
      <p>ぴー<br />ぴー<br />ぴー</p>
   </div>
     <div class="row">

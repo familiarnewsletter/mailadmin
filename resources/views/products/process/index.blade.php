@@ -14,30 +14,30 @@
   <ul class="tab-list" id="tab-1">
  
     <li class="tab-item is-open">
-      <a href="#clients_index" data-toggle>法人一覧</a>
+      <a href="#maker_index" data-toggle>メーカー一覧</a>
     </li>
     <li class="tab-item">
-      <a href="#clients_create" data-toggle>法人登録</a>
+      <a href="#maker_create" data-toggle>メーカー登録</a>
     </li>
     <li class="tab-item">
-      <a href="#meetinglog_index" data-toggle>商談ログ</a>
+      <a href="#warehousing_index" data-toggle>入庫管理</a>
     </li>
     <li class="tab-item">
-      <a href="#budget_index" data-toggle>予算設定</a>
+      <a href="#cost_index" data-toggle>コスト管理</a>
     </li>
  
   </ul>
 
-  <div class="tab-content is-open" id="clients_index">
+  <div class="tab-content is-open" id="maker_index">
    
   </div>
-  <div class="tab-content" id="clients_create">
+  <div class="tab-content" id="maker_create">
   	 <p>ワン<br />にゃー<br />にゃー</p>
   </div>
-  <div class="tab-content" id="meetinglog_index">
+  <div class="tab-content" id="warehousing_index">
   	 <p>ぴー<br />ぴー<br />ぴー</p>
   </div>
-  <div class="tab-content" id="budget_index">
+  <div class="tab-content" id="cost_index">
      <p>ぴー<br />ぴー<br />ぴー</p>
   </div>
     <div class="row">

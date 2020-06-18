@@ -8,9 +8,24 @@ class ShopController extends Controller
 {
     public function shopIndex(){
 
-		//$shops = Shop::all();
+		return view ('sales.shops.list.index', [
+
+			// 'shops' => $shops,
         
-		return view ('sales.shops.lists.index', [
+		]);
+	}
+
+
+
+
+
+
+
+
+
+	public function ordersIndex(){
+
+		return view ('sales.shops.orders.index', [
 
 			// 'shops' => $shops,
         
