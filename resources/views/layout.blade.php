@@ -15,6 +15,7 @@
   <link href="/sb_admin_2/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
+
   <!-- Custom styles for this template-->
   <link href="/sb_admin_2/css/sb-admin-2.css" rel="stylesheet">
   @yield('styles')
@@ -65,6 +66,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">業務選択:</h6>
             <a class="collapse-item" href="/shops/list/index">店舗マスタ</a>
+            <a class="collapse-item" href="/shops/budgets/index">予算管理</a>
             <a class="collapse-item" href="#">在庫管理</a>
             <a class="collapse-item" href="/shops/orders/index">客注管理</a>
           </div>
@@ -81,6 +83,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">業務選択:</h6>
             <a class="collapse-item" href="/corporations/clients/index">法人マスタ</a>
+            <a class="collapse-item" href="/corporations/budgets/index">予算管理</a>
             <a class="collapse-item" href="/corporations/orders/index">出荷管理</a>
             <a class="collapse-item" href="/corporations/invoices/index">請求管理</a>
           </div>
@@ -170,7 +173,7 @@
             <h6 class="collapse-header">業務選択:</h6>
             <a class="collapse-item" href="/promotion/list/index">販促マスタ</a>
             <a class="collapse-item" href="/promotion/log/index">アクションログ</a>
-            <a class="collapse-item" href="/promotion/homepage/index">HP分析</a>
+            <a class="collapse-item" href="/promotion/homepage/index">HPアクセス分析</a>
             <a class="collapse-item" href="/promotion/newsletter/index">ニュースレター分析</a>
             <a class="collapse-item" href="/promotion/sns/index">SNS分析</a>
             <a class="collapse-item" href="/promotion/blog/index">ブログ分析</a>
@@ -197,6 +200,20 @@
           </div>
         </div>
       </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage5" aria-expanded="true" aria-controls="collapsePage4">
+          <i class="fas fa-fw fa-question-circle"></i>
+          <span>ヘルプ</span>
+        </a>
+        <div id="collapsePage5" class="collapse" aria-labelledby="headingPage5" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">内容:</h6>
+            <a class="collapse-item" href="#">各メニューについて</a>
+            <a class="collapse-item" href="#">アカウントについて</a>
+            <a class="collapse-item" href="#">お問い合わせ</a>
+          </div>
+        </div>
+      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -207,6 +224,7 @@
       </div>
 
     </ul>
+    
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->

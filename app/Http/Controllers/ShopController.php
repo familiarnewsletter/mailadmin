@@ -17,6 +17,16 @@ class ShopController extends Controller
 
 
 
+	public function budgetsIndex(){
+
+		$data_list = [100, 122, 30, 60, 6, 300, 70];
+
+		return view ('sales.shops.budgets.index', [
+
+			'data_list' => $data_list,
+        
+		]);
+	}
 
 
 

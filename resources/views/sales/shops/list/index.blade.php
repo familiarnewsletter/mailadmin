@@ -25,9 +25,6 @@
       <a href="#shops_create" data-toggle>店舗登録</a>
     </li>
     <li class="tab-item">
-      <a href="#budget_index" data-toggle>予算設定</a>
-    </li>
-    <li class="tab-item">
       <a href="#action_index" data-toggle>アクションシート</a>
     </li>
  
@@ -177,62 +174,111 @@
 
   </div>
   <div class="tab-content" id="shops_create">
-  	<div class="container">
-    <div class="row">
-      <div class="col col-md-offset-3 col-md-6">
-        <nav class="panel panel-default">
-          <div class="panel-heading"></div>
-          <div class="panel-body">
+  	<div class="container"> 
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">新規店舗登録</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
             
-            <form action="#" method="POST">
-              @csrf
-              <div class="form-group">
-                <label for="title">店名</label>
-                <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" />
-              </div>
-              <div class="form-group">
-                <label for="due_date">エリア</label>
-                <input type="text" class="form-control" name="due_date" id="due_date" value="{{ old('due_date') }}" />
-              </div>
-              <div class="form-group">
-                <label for="assigner_id">住所</label>
-                <input type="text" class="form-control" name="assigner_id" id="assigner_id" value="{{ old('assigner_id') }}" />
-              </div>
-              <div class="form-group">
-                <label for="assigning_id">電話番号</label>
-                <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
-              </div>
-              <div class="form-group">
-                <label for="assigning_id">メールアドレス</label>
-                <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
-              </div>
-              <div class="form-group">
-                <label for="assigning_id">店長名</label>
-                <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
-              </div>
-              <div class="form-group">
-                <label for="assigning_id">ランク</label>
-                <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
-              </div>
-              <div class="text-right">
-                <button type="submit" class="btn btn-primary">登録</button>
-              </div>
-            </form>
-          </div>
-        </nav>
+           
+              
+              <form action="#" method="POST">
+                @csrf
+                <div class="form-group">
+                  <label for="title">店名</label>
+                  <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" />
+                </div>
+                <div class="form-group">
+                  <label for="due_date">エリア</label>
+                  <input type="text" class="form-control" name="due_date" id="due_date" value="{{ old('due_date') }}" />
+                </div>
+                <div class="form-group">
+                  <label for="assigner_id">住所</label>
+                  <input type="text" class="form-control" name="assigner_id" id="assigner_id" value="{{ old('assigner_id') }}" />
+                </div>
+                <div class="form-group">
+                  <label for="assigning_id">電話番号</label>
+                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                </div>
+                <div class="form-group">
+                  <label for="assigning_id">メールアドレス</label>
+                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                </div>
+                <div class="form-group">
+                  <label for="assigning_id">店長名</label>
+                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                </div>
+                <div class="form-group">
+                  <label for="assigning_id">ランク</label>
+                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary">登録</button>
+                </div>
+              </form>        
+          </nav>
+        </div>
       </div>
     </div>
   </div>
-  </div>
-  <div class="tab-content" id="budget_index">
-  	 <p>ぴー<br />ぴー<br />ぴー</p>
-  </div>
+  
+      
   <div class="tab-content" id="action_index">
-     <p>ぴ<br />ぴ<br />ぴ</p>
-  </div>
- 
+    <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">アクション一覧</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+                      <div class="dropdown-header">menu:</div>
+                      <a class="dropdown-item" href="#">追加</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">月別</a>
+                      <a class="dropdown-item" href="#">週別</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="card-body">
+                  <table class="table">
+            <thead>
+            <tr>
+              <th>月</th>
+              <th>予算</th>
+              <th>内容</th>
+              
+            </tr>
+            </thead>
+            <tbody>
+            
+              <tr>
+                <td>a</td>
+                <td>
+                  <span class="label">q</span>
+                </td>
+                
+                <td>詳細</td>
+              </tr>
+           
+            </tbody>
+          </table>
+                </div>
+              </div>
+          </div>
+                </div>
+              </div>
     
-</div>
+  
+ </div>
+    
+
 
  
 
@@ -246,8 +292,7 @@
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
 <script src="/sb_admin_2/vendor/jquery/jquery.min.js"></script>
-  <script src="/sb_admin_2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  
   <!-- Core plugin JavaScript-->
   <script src="/sb_admin_2/vendor/jquery-easing/jquery.easing.min.js"></script>
 

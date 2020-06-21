@@ -1,7 +1,8 @@
 @extends('layout')
 
 @section('styles')
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
     <!--  datatables css -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"/>
@@ -14,21 +15,37 @@
 
 <div class="container">
 
+ <div align="right">
+   <select name=”year”>
+
+      <option value=”2020”>2020</option>
+      <option value=”2019”>2019</option>
+      <option value=”2018”>2018</option>
+      <option value=”2017”>2017</option>
+ 
+    </select>
+  </div>
 
   <ul class="tab-list" id="tab-1">
  
     <li class="tab-item is-open">
-      <a href="#products_index" data-toggle>商品一覧</a>
+      <a href="#shops_index" data-toggle>月別</a>
     </li>
     <li class="tab-item">
-      <a href="#products_create" data-toggle>商品登録</a>
+      <a href="#shops_create" data-toggle>週別</a>
     </li>
-    
- 
+    <li class="tab-item">
+      <a href="#action_index" data-toggle>日別</a>
+    </li>
+
   </ul>
 
-  <div class="tab-content is-open" id="products_index">
-    <div class="container">
+  <div class="tab-content is-open" id="shops_index">
+   
+    <canvas id="myChart"></canvas>
+
+
+<div class="container">
 
     <div class="col-xs-12">
         <table id="table1" class="table table-bordered">
@@ -163,62 +180,19 @@
         </table>
     </div>
 </div>
+
+
   </div>
+  <div class="tab-content" id="shops_create">
+  	<canvas id="myChart2"></canvas>
+    
   </div>
-  </div>
-  <div class="tab-content" id="products_create">
-  	 <div class="container"> 
-      <div class="card shadow mb-4">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">新規登録</h6>
-        </div>
-        <div class="card-body">
-          
-          <nav class="panel panel-default">
-            
-           
-              
-              <form action="#" method="POST">
-                @csrf
-                <div class="form-group">
-                  <label for="title">店名</label>
-                  <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="due_date">エリア</label>
-                  <input type="text" class="form-control" name="due_date" id="due_date" value="{{ old('due_date') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="assigner_id">住所</label>
-                  <input type="text" class="form-control" name="assigner_id" id="assigner_id" value="{{ old('assigner_id') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="assigning_id">電話番号</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="assigning_id">メールアドレス</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="assigning_id">店長名</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="assigning_id">ランク</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
-                </div>
-                <div class="text-right">
-                  <button type="submit" class="btn btn-primary">登録</button>
-                </div>
-              </form>        
-          </nav>
-        </div>
-      </div>
-    </div>
+      
+  <div class="tab-content" id="action_index">
+    <canvas id="myChart3"></canvas>
+    
   
-  </div>
- 
+ </div>
 
 </div>
 
@@ -226,7 +200,10 @@
 @endsection
 
 @section('scripts')
-<script src="/sb_admin_2/vendor/jquery/jquery.js"></script>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script src="/sb_admin_2/vendor/jquery/jquery.min.js"></script>
   
   <!-- Core plugin JavaScript-->
   <script src="/sb_admin_2/vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -244,5 +221,61 @@
     $("#table1").DataTable(); 
 }); 
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+<script>
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var data_list = <?php echo json_encode($data_list); ?>;
+var myChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+    datasets: [{
+      label: 'budgets',
+      data: data_list,
+      backgroundColor: "silver"
+    }, {
+      label: 'sales',
+      data: [2, 100, 500, 50, 2, 3, 1],
+      backgroundColor: "blue"
+    }]
+  }
+});
+</script>
+<script>
+  var ctx = document.getElementById('myChart2').getContext('2d');
+var myChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['M', 'T', 'W', 'T', 'F'],
+    datasets: [{
+      label: 'sales',
+      data: [2, 29, 5, 5, 2],
+      backgroundColor: "blue"
+    }]
+  }
+});
+</script>
+
+<script>
+  var ctx = document.getElementById('myChart3').getContext('2d');
+  var data_list = <?php echo json_encode($data_list); ?>;
+var myChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+    datasets: [{
+      label: 'budgets',
+      data: [200, 100, 500, 50, 200, 30, 100],
+      backgroundColor: "silver"
+    }, {
+      label: 'sales',
+      data: [200, 100, 500, 50, 200, 30, 100],
+      backgroundColor: "blue"
+    }]
+  }
+});
+</script>
+
 
 @endsection

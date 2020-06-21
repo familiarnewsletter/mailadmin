@@ -16,6 +16,16 @@ class CorporationController extends Controller
 	}
 
 
+	public function budgetsIndex(){
+
+		return view ('sales.corporations.budgets.index', [
+
+			// 'shops' => $shops,
+        
+		]);
+	}
+
+
 	public function ordersIndex(){
 
 		return view ('sales.corporations.orders.index', [
