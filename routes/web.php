@@ -95,6 +95,10 @@ Route::post('/shops/orders/{shop_id}/delete/{shop_order_id}', 'ShopController@or
 
 
 
+
+
+
+
 Route::get('/corporations/clients/index', 'CorporationController@clientsIndex')->name('corporation_clients.index');
 
 Route::get('/corporations/clients/show/{corporation_id}', 'CorporationController@clientsShow')->name('corporation_clients.show');
@@ -193,6 +197,129 @@ Route::get('/products/delivery/{delivery_id}/edit', 'ProductController@deliveryE
 Route::post('/shops/delivery/{delivery_id}/edit', 'ProductController@deliveryUpdate')->name('delivery.update');
 
 Route::post('/products/delivery/{delivery_id}/delete', 'ProductController@deliveryDelete')->name('delivery.delete'); 
+
+
+
+
+
+Route::get('/earnings/shops/index', 'EarningsController@shopsIndex')->name('shopearnings.index');
+
+Route::get('/earnings/shops/show/{shop_id}', 'EarningsController@shopsShow')->name('shopearnings.show');
+
+Route::get('/earnings/shops/create', 'EarningsController@shopsCreate')->name('shopearnings.create');
+Route::post('/earnings/shops/create', 'EarningsController@shopsStore')->name('shopearnings.store');
+
+Route::get('/earnings/shops/{shopearnings_id}/edit', 'EarningsController@shopsEdit')->name('shopearnings.edit');
+Route::post('/earnings/shops/{shopearnings_id}/edit', 'EarningsController@shopsUpdate')->name('shopearnings.update');
+
+Route::post('/earnings/shops/{shopearnings_id}/delete', 'EarningsController@shopsDelete')->name('shopearnings.delete'); 
+
+
+Route::get('/earnings/corporations/index', 'EarningsController@corporationsIndex')->name('corporationearnings.index');
+
+Route::get('/earnings/corporations/show/{shop_id}', 'EarningsController@corporationsShow')->name('corporationearnings.show');
+
+Route::get('/earnings/corporations/create', 'EarningsController@corporationsCreate')->name('corporationearnings.create');
+Route::post('/earnings/corporations/create', 'EarningsController@corporationsStore')->name('corporationearnings.store');
+
+Route::get('/earnings/corporations/{corporationearnings_id}/edit', 'EarningsController@corporationsEdit')->name('corporationearnings.edit');
+Route::post('/earnings/corporations/{corporationearnings_id}/edit', 'EarningsController@corporationsUpdate')->name('corporationearnings.update');
+
+Route::post('/earnings/corporations/{corporationearnings_id}/delete', 'EarningsController@corporationsDelete')->name('corporationearnings.delete'); 
+
+
+Route::get('/earnings/ec/index', 'EarningsController@ecIndex')->name('ecearnings.index');
+
+Route::get('/earnings/ec/show/{shop_id}', 'EarningsController@ecShow')->name('ecearnings.show');
+
+Route::get('/earnings/ec/create', 'EarningsController@ecCreate')->name('ecearnings.create');
+Route::post('/earnings/ec/create', 'EarningsController@ecStore')->name('ecearnings.store');
+
+Route::get('/earnings/ec/{ecearnings_id}/edit', 'EarningsController@ecEdit')->name('ecearnings.edit');
+Route::post('/earnings/ec/{ecales_id}/edit', 'EarningsController@ecUpdate')->name('ecearnings.update');
+
+Route::post('/earnings/ec/{ecearnings_id}/delete', 'EarningsController@ecDelete')->name('ecearnings.delete'); 
+
+
+Route::get('/earnings/promotions/index', 'EarningsController@promotionsIndex')->name('promotionearnings.index');
+
+Route::get('/earnings/promotions/show/{shop_id}', 'EarningsController@promotionsShow')->name('promotionearnings.show');
+
+Route::get('/earnings/promotions/create', 'EarningsController@promotionsCreate')->name('promotionearnings.create');
+Route::post('/earnings/promotions/create', 'EarningsController@promotionsStore')->name('promotionearnings.store');
+
+Route::get('/earnings/promotions/{promotionearnings_id}/edit', 'EarningsController@promotionsEdit')->name('promotionearnings.edit');
+Route::post('/earnings/promotions/{promotionearnings_id}/edit', 'EarningsController@promotionsUpdate')->name('promotionearnings.update');
+
+Route::post('/earnings/promotions/{promotionearnings_id}/delete', 'EarningsController@promotionsDelete')->name('promotionearnings.delete'); 
+
+
+Route::get('/earnings/categories/index', 'EarningsController@categoriesIndex')->name('categoriesearnings.index');
+
+Route::get('/earnings/categories/show/{shop_id}', 'EarningsController@categoriesShow')->name('categoriesearnings.show');
+
+Route::get('/earnings/categories/create', 'EarningsController@categoriesCreate')->name('categoriesearnings.create');
+Route::post('/earnings/categories/create', 'EarningsController@categoriesStore')->name('categoriesearnings.store');
+
+Route::get('/earnings/categories/{categoriesearnings_id}/edit', 'EarningsController@categoriesEdit')->name('categoriesearnings.edit');
+Route::post('/earnings/categories/{categoriesearnings_id}/edit', 'EarningsController@categoriesUpdate')->name('categoriesearnings.update');
+
+Route::post('/earnings/categories/{categoriesearnings_id}/delete', 'EarningsController@categoriesDelete')->name('categoriesearnings.delete'); 
+
+
+Route::get('/earnings/brands/index', 'EarningsController@brandsIndex')->name('brandearnings.index');
+
+Route::get('/earnings/brands/show/{shop_id}', 'EarningsController@brandsShow')->name('brandearnings.show');
+
+Route::get('/earnings/brands/create', 'EarningsController@brandsCreate')->name('brandearnings.create');
+Route::post('/earnings/brands/create', 'EarningsController@brandsStore')->name('brandearnings.store');
+
+Route::get('/earnings/brands/{brandearnings_id}/edit', 'EarningsController@brandsEdit')->name('brandearnings.edit');
+Route::post('/earnings/brands/{brandearnings_id}/edit', 'EarningsController@brandsUpdate')->name('brandearnings.update');
+
+Route::post('/earnings/brands/{brandearnings_id}/delete', 'EarningsController@brandsDelete')->name('brandearnings.delete'); 
+
+
+Route::get('/earnings/sizes/index', 'EarningsController@sizesIndex')->name('sizeearnings.index');
+
+Route::get('/earnings/sizes/show/{shop_id}', 'EarningsController@sizesShow')->name('sizeearnings.show');
+
+Route::get('/earnings/sizes/create', 'EarningsController@sizesCreate')->name('sizeearnings.create');
+Route::post('/earnings/sizes/create', 'EarningsController@sizesStore')->name('sizeearnings.store');
+
+Route::get('/earnings/sizes/{sizeearnings_id}/edit', 'EarningsController@sizesEdit')->name('sizeearnings.edit');
+Route::post('/earnings/sizes/{sizeearnings_id}/edit', 'EarningsController@sizesUpdate')->name('sizeearnings.update');
+
+Route::post('/earnings/sizes/{sizeearnings_id}/delete', 'EarningsController@sizesDelete')->name('sizeearnings.delete'); 
+
+
+Route::get('/earnings/ages/index', 'EarningsController@agesIndex')->name('ageearnings.index');
+
+Route::get('/earnings/ages/show/{shop_id}', 'EarningsController@agesShow')->name('ageearnings.show');
+
+Route::get('/earnings/ages/create', 'EarningsController@agesCreate')->name('ageearnings.create');
+Route::post('/earnings/ages/create', 'EarningsController@agesStore')->name('ageearnings.store');
+
+Route::get('/earnings/ages/{ageearnings_id}/edit', 'EarningsController@agesEdit')->name('ageearnings.edit');
+Route::post('/earnings/ages/{ageearnings_id}/edit', 'EarningsController@agesUpdate')->name('ageearnings.update');
+
+Route::post('/earnings/ages/{ageearnings_id}/delete', 'EarningsController@agesDelete')->name('ageearnings.delete'); 
+
+
+Route::get('/earnings/areas/index', 'EarningsController@areasIndex')->name('areaearnings.index');
+
+Route::get('/earnings/areas/show/{shop_id}', 'EarningsController@areasShow')->name('areaearnings.show');
+
+Route::get('/earnings/areas/create', 'EarningsController@areasCreate')->name('areaearnings.create');
+Route::post('/earnings/areas/create', 'EarningsController@areasStore')->name('areaearnings.store');
+
+Route::get('/earnings/areas/{areaearnings_id}/edit', 'EarningsController@areasEdit')->name('areaearnings.edit');
+Route::post('/earnings/areas/{areaearnings_id}/edit', 'EarningsController@areasUpdate')->name('areaearnings.update');
+
+Route::post('/earnings/areas/{areaearnings_id}/delete', 'EarningsController@areasDelete')->name('areaearnings.delete'); 
+
+
+
 
 
 

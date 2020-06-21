@@ -143,17 +143,17 @@
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">チャネル別:</h6>
-            <a class="collapse-item" href="#">店舗分析</a>
-            <a class="collapse-item" href="#">法人分析</a>
-            <a class="collapse-item" href="#">EC分析</a>
+            <a class="collapse-item" href="/earnings/shops/index">店舗分析</a>
+            <a class="collapse-item" href="/earnings/corporations/index">法人分析</a>
+            <a class="collapse-item" href="/earnings/ec/index">EC分析</a>
             <div class="collapse-divider"></div><br>
             <h6 class="collapse-header">カテゴリ別:</h6>
-            <a class="collapse-item" href="#">プロモーション効果分析</a>
-            <a class="collapse-item" href="#">会員分析</a>
-            <a class="collapse-item" href="#">ブランド別分析</a>
-            <a class="collapse-item" href="#">サイズ別分析</a>
-            <a class="collapse-item" href="#">年齢別分析</a>
-            <a class="collapse-item" href="#">エリア別分析</a>
+            <a class="collapse-item" href="/earnings/promotions/index">プロモーション効果分析</a>
+            <a class="collapse-item" href="/earnings/categories/index">カテゴリ別分析</a>
+            <a class="collapse-item" href="/earnings/brands/index">ブランド別分析</a>
+            <a class="collapse-item" href="/earnings/sizes/index">サイズ別分析</a>
+            <a class="collapse-item" href="/earnings/ages/index">年齢別分析</a>
+            <a class="collapse-item" href="/earnings/areas/index">エリア別分析</a>
           </div>
         </div>
       </li>
@@ -224,7 +224,7 @@
       </div>
 
     </ul>
-    
+
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
