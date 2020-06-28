@@ -2,10 +2,10 @@
 
 @section('styles')
 <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-    <!--  datatables css -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+<!--  datatables css -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
 
 @endsection
 
@@ -63,7 +63,7 @@
           <nav class="panel panel-default">
             
                    
-            <canvas id="myChart"></canvas>
+            <canvas id="chart1"></canvas>
           </div>
           </nav>
         </div>
@@ -91,7 +91,76 @@
         <div class="card-body">
           
           <nav class="panel panel-default">
-            
+             <table id="table1" class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>No</th>
+                    <th>企画名</th>
+                    <th>ターゲットアイテム</th>
+                    <th>CV率</th>
+                    <th>詳細</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Tシャツキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>                
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Tシャツキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>           
+                </tr>
+                <tr>
+                    <td>3</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>              
+                </tr>
+                <tr>
+                    <td>4</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>              
+                </tr>
+                <tr>
+                    <td>5</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>               
+                </tr>
+                <tr>
+                    <td>6</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>               
+                </tr>
+
+                
+                </tbody>
+            </table>
+  
           
           </nav>
         </div>
@@ -128,7 +197,7 @@
         <div class="card-body">
           
           <nav class="panel panel-default">
-              <canvas id="myChart2"></canvas>
+              <canvas id="chart2"></canvas>
           </nav>
         </div>
       </div>
@@ -155,6 +224,7 @@
           
           <nav class="panel panel-default">
             
+              <canvas id="chart3"></canvas>
           
           </nav>
         </div>
@@ -362,137 +432,137 @@
         <div class="card-body">
           
           <nav class="panel panel-default">
-  
-        <table id="table1" class="table table-bordered">
-                <thead>
-                <tr>
-                    <th>No</th>
-                    <th>企画名</th>
-                    <th>立ち上がり日</th>
-                    <th>予算</th>
-                    <th>詳細</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>2020.2.19</td>
-                    <td>1200000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>                
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Yシャツキャンペーン</td>
-                    <td>2020.12.2</td>
-                    <td>10000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>          
-                </tr>
-                <tr>
-                    <td>3</td>
-                   <td>UGCキャンペーン</td>
-                    <td>2020.10.2</td>
-                    <td>30000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>              
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>デザイン体験</td>
-                    <td>2020.6.2</td>
-                    <td>300000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>             
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>2020.7.2</td>
-                    <td>9000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>            
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>2020.9.9</td>
-                    <td>80000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>              
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>2020.1.2</td>
-                    <td>780000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>              
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>2020.2.2</td>
-                    <td>110000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>              
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>2020.2.2</td>
-                    <td>1110000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>              
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>2020.2.2</td>
-                    <td>300000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>              
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>2020.3.2</td>
-                    <td>3090000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>             
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>2020.2.5</td>
-                    <td>200000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>            
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>2020.2.9</td>
-                    <td>60000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>         
-                </tr>
-                </tbody>
-            </table>
+    
+              <table id="table1" class="table table-bordered">
+                      <thead>
+                      <tr>
+                          <th>No</th>
+                          <th>企画名</th>
+                          <th>立ち上がり日</th>
+                          <th>予算</th>
+                          <th>詳細</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <td>1</td>
+                          <td>Tシャツキャンペーン</td>
+                          <td>2020.2.19</td>
+                          <td>1200000</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>                
+                      </tr>
+                      <tr>
+                          <td>2</td>
+                          <td>Yシャツキャンペーン</td>
+                          <td>2020.12.2</td>
+                          <td>10000</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>          
+                      </tr>
+                      <tr>
+                          <td>3</td>
+                         <td>UGCキャンペーン</td>
+                          <td>2020.10.2</td>
+                          <td>30000</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>              
+                      </tr>
+                      <tr>
+                          <td>4</td>
+                          <td>デザイン体験</td>
+                          <td>2020.6.2</td>
+                          <td>300000</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>             
+                      </tr>
+                      <tr>
+                          <td>5</td>
+                          <td>Tシャツキャンペーン</td>
+                          <td>2020.7.2</td>
+                          <td>9000</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>            
+                      </tr>
+                      <tr>
+                          <td>6</td>
+                          <td>Tシャツキャンペーン</td>
+                          <td>2020.9.9</td>
+                          <td>80000</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>              
+                      </tr>
+                      <tr>
+                          <td>7</td>
+                          <td>Tシャツキャンペーン</td>
+                          <td>2020.1.2</td>
+                          <td>780000</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>              
+                      </tr>
+                      <tr>
+                          <td>8</td>
+                          <td>Tシャツキャンペーン</td>
+                          <td>2020.2.2</td>
+                          <td>110000</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>              
+                      </tr>
+                      <tr>
+                          <td>9</td>
+                          <td>Tシャツキャンペーン</td>
+                          <td>2020.2.2</td>
+                          <td>1110000</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>              
+                      </tr>
+                      <tr>
+                          <td>10</td>
+                          <td>Tシャツキャンペーン</td>
+                          <td>2020.2.2</td>
+                          <td>300000</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>              
+                      </tr>
+                      <tr>
+                          <td>11</td>
+                          <td>Tシャツキャンペーン</td>
+                          <td>2020.3.2</td>
+                          <td>3090000</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>             
+                      </tr>
+                      <tr>
+                          <td>12</td>
+                          <td>Tシャツキャンペーン</td>
+                          <td>2020.2.5</td>
+                          <td>200000</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>            
+                      </tr>
+                      <tr>
+                          <td>13</td>
+                          <td>Tシャツキャンペーン</td>
+                          <td>2020.2.9</td>
+                          <td>60000</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>         
+                      </tr>
+                      </tbody>
+              </table>
   
           </nav>
         </div>
@@ -521,7 +591,7 @@
 
 
 <script>
-  var ctx = document.getElementById('myChart').getContext('2d');
+  var ctx = document.getElementById('chart1').getContext('2d');
   
 var myChart = new Chart(ctx, {
   type: 'bar',
@@ -541,7 +611,7 @@ var myChart = new Chart(ctx, {
 </script>
 
 <script>
-  var ctx = document.getElementById('myChart2').getContext('2d');
+  var ctx = document.getElementById('chart2').getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'bar',
   data: {
@@ -560,19 +630,19 @@ var myChart = new Chart(ctx, {
 </script>
 
 <script>
-  var ctx = document.getElementById('myChart3').getContext('2d');
+  var ctx = document.getElementById('chart3').getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ['M', 'T', 'W', 'T', 'F'],
+    labels: ['7.14', '7.15', '7.16', '7.17', '7.18'],
     datasets: [{
-      label: 'sales',
-      data: [200, 290, 50, 500, 200],
-      backgroundColor: "blue"
+      label: '実績',
+      data: [50, 50, 60, 60, 50],
+      borderColor: "blue"
     }, {
-      label: 'budgets',
-      data: [20, 100, 300, 50, 80],
-      backgroundColor: "silver"
+      label: '目標',
+      data: [20, 60, 30, 50, 60],
+      borderColor: "silver"
     }]
   }
 });

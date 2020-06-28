@@ -125,8 +125,76 @@
         <div class="card-body">
           
           <nav class="panel panel-default">
-    <canvas id="myChart3"></canvas>
-    </nav>
+              <table id="table1" class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>No</th>
+                    <th>企画名</th>
+                    <th>ターゲットアイテム</th>
+                    <th>CV率</th>
+                    <th>詳細</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Tシャツキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>                
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Tシャツキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>           
+                </tr>
+                <tr>
+                    <td>3</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>              
+                </tr>
+                <tr>
+                    <td>4</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>              
+                </tr>
+                <tr>
+                    <td>5</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>               
+                </tr>
+                <tr>
+                    <td>6</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>               
+                </tr>
+
+                
+                </tbody>
+            </table>
+          </nav>
         </div>
       </div>
     </div>

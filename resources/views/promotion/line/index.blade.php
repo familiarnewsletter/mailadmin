@@ -63,7 +63,7 @@
           <nav class="panel panel-default">
             
                    
-            <canvas id="myChart"></canvas>
+            <canvas id="chart1"></canvas>
           </div>
           </nav>
         </div>
@@ -91,7 +91,7 @@
         <div class="card-body">
           
           <nav class="panel panel-default">
-            
+            <canvas id="chart2"></canvas>
           
           </nav>
         </div>
@@ -128,7 +128,7 @@
         <div class="card-body">
           
           <nav class="panel panel-default">
-              <canvas id="myChart2"></canvas>
+              <canvas id="chart3"></canvas>
           </nav>
         </div>
       </div>
@@ -154,10 +154,81 @@
         <div class="card-body">
           
           <nav class="panel panel-default">
-            
-          
+            <table id="table1" class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>No</th>
+                    <th>企画名</th>
+                    <th>ターゲットアイテム</th>
+                    <th>CV率</th>
+                    <th>詳細</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Tシャツキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>                
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Tシャツキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>           
+                </tr>
+                <tr>
+                    <td>3</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>              
+                </tr>
+                <tr>
+                    <td>4</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>              
+                </tr>
+                <tr>
+                    <td>5</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>               
+                </tr>
+                <tr>
+                    <td>6</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>               
+                </tr>
+
+                
+                </tbody>
+            </table>
+  
           </nav>
         </div>
+      </div>
+          
+          
       </div>
     </div>
     </div>
@@ -193,8 +264,8 @@
         </div>
         <div class="card-body">
           
+          
           <nav class="panel panel-default">
-    <nav class="panel panel-default">
   
         <table id="table1" class="table table-bordered">
                 <thead>
@@ -265,10 +336,11 @@
                 </tbody>
             </table>
   
-          </nav>
+         
         </div>
-    </nav>
-        </div>
+   　　 
+     
+        </nav>
       </div>
     </div>
   </div>
@@ -301,12 +373,12 @@
           
           <nav class="panel panel-default">
   
-        <table id="table1" class="table table-bordered">
+        <table id="table2" class="table table-bordered">
                 <thead>
                 <tr>
                     <th>No</th>
-                    <th>企画名</th>
-                    <th>立ち上がり日</th>
+                    <th>タイトル</th>
+                    <th>配信日</th>
                     <th>予算</th>
                     <th>詳細</th>
                 </tr>
@@ -339,6 +411,34 @@
                         <i class="fas fa-info-circle"></i>
                       </a></td>              
                 </tr>
+                <tr>
+                    <td>4</td>
+                   <td>UGCキャンペーン</td>
+                    <td>配信スタート</td>
+                    <td>2020.2.19</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>              
+                </tr>
+                <tr>
+                    <td>5</td>
+                   <td>UGCキャンペーン</td>
+                    <td>配信スタート</td>
+                    <td>2020.2.19</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>              
+                </tr>
+                <tr>
+                    <td>6</td>
+                   <td>UGCキャンペーン</td>
+                    <td>配信スタート</td>
+                    <td>2020.2.19</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>              
+                </tr>
+
                 
                 </tbody>
             </table>
@@ -370,18 +470,18 @@
 
 
 <script>
-  var ctx = document.getElementById('myChart').getContext('2d');
+  var ctx = document.getElementById('chart1').getContext('2d');
   
 var myChart = new Chart(ctx, {
   type: 'bar',
   data: {
     labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
     datasets: [{
-      label: '再生数',
+      label: '実績',
       data: [200, 100, 500, 50, 30, 35, 10],
       backgroundColor: "blue"
     }, {
-      label: '目標数',
+      label: '目標',
       data: [2, 100, 500, 50, 200, 30, 15],
       backgroundColor: "silver"
     }]
@@ -390,17 +490,17 @@ var myChart = new Chart(ctx, {
 </script>
 
 <script>
-  var ctx = document.getElementById('myChart2').getContext('2d');
+  var ctx = document.getElementById('chart2').getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'bar',
   data: {
     labels: ['M', 'T', 'W', 'T', 'F'],
     datasets: [{
-      label: '参加人数',
+      label: '実績',
       data: [2, 29, 5, 5, 2],
       backgroundColor: "blue"
     }, {
-      label: '枠数',
+      label: '目標',
       data: [2, 29, 5, 5, 2],
       backgroundColor: "silver"
     }]
@@ -409,19 +509,19 @@ var myChart = new Chart(ctx, {
 </script>
 
 <script>
-  var ctx = document.getElementById('myChart3').getContext('2d');
+  var ctx = document.getElementById('chart3').getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'line',
   data: {
     labels: ['M', 'T', 'W', 'T', 'F'],
     datasets: [{
-      label: 'sales',
+      label: '実績',
       data: [200, 290, 50, 500, 200],
-      backgroundColor: "blue"
+      borderColor: "blue"
     }, {
-      label: 'budgets',
+      label: '目標',
       data: [20, 100, 300, 50, 80],
-      backgroundColor: "silver"
+      borderColor: "silver"
     }]
   }
 });
@@ -433,7 +533,8 @@ var myChart = new Chart(ctx, {
 
 <script>
     jQuery(function($){ 
-    $("#table1").DataTable(); 
+    $("#table1").DataTable();
+    $("#table2").DataTable(); 
 }); 
 </script>
 
