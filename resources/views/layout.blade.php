@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Stork</title>
+  <title>Stork.com</title>
 
   <!-- Custom fonts for this template-->
   <link href="/sb_admin_2/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -34,7 +34,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-feather-alt"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Stork </div>
+        <div class="sidebar-brand-text mx-3">Stork.com </div>
       </a>
 
       <!-- Divider -->
@@ -124,8 +124,8 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">業務選択:</h6>
             <a class="collapse-item" href="/products/list/index">商品マスタ</a>
-            <a class="collapse-item" href="/products/process/index">生産管理</a>
-            <a class="collapse-item" href="/products/delivery/index">出荷管理</a>
+            <a class="collapse-item" href="#">生産管理</a><!-- リンク先に/products/process/indexが入る予定 -->
+            <a class="collapse-item" href="#">出荷管理</a><!-- リンク先に/products/delivery/index入る予定 -->
         </div>
       </li>
 
@@ -172,12 +172,13 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">業務選択:</h6>
             <a class="collapse-item" href="/promotion/list/index">販促マスタ</a>
-            <a class="collapse-item" href="/promotion/log/index">アクションログ</a>
             <a class="collapse-item" href="/promotion/homepage/index">HPアクセス分析</a>
             <a class="collapse-item" href="/promotion/newsletter/index">ニュースレター分析</a>
-            <a class="collapse-item" href="/promotion/sns/index">SNS分析</a>
+            <a class="collapse-item" href="/promotion/instagram/index">Instagram分析</a>
+            <a class="collapse-item" href="/promotion/movie/index">動画コンテンツ分析</a>
+            <a class="collapse-item" href="/promotion/line/index">LINE分析</a>
             <a class="collapse-item" href="/promotion/blog/index">ブログ分析</a>
-            <a class="collapse-item" href="/promotion/othermedia/index">その他媒体分析</a>
+            <a class="collapse-item" href="/promotion/facebook/index">facebook分析</a>
         </div>
       </li>
 
@@ -196,7 +197,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">業務選択:</h6>
             <a class="collapse-item" href="#">ユーザー管理</a>
-            <a class="collapse-item" href="#">顔認証設定</a>
+            <a class="collapse-item" href="#">画面設定</a>
           </div>
         </div>
       </li>
@@ -386,7 +387,7 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Fujishima</span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
               <!-- Dropdown - User Information -->
@@ -424,7 +425,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Stork 2020</span>
+            <span>Copyright &copy; Stork.com 2020</span>
           </div>
         </div>
       </footer>
@@ -465,19 +466,26 @@
   <script src="/sb_admin_2/vendor/jquery/jquery.js"></script>
   <script src="/sb_admin_2/vendor/bootstrap/js/bootstrap.bundle.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="/sb_admin_2/vendor/jquery-easing/jquery.easing.js"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="/js/sb-admin-2.js"></script>
-
-  <!-- Page level plugins -->
-  <script src="/sb_admin_2/vendor/chart.js/Chart.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="/sb_admin_2/js/demo/chart-area-demo.js"></script>
-  <script src="/sb_admin_2/js/demo/chart-pie-demo.js"></script>
-  <script src="/sb_admin_2/js/demo/chart-bar-demo.js"></script>
+  <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+  <script src="https://npmcdn.com/flatpickr/dist/l10n/ja.js"></script>
+  <script>
+    flatpickr(document.getElementById('due_date'), {
+      locale: 'ja',
+      dateFormat: "Y/m/d",
+      minDate: new Date()
+    });
+  </script>
+  
+<script>
+    flatpickr(document.getElementById('end_date'), {
+      locale: 'ja',
+      dateFormat: "Y/m/d",
+      minDate: new Date()
+    });
+  </script>
+  
+  
+ 
 
 </body>
 

@@ -12,7 +12,7 @@
 @section('content')
 
 <div class="container-fluid">
-
+<h1 class="h3 mb-2 text-gray-800">店舗管理</h1>
 <div class="container">
 
 
@@ -188,32 +188,32 @@
               <form action="#" method="POST">
                 @csrf
                 <div class="form-group">
-                  <label for="title">店名</label>
-                  <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" />
+                  <label for="shop_name">店名</label>
+                  <input type="text" class="form-control" name="shop_name" id="shop_name" value="{{ old('shop_name') }}" />
                 </div>
                 <div class="form-group">
-                  <label for="due_date">エリア</label>
-                  <input type="text" class="form-control" name="due_date" id="due_date" value="{{ old('due_date') }}" />
+                  <label for="area">エリア</label>
+                  <input type="text" class="form-control" name="area" id="area" value="{{ old('area') }}" />
                 </div>
                 <div class="form-group">
-                  <label for="assigner_id">住所</label>
-                  <input type="text" class="form-control" name="assigner_id" id="assigner_id" value="{{ old('assigner_id') }}" />
+                  <label for="address">住所</label>
+                  <input type="text" class="form-control" name="address" id="address" value="{{ old('address') }}" />
                 </div>
                 <div class="form-group">
-                  <label for="assigning_id">電話番号</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                  <label for="phone_number">電話番号</label>
+                  <input type="text" class="form-control" name="phone_number" id="phone_number" value="{{ old('phone_number') }}" />
                 </div>
                 <div class="form-group">
-                  <label for="assigning_id">メールアドレス</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                  <label for="email">メールアドレス</label>
+                  <input type="text" class="form-control" name="email" id="email" value="{{ old('email') }}" />
                 </div>
                 <div class="form-group">
-                  <label for="assigning_id">店長名</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                  <label for="shop_chief">店長名</label>
+                  <input type="text" class="form-control" name="shop_chief" id="shop_chief" value="{{ old('shop_chief') }}" />
                 </div>
                 <div class="form-group">
-                  <label for="assigning_id">ランク</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                  <label for="rank">ランク</label>
+                  <input type="text" class="form-control" name="rank" id="rank" value="{{ old('rank') }}" />
                 </div>
                 <div class="text-right">
                   <button type="submit" class="btn btn-primary">登録</button>
@@ -230,7 +230,7 @@
     <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">アクション一覧</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">店舗スタッフ取組一覧</h6>
                   <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -246,37 +246,89 @@
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                  <div class="card-body">
-                  <table class="table">
+                
+
+    <div class="col-xs-12">
+        <table id="table2" class="table table-bordered">
             <thead>
             <tr>
-              <th>月</th>
-              <th>予算</th>
-              <th>内容</th>
-              
+                <th>No</th>
+                <th>店名</th>
+                <th>アクション</th>
+                <th>予算</th>
+                <th>記入日</th>
+                <th>詳細</th>
             </tr>
             </thead>
             <tbody>
+            <tr>
+                <td>1</td>
+                <td>銀座店</td>
+                <td>夏物ディスプレイ強化</td>
+                <td>30000</td>
+                <td>2020.6.30</td>
+                <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>                
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>大阪店</td>
+                <td>ギフト強化</td>
+                <td>30000</td>
+                <td>2020.6.30</td>
+                <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>     
+            </tr>
+            <tr>
+                <td>3</td>
+               <td>博多店</td>
+                <td>接客ロープレ実施</td>
+                <td>30000</td>
+                <td>2020.6.30</td>
+                <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>     
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>札幌店</td>
+                <td>トップスフェア</td>
+                <td>30000</td>
+                <td>2020.6.30</td>
+                <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>     
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>横浜店</td>
+                <td>DM送付</td>
+                <td>30000</td>
+                <td>2020.6.30</td>
+                <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>     
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>自由が丘店</td>
+                <td>夏物ディスプレイ強化</td>
+                <td>30000</td>
+                <td>2020.6.30</td>
+                <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>     
+            </tr>
             
-              <tr>
-                <td>a</td>
-                <td>
-                  <span class="label">q</span>
-                </td>
-                
-                <td>詳細</td>
-              </tr>
-           
             </tbody>
-          </table>
-                </div>
-              </div>
-          </div>
-                </div>
-              </div>
-    
-  
- </div>
+        </table>
+    </div>
+</div>
+
+
+  </div>
     
 
 
@@ -307,6 +359,7 @@
 <script>
     jQuery(function($){ 
     $("#table1").DataTable(); 
+    $("#table2").DataTable(); 
 }); 
 </script>
 

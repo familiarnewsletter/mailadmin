@@ -15,9 +15,9 @@ class PromotionController extends Controller
 		]);
 	}
 
-	public function logIndex(){
+	public function movieIndex(){
 
-		return view ('promotion.log.index', [
+		return view ('promotion.movie.index', [
 
 			// 'shops' => $shops,
         
@@ -42,14 +42,26 @@ class PromotionController extends Controller
 		]);
 	}
 
-	public function snsIndex(){
+	public function facebookIndex(){
 
-		return view ('promotion.sns.index', [
+		return view ('promotion.facebook.index', [
 
 			// 'shops' => $shops,
         
 		]);
 	}
+
+
+	public function lineIndex(){
+
+		return view ('promotion.line.index', [
+
+			// 'shops' => $shops,
+        
+		]);
+	}
+
+
 
 	public function blogIndex(){
 
@@ -60,9 +72,18 @@ class PromotionController extends Controller
 		]);
 	}
 
-	public function othermediaIndex(){
+	public function instagramIndex(){
 
-		return view ('promotion.othermedia.index', [
+		return view ('promotion.instagram.index', [
+
+			// 'shops' => $shops,
+        
+		]);
+	}
+
+	public function show(){
+
+		return view ('show', [
 
 			// 'shops' => $shops,
         

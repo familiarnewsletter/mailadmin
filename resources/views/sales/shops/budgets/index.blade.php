@@ -12,7 +12,7 @@
 @section('content')
 
 <div class="container-fluid">
-
+<h1 class="h3 mb-2 text-gray-800">店舗予算管理</h1>
 <div class="container">
 
  
@@ -20,26 +20,34 @@
   <ul class="tab-list" id="tab-1">
  
     <li class="tab-item is-open">
-      <a href="#shops_index" data-toggle>月別</a>
+      <a href="#monthly_budget" data-toggle>月別</a>
     </li>
     <li class="tab-item">
-      <a href="#shops_create" data-toggle>週別</a>
+      <a href="#weekly_budget" data-toggle>週別</a>
     </li>
     <li class="tab-item">
-      <a href="#action_index" data-toggle>日別</a>
+      <a href="#daily_budget" data-toggle>日別</a>
     </li>
 
   </ul>
 
-  <div class="tab-content is-open" id="shops_index">
+  <div class="tab-content is-open" id="monthly_budget">
 
     <div align="right">
    <select name=”year”>
 
-      <option value=”2020”>2020</option>
-      <option value=”2019”>2019</option>
-      <option value=”2018”>2018</option>
-      <option value=”2017”>2017</option>
+      <option value=”Feb”>Feb</option>
+      <option value=”Mar”>Mar</option>
+      <option value=”Apr”>Apr</option>
+      <option value=”May”>May</option>
+      <option value=”Jun”>Jun</option>
+      <option value=”Jul”>Jul</option>
+      <option value=”Aug”>Aug</option>
+      <option value=”Sep”>Sep</option>
+      <option value=”Oct”>Oct</option>
+      <option value=”Nov”>Nov</option>
+      <option value=”Dec”>Dec</option>
+      <option value=”Jan”>Jan</option>
  
     </select>
   </div>
@@ -55,7 +63,7 @@
                 <th>No</th>
                 <th>店名</th>
                 <th>エリア</th>
-                <th>年間予算</th>
+                <th>月別予算</th>
                 <th>詳細</th>
             </tr>
             </thead>
@@ -183,36 +191,29 @@
 </div>
 
 
+
   </div>
-  <div class="tab-content" id="shops_create">
+  <div class="tab-content" id="weekly_budget">
     <div align="right">
    <select name=”year”>
 
-      <option value=”Feb”>Feb</option>
-      <option value=”Mar”>Mar</option>
-      <option value=”Apr”>Apr</option>
-      <option value=”May”>May</option>
-      <option value=”Jun”>Jun</option>
-      <option value=”Jul”>Jul</option>
-      <option value=”Aug”>Aug</option>
-      <option value=”Sep”>Sep</option>
-      <option value=”Oct”>Oct</option>
-      <option value=”Nov”>Nov</option>
-      <option value=”Dec”>Dec</option>
-      <option value=”Jan”>Jan</option>
+      <option value=”1w”>1w</option>
+      <option value=”2w”>2w</option>
+      <option value=”3w”>3w</option>
+      <option value=”4w”>4w</option>
  
     </select>
   </div>
   	<div class="container">
 
     <div class="col-xs-12">
-        <table id="table1" class="table table-bordered">
+        <table id="table2" class="table table-bordered">
             <thead>
             <tr>
                 <th>No</th>
                 <th>店名</th>
                 <th>エリア</th>
-                <th>年間予算</th>
+                <th>週別予算</th>
                 <th>詳細</th>
             </tr>
             </thead>
@@ -340,27 +341,30 @@
   </div>
 </div>
       
-  <div class="tab-content" id="action_index">
+  <div class="tab-content" id="daily_budget">
     <div align="right">
    <select name=”year”>
 
-      <option value=”1w”>1w</option>
-      <option value=”2w”>2w</option>
-      <option value=”3w”>3w</option>
-      <option value=”4w”>4w</option>
+      <option value=”mon”>Monday</option>
+      <option value=”tue”>Tuesday</option>
+      <option value=”wed”>Wednesday</option>
+      <option value=”thi”>Thirsday</option>
+      <option value=”fri”>Friday</option>
+      <option value=”sat”>Saturday</option>
+      <option value=”sun”>Sunday</option>
  
     </select>
   </div>
     <div class="container">
 
     <div class="col-xs-12">
-        <table id="table1" class="table table-bordered">
+        <table id="table3" class="table table-bordered">
             <thead>
             <tr>
                 <th>No</th>
                 <th>店名</th>
                 <th>エリア</th>
-                <th>年間予算</th>
+                <th>日別予算</th>
                 <th>詳細</th>
             </tr>
             </thead>
@@ -515,6 +519,8 @@
 <script>
     jQuery(function($){ 
     $("#table1").DataTable(); 
+    $("#table2").DataTable(); 
+    $("#table3").DataTable(); 
 }); 
 </script>
 
@@ -525,7 +531,7 @@
    <script src="/sb_admin_2/vendor/chart.js/Chart.bundle.js"></script>
 
 <script>
-  var ctx = document.getElementById('myChart').getContext('2d');
+  var ctx = document.getElementById('table1').getContext('2d');
   var data_list = <?php echo json_encode($data_list); ?>;
 var myChart = new Chart(ctx, {
   type: 'bar',
@@ -544,7 +550,7 @@ var myChart = new Chart(ctx, {
 });
 </script>
 <script>
-  var ctx = document.getElementById('myChart2').getContext('2d');
+  var ctx = document.getElementById('table2').getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'bar',
   data: {
@@ -563,7 +569,7 @@ var myChart = new Chart(ctx, {
 </script>
 
 <script>
-  var ctx = document.getElementById('myChart3').getContext('2d');
+  var ctx = document.getElementById('table3').getContext('2d');
   var data_list = <?php echo json_encode($data_list); ?>;
 var myChart = new Chart(ctx, {
   type: 'bar',

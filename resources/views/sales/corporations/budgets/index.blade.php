@@ -12,7 +12,7 @@
 @section('content')
 
 <div class="container-fluid">
-
+<h1 class="h3 mb-2 text-gray-800">法人予算管理</h1>
 <div class="container">
 
  <div align="right">
@@ -49,8 +49,8 @@
             <thead>
             <tr>
                 <th>No</th>
-                <th>店名</th>
-                <th>エリア</th>
+                <th>取引先名</th>
+                <th>カテゴリ</th>
                 <th>年間予算</th>
                 <th>詳細</th>
             </tr>
@@ -58,8 +58,8 @@
             <tbody>
             <tr>
                 <td>1</td>
-                <td>銀座店</td>
-                <td>東京</td>
+                <td>Aホスピタル</td>
+                <td>クリニック</td>
                 <td>300000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
@@ -67,8 +67,8 @@
             </tr>
             <tr>
                 <td>2</td>
-                <td>大阪阪急</td>
-                <td>大阪</td>
+                <td>A商事</td>
+                <td>企業</td>
                 <td>700000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
@@ -76,8 +76,8 @@
             </tr>
             <tr>
                 <td>3</td>
-               <td>西宮店</td>
-                <td>兵庫</td>
+               <td>中央区役所</td>
+                <td>自治体</td>
                 <td>300000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
@@ -85,8 +85,8 @@
             </tr>
             <tr>
                 <td>4</td>
-                <td>神戸店</td>
-                <td>兵庫</td>
+                <td>K幼稚園</td>
+                <td>教育機関</td>
                 <td>1000000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
@@ -94,8 +94,8 @@
             </tr>
             <tr>
                 <td>5</td>
-                <td>横浜本町店</td>
-                <td>横浜</td>
+                <td>B高校</td>
+                <td>教育機関</td>
                 <td>50000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
@@ -103,8 +103,8 @@
             </tr>
             <tr>
                 <td>6</td>
-                <td>自由が丘店</td>
-                <td>東京</td>
+                <td>K病院</td>
+                <td>クリニック</td>
                 <td>43000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
@@ -112,67 +112,15 @@
             </tr>
             <tr>
                 <td>7</td>
-                <td>金沢店</td>
-                <td>北陸中部</td>
+                <td>T市役所</td>
+                <td>自治体</td>
                 <td>55000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
                   </a></td>     
             </tr>
-            <tr>
-                <td>8</td>
-                <td>仙台店</td>
-                <td>北海道東北</td>
-                <td>44000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>博多店</td>
-                <td>九州</td>
-                <td>60000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>奈良店</td>
-                <td>近畿</td>
-                <td>70000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>高松店</td>
-                <td>四国</td>
-                <td>30000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>札幌店</td>
-                <td>北海道東北</td>
-                <td>30000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>名古屋店</td>
-                <td>愛知</td>
-                <td>65000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
+            
+            
             </tbody>
         </table>
     </div>
@@ -183,13 +131,13 @@
   <div class="tab-content" id="shops_create">
   	<div class="container">
 
-    <div class="col-xs-12">
+         <div class="col-xs-12">
         <table id="table2" class="table table-bordered">
             <thead>
             <tr>
                 <th>No</th>
-                <th>店名</th>
-                <th>エリア</th>
+                <th>取引先名</th>
+                <th>カテゴリ</th>
                 <th>年間予算</th>
                 <th>詳細</th>
             </tr>
@@ -197,8 +145,8 @@
             <tbody>
             <tr>
                 <td>1</td>
-                <td>銀座店</td>
-                <td>東京</td>
+                <td>Aホスピタル</td>
+                <td>クリニック</td>
                 <td>300000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
@@ -206,8 +154,8 @@
             </tr>
             <tr>
                 <td>2</td>
-                <td>大阪阪急</td>
-                <td>大阪</td>
+                <td>A商事</td>
+                <td>企業</td>
                 <td>700000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
@@ -215,8 +163,8 @@
             </tr>
             <tr>
                 <td>3</td>
-               <td>西宮店</td>
-                <td>兵庫</td>
+               <td>中央区役所</td>
+                <td>自治体</td>
                 <td>300000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
@@ -224,8 +172,8 @@
             </tr>
             <tr>
                 <td>4</td>
-                <td>神戸店</td>
-                <td>兵庫</td>
+                <td>K幼稚園</td>
+                <td>教育機関</td>
                 <td>1000000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
@@ -233,8 +181,8 @@
             </tr>
             <tr>
                 <td>5</td>
-                <td>横浜本町店</td>
-                <td>横浜</td>
+                <td>B高校</td>
+                <td>教育機関</td>
                 <td>50000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
@@ -242,8 +190,8 @@
             </tr>
             <tr>
                 <td>6</td>
-                <td>自由が丘店</td>
-                <td>東京</td>
+                <td>K病院</td>
+                <td>クリニック</td>
                 <td>43000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
@@ -251,70 +199,19 @@
             </tr>
             <tr>
                 <td>7</td>
-                <td>金沢店</td>
-                <td>北陸中部</td>
+                <td>T市役所</td>
+                <td>自治体</td>
                 <td>55000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
                   </a></td>     
             </tr>
-            <tr>
-                <td>8</td>
-                <td>仙台店</td>
-                <td>北海道東北</td>
-                <td>44000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>博多店</td>
-                <td>九州</td>
-                <td>60000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>奈良店</td>
-                <td>近畿</td>
-                <td>70000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>高松店</td>
-                <td>四国</td>
-                <td>30000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>札幌店</td>
-                <td>北海道東北</td>
-                <td>30000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>名古屋店</td>
-                <td>愛知</td>
-                <td>65000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
+            
+            
             </tbody>
         </table>
     </div>
+   
 </div>
     
   </div>
@@ -322,13 +219,13 @@
   <div class="tab-content" id="action_index">
     <div class="container">
 
-    <div class="col-xs-12">
+     <div class="col-xs-12">
         <table id="table3" class="table table-bordered">
             <thead>
             <tr>
                 <th>No</th>
-                <th>店名</th>
-                <th>エリア</th>
+                <th>取引先名</th>
+                <th>カテゴリ</th>
                 <th>年間予算</th>
                 <th>詳細</th>
             </tr>
@@ -336,8 +233,8 @@
             <tbody>
             <tr>
                 <td>1</td>
-                <td>銀座店</td>
-                <td>東京</td>
+                <td>Aホスピタル</td>
+                <td>クリニック</td>
                 <td>300000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
@@ -345,8 +242,8 @@
             </tr>
             <tr>
                 <td>2</td>
-                <td>大阪阪急</td>
-                <td>大阪</td>
+                <td>A商事</td>
+                <td>企業</td>
                 <td>700000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
@@ -354,8 +251,8 @@
             </tr>
             <tr>
                 <td>3</td>
-               <td>西宮店</td>
-                <td>兵庫</td>
+               <td>中央区役所</td>
+                <td>自治体</td>
                 <td>300000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
@@ -363,8 +260,8 @@
             </tr>
             <tr>
                 <td>4</td>
-                <td>神戸店</td>
-                <td>兵庫</td>
+                <td>K幼稚園</td>
+                <td>教育機関</td>
                 <td>1000000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
@@ -372,8 +269,8 @@
             </tr>
             <tr>
                 <td>5</td>
-                <td>横浜本町店</td>
-                <td>横浜</td>
+                <td>B高校</td>
+                <td>教育機関</td>
                 <td>50000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
@@ -381,8 +278,8 @@
             </tr>
             <tr>
                 <td>6</td>
-                <td>自由が丘店</td>
-                <td>東京</td>
+                <td>K病院</td>
+                <td>クリニック</td>
                 <td>43000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
@@ -390,67 +287,15 @@
             </tr>
             <tr>
                 <td>7</td>
-                <td>金沢店</td>
-                <td>北陸中部</td>
+                <td>T市役所</td>
+                <td>自治体</td>
                 <td>55000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
                   </a></td>     
             </tr>
-            <tr>
-                <td>8</td>
-                <td>仙台店</td>
-                <td>北海道東北</td>
-                <td>44000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>博多店</td>
-                <td>九州</td>
-                <td>60000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>奈良店</td>
-                <td>近畿</td>
-                <td>70000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>高松店</td>
-                <td>四国</td>
-                <td>30000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>札幌店</td>
-                <td>北海道東北</td>
-                <td>30000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>名古屋店</td>
-                <td>愛知</td>
-                <td>65000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
+            
+            
             </tbody>
         </table>
     </div>

@@ -182,44 +182,39 @@
               <form action="#" method="POST">
                 @csrf
                 <div class="form-group">
-                  <label for="title">お名前</label>
-                  <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" />
+                  <label for="name">お名前</label>
+                  <input type="text" class="form-control" name="name" id="name" value="{{ old('name') }}" />
                 </div>
                 <div class="form-group">
-                  <label for="due_date">お電話番号</label>
-                  <input type="text" class="form-control" name="due_date" id="due_date" value="{{ old('due_date') }}" />
+                  <label for="phone_number">お電話番号</label>
+                  <input type="text" class="form-control" name="phone_number" id="phone_number" value="{{ old('phone_number') }}" />
                 </div>
                 <div class="form-group">
-                  <label for="assigner_id">ご住所</label>
-                  <input type="text" class="form-control" name="assigner_id" id="assigner_id" value="{{ old('assigner_id') }}" />
+                  <label for="address">ご住所</label>
+                  <input type="text" class="form-control" name="address" id="address" value="{{ old('address') }}" />
                 </div>
                 <div class="form-group">
-                  <label for="assigning_id">Email</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                  <label for="email">メールアドレス</label>
+                  <input type="text" class="form-control" name="email" id="email" value="{{ old('email') }}" />
                 </div>
                 <div class="form-group">
-                  <label for="assigning_id">メールアドレス</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                  <label for="staff">担当者名</label>
+                  <input type="text" class="form-control" name="staff" id="staff" value="{{ old('staff') }}" />
                 </div>
                 <div class="form-group">
-                  <label for="assigning_id">担当者名</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                  <label for="how_to_receive">お渡し方法</label>
+                  <select type="text" class="form-control" name="how_to_receive" id="how_to_receive" value="{{ old('how_to_receive') }}" />
+                    <option>来店</option>
+                    <option>配送</option>
+                  </select>
                 </div>
                 <div class="form-group">
-                  <label for="assigning_id">ご注文品</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                  <label for="email">受け取り希望日</label>
+                  <input type="text" class="form-control" name="email" id="email" value="{{ old('email') }}" />
                 </div>
                 <div class="form-group">
-                  <label for="assigning_id">お渡し方法</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="assigning_id">ご希望日</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="assigning_id">ご注文日</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                  <label for="email">ご注文日</label>
+                  <input type="text" class="form-control" name="email" id="email" value="{{ old('email') }}" />
                 </div>
                 <div class="text-right">
                   <button type="submit" class="btn btn-primary">商品選択画面へ</button>

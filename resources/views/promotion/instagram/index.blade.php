@@ -12,34 +12,34 @@
 @section('content')
 
 <div class="container-fluid">
-<h1 class="h3 mb-2 text-gray-800">Newsletter</h1>
+<h1 class="h3 mb-2 text-gray-800">Instagram</h1>
 <div class="container">
 
 
   <ul class="tab-list" id="tab-1">
  
     <li class="tab-item is-open">
-      <a href="#openingrate_index" data-toggle>開封率分析</a>
+      <a href="#follower_index" data-toggle>フォロワー分析</a>
     </li>
     <li class="tab-item">
-      <a href="#session_index" data-toggle>セッション分析</a>
+      <a href="#post_index" data-toggle>本投稿分析</a>
     </li>
     <li class="tab-item">
-      <a href="#cvr_index" data-toggle>CVR分析</a>
+      <a href="#stories_index" data-toggle>ストーリーズ分析</a>
     </li>
     <li class="tab-item">
-      <a href="#newsletter_index" data-toggle>配信内容一覧</a>
+      <a href="#contents_index" data-toggle>配信内容一覧</a>
     </li>
  
   </ul>
 
-  <div class="tab-content is-open" id="openingrate_index">
+  <div class="tab-content is-open" id="follower_index">
 
      <div class="container">
      <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">開封率</h6>
+          <h6 class="m-0 font-weight-bold text-primary">フォロワー数</h6>
           <div class="dropdown no-arrow">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -59,9 +59,9 @@
           
           <nav class="panel panel-default">
             
-           
-    <canvas id="myChart"></canvas>
-  </div>
+                   
+            <canvas id="myChart"></canvas>
+          </div>
           </nav>
         </div>
       </div>
@@ -70,12 +70,12 @@
  
   
  
-  <div class="tab-content" id="session_index">
+  <div class="tab-content" id="post_index">
     <div class="container">
      <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">セッション</h6>
+          <h6 class="m-0 font-weight-bold text-primary">EG数</h6>
           <div class="dropdown no-arrow">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -101,12 +101,13 @@
     </div>
   </div>
  
-  <div class="tab-content" id="cvr_index">
-  <div class="container">
+  
+  <div class="tab-content" id="stories_index">
+    <div class="container">
      <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">CV率</h6>
+          <h6 class="m-0 font-weight-bold text-primary">WEB送客数</h6>
           <div class="dropdown no-arrow">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -131,14 +132,16 @@
       </div>
     </div>
   </div>
+    
+    </nav>
   </div>
     
-  <div class="tab-content" id="newsletter_index">
+  <div class="tab-content" id="contents_index">
     <div class="container">
      <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">配信内容</h6>
+          <h6 class="m-0 font-weight-bold text-primary">投稿内容</h6>
           <div class="dropdown no-arrow">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -162,9 +165,9 @@
                 <thead>
                 <tr>
                     <th>No</th>
-                    <th>タイトル</th>
-                    <th>配信日</th>
-                    <th>対象</th>
+                    <th>企画名</th>
+                    <th>立ち上がり日</th>
+                    <th>予算</th>
                     <th>詳細</th>
                 </tr>
                 </thead>
@@ -319,16 +322,16 @@
   var ctx = document.getElementById('myChart').getContext('2d');
   
 var myChart = new Chart(ctx, {
-  type: 'line',
+  type: 'bar',
   data: {
-    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+    labels: ['Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan'],
     datasets: [{
-      label: '実績',
-      data: [200, 100, 500, 50, 30, 35, 10],
+      label: '目標',
+      data: [72000, 78000, 88000, 92000, 98000, 100000],
       backgroundColor: "silver"
     }, {
-      label: '予算',
-      data: [2, 100, 500, 50, 200, 30, 15],
+      label: '実績',
+      data: [52000, 90000, 0, 0, 0, 0],
       backgroundColor: "blue"
     }]
   }
@@ -342,13 +345,13 @@ var myChart = new Chart(ctx, {
   data: {
     labels: ['M', 'T', 'W', 'T', 'F'],
     datasets: [{
-      label: '実績',
-      data: [2, 29, 5, 5, 2],
-      backgroundColor: "blue"
-    }, {
-      label: '予算',
+      label: '',
       data: [2, 29, 5, 5, 2],
       backgroundColor: "silver"
+    }, {
+      label: 'budgets',
+      data: [2, 29, 5, 5, 2],
+      backgroundColor: "blue"
     }]
   }
 });
@@ -357,17 +360,17 @@ var myChart = new Chart(ctx, {
 <script>
   var ctx = document.getElementById('myChart3').getContext('2d');
 var myChart = new Chart(ctx, {
-  type: 'pie',
+  type: 'line',
   data: {
     labels: ['M', 'T', 'W', 'T', 'F'],
     datasets: [{
-      label: 'sales',
-      data: [2, 29, 5, 5, 2],
-      backgroundColor: "blue"
+      label: '目標',
+      data: [200, 290, 50, 500, 200],
+      borderColor: "silver"
     }, {
-      label: 'budgets',
-      data: [2, 29, 5, 5, 2],
-      backgroundColor: "silver"
+      label: '実績',
+      data: [20, 100, 300, 50, 80],
+      borderColor: "blue"
     }]
   }
 });

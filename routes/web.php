@@ -22,17 +22,22 @@ Route::get('/layout', function () {
     return view('layout');
 });
 
+Route::get('/show', 'HomeController@show')->name('show');
+
 Auth::routes();
 
 Route::get('/admin', function () {
     return view('admin');
 });
 
+Route::get('/show', 'HomeController@show')->name('show');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 
 
 Route::get('/', 'HomeController@index')->name('home');
+
 
 
 
@@ -341,17 +346,17 @@ Route::post('/promotion/list/{promotion_id}/delete', 'PromotionController@promot
 
 
 
-Route::get('/promotion/log/index', 'PromotionController@logIndex')->name('log.index');
+Route::get('/promotion/movie/index', 'PromotionController@movieIndex')->name('movie.index');
 
-Route::get('/promotion/log/show/{log_id}', 'PromotionController@logShow')->name('log.show');
+Route::get('/promotion/movie/show/{movie_id}', 'PromotionController@movieShow')->name('movie.show');
 
-Route::get('/promotion/log/create', 'PromotionController@logCreate')->name('log.create');
-Route::post('/promotion/log/create', 'PromotionController@logStore')->name('log.store');
+Route::get('/promotion/movie/create', 'PromotionController@movieCreate')->name('movie.create');
+Route::post('/promotion/movie/create', 'PromotionController@movieStore')->name('movie.store');
 
-Route::get('/promotion/log/{log_id}/edit', 'PromotionController@logEdit')->name('log.edit');
-Route::post('/promotion/log/{log_id}/edit', 'PromotionController@logUpdate')->name('log.update');
+Route::get('/promotion/movie/{movie_id}/edit', 'PromotionController@movieEdit')->name('movie.edit');
+Route::post('/promotion/movie/{movie_id}/edit', 'PromotionController@movieUpdate')->name('movie.update');
 
-Route::post('/promotion/log/{log_id}/delete', 'PromotionController@logDelete')->name('log.delete'); 
+Route::post('/promotion/movie/{movie_id}/delete', 'PromotionController@movieDelete')->name('movie.delete'); 
 
 
 
@@ -383,17 +388,17 @@ Route::post('/promotion/newsletter/{newsletter_id}/delete', 'PromotionController
 
 
 
-Route::get('/promotion/sns/index', 'PromotionController@snsIndex')->name('sns.index');
+Route::get('/promotion/facebook/index', 'PromotionController@facebookIndex')->name('facebook.index');
 
-Route::get('/promotion/sns/show/{sns_id}', 'PromotionController@snsShow')->name('sns.show');
+Route::get('/promotion/facebook/show/{facebook_id}', 'PromotionController@facebookShow')->name('facebook.show');
 
-Route::get('/promotion/sns/create', 'PromotionController@snsCreate')->name('sns.create');
-Route::post('/promotion/sns/create', 'PromotionController@snsStore')->name('sns.store');
+Route::get('/promotion/facebook/create', 'PromotionController@facebookCreate')->name('facebook.create');
+Route::post('/promotion/facebook/create', 'PromotionController@facebookStore')->name('facebook.store');
 
-Route::get('/promotion/sns/{sns_id}/edit', 'PromotionController@snsEdit')->name('sns.edit');
-Route::post('/promotion/sns/{sns_id}/edit', 'PromotionController@snsUpdate')->name('sns.update');
+Route::get('/promotion/facebook/{facebook_id}/edit', 'PromotionController@facebookEdit')->name('facebook.edit');
+Route::post('/promotion/facebook/{facebook_id}/edit', 'PromotionController@facebookUpdate')->name('facebook.update');
 
-Route::post('/promotion/sns/{sns_id}/delete', 'PromotionController@snsDelete')->name('sns.delete');
+Route::post('/promotion/facebook/{facebook_id}/delete', 'PromotionController@facebookDelete')->name('facebook.delete');
 
 
 
@@ -411,15 +416,32 @@ Route::post('/promotion/blog/{blog_id}/delete', 'PromotionController@blogDelete'
 
 
 
-Route::get('/promotion/othermedia/index', 'PromotionController@othermediaIndex')->name('othermedia.index');
+Route::get('/promotion/line/index', 'PromotionController@lineIndex')->name('line.index');
 
-Route::get('/promotion/othermedia/show/{othermedia_id}', 'PromotionController@othermediaShow')->name('othermedia.show');
+Route::get('/promotion/line/show/{line_id}', 'PromotionController@lineShow')->name('line.show');
 
-Route::get('/promotion/othermedia/create', 'PromotionController@othermediaCreate')->name('othermedia.create');
-Route::post('/promotion/othermedia/create', 'PromotionController@othermediaStore')->name('othermedia.store');
+Route::get('/promotion/line/create', 'PromotionController@lineCreate')->name('line.create');
+Route::post('/promotion/line/create', 'PromotionController@lineStore')->name('line.store');
 
-Route::get('/promotion/othermedia/{othermedia_id}/edit', 'PromotionController@othermediaEdit')->name('othermedia.edit');
-Route::post('/promotion/othermedia/{othermedia_id}/edit', 'PromotionController@othermediaUpdate')->name('othermedia.update');
+Route::get('/promotion/line/{line_id}/edit', 'PromotionController@lineEdit')->name('line.edit');
+Route::post('/promotion/line/{line_id}/edit', 'PromotionController@lineUpdate')->name('line.update');
 
-Route::post('/promotion/othermedia/{othermedia_id}/delete', 'PromotionController@othermediaDelete')->name('othermedia.delete');
+Route::post('/promotion/line/{line_id}/delete', 'PromotionController@lineDelete')->name('line.delete');
 
+
+
+Route::get('/promotion/instagram/index', 'PromotionController@instagramIndex')->name('instagram.index');
+
+Route::get('/promotion/instagram/show/{instagram_id}', 'PromotionController@instagramShow')->name('instagram.show');
+
+Route::get('/promotion/instagram/create', 'PromotionController@instagramCreate')->name('instagram.create');
+Route::post('/promotion/instagram/create', 'PromotionController@instagramStore')->name('instagram.store');
+
+Route::get('/promotion/instagram/{instagram_id}/edit', 'PromotionController@instagramEdit')->name('instagram.edit');
+Route::post('/promotion/instagram/{instagram_id}/edit', 'PromotionController@instagramUpdate')->name('instagram.update');
+
+Route::post('/promotion/instagram/{instagram_id}/delete', 'PromotionController@instagramDelete')->name('instagram.delete');
+
+
+
+Route::get('/show', 'PromotionController@show')->name('show');

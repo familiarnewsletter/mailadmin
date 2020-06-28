@@ -12,7 +12,7 @@
 @section('content')
 
 <div class="container-fluid">
-
+<h1 class="h3 mb-2 text-gray-800">受注管理</h1>
 <div class="container">
 
 
@@ -44,130 +44,78 @@
             <thead>
             <tr>
                 <th>No</th>
-                <th>店名</th>
-                <th>エリア</th>
-                <th>年間予算</th>
+                <th>取引先名</th>
+                <th>納期</th>
+                <th>状態</th>
                 <th>詳細</th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <td>1</td>
-                <td>銀座店</td>
-                <td>東京</td>
-                <td>300000</td>
+                <td>Aホスピタル</td>
+                <td>2020.1.1</td>
+                <td>完了</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
                   </a></td>                
             </tr>
             <tr>
                 <td>2</td>
-                <td>大阪阪急</td>
-                <td>大阪</td>
-                <td>700000</td>
+                <td>A商事</td>
+                <td>2020.1.1</td>
+                <td>完了</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
                   </a></td>     
             </tr>
             <tr>
                 <td>3</td>
-               <td>西宮店</td>
-                <td>兵庫</td>
-                <td>300000</td>
+               <td>中央区役所</td>
+                <td>2020.1.1</td>
+                <td>完了</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
                   </a></td>     
             </tr>
             <tr>
                 <td>4</td>
-                <td>神戸店</td>
-                <td>兵庫</td>
-                <td>1000000</td>
+                <td>K幼稚園</td>
+               <td>2020.1.1</td>
+                <td>完了</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
                   </a></td>     
             </tr>
             <tr>
                 <td>5</td>
-                <td>横浜本町店</td>
-                <td>横浜</td>
-                <td>50000</td>
+                <td>B高校</td>
+                <td>2020.1.1</td>
+                <td>完了</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
                   </a></td>     
             </tr>
             <tr>
                 <td>6</td>
-                <td>自由が丘店</td>
-                <td>東京</td>
-                <td>43000</td>
+                <td>K病院</td>
+                <td>2020.1.1</td>
+                <td>完了</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
                   </a></td>     
             </tr>
             <tr>
                 <td>7</td>
-                <td>金沢店</td>
-                <td>北陸中部</td>
-                <td>55000</td>
+                <td>T市役所</td>
+                <td>2020.1.1</td>
+                <td>完了</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
                   </a></td>     
             </tr>
-            <tr>
-                <td>8</td>
-                <td>仙台店</td>
-                <td>北海道東北</td>
-                <td>44000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>博多店</td>
-                <td>九州</td>
-                <td>60000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>奈良店</td>
-                <td>近畿</td>
-                <td>70000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>高松店</td>
-                <td>四国</td>
-                <td>30000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>札幌店</td>
-                <td>北海道東北</td>
-                <td>30000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>名古屋店</td>
-                <td>愛知</td>
-                <td>65000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
+            
+            
             </tbody>
         </table>
     </div>
@@ -188,32 +136,32 @@
               <form action="#" method="POST">
                 @csrf
                 <div class="form-group">
-                  <label for="title">店名</label>
-                  <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" />
+                  <label for="title">取引先名</label>
+                  <input type="text" class="form-control" name="name" id="name" value="{{ old('name') }}" />
                 </div>
                 <div class="form-group">
-                  <label for="due_date">エリア</label>
+                  <label for="order_list">納品リスト</label>
+                  <input type="text" class="form-control" name="order_list" id="order_list" value="{{ old('order_list') }}" />
+                </div>
+                <div class="form-group">
+                  <label for="deal_rate">取引条件(%)</label>
+                  <input type="number" step="0.01" class="form-control" name="deal_rate" id="deal_rate" value="{{ old('deal_rate') }}" />
+                </div>
+                <div class="form-group">
+                  <label for="deal_amount">取引金額(円)</label>
+                  <input type="number" class="form-control" name="deal_amount" id="deal_amount" value="{{ old('deal_amount') }}" />
+                </div>
+                <div class="form-group">
+                  <label for="delivery_address">納品先</label>
+                  <input type="text" class="form-control" name="delivery_address" id="delivery_address" value="{{ old('delivery_address') }}" />
+                </div>
+                <div class="form-group">
+                  <label for="due_date">指定納期</label>
                   <input type="text" class="form-control" name="due_date" id="due_date" value="{{ old('due_date') }}" />
                 </div>
                 <div class="form-group">
-                  <label for="assigner_id">住所</label>
-                  <input type="text" class="form-control" name="assigner_id" id="assigner_id" value="{{ old('assigner_id') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="assigning_id">電話番号</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="assigning_id">メールアドレス</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="assigning_id">店長名</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="assigning_id">ランク</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                  <label for="remarks">備考</label>
+                  <input type="text" class="form-control" name="remarks" id="remarks" value="{{ old('remarks') }}" />
                 </div>
                 <div class="text-right">
                   <button type="submit" class="btn btn-primary">登録</button>
@@ -233,184 +181,53 @@
             <thead>
             <tr>
                 <th>No</th>
-                <th>店名</th>
-                <th>エリア</th>
-                <th>年間予算</th>
-                <th>詳細</th>
+                <th>リスト名</th>
+                <th>明細</th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <td>1</td>
-                <td>銀座店</td>
-                <td>東京</td>
-                <td>300000</td>
+                <td>Aホスピタル用セット</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
                   </a></td>                
             </tr>
             <tr>
                 <td>2</td>
-                <td>大阪阪急</td>
-                <td>大阪</td>
-                <td>700000</td>
+                <td>A商事用セット</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
+                  </a></td>                
+            </tr> 
+            
             <tr>
                 <td>3</td>
-               <td>西宮店</td>
-                <td>兵庫</td>
-                <td>300000</td>
+               <td>中央区役所用セット</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
+                  </a></td>                
+            </tr>   
+           
             <tr>
                 <td>4</td>
-                <td>神戸店</td>
-                <td>兵庫</td>
-                <td>1000000</td>
+                <td>Aホスピタル用セット２</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
+                  </a></td>                
+            </tr>   
+           
             <tr>
                 <td>5</td>
-                <td>横浜本町店</td>
-                <td>横浜</td>
-                <td>50000</td>
+                <td>K幼稚園用セット</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
-                  </a></td>     
+                  </a></td>                
             </tr>
-            <tr>
-                <td>6</td>
-                <td>自由が丘店</td>
-                <td>東京</td>
-                <td>43000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>金沢店</td>
-                <td>北陸中部</td>
-                <td>55000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>仙台店</td>
-                <td>北海道東北</td>
-                <td>44000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>博多店</td>
-                <td>九州</td>
-                <td>60000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>奈良店</td>
-                <td>近畿</td>
-                <td>70000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>高松店</td>
-                <td>四国</td>
-                <td>30000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>札幌店</td>
-                <td>北海道東北</td>
-                <td>30000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>名古屋店</td>
-                <td>愛知</td>
-                <td>65000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
+           
+            
             </tbody>
         </table>
-    </div>
-  </div>
-  </div>
-  <div class="tab-content" id="deliverlist_index">
-     <div class="container"> 
-      <div class="card shadow mb-4">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">新規登録</h6>
-        </div>
-        <div class="card-body">
-          
-          <nav class="panel panel-default">
-            
-           
-              
-              <form action="#" method="POST">
-                @csrf
-                <div class="form-group">
-                  <label for="title">店名</label>
-                  <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="due_date">エリア</label>
-                  <input type="text" class="form-control" name="due_date" id="due_date" value="{{ old('due_date') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="assigner_id">住所</label>
-                  <input type="text" class="form-control" name="assigner_id" id="assigner_id" value="{{ old('assigner_id') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="assigning_id">電話番号</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="assigning_id">メールアドレス</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="assigning_id">店長名</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="assigning_id">ランク</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
-                </div>
-                <div class="text-right">
-                  <button type="submit" class="btn btn-primary">登録</button>
-                </div>
-              </form>        
-          </nav>
-        </div>
-      </div>
     </div>
   </div>
   </div>
@@ -429,32 +246,39 @@
               <form action="#" method="POST">
                 @csrf
                 <div class="form-group">
-                  <label for="title">店名</label>
+                  <label for="title">リスト名</label>
                   <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" />
+                  <p>数量　<input type="number" value="1" min="1" max="1000000" step="1"></p>
                 </div>
                 <div class="form-group">
-                  <label for="due_date">エリア</label>
-                  <input type="text" class="form-control" name="due_date" id="due_date" value="{{ old('due_date') }}" />
+                  <label for="order_list">アイテム１</label>
+                  <input type="text" class="form-control" name="order_list" id="order_list" value="{{ old('order_list') }}" />
+                  <p>数量　<input type="number" value="1" min="1" max="1000000" step="1"></p>
                 </div>
                 <div class="form-group">
-                  <label for="assigner_id">住所</label>
-                  <input type="text" class="form-control" name="assigner_id" id="assigner_id" value="{{ old('assigner_id') }}" />
+                  <label for="deal_rate">アイテム２</label>
+                  <input type="text" class="form-control" name="deal_rate" id="deal_rate" value="{{ old('deal_rate') }}" />
+                  <p>数量　<input type="number" value="1" min="1" max="1000000" step="1"></p>
                 </div>
                 <div class="form-group">
-                  <label for="assigning_id">電話番号</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                  <label for="deal_amount">アイテム３</label>
+                  <input type="text" class="form-control" name="deal_amount" id="deal_amount" value="{{ old('deal_amount') }}" />
+                  <p>数量　<input type="number" value="1" min="1" max="1000000" step="1"></p>
                 </div>
                 <div class="form-group">
-                  <label for="assigning_id">メールアドレス</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                  <label for="deal_amount">アイテム４</label>
+                  <input type="text" class="form-control" name="deal_amount" id="deal_amount" value="{{ old('deal_amount') }}" />
+                  <p>数量　<input type="number" value="1" min="1" max="1000000" step="1"></p>
                 </div>
                 <div class="form-group">
-                  <label for="assigning_id">店長名</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                  <label for="deal_amount">アイテム５</label>
+                  <input type="text" class="form-control" name="deal_amount" id="deal_amount" value="{{ old('deal_amount') }}" />
+                  <p>数量　<input type="number" value="1" min="1" max="1000000" step="1"></p>
                 </div>
                 <div class="form-group">
-                  <label for="assigning_id">ランク</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                  <label for="deal_amount">アイテム６</label>
+                  <input type="text" class="form-control" name="deal_amount" id="deal_amount" value="{{ old('deal_amount') }}" />
+                  <p>数量　<input type="number" value="1" min="1" max="1000000" step="1"></p>
                 </div>
                 <div class="text-right">
                   <button type="submit" class="btn btn-primary">登録</button>
@@ -464,14 +288,14 @@
         </div>
       </div>
     </div>
-  
-
   </div>
+  </div>
+ 
   <div class="tab-content" id="return_create">
      <div class="container"> 
       <div class="card shadow mb-4">
         <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">新規登録</h6>
+          <h6 class="m-0 font-weight-bold text-primary">返品処理</h6>
         </div>
         <div class="card-body">
           
@@ -479,35 +303,31 @@
             
            
               
-              <form action="#" method="POST">
+               <form action="#" method="POST">
                 @csrf
                 <div class="form-group">
-                  <label for="title">店名</label>
-                  <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" />
+                  <label for="title">取引先名</label>
+                  <input type="text" class="form-control" name="name" id="name" value="{{ old('name') }}" />
                 </div>
                 <div class="form-group">
-                  <label for="due_date">エリア</label>
-                  <input type="text" class="form-control" name="due_date" id="due_date" value="{{ old('due_date') }}" />
+                  <label for="order_list">返品リスト</label>
+                  <input type="text" class="form-control" name="order_list" id="order_list" value="{{ old('order_list') }}" />
                 </div>
                 <div class="form-group">
-                  <label for="assigner_id">住所</label>
-                  <input type="text" class="form-control" name="assigner_id" id="assigner_id" value="{{ old('assigner_id') }}" />
+                  <label for="return_rate">返品条件(%)</label>
+                  <input  type="number" step="0.01" class="form-control" name="deal_rate" id="deal_rate" value="{{ old('deal_rate') }}" />
                 </div>
                 <div class="form-group">
-                  <label for="assigning_id">電話番号</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                  <label for="return_amount">返品額(円)</label><!-- <---ここは合計値を算出-->
+                  <input type="number" class="form-control" name="deal_amount" id="deal_amount" value="{{ old('deal_amount') }}" />
                 </div>
                 <div class="form-group">
-                  <label for="assigning_id">メールアドレス</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="assigning_id">店長名</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="assigning_id">ランク</label>
-                  <input type="text" class="form-control" name="assigning_id" id="assigning_id" value="{{ old('assigning_id') }}" />
+                  <label for="reason">返品理由</label>
+                  <select type="text" class="form-control" name="reason" id="reason" value="{{ old('reason') }}" />
+                  <option>不良品発生</option>
+                  <option>ラインナップ変更</option>
+                  <option>指定回収</option>
+                  <option>その他</option>
                 </div>
                 <div class="text-right">
                   <button type="submit" class="btn btn-primary">登録</button>
@@ -518,18 +338,13 @@
       </div>
     </div>
   </div>
- 
-    <div class="row">
-
-            
-          <!-- Content Row -->
-          <div class="row">
-  </div>
+  
+  
 </div>
 
  
 
-</div>
+
 
 
 @endsection
