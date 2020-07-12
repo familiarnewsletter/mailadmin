@@ -15,6 +15,23 @@ class ProductController extends Controller
 		]);
 	}
 
+	public function productsShow(){
+
+		return view ('products.list.show', [
+
+			// 'shops' => $shops,
+        
+		]);
+	}
+
+
+
+
+
+
+
+
+
 
 	public function processIndex(){
 

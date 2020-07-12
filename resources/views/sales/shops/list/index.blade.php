@@ -35,9 +35,25 @@
     
 
 
-<div class="container">
-
-    <div class="col-xs-12">
+<div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">店舗一覧</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+                      <div class="dropdown-header">menu:</div>
+                      <a class="dropdown-item"data-toggle="modal" data-target="#Modal4">期間選択</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">エクスポート</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                
         <table id="table1" class="table table-bordered">
             <thead>
             <tr>
@@ -54,7 +70,7 @@
                 <td>銀座店</td>
                 <td>東京</td>
                 <td>300000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                <td><a href="/shops/list/show" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
                   </a></td>                
             </tr>
@@ -237,10 +253,9 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
                       <div class="dropdown-header">menu:</div>
-                      <a class="dropdown-item" href="#">追加</a>
+                      <a class="dropdown-item"data-toggle="modal" data-target="#Modal4">期間選択</a>
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">月別</a>
-                      <a class="dropdown-item" href="#">週別</a>
+                      <a class="dropdown-item" href="#">エクスポート</a>
                     </div>
                   </div>
                 </div>

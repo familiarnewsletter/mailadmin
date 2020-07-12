@@ -14,36 +14,31 @@
 @endsection
 
 @section('content')
-
 <div class="container-fluid">
-<h1 class="h3 mb-2 text-gray-800">Instagram</h1>
+<h1 class="h3 mb-2 text-gray-800">店舗詳細</h1>
 <div class="container">
 
 
   <ul class="tab-list" id="tab-1">
  
     <li class="tab-item is-open">
-      <a href="#follower_index" data-toggle>フォロワー分析</a>
+      <a href="#shops_show" data-toggle>店舗情報</a>
     </li>
     <li class="tab-item">
-      <a href="#post_index" data-toggle>本投稿分析</a>
+      <a href="#budget_show" data-toggle>予算・実績</a>
     </li>
-    <li class="tab-item">
-      <a href="#stories_index" data-toggle>ストーリーズ分析</a>
-    </li>
-    <li class="tab-item">
-      <a href="#contents_index" data-toggle>配信内容一覧</a>
-    </li>
- 
   </ul>
 
-  <div class="tab-content is-open" id="follower_index">
+
+<!--------------------- shops ---------------------------------->
+
+  <div class="tab-content is-open" id="shops_show">
 
      <div class="container">
      <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">フォロワー数</h6>
+          <h6 class="m-0 font-weight-bold text-primary">店舗概要</h6>
           <div class="dropdown no-arrow">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -61,63 +56,27 @@
           <nav class="panel panel-default">
             
                    
-            <canvas id="myChart"></canvas>
+            <figure class="c mb15">
+          <a href="#"><img src="/images/eimi.jpg" width="500" alt=""></a>　
+          <a href="#');"><img src="/images/stork.png" width="500" alt=""></a>　
+          </figure>
+          <p>
+            これはダミーの店舗です。ダミー以外の何ものでもありません。これはダミーの店舗です。ダミー以外の何ものでもありません。これはダミーの店舗です。ダミー以外の何ものでもありません。
+          </p>
+          <p>
+            これはダミーの店舗です。ダミー以外の何ものでもありません。これはダミーの店舗です。ダミー以外の何ものでもありません。これはダミーの店舗です。ダミー以外の何ものでもありません。
+          </p>
+
+          
           </div>
           </nav>
         </div>
       </div>
-    </div>
-    
- <div class="modal fade" id="Modal1" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="card shadow mb-4">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
-        </div>
-        <div class="card-body">
-          
-          <nav class="panel panel-default">
-            
-           
-              
-              
-               
-                <div class="form-group">
-                  <label for="title">企画名</label>
-                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
-                    <option>Tシャツキャンペーン</option>
-                  </select>
-                </div>
-        
-                <div class="form-group">
-                <label for="logstart_date">期限</label>
-                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
-                </div>
-                <div class="form-group">
-                  <label for="logend_date">検証終了日</label>
-                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
-                </div>
-                <div class="text-right">
-                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
-                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
-                </div>
-                   
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> 
- 
-  
- 
-  <div class="tab-content" id="post_index">
-    <div class="container">
-     <div class="card shadow mb-4">
+
+       <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">インタラクション数</h6>
+          <h6 class="m-0 font-weight-bold text-primary">詳細</h6>
           <div class="dropdown no-arrow">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -133,15 +92,63 @@
         <div class="card-body">
           
           <nav class="panel panel-default">
-    <canvas id="myChart2"></canvas>
-    </nav>
+             <table id="table" class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>項目</th>
+                    <th>詳細</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>店舗名</td>
+                    <td>aaa</td>
+                                
+                </tr>
+                <tr>
+                    <td>住所</td>
+                    <td>aaa</td>
+                           
+                </tr>
+                <tr>
+                    <td>電話番号</td>
+                   <td>aaa</td>
+                              
+                </tr>
+                <tr>
+                    <td>Fax番号</td>
+                   <td>aaa</td>
+                              
+                </tr>
+                <tr>
+                    <td>Email</td>
+                   <td>aaa</td>
+                               
+                </tr>
+                <tr>
+                    <td>店長</td>
+                   <td>aaa</td>
+                               
+                </tr>
+
+                <tr>
+                    <td>スタッフリスト</td>
+                   <td>aaa</td>
+                               
+                </tr>
+
+                
+                </tbody>
+            </table>
+  
+          
+          </nav>
         </div>
       </div>
     </div>
   </div>
  
-
- <div class="modal fade" id="Modal2" tabindex="-1">
+<div class="modal fade" id="Modal1" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="card shadow mb-4">
@@ -182,13 +189,58 @@
     </div>
   </div>
 </div> 
-  
-  <div class="tab-content" id="stories_index">
+
+<div class="modal fade" id="Modal2" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+            
+           
+              
+              
+               
+                <div class="form-group">
+                  <label for="title">企画名</label>
+                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
+                    <option>Tシャツキャンペーン</option>
+                  </select>
+                </div>
+        
+                <div class="form-group">
+                <label for="logstart_date">期限</label>
+                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
+                </div>
+                <div class="form-group">
+                  <label for="logend_date">検証終了日</label>
+                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
+                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
+                </div>
+                   
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+<!--------------------- Budget and Sales ---------------------------------->
+ 
+  <div class="tab-content" id="budget_show">
     <div class="container">
      <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">WEB送客数</h6>
+          <h6 class="m-0 font-weight-bold text-primary">予算・実績</h6>
           <div class="dropdown no-arrow">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -204,65 +256,14 @@
         <div class="card-body">
           
           <nav class="panel panel-default">
-            <canvas id="myChart3"></canvas>
+              <canvas id="chart1"></canvas>
           </nav>
         </div>
       </div>
-    </div>
-  </div>
-    
-    </nav>
-  </div>
-   
-
- <div class="modal fade" id="Modal3" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
       <div class="card shadow mb-4">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
-        </div>
-        <div class="card-body">
-          
-          <nav class="panel panel-default">
-            
-           
-              
-              
-               
-                <div class="form-group">
-                  <label for="title">企画名</label>
-                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
-                    <option>Tシャツキャンペーン</option>
-                  </select>
-                </div>
-        
-                <div class="form-group">
-                <label for="logstart_date">期限</label>
-                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
-                </div>
-                <div class="form-group">
-                  <label for="logend_date">検証終了日</label>
-                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
-                </div>
-                <div class="text-right">
-                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
-                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
-                </div>
-                   
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>   
-
-  <div class="tab-content" id="contents_index">
-    <div class="container">
-     <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">投稿内容</h6>
+          <h6 class="m-0 font-weight-bold text-primary">売上履歴</h6>
           <div class="dropdown no-arrow">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -278,14 +279,14 @@
         <div class="card-body">
           
           <nav class="panel panel-default">
-  
-        <table id="table1" class="table table-bordered">
+            
+              <table id="table1" class="table table-bordered">
                 <thead>
                 <tr>
                     <th>No</th>
                     <th>企画名</th>
-                    <th>投稿日</th>
-                    <th>ステータス</th>
+                    <th>ターゲットアイテム</th>
+                    <th>CV率</th>
                     <th>詳細</th>
                 </tr>
                 </thead>
@@ -293,130 +294,71 @@
                 <tr>
                     <td>1</td>
                     <td>Tシャツキャンペーン</td>
-                    <td>2020.2.19</td>
-                    <td>投稿済み</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
                     <td><a href="#" class="btn btn-info btn-circle btn-sm">
                         <i class="fas fa-info-circle"></i>
                       </a></td>                
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>Yシャツキャンペーン</td>
-                    <td>2020.12.2</td>
-                    <td>10000</td>
+                    <td>Tシャツキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
                     <td><a href="#" class="btn btn-info btn-circle btn-sm">
                         <i class="fas fa-info-circle"></i>
-                      </a></td>          
+                      </a></td>           
                 </tr>
                 <tr>
                     <td>3</td>
                    <td>UGCキャンペーン</td>
-                    <td>2020.10.2</td>
-                    <td>30000</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
                     <td><a href="#" class="btn btn-info btn-circle btn-sm">
                         <i class="fas fa-info-circle"></i>
                       </a></td>              
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td>デザイン体験</td>
-                    <td>2020.6.2</td>
-                    <td>300000</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
                     <td><a href="#" class="btn btn-info btn-circle btn-sm">
                         <i class="fas fa-info-circle"></i>
-                      </a></td>             
+                      </a></td>              
                 </tr>
                 <tr>
                     <td>5</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>2020.7.2</td>
-                    <td>9000</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
                     <td><a href="#" class="btn btn-info btn-circle btn-sm">
                         <i class="fas fa-info-circle"></i>
-                      </a></td>            
+                      </a></td>               
                 </tr>
                 <tr>
                     <td>6</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>2020.9.9</td>
-                    <td>80000</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
                     <td><a href="#" class="btn btn-info btn-circle btn-sm">
                         <i class="fas fa-info-circle"></i>
-                      </a></td>              
+                      </a></td>               
                 </tr>
-                <tr>
-                    <td>7</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>2020.1.2</td>
-                    <td>780000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>              
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>2020.2.2</td>
-                    <td>110000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>              
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>2020.2.2</td>
-                    <td>1110000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>              
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>2020.2.2</td>
-                    <td>300000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>              
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>2020.3.2</td>
-                    <td>3090000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>             
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>2020.2.5</td>
-                    <td>200000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>            
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>2020.2.9</td>
-                    <td>60000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>         
-                </tr>
+
+                
                 </tbody>
             </table>
-  
+          
           </nav>
         </div>
       </div>
     </div>
+    </div>
 
+  </div>
 
- <div class="modal fade" id="Modal4" tabindex="-1">
+<div class="modal fade" id="Modal3" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="card shadow mb-4">
@@ -457,17 +399,65 @@
     </div>
   </div>
 </div> 
+
+<div class="modal fade" id="Modal4" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+            
+           
+              
+              
+               
+                <div class="form-group">
+                  <label for="title">企画名</label>
+                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
+                    <option>Tシャツキャンペーン</option>
+                  </select>
+                </div>
+        
+                <div class="form-group">
+                <label for="logstart_date">期限</label>
+                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
+                </div>
+                <div class="form-group">
+                  <label for="logend_date">検証終了日</label>
+                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
+                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
+                </div>
+                   
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+
+
 </div>
+
 
 @endsection
 
 @section('scripts')
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+
 
 <script src="/sb_admin_2/vendor/jquery/jquery.min.js"></script>
   
-  <!-- Core plugin JavaScript-->
-  <script src="/sb_admin_2/vendor/jquery-easing/jquery.easing.min.js"></script>
+  
 
   <!-- Custom scripts for all pages-->
   <script src="/sb_admin_2/js/sb-admin-2.min.js"></script>
@@ -476,17 +466,17 @@
 
 <script src="/sb_admin_2/js/sb-admin-2.js"></script>
 <script src="/sb_admin_2/vendor/chart.js/Chart.js"></script>
-<script src="/sb_admin_2/vendor/chart.js/Chart.bundle.js"></script>
+
 
 
 <script>
-        var ctx = document.getElementById('myChart').getContext('2d');
+        var ctx = document.getElementById('chart1').getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
                 datasets: [{
-                    label: 'リーチ数',
+                    label: '予算',
                     type: "bar",
                    
                     data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
@@ -494,7 +484,7 @@
 　　　　　　　　　　    borderWidth: 2, 
                     yAxisID: "y-axis-1",
                 }, {
-                    label: '開封数',
+                    label: '実績',
                     type: "bar",
                     
                     data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
@@ -502,7 +492,7 @@
 　　　　　　　　　　    borderWidth: 2, 
                     yAxisID: "y-axis-1",
                 }, {
-                    label: '開封率',
+                    label: '予算比',
                     type: "line",
                     fill: false,
                     data: [22, 23, 10, 15, 40, 35, 30],
@@ -540,130 +530,8 @@
         });
 </script>
 
-<script>
-  var ctx = document.getElementById('myChart2').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
-                datasets: [{
-                    label: '開封数',
-                    type: "bar",
-                   
-                    data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
-                    borderColor: "black",                         // 棒の枠線の色
-　　　　　　　　　　    borderWidth: 2, 
-                    yAxisID: "y-axis-1",
-                }, {
-                    label: 'セッション数',
-                    type: "bar",
-                    
-                    data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
-                    borderColor: "blue",                         // 棒の枠線の色
-　　　　　　　　　　    borderWidth: 2, 
-                    yAxisID: "y-axis-1",
-                }, {
-                    label: '新規セッション率',
-                    type: "line",
-                    fill: false,
-                    data: [22, 23, 10, 15, 40, 35, 30],
-                    borderColor: "pink",
-                    
-                    yAxisID: "y-axis-2",
-                }]
-            },
-            options: {
-                
-                responsive: true,
-                scales: {
-                    yAxes: [{
-                        id: "y-axis-1",
-                        
-                        position: "left",
-                        ticks: {
-                            max: 15000,
-                            min: 0,
-                            stepSize: 1000
-                        },
-                    }, {
-                        id: "y-axis-2",
-                        
-                        position: "right",
-                        ticks: {
-                            max: 100,
-                            min: 0,
-                            stepSize: 20
-                        },
-                        
-                    }],
-                },
-            }
-        });
-</script>
-
-
-<script>
-  var ctx = document.getElementById('myChart3').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
-                datasets: [{
-                    label: 'セッション数',
-                    type: "bar",
-                   
-                    data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
-                    borderColor: "black",                         // 棒の枠線の色
-　　　　　　　　　　    borderWidth: 2, 
-                    yAxisID: "y-axis-1",
-                }, {
-                    label: 'CV数',
-                    type: "bar",
-                    
-                    data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
-                    borderColor: "blue",                         // 棒の枠線の色
-　　　　　　　　　　    borderWidth: 2, 
-                    yAxisID: "y-axis-1",
-                }, {
-                    label: 'CV率',
-                    type: "line",
-                    fill: false,
-                    data: [22, 23, 10, 15, 40, 35, 30],
-                    borderColor: "pink",
-                    
-                    yAxisID: "y-axis-2",
-                }]
-            },
-            options: {
-                
-                responsive: true,
-                scales: {
-                    yAxes: [{
-                        id: "y-axis-1",
-                        
-                        position: "left",
-                        ticks: {
-                            max: 15000,
-                            min: 0,
-                            stepSize: 1000
-                        },
-                    }, {
-                        id: "y-axis-2",
-                        
-                        position: "right",
-                        ticks: {
-                            max: 100,
-                            min: 0,
-                            stepSize: 20
-                        },
-                        
-                    }],
-                },
-            }
-        });
-</script>
-
-
+<script src="/sb_admin_2/vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="/sb_admin_2/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
 
 
@@ -672,14 +540,4 @@
     $("#table1").DataTable(); 
 }); 
 </script>
-
-<!-- Page level plugins -->
-  <script src="/sb_admin_2/vendor/datatables/jquery.dataTables.min.js"></script>
-  <script src="/sb_admin_2/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-  
-
-
-
-
 @endsection

@@ -18,6 +18,8 @@
 
   <!-- Custom styles for this template-->
   <link href="/sb_admin_2/css/sb-admin-2.css" rel="stylesheet">
+
+  
   @yield('styles')
 </head>
 
@@ -172,7 +174,6 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">業務選択:</h6>
             <a class="collapse-item" href="/promotion/list/index">販促マスタ</a>
-            <a class="collapse-item" href="/promotion/homepage/index">HPアクセス分析</a>
             <a class="collapse-item" href="/promotion/newsletter/index">ニュースレター分析</a>
             <a class="collapse-item" href="/promotion/instagram/index">Instagram分析</a>
             <a class="collapse-item" href="/promotion/movie/index">動画コンテンツ分析</a>
@@ -196,7 +197,7 @@
         <div id="collapsePage4" class="collapse" aria-labelledby="headingPage4" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">業務選択:</h6>
-            <a class="collapse-item" href="#">ユーザー管理</a>
+            <a class="collapse-item" href="/show">ユーザー管理</a>
             <a class="collapse-item" href="#">画面設定</a>
           </div>
         </div>
@@ -461,30 +462,68 @@
     </div>
   </div>
   
-  @yield('scripts')
-  <!-- Bootstrap core JavaScript-->
-  <script src="/sb_admin_2/vendor/jquery/jquery.js"></script>
-  <script src="/sb_admin_2/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+@yield('scripts')
+<!-- Bootstrap core JavaScript-->
+<script src="/sb_admin_2/vendor/jquery/jquery.js"></script>
+<script src="/sb_admin_2/vendor/bootstrap/js/bootstrap.bundle.js"></script>
 
-  <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
-  <script src="https://npmcdn.com/flatpickr/dist/l10n/ja.js"></script>
-  <script>
-    flatpickr(document.getElementById('due_date'), {
-      locale: 'ja',
-      dateFormat: "Y/m/d",
-      minDate: new Date()
-    });
-  </script>
-  
+<script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+<script src="https://npmcdn.com/flatpickr/dist/l10n/ja.js"></script>
 <script>
-    flatpickr(document.getElementById('end_date'), {
-      locale: 'ja',
-      dateFormat: "Y/m/d",
-      minDate: new Date()
-    });
-  </script>
-  
-  
+  flatpickr(document.getElementById('due_date'), {
+    locale: 'ja',
+    dateFormat: "Y/m/d",
+    minDate: new Date()
+  });
+</script>
+
+<script>
+  flatpickr(document.getElementById('announce_date'), {
+    locale: 'ja',
+    dateFormat: "Y/m/d",
+    minDate: new Date()
+  });
+</script>
+
+<script>
+  flatpickr(document.getElementById('start_date'), {
+    locale: 'ja',
+    dateFormat: "Y/m/d",
+    minDate: new Date()
+  });
+</script>
+
+<script>
+  flatpickr(document.getElementById('end_date'), {
+    locale: 'ja',
+    dateFormat: "Y/m/d",
+    minDate: new Date()
+  });
+</script>
+
+<script>
+  flatpickr(document.getElementById('logstart_date'), {
+    locale: 'ja',
+    dateFormat: "Y/m/d",
+    defaultDate: ["2016-2-1", new Date()]
+  });
+</script>
+
+<script>
+  flatpickr(document.getElementById('logend_date'), {
+    locale: 'ja',
+    dateFormat: "Y/m/d",
+    defaultDate: ["2016-2-1", new Date()]
+  });
+</script>
+
+<script>
+  flatpickr(document.getElementById('logend_date2'), {
+    locale: 'ja',
+    dateFormat: "Y/m/d",
+    defaultDate: ["2016-2-1", new Date()]
+  });
+</script>
  
 
 </body>

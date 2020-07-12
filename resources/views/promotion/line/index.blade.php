@@ -19,13 +19,13 @@
   <ul class="tab-list" id="tab-1">
  
     <li class="tab-item is-open">
-      <a href="#friends_index" data-toggle>友達登録分析</a>
+      <a href="#friends_index" data-toggle>友だち分析</a>
+    </li>
+    <li class="tab-item">
+      <a href="#openrate_index" data-toggle>開封率分析</a>
     </li>
     <li class="tab-item">
       <a href="#cvr_index" data-toggle>WEB送客分析</a>
-    </li>
-    <li class="tab-item">
-      <a href="#logs_index" data-toggle>企画ログ</a>
     </li>
     <li class="tab-item">
       <a href="#contents_index" data-toggle>配信内容一覧</a>
@@ -102,9 +102,9 @@
 
 
 
-<!--------------------- CVR ---------------------------------->
+<!--------------------- openrate ---------------------------------->
  
-  <div class="tab-content" id="cvr_index">
+  <div class="tab-content" id="openrate_index">
     <div class="container">
      <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
@@ -238,10 +238,41 @@
   
  
 
- <!--------------------- Logs ---------------------------------->
+ <!--------------------- cvr ---------------------------------->
 
   
-  <div class="tab-content" id="logs_index">
+  <div class="tab-content" id="cvr_index">
+    <div class="container">
+     <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">LINE企画ログ</h6>
+          <div class="dropdown no-arrow">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+              <div class="dropdown-header">menu:</div>
+              <a class="dropdown-item" href="#">daily</a>
+              <a class="dropdown-item" href="#">weekly</a>
+              <a class="dropdown-item" href="#">monthly</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">DataExport</a>
+              <a class="dropdown-item" href="#">check</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          
+          
+          <nav class="panel panel-default">
+  
+        <canvas id="chart4"></canvas>
+     
+        </nav>
+        </div>
+      </div>
+    </div>
     <div class="container">
      <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
@@ -334,13 +365,10 @@
                 </tr>
                 
                 </tbody>
-            </table>
-  
-         
-        </div>
-   　　 
+        </table>
      
         </nav>
+        </div>
       </div>
     </div>
   </div>
@@ -470,64 +498,249 @@
 
 
 <script>
-  var ctx = document.getElementById('chart1').getContext('2d');
-  
-var myChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-    datasets: [{
-      label: '実績',
-      data: [200, 100, 500, 50, 30, 35, 10],
-      backgroundColor: "blue"
-    }, {
-      label: '目標',
-      data: [2, 100, 500, 50, 200, 30, 15],
-      backgroundColor: "silver"
-    }]
-  }
-});
+        var ctx = document.getElementById('chart1').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
+                datasets: [{
+                    label: 'リーチ数',
+                    type: "bar",
+                   
+                    data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
+                    borderColor: "black",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: '開封数',
+                    type: "bar",
+                    
+                    data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
+                    borderColor: "blue",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: '開封率',
+                    type: "line",
+                    fill: false,
+                    data: [22, 23, 10, 15, 40, 35, 30],
+                    borderColor: "pink",
+                    
+                    yAxisID: "y-axis-2",
+                }]
+            },
+            options: {
+                
+                responsive: true,
+                scales: {
+                    yAxes: [{
+                        id: "y-axis-1",
+                        
+                        position: "left",
+                        ticks: {
+                            max: 15000,
+                            min: 0,
+                            stepSize: 1000
+                        },
+                    }, {
+                        id: "y-axis-2",
+                        
+                        position: "right",
+                        ticks: {
+                            max: 100,
+                            min: 0,
+                            stepSize: 20
+                        },
+                        
+                    }],
+                },
+            }
+        });
 </script>
 
 <script>
   var ctx = document.getElementById('chart2').getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['M', 'T', 'W', 'T', 'F'],
-    datasets: [{
-      label: '実績',
-      data: [2, 29, 5, 5, 2],
-      backgroundColor: "blue"
-    }, {
-      label: '目標',
-      data: [2, 29, 5, 5, 2],
-      backgroundColor: "silver"
-    }]
-  }
-});
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
+                datasets: [{
+                    label: '開封数',
+                    type: "bar",
+                   
+                    data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
+                    borderColor: "black",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: 'セッション数',
+                    type: "bar",
+                    
+                    data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
+                    borderColor: "blue",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: '新規セッション率',
+                    type: "line",
+                    fill: false,
+                    data: [22, 23, 10, 15, 40, 35, 30],
+                    borderColor: "pink",
+                    
+                    yAxisID: "y-axis-2",
+                }]
+            },
+            options: {
+                
+                responsive: true,
+                scales: {
+                    yAxes: [{
+                        id: "y-axis-1",
+                        
+                        position: "left",
+                        ticks: {
+                            max: 15000,
+                            min: 0,
+                            stepSize: 1000
+                        },
+                    }, {
+                        id: "y-axis-2",
+                        
+                        position: "right",
+                        ticks: {
+                            max: 100,
+                            min: 0,
+                            stepSize: 20
+                        },
+                        
+                    }],
+                },
+            }
+        });
 </script>
+
 
 <script>
   var ctx = document.getElementById('chart3').getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: ['M', 'T', 'W', 'T', 'F'],
-    datasets: [{
-      label: '実績',
-      data: [200, 290, 50, 500, 200],
-      borderColor: "blue"
-    }, {
-      label: '目標',
-      data: [20, 100, 300, 50, 80],
-      borderColor: "silver"
-    }]
-  }
-});
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
+                datasets: [{
+                    label: 'セッション数',
+                    type: "bar",
+                   
+                    data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
+                    borderColor: "black",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: 'CV数',
+                    type: "bar",
+                    
+                    data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
+                    borderColor: "blue",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: 'CV率',
+                    type: "line",
+                    fill: false,
+                    data: [22, 23, 10, 15, 40, 35, 30],
+                    borderColor: "pink",
+                    
+                    yAxisID: "y-axis-2",
+                }]
+            },
+            options: {
+                
+                responsive: true,
+                scales: {
+                    yAxes: [{
+                        id: "y-axis-1",
+                        
+                        position: "left",
+                        ticks: {
+                            max: 15000,
+                            min: 0,
+                            stepSize: 1000
+                        },
+                    }, {
+                        id: "y-axis-2",
+                        
+                        position: "right",
+                        ticks: {
+                            max: 100,
+                            min: 0,
+                            stepSize: 20
+                        },
+                        
+                    }],
+                },
+            }
+        });
 </script>
 
-
+<script>
+  var ctx = document.getElementById('chart4').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
+                datasets: [{
+                    label: 'セッション数',
+                    type: "bar",
+                   
+                    data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
+                    borderColor: "black",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: 'CV数',
+                    type: "bar",
+                    
+                    data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
+                    borderColor: "blue",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: 'CV率',
+                    type: "line",
+                    fill: false,
+                    data: [22, 23, 10, 15, 40, 35, 30],
+                    borderColor: "pink",
+                    
+                    yAxisID: "y-axis-2",
+                }]
+            },
+            options: {
+                
+                responsive: true,
+                scales: {
+                    yAxes: [{
+                        id: "y-axis-1",
+                        
+                        position: "left",
+                        ticks: {
+                            max: 15000,
+                            min: 0,
+                            stepSize: 1000
+                        },
+                    }, {
+                        id: "y-axis-2",
+                        
+                        position: "right",
+                        ticks: {
+                            max: 100,
+                            min: 0,
+                            stepSize: 20
+                        },
+                        
+                    }],
+                },
+            }
+        });
+</script>
 
 
 

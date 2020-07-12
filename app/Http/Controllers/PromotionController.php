@@ -15,18 +15,88 @@ class PromotionController extends Controller
 		]);
 	}
 
-	public function movieIndex(){
+	public function promotionShow(){
 
-		return view ('promotion.movie.index', [
+		return view ('promotion.list.show', [
 
 			// 'shops' => $shops,
         
 		]);
 	}
 
-	public function homepageIndex(){
+	public function promotionCreate(){
 
-		return view ('promotion.homepage.index', [
+		return view ('promotion.list.create', [
+
+			// 'shops' => $shops,
+        
+		]);
+	}
+
+
+
+
+
+
+
+	public function apShow(){
+
+		return view ('promotion.ap.show', [
+
+			// 'shops' => $shops,
+        
+		]);
+	}
+
+
+
+
+
+	public function logShow(){
+
+		return view ('promotion.log.show', [
+
+			// 'shops' => $shops,
+        
+		]);
+	}
+
+
+
+	public function budgetShow(){
+
+		return view ('promotion.budget.show', [
+
+			// 'shops' => $shops,
+        
+		]);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public function movieIndex(){
+
+		return view ('promotion.movie.index', [
 
 			// 'shops' => $shops,
         

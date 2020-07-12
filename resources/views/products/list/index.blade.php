@@ -4,14 +4,18 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
     <!--  datatables css -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"/>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+
 
 @endsection
 
 @section('content')
 
 <div class="container-fluid">
-
+<h1 class="h3 mb-2 text-gray-800">商品管理</h1>
 <div class="container">
 
 
@@ -29,8 +33,23 @@
 
   <div class="tab-content is-open" id="products_index">
     <div class="container">
-
-    <div class="col-xs-12">
+     <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">企画一覧</h6>
+          <div class="dropdown no-arrow">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+              <div class="dropdown-header">menu:</div>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">期間選択</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/promotion/list/create">新規作成</a>
+              <a class="dropdown-item" href="#">エクスポート</a>
+            </div>
+          </div>
+        </div>
         <table id="table1" class="table table-bordered">
             <thead>
             <tr>
@@ -47,7 +66,7 @@
                 <td>Tシャツ</td>
                 <td>トップス</td>
                 <td>5,000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                <td><a href="/products/list/show" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
                   </a></td>                
             </tr>
@@ -234,7 +253,10 @@
                 </div>
                 <div class="form-group">
                   <label for="image">画像</label>
-                  <input type="text" class="form-control" name="image" id="image" value="{{ old('image') }}" />
+                  <div class="custom-file">
+                        <input type="file" name="image" class="custom-file-input">
+                        <label class="custom-file-label">File</label>
+                    </div>
                 </div>
                 <div class="text-right">
                   <button type="submit" class="btn btn-primary">登録</button>

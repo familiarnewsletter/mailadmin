@@ -44,7 +44,9 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/shops/list/index', 'ShopController@shopIndex')->name('shops.index');
 
-Route::get('/shops/list/show/{shop_id}', 'ShopController@shopShow')->name('shops.show');
+//Route::get('/shops/list/show/{shop_id}', 'ShopController@shopShow')->name('shops.show');
+Route::get('/shops/list/show', 'ShopController@shopShow')->name('shops.show');
+
 
 Route::get('/shops/list/create', 'ShopController@shopCreate')->name('shops.create');
 Route::post('/shops/list/create', 'ShopController@shopStore')->name('shops.store');
@@ -106,7 +108,9 @@ Route::post('/shops/orders/{shop_id}/delete/{shop_order_id}', 'ShopController@or
 
 Route::get('/corporations/clients/index', 'CorporationController@clientsIndex')->name('corporation_clients.index');
 
-Route::get('/corporations/clients/show/{corporation_id}', 'CorporationController@clientsShow')->name('corporation_clients.show');
+//Route::get('/corporations/clients/show/{corporation_id}', 'CorporationController@clientsShow')->name('corporation_clients.show');
+Route::get('/corporations/clients/show', 'CorporationController@clientsShow')->name('corporation_clients.show');
+
 
 Route::get('/corporations/clients/create', 'CorporationController@clientsCreate')->name('corporation_clients.create');
 Route::post('/corporations/clients/create', 'CorporationController@clientsStore')->name('corporation_client.store');
@@ -166,7 +170,9 @@ Route::post('/corporations/invoices/{corporation_id}/delete', 'CorporationContro
 
 Route::get('/products/list/index', 'ProductController@productsIndex')->name('products.index');
 
-Route::get('/products/list/show/{product_id}', 'ProductController@productsShow')->name('products.show');
+//Route::get('/products/list/show/{product_id}', 'ProductController@productsShow')->name('products.show');
+Route::get('/products/list/show', 'ProductController@productsShow')->name('products.show');
+
 
 Route::get('/products/list/create', 'ProductController@productsCreate')->name('products.create');
 Route::post('/products/list/create', 'ProductController@productsStore')->name('product.store');
@@ -334,7 +340,8 @@ Route::post('/earnings/areas/{areaearnings_id}/delete', 'EarningsController@area
 
 Route::get('/promotion/list/index', 'PromotionController@promotionIndex')->name('promotion.index');
 
-Route::get('/promotion/list/show/{promotion_id}', 'PromotionController@promotionShow')->name('promotion.show');
+//Route::get('/promotion/list/show/{promotion_id}', 'PromotionController@promotionShow')->name('promotion.show');
+Route::get('/promotion/list/show', 'PromotionController@promotionShow')->name('promotion.show');
 
 Route::get('/promotion/list/create', 'PromotionController@promotionCreate')->name('promotion.create');
 Route::post('/promotion/list/create', 'PromotionController@promotionStore')->name('promotion.store');
@@ -343,6 +350,55 @@ Route::get('/promotion/list/{promotion_id}/edit', 'PromotionController@promotion
 Route::post('/promotion/list/{promotion_id}/edit', 'PromotionController@promotionUpdate')->name('promotion.update');
 
 Route::post('/promotion/list/{promotion_id}/delete', 'PromotionController@promotionDelete')->name('promotion.delete'); 
+
+
+Route::get('/promotion/ap/show', 'PromotionController@apShow')->name('ap.show');
+
+Route::get('/promotion/ap/create', 'PromotionController@apCreate')->name('ap.create');
+Route::post('/promotion/ap/create', 'PromotionController@apStore')->name('ap.store');
+
+Route::get('/promotion/ap/{ap_id}/edit', 'PromotionController@apEdit')->name('ap.edit');
+Route::post('/promotion/ap/{ap_id}/edit', 'PromotionController@apUpdate')->name('ap.update');
+
+Route::post('/promotion/ap/{ap_id}/delete', 'PromotionController@apDelete')->name('ap.delete'); 
+
+
+Route::get('/promotion/log/show', 'PromotionController@logShow')->name('log.show');
+
+Route::get('/promotion/log/create', 'PromotionController@logCreate')->name('log.create');
+Route::post('/promotion/log/create', 'PromotionController@logStore')->name('log.store');
+
+Route::get('/promotion/log/{log_id}/edit', 'PromotionController@logEdit')->name('log.edit');
+Route::post('/promotion/log/{log_id}/edit', 'PromotionController@logUpdate')->name('log.update');
+
+Route::post('/promotion/log/{log_id}/delete', 'PromotionController@logDelete')->name('log.delete'); 
+
+
+Route::get('/promotion/budget/index', 'PromotionController@budgetIndex')->name('budget.index');
+
+Route::get('/promotion/budget/create', 'PromotionController@budgetCreate')->name('budget.create');
+Route::post('/promotion/budget/create', 'PromotionController@budgetStore')->name('budget.store');
+
+Route::get('/promotion/budget/{budget_id}/edit', 'PromotionController@budgetEdit')->name('budget.edit');
+Route::post('/promotion/budget/{budget_id}/edit', 'PromotionController@budgetUpdate')->name('budget.update');
+
+Route::post('/promotion/log/{budget_id}/delete', 'PromotionController@budgetDelete')->name('budget.delete'); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -358,19 +414,6 @@ Route::post('/promotion/movie/{movie_id}/edit', 'PromotionController@movieUpdate
 
 Route::post('/promotion/movie/{movie_id}/delete', 'PromotionController@movieDelete')->name('movie.delete'); 
 
-
-
-Route::get('/promotion/homepage/index', 'PromotionController@homepageIndex')->name('homepage.index');
-
-Route::get('/promotion/homepage/show/{page_id}', 'PromotionController@homepageShow')->name('homepage.show');
-
-Route::get('/promotion/homepage/create', 'PromotionController@homepageCreate')->name('homepage.create');
-Route::post('/promotion/homepage/create', 'PromotionController@homepageStore')->name('homepage.store');
-
-Route::get('/promotion/homepage/{pege_id}/edit', 'PromotionController@homepageEdit')->name('homepage.edit');
-Route::post('/promotion/homepage/{page_id}/edit', 'PromotionController@homepageUpdate')->name('homepage.update');
-
-Route::post('/promotion/homepage/{page_id}/delete', 'PromotionController@homepageDelete')->name('homepage.delete');
 
 
 

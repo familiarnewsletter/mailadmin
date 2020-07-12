@@ -7,6 +7,10 @@
 <!--  datatables css -->
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
 
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+
+
 @endsection
 
 @section('content')
@@ -49,12 +53,9 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
               <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item" href="#">daily</a>
-              <a class="dropdown-item" href="#">weekly</a>
-              <a class="dropdown-item" href="#">monthly</a>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">期間選択</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">DataExport</a>
-              <a class="dropdown-item" href="#">check</a>
+              <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
         </div>
@@ -63,7 +64,7 @@
           <nav class="panel panel-default">
             
                    
-            <canvas id="chart1"></canvas>
+            <canvas id="chart"></canvas>
           </div>
           </nav>
         </div>
@@ -79,12 +80,9 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
               <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item" href="#">daily</a>
-              <a class="dropdown-item" href="#">weekly</a>
-              <a class="dropdown-item" href="#">monthly</a>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal2">期間選択</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">DataExport</a>
-              <a class="dropdown-item" href="#">check</a>
+              <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
         </div>
@@ -168,7 +166,89 @@
     </div>
   </div>
  
+<div class="modal fade" id="Modal1" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+            
+           
+              
+              
+               
+                <div class="form-group">
+                  <label for="title">企画名</label>
+                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
+                    <option>Tシャツキャンペーン</option>
+                  </select>
+                </div>
+        
+                <div class="form-group">
+                <label for="logstart_date">期限</label>
+                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
+                </div>
+                <div class="form-group">
+                  <label for="logend_date">検証終了日</label>
+                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
+                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
+                </div>
+                   
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
 
+<div class="modal fade" id="Modal2" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+            
+           
+              
+              
+               
+                <div class="form-group">
+                  <label for="title">企画名</label>
+                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
+                    <option>Tシャツキャンペーン</option>
+                  </select>
+                </div>
+        
+                <div class="form-group">
+                <label for="logstart_date">期限</label>
+                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
+                </div>
+                <div class="form-group">
+                  <label for="logend_date">検証終了日</label>
+                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
+                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
+                </div>
+                   
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
 
 
 <!--------------------- Zoom ---------------------------------->
@@ -185,12 +265,9 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
               <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item" href="#">daily</a>
-              <a class="dropdown-item" href="#">weekly</a>
-              <a class="dropdown-item" href="#">monthly</a>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal3">期間選択</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">DataExport</a>
-              <a class="dropdown-item" href="#">check</a>
+              <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
         </div>
@@ -211,12 +288,9 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
               <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item" href="#">daily</a>
-              <a class="dropdown-item" href="#">weekly</a>
-              <a class="dropdown-item" href="#">monthly</a>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal4">期間選択</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">DataExport</a>
-              <a class="dropdown-item" href="#">check</a>
+              <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
         </div>
@@ -234,7 +308,89 @@
 
   </div>
 
-  
+<div class="modal fade" id="Modal3" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+            
+           
+              
+              
+               
+                <div class="form-group">
+                  <label for="title">企画名</label>
+                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
+                    <option>Tシャツキャンペーン</option>
+                  </select>
+                </div>
+        
+                <div class="form-group">
+                <label for="logstart_date">期限</label>
+                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
+                </div>
+                <div class="form-group">
+                  <label for="logend_date">検証終了日</label>
+                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
+                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
+                </div>
+                   
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<div class="modal fade" id="Modal4" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+            
+           
+              
+              
+               
+                <div class="form-group">
+                  <label for="title">企画名</label>
+                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
+                    <option>Tシャツキャンペーン</option>
+                  </select>
+                </div>
+        
+                <div class="form-group">
+                <label for="logstart_date">期限</label>
+                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
+                </div>
+                <div class="form-group">
+                  <label for="logend_date">検証終了日</label>
+                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
+                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
+                </div>
+                   
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
  
 
  <!--------------------- Logs ---------------------------------->
@@ -252,12 +408,9 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
               <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item" href="#">daily</a>
-              <a class="dropdown-item" href="#">weekly</a>
-              <a class="dropdown-item" href="#">monthly</a>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal5">期間選択</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">DataExport</a>
-              <a class="dropdown-item" href="#">check</a>
+              <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
         </div>
@@ -405,6 +558,48 @@
     </div>
   </div>
     
+
+<div class="modal fade" id="Modal5" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+            
+           
+              
+              
+               
+                <div class="form-group">
+                  <label for="title">企画名</label>
+                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
+                    <option>Tシャツキャンペーン</option>
+                  </select>
+                </div>
+        
+                <div class="form-group">
+                <label for="logstart_date">期限</label>
+                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
+                </div>
+                <div class="form-group">
+                  <label for="logend_date">検証終了日</label>
+                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
+                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
+                </div>
+                   
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
 <!--------------------- Contents ---------------------------------->
 
     
@@ -420,12 +615,9 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
               <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item" href="#">daily</a>
-              <a class="dropdown-item" href="#">weekly</a>
-              <a class="dropdown-item" href="#">monthly</a>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal6">期間選択</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">DataExport</a>
-              <a class="dropdown-item" href="#">check</a>
+              <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
         </div>
@@ -568,6 +760,45 @@
         </div>
       </div>
     </div>
+
+<div class="modal fade" id="Modal6" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+            
+            
+                <div class="form-group">
+                  <label for="title">企画名</label>
+                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
+                    <option>Tシャツキャンペーン</option>
+                  </select>
+                </div>
+        
+                <div class="form-group">
+                <label for="logstart_date">期限</label>
+                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
+                </div>
+                <div class="form-group">
+                  <label for="logend_date">検証終了日</label>
+                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
+                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
+                </div>
+                   
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
 </div>
 
 @endsection
@@ -591,63 +822,188 @@
 
 
 <script>
-  var ctx = document.getElementById('chart1').getContext('2d');
-  
-var myChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-    datasets: [{
-      label: '再生数',
-      data: [200, 100, 500, 50, 30, 35, 10],
-      backgroundColor: "blue"
-    }, {
-      label: '目標数',
-      data: [2, 100, 500, 50, 200, 30, 15],
-      backgroundColor: "silver"
-    }]
-  }
-});
+        var ctx = document.getElementById('chart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
+                datasets: [{
+                    label: 'リーチ数',
+                    type: "bar",
+                   
+                    data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
+                    borderColor: "black",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: '開封数',
+                    type: "bar",
+                    
+                    data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
+                    borderColor: "blue",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: '開封率',
+                    type: "line",
+                    fill: false,
+                    data: [22, 23, 10, 15, 40, 35, 30],
+                    borderColor: "pink",
+                    
+                    yAxisID: "y-axis-2",
+                }]
+            },
+            options: {
+                
+                responsive: true,
+                scales: {
+                    yAxes: [{
+                        id: "y-axis-1",
+                        
+                        position: "left",
+                        ticks: {
+                            max: 15000,
+                            min: 0,
+                            stepSize: 1000
+                        },
+                    }, {
+                        id: "y-axis-2",
+                        
+                        position: "right",
+                        ticks: {
+                            max: 100,
+                            min: 0,
+                            stepSize: 20
+                        },
+                        
+                    }],
+                },
+            }
+        });
 </script>
 
 <script>
   var ctx = document.getElementById('chart2').getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['M', 'T', 'W', 'T', 'F'],
-    datasets: [{
-      label: '参加人数',
-      data: [2, 29, 5, 5, 2],
-      backgroundColor: "blue"
-    }, {
-      label: '枠数',
-      data: [2, 29, 5, 5, 2],
-      backgroundColor: "silver"
-    }]
-  }
-});
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
+                datasets: [{
+                    label: '開封数',
+                    type: "bar",
+                   
+                    data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
+                    borderColor: "black",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: 'セッション数',
+                    type: "bar",
+                    
+                    data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
+                    borderColor: "blue",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: '新規セッション率',
+                    type: "line",
+                    fill: false,
+                    data: [22, 23, 10, 15, 40, 35, 30],
+                    borderColor: "pink",
+                    
+                    yAxisID: "y-axis-2",
+                }]
+            },
+            options: {
+                
+                responsive: true,
+                scales: {
+                    yAxes: [{
+                        id: "y-axis-1",
+                        
+                        position: "left",
+                        ticks: {
+                            max: 15000,
+                            min: 0,
+                            stepSize: 1000
+                        },
+                    }, {
+                        id: "y-axis-2",
+                        
+                        position: "right",
+                        ticks: {
+                            max: 100,
+                            min: 0,
+                            stepSize: 20
+                        },
+                        
+                    }],
+                },
+            }
+        });
 </script>
+
 
 <script>
   var ctx = document.getElementById('chart3').getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: ['7.14', '7.15', '7.16', '7.17', '7.18'],
-    datasets: [{
-      label: '実績',
-      data: [50, 50, 60, 60, 50],
-      borderColor: "blue"
-    }, {
-      label: '目標',
-      data: [20, 60, 30, 50, 60],
-      borderColor: "silver"
-    }]
-  }
-});
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
+                datasets: [{
+                    label: 'セッション数',
+                    type: "bar",
+                   
+                    data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
+                    borderColor: "black",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: 'CV数',
+                    type: "bar",
+                    
+                    data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
+                    borderColor: "blue",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: 'CV率',
+                    type: "line",
+                    fill: false,
+                    data: [22, 23, 10, 15, 40, 35, 30],
+                    borderColor: "pink",
+                    
+                    yAxisID: "y-axis-2",
+                }]
+            },
+            options: {
+                
+                responsive: true,
+                scales: {
+                    yAxes: [{
+                        id: "y-axis-1",
+                        
+                        position: "left",
+                        ticks: {
+                            max: 15000,
+                            min: 0,
+                            stepSize: 1000
+                        },
+                    }, {
+                        id: "y-axis-2",
+                        
+                        position: "right",
+                        ticks: {
+                            max: 100,
+                            min: 0,
+                            stepSize: 20
+                        },
+                        
+                    }],
+                },
+            }
+        });
 </script>
-
 
 
 

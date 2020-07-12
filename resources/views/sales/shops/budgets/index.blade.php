@@ -12,7 +12,7 @@
 @section('content')
 
 <div class="container-fluid">
-<h1 class="h3 mb-2 text-gray-800">店舗予算管理</h1>
+<h1 class="h3 mb-2 text-gray-800">店舗予算</h1>
 <div class="container">
 
  

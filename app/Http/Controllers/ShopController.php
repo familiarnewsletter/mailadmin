@@ -16,6 +16,28 @@ class ShopController extends Controller
 	}
 
 
+	public function shopShow(){
+
+		return view ('sales.shops.list.show', [
+
+			// 'shops' => $shops,
+        
+		]);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	public function budgetsIndex(){
 

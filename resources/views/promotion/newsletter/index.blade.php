@@ -6,6 +6,9 @@
 
     <!--  datatables css -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+
 
 @endsection
 
@@ -34,7 +37,6 @@
   </ul>
 
   <div class="tab-content is-open" id="openingrate_index">
-
      <div class="container">
      <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
@@ -46,12 +48,9 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
               <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item" href="#">daily</a>
-              <a class="dropdown-item" href="#">weekly</a>
-              <a class="dropdown-item" href="#">monthly</a>
+             <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">期間選択</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">DataExport</a>
-              <a class="dropdown-item" href="#">check</a>
+              <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
         </div>
@@ -60,14 +59,54 @@
           <nav class="panel panel-default">
             
            
-    <canvas id="myChart"></canvas>
+            <canvas id="myChart"></canvas>
+          </div>
+          </nav>
+        </div>
+      </div>
   </div>
+  
+ <div class="modal fade" id="Modal1" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+            
+           
+              
+              
+               
+                <div class="form-group">
+                  <label for="title">企画名</label>
+                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
+                    <option>Tシャツキャンペーン</option>
+                  </select>
+                </div>
+        
+                <div class="form-group">
+                <label for="logstart_date">期限</label>
+                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
+                </div>
+                <div class="form-group">
+                  <label for="logend_date">検証終了日</label>
+                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
+                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
+                </div>
+                   
           </nav>
         </div>
       </div>
     </div>
-  
- 
+  </div>
+</div> 
   
  
   <div class="tab-content" id="session_index">
@@ -82,25 +121,151 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
               <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item" href="#">daily</a>
-              <a class="dropdown-item" href="#">weekly</a>
-              <a class="dropdown-item" href="#">monthly</a>
+             <a class="dropdown-item"data-toggle="modal" data-target="#Modal2">期間選択</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">DataExport</a>
-              <a class="dropdown-item" href="#">check</a>
+              <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
         </div>
         <div class="card-body">
           
           <nav class="panel panel-default">
-    <canvas id="myChart2"></canvas>
-    </nav>
+            <canvas id="myChart2"></canvas>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+     <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">セッション</h6>
+          <div class="dropdown no-arrow">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+              <div class="dropdown-header">menu:</div>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal2">期間選択</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">エクスポート</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+            <table id="table1" class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>No</th>
+                    <th>企画名</th>
+                    <th>ターゲットアイテム</th>
+                    <th>CV率</th>
+                    <th>詳細</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Tシャツキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>                
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Tシャツキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>           
+                </tr>
+                <tr>
+                    <td>3</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>              
+                </tr>
+                <tr>
+                    <td>4</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>              
+                </tr>
+                <tr>
+                    <td>5</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>               
+                </tr>
+                <tr>
+                    <td>6</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>               
+                </tr>
+
+                
+                </tbody>
+            </table>
+          </nav>
         </div>
       </div>
     </div>
   </div>
- 
+ <div class="modal fade" id="Modal2" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+           
+                <div class="form-group">
+                  <label for="title">企画名</label>
+                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
+                    <option>Tシャツキャンペーン</option>
+                  </select>
+                </div>
+        
+                <div class="form-group">
+                <label for="logstart_date">期限</label>
+                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
+                </div>
+                <div class="form-group">
+                  <label for="logend_date2">検証終了日</label>
+                  <input type="text" class="form-control" name="logend_date2" id="logend_date2" value="{{ old('logend_date2') }}" >
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
+                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
+                </div>
+                   
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
   <div class="tab-content" id="cvr_index">
   <div class="container">
      <div class="card shadow mb-4">
@@ -113,19 +278,41 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
               <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item" href="#">daily</a>
-              <a class="dropdown-item" href="#">weekly</a>
-              <a class="dropdown-item" href="#">monthly</a>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal3">期間選択</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">DataExport</a>
-              <a class="dropdown-item" href="#">check</a>
+              <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
         </div>
         <div class="card-body">
           
           <nav class="panel panel-default">
-              <table id="table1" class="table table-bordered">
+              <canvas id="myChart3"></canvas>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+     <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">CV率</h6>
+          <div class="dropdown no-arrow">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+              <div class="dropdown-header">menu:</div>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal3">期間選択</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">エクスポート</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+              <table id="table2" class="table table-bordered">
                 <thead>
                 <tr>
                     <th>No</th>
@@ -200,6 +387,49 @@
     </div>
   </div>
   </div>
+
+  </div>
+<div class="modal fade" id="Modal3" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+            
+           
+              
+              
+               
+                <div class="form-group">
+                  <label for="title">企画名</label>
+                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
+                    <option>Tシャツキャンペーン</option>
+                  </select>
+                </div>
+        
+                <div class="form-group">
+                <label for="logstart_date">期限</label>
+                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
+                </div>
+                <div class="form-group">
+                  <label for="logend_date">検証終了日</label>
+                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
+                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
+                </div>
+                   
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
     
   <div class="tab-content" id="newsletter_index">
     <div class="container">
@@ -213,12 +443,9 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
               <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item" href="#">daily</a>
-              <a class="dropdown-item" href="#">weekly</a>
-              <a class="dropdown-item" href="#">monthly</a>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal4">期間選択</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">DataExport</a>
-              <a class="dropdown-item" href="#">check</a>
+              <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
         </div>
@@ -226,13 +453,13 @@
           
           <nav class="panel panel-default">
   
-        <table id="table1" class="table table-bordered">
+        <table id="table3" class="table table-bordered">
                 <thead>
                 <tr>
                     <th>No</th>
                     <th>タイトル</th>
                     <th>配信日</th>
-                    <th>対象</th>
+                    <th>ステータス</th>
                     <th>詳細</th>
                 </tr>
                 </thead>
@@ -361,6 +588,47 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="Modal4" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+            
+           
+              
+              
+               
+                <div class="form-group">
+                  <label for="title">企画名</label>
+                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
+                    <option>Tシャツキャンペーン</option>
+                  </select>
+                </div>
+        
+                <div class="form-group">
+                <label for="logstart_date">期限</label>
+                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
+                </div>
+                <div class="form-group">
+                  <label for="logend_date">検証終了日</label>
+                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
+                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
+                </div>
+                   
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
 </div>
 
 @endsection
@@ -383,62 +651,188 @@
 <script src="/sb_admin_2/vendor/chart.js/Chart.bundle.js"></script>
 
 
-<script>
-  var ctx = document.getElementById('myChart').getContext('2d');
-  
-var myChart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-    datasets: [{
-      label: '実績',
-      data: [200, 100, 500, 50, 30, 35, 10],
-      backgroundColor: "silver"
-    }, {
-      label: '予算',
-      data: [2, 100, 500, 50, 200, 30, 15],
-      backgroundColor: "blue"
-    }]
-  }
-});
+ <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
+                datasets: [{
+                    label: 'リーチ数',
+                    type: "bar",
+                   
+                    data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
+                    borderColor: "black",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: '開封数',
+                    type: "bar",
+                    
+                    data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
+                    borderColor: "blue",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: '開封率',
+                    type: "line",
+                    fill: false,
+                    data: [22, 23, 10, 15, 40, 35, 30],
+                    borderColor: "pink",
+                    
+                    yAxisID: "y-axis-2",
+                }]
+            },
+            options: {
+                
+                responsive: true,
+                scales: {
+                    yAxes: [{
+                        id: "y-axis-1",
+                        
+                        position: "left",
+                        ticks: {
+                            max: 15000,
+                            min: 0,
+                            stepSize: 1000
+                        },
+                    }, {
+                        id: "y-axis-2",
+                        
+                        position: "right",
+                        ticks: {
+                            max: 100,
+                            min: 0,
+                            stepSize: 20
+                        },
+                        
+                    }],
+                },
+            }
+        });
 </script>
 
 <script>
   var ctx = document.getElementById('myChart2').getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['M', 'T', 'W', 'T', 'F'],
-    datasets: [{
-      label: '実績',
-      data: [2, 29, 5, 5, 2],
-      backgroundColor: "blue"
-    }, {
-      label: '予算',
-      data: [2, 29, 5, 5, 2],
-      backgroundColor: "silver"
-    }]
-  }
-});
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
+                datasets: [{
+                    label: '開封数',
+                    type: "bar",
+                   
+                    data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
+                    borderColor: "black",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: 'セッション数',
+                    type: "bar",
+                    
+                    data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
+                    borderColor: "blue",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: '新規セッション率',
+                    type: "line",
+                    fill: false,
+                    data: [22, 23, 10, 15, 40, 35, 30],
+                    borderColor: "pink",
+                    
+                    yAxisID: "y-axis-2",
+                }]
+            },
+            options: {
+                
+                responsive: true,
+                scales: {
+                    yAxes: [{
+                        id: "y-axis-1",
+                        
+                        position: "left",
+                        ticks: {
+                            max: 15000,
+                            min: 0,
+                            stepSize: 1000
+                        },
+                    }, {
+                        id: "y-axis-2",
+                        
+                        position: "right",
+                        ticks: {
+                            max: 100,
+                            min: 0,
+                            stepSize: 20
+                        },
+                        
+                    }],
+                },
+            }
+        });
 </script>
+
 
 <script>
   var ctx = document.getElementById('myChart3').getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'pie',
-  data: {
-    labels: ['M', 'T', 'W', 'T', 'F'],
-    datasets: [{
-      label: 'sales',
-      data: [2, 29, 5, 5, 2],
-      backgroundColor: "blue"
-    }, {
-      label: 'budgets',
-      data: [2, 29, 5, 5, 2],
-      backgroundColor: "silver"
-    }]
-  }
-});
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
+                datasets: [{
+                    label: 'セッション数',
+                    type: "bar",
+                   
+                    data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
+                    borderColor: "black",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: 'CV数',
+                    type: "bar",
+                    
+                    data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
+                    borderColor: "blue",                         // 棒の枠線の色
+　　　　　　　　　　    borderWidth: 2, 
+                    yAxisID: "y-axis-1",
+                }, {
+                    label: 'CV率',
+                    type: "line",
+                    fill: false,
+                    data: [22, 23, 10, 15, 40, 35, 30],
+                    borderColor: "pink",
+                    
+                    yAxisID: "y-axis-2",
+                }]
+            },
+            options: {
+                
+                responsive: true,
+                scales: {
+                    yAxes: [{
+                        id: "y-axis-1",
+                        
+                        position: "left",
+                        ticks: {
+                            max: 15000,
+                            min: 0,
+                            stepSize: 1000
+                        },
+                    }, {
+                        id: "y-axis-2",
+                        
+                        position: "right",
+                        ticks: {
+                            max: 100,
+                            min: 0,
+                            stepSize: 20
+                        },
+                        
+                    }],
+                },
+            }
+        });
 </script>
 
 
@@ -448,6 +842,8 @@ var myChart = new Chart(ctx, {
 <script>
     jQuery(function($){ 
     $("#table1").DataTable(); 
+    $("#table2").DataTable();
+    $("#table3").DataTable(); 
 }); 
 </script>
 

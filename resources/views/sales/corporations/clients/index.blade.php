@@ -5,6 +5,8 @@
 
     <!--  datatables css -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
 
 @endsection
 
@@ -31,9 +33,27 @@
   </ul>
 
   <div class="tab-content is-open" id="clients_index">
-   <div class="container">
-
-    <div class="col-xs-12">
+    <div class="container">
+   <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">企画概要</h6>
+          <div class="dropdown no-arrow">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+              <div class="dropdown-header">menu:</div>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">エリア選択</a>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal2">カテゴリ選択</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">エクスポート</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
         <table id="table1" class="table table-bordered">
             <thead>
             <tr>
@@ -50,7 +70,7 @@
                 <td>Aホスピタル</td>
                 <td>クリニック</td>
                 <td>300000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                <td><a href="/corporations/clients/show" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
                   </a></td>                
             </tr>
@@ -112,9 +132,83 @@
             
             </tbody>
         </table>
+      </nav>
+    </div>
     </div>
 </div>
   </div>
+
+  <div class="modal fade" id="Modal1" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+            
+           
+              
+              
+               
+                <div class="form-group">
+                  <label for="title">エリア選択</label>
+                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
+                    <option>北海道・東北</option>
+                    <option>関東</option>
+                    <option>東京</option>
+                    <option>北信越・中部</option>
+                    <option>名古屋</option>
+                    <option>神戸・兵庫</option>
+                    <option>大阪</option>
+                    <option>近畿</option>
+                  </select>
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
+                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
+                </div>
+                   
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<div class="modal fade" id="Modal2" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">カテゴリ</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+              <div class="form-group">
+                  <label for="title">カテゴリ選択</label>
+                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
+                    <option>企業</option>
+                    <option>自治体</option>
+                    <option>教育機関</option>
+                    <option>クリニック</option>
+                    <option>その他</option>
+                  </select>
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
+                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
+                </div>
+                   
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
       <div class="tab-content" id="clients_create">
       	 <div class="container"> 
           <div class="card shadow mb-4">
@@ -157,6 +251,14 @@
                       <label for="remarks">備考</label>
                       <input type="text" class="form-control" name="remarks" id="remarks" value="{{ old('remarks') }}" />
                     </div>
+                    <div class="form-group">
+                      <label for="files">画像</label>
+                      <div class="custom-file">
+                          <input type="file" name="image" class="custom-file-input">
+                          <label class="custom-file-label">画像選択</label>
+                      </div>
+                    </div>
+
                     <div class="text-right">
                       <button type="submit" class="btn btn-primary">登録</button>
                     </div>
