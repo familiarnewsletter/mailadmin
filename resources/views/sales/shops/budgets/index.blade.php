@@ -1,69 +1,68 @@
 @extends('layout')
 
 @section('styles')
-<!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
     <!--  datatables css -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
 
 @endsection
 
 @section('content')
 
 <div class="container-fluid">
-<h1 class="h3 mb-2 text-gray-800">店舗予算</h1>
+<h1 class="h3 mb-2 text-gray-800">予算管理</h1>
 <div class="container">
 
- 
 
   <ul class="tab-list" id="tab-1">
  
     <li class="tab-item is-open">
-      <a href="#monthly_budget" data-toggle>月別</a>
+      <a href="#sales_index" data-toggle>売上予算</a>
     </li>
     <li class="tab-item">
-      <a href="#weekly_budget" data-toggle>週別</a>
+      <a href="#expense_index" data-toggle>経費予算</a>
     </li>
     <li class="tab-item">
-      <a href="#daily_budget" data-toggle>日別</a>
+      <a href="#profit_index" data-toggle>利益予算</a>
     </li>
-
+    
+ 
   </ul>
 
-  <div class="tab-content is-open" id="monthly_budget">
-
-    <div align="right">
-   <select name=”year”>
-
-      <option value=”Feb”>Feb</option>
-      <option value=”Mar”>Mar</option>
-      <option value=”Apr”>Apr</option>
-      <option value=”May”>May</option>
-      <option value=”Jun”>Jun</option>
-      <option value=”Jul”>Jul</option>
-      <option value=”Aug”>Aug</option>
-      <option value=”Sep”>Sep</option>
-      <option value=”Oct”>Oct</option>
-      <option value=”Nov”>Nov</option>
-      <option value=”Dec”>Dec</option>
-      <option value=”Jan”>Jan</option>
- 
-    </select>
-  </div>
-   
-   
-
-<div class="container">
-
-    <div class="col-xs-12">
+  <div class="tab-content is-open" id="sales_index">
+    <div class="container">
+   <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">年間売上</h6>
+          <div class="dropdown no-arrow">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+              <div class="dropdown-header">menu:</div>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">エリア選択</a>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal2">カテゴリ選択</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">編集</a>
+               <a class="dropdown-item" href="#">削除</a>
+              <a class="dropdown-item" href="#">エクスポート</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
         <table id="table1" class="table table-bordered">
             <thead>
             <tr>
                 <th>No</th>
                 <th>店名</th>
                 <th>エリア</th>
-                <th>月別予算</th>
+                <th>年間予算</th>
                 <th>詳細</th>
             </tr>
             </thead>
@@ -73,7 +72,7 @@
                 <td>銀座店</td>
                 <td>東京</td>
                 <td>300000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                <td><a href="/shops/budgets/show_monthly_budget" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
                   </a></td>                
             </tr>
@@ -187,33 +186,114 @@
             </tr>
             </tbody>
         </table>
+      </nav>
+    </div>
     </div>
 </div>
-
-
-
   </div>
-  <div class="tab-content" id="weekly_budget">
-    <div align="right">
-   <select name=”year”>
 
-      <option value=”1w”>1w</option>
-      <option value=”2w”>2w</option>
-      <option value=”3w”>3w</option>
-      <option value=”4w”>4w</option>
- 
-    </select>
+  <div class="modal fade" id="Modal1" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+            
+           
+              
+              
+               
+                <div class="form-group">
+                  <label for="title">エリア選択</label>
+                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
+                    <option>北海道・東北</option>
+                    <option>関東</option>
+                    <option>東京</option>
+                    <option>北信越・中部</option>
+                    <option>名古屋</option>
+                    <option>神戸・兵庫</option>
+                    <option>大阪</option>
+                    <option>近畿</option>
+                  </select>
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
+                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
+                </div>
+                   
+          </nav>
+        </div>
+      </div>
+    </div>
   </div>
-  	<div class="container">
+</div> 
 
-    <div class="col-xs-12">
+<div class="modal fade" id="Modal2" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">カテゴリ</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+              <div class="form-group">
+                  <label for="title">カテゴリ選択</label>
+                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
+                    <option>企業</option>
+                    <option>自治体</option>
+                    <option>教育機関</option>
+                    <option>クリニック</option>
+                    <option>その他</option>
+                  </select>
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
+                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
+                </div>
+                   
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+      <div class="tab-content" id="expense_index">
+         <div class="container">
+   <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">年間経費</h6>
+          <div class="dropdown no-arrow">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+              <div class="dropdown-header">menu:</div>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">エリア選択</a>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal2">カテゴリ選択</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">編集</a>
+               <a class="dropdown-item" href="#">削除</a>
+              <a class="dropdown-item" href="#">エクスポート</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
         <table id="table2" class="table table-bordered">
             <thead>
             <tr>
                 <th>No</th>
                 <th>店名</th>
                 <th>エリア</th>
-                <th>週別予算</th>
+                <th>年間予算</th>
                 <th>詳細</th>
             </tr>
             </thead>
@@ -223,7 +303,7 @@
                 <td>銀座店</td>
                 <td>東京</td>
                 <td>300000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                <td><a href="/shops/list/show" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
                   </a></td>                
             </tr>
@@ -337,34 +417,42 @@
             </tr>
             </tbody>
         </table>
+      </nav>
     </div>
-  </div>
+    </div>
 </div>
-      
-  <div class="tab-content" id="daily_budget">
-    <div align="right">
-   <select name=”year”>
-
-      <option value=”mon”>Monday</option>
-      <option value=”tue”>Tuesday</option>
-      <option value=”wed”>Wednesday</option>
-      <option value=”thi”>Thirsday</option>
-      <option value=”fri”>Friday</option>
-      <option value=”sat”>Saturday</option>
-      <option value=”sun”>Sunday</option>
- 
-    </select>
   </div>
-    <div class="container">
-
-    <div class="col-xs-12">
+  <div class="tab-content" id="profit_index">
+     <div class="container">
+   <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">年間利益</h6>
+          <div class="dropdown no-arrow">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+              <div class="dropdown-header">menu:</div>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">エリア選択</a>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal2">カテゴリ選択</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">編集</a>
+               <a class="dropdown-item" href="#">削除</a>
+              <a class="dropdown-item" href="#">エクスポート</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
         <table id="table3" class="table table-bordered">
             <thead>
             <tr>
                 <th>No</th>
                 <th>店名</th>
                 <th>エリア</th>
-                <th>日別予算</th>
+                <th>年間予算</th>
                 <th>詳細</th>
             </tr>
             </thead>
@@ -374,7 +462,7 @@
                 <td>銀座店</td>
                 <td>東京</td>
                 <td>300000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                <td><a href="/shops/list/show" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
                   </a></td>                
             </tr>
@@ -488,105 +576,36 @@
             </tr>
             </tbody>
         </table>
+      </nav>
     </div>
-  </div>
- </div>
-
+    </div>
 </div>
-
-
+  </div>
+  </div>
 
 
 @endsection
 
 @section('scripts')
 
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
-<script src="/sb_admin_2/vendor/jquery/jquery.min.js"></script>
+<script src="/sb_admin_2/vendor/jquery/jquery.js"></script>
   
   <!-- Core plugin JavaScript-->
-  <script src="/sb_admin_2/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="/sb_admin_2/vendor/jquery-easing/jquery.easing.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="/sb_admin_2/js/sb-admin-2.min.js"></script>
+  <script src="/sb_admin_2/js/sb-admin-2.js"></script>
 
   <!-- Page level plugins -->
-  <script src="/sb_admin_2/vendor/datatables/jquery.dataTables.min.js"></script>
-  <script src="/sb_admin_2/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <script src="/sb_admin_2/vendor/datatables/jquery.dataTables.js"></script>
+  <script src="/sb_admin_2/vendor/datatables/dataTables.bootstrap4.js"></script>
 
   
 <script>
     jQuery(function($){ 
-    $("#table1").DataTable(); 
-    $("#table2").DataTable(); 
-    $("#table3").DataTable(); 
+    $("#table1").DataTable();
+    $("#table2").DataTable();
+    $("#table3").DataTable();   
 }); 
 </script>
-
-
- 
-  <script src="/sb_admin_2/js/sb-admin-2.js"></script>
-   <script src="/sb_admin_2/vendor/chart.js/Chart.js"></script>
-   <script src="/sb_admin_2/vendor/chart.js/Chart.bundle.js"></script>
-
-<script>
-  var ctx = document.getElementById('table1').getContext('2d');
-  var data_list = <?php echo json_encode($data_list); ?>;
-var myChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan'],
-    datasets: [{
-      label: 'budgets',
-      data: data_list,
-      backgroundColor: "silver"
-    }, {
-      label: 'sales',
-      data: [2, 100, 500, 50, 2, 3, 100, 2, 100, 500, 50, 2, 3, 1000, ],
-      backgroundColor: "blue"
-    }]
-  }
-});
-</script>
-<script>
-  var ctx = document.getElementById('table2').getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['1w', '2w', '3w', '4w', '5w'],
-    datasets: [{
-      label: 'budgets',
-      data: [200, 1000, 500, 500, 200],
-      backgroundColor: "silver"
-    }, {
-      label: 'sales',
-      data: [200, 100, 500, 500, 200],
-      backgroundColor: "blue"
-    }]
-  }
-});
-</script>
-
-<script>
-  var ctx = document.getElementById('table3').getContext('2d');
-  var data_list = <?php echo json_encode($data_list); ?>;
-var myChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-    datasets: [{
-      label: 'budgets',
-      data: [200, 100, 500, 50, 200, 30, 100],
-      backgroundColor: "silver"
-    }, {
-      label: 'sales',
-      data: [200, 100, 500, 50, 200, 30, 100],
-      backgroundColor: "blue"
-    }]
-  }
-});
-</script>
-
-
 @endsection

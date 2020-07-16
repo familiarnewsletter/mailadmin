@@ -9,89 +9,33 @@
 
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
-<style type="text/css">
-  
-    .swiper-slide {
-        text-align: center;
-        
-    }
-</style>
+
 
 @endsection
 
 @section('content')
 <div class="container-fluid">
-<h1 class="h3 mb-2 text-gray-800">企画詳細</h1>
+<h1 class="h3 mb-2 text-gray-800">日別予実</h1>
 <div class="container">
 
 
   <ul class="tab-list" id="tab-1">
  
     <li class="tab-item is-open">
-      <a href="#promotion_show" data-toggle>企画概要</a>
+      <a href="#shops_show" data-toggle>日別予算</a>
     </li>
     <li class="tab-item">
-      <a href="#budget_show" data-toggle>予算・実績</a>
+      <a href="#budget_show" data-toggle>詳細データ</a><!-- ブランド別とか -->
     </li>
   </ul>
 
 
-<!--------------------- Promotion ---------------------------------->
+<!--------------------- shops ---------------------------------->
 
-  <div class="tab-content is-open" id="promotion_show">
+  <div class="tab-content is-open" id="shops_show">
 
      <div class="container">
-     <div class="card shadow mb-4">
-        <!-- Card Header - Dropdown -->
-        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">企画概要</h6>
-          <div class="dropdown no-arrow">
-            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
-              <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">期間選択</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">編集</a>
-               <a class="dropdown-item" href="#">削除</a>
-              <a class="dropdown-item" href="#">エクスポート</a>
-            </div>
-          </div>
-        </div>
-        <div class="card-body">
-          
-          <nav class="panel panel-default">
-            
-                   
-          <!-- Swiper START -->
-          <div class="swiper-container">
-            <!-- メイン表示部分 -->
-            <div class="swiper-wrapper">
-              <!-- 各スライド -->
-              <div class="swiper-slide"><img src="/images/fabric1.jpg" width="800" height="600" alt=""></div>
-              <div class="swiper-slide"><img src="/images/fabric2.jpg" width="800" height="600" alt=""></div>
-              <div class="swiper-slide"><img src="/images/towel1.jpg" width="800" height="600" alt=""></div>
-              <div class="swiper-slide"><img src="/images/towels2.jpg" width="800" height="600" alt=""></div>
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div><br>
-          <!-- Swiper END -->
-          <p>
-            これはダミーの企画です。ダミー以外の何ものでもありません。これはダミーの企画です。ダミー以外の何ものでもありません。これはダミーの企画です。ダミー以外の何ものでもありません。
-          </p>
-          <p>
-            これはダミーの企画です。ダミー以外の何ものでもありません。これはダミーの企画です。ダミー以外の何ものでもありません。これはダミーの企画です。ダミー以外の何ものでもありません。
-          </p>
-
-          
-          </div>
-          </nav>
-        </div>
-      </div>
-
+     
        <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -104,56 +48,386 @@
               <div class="dropdown-header">menu:</div>
               <a class="dropdown-item"data-toggle="modal" data-target="#Modal2">期間選択</a>
               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">編集</a>
+               <a class="dropdown-item" href="#">削除</a>
               <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
         </div>
         <div class="card-body">
-          
+          <!-- foreachで日数をカウントして使う -->
           <nav class="panel panel-default">
              <table id="table" class="table table-bordered">
                 <thead>
                 <tr>
-                    <th>項目</th>
-                    <th>詳細</th>
+                    <th>日</th>
+                    <th>本年実績</th>
+                    <th>本年予算</th>
+                    <th>前年実績</th>
+                    <th>本年客数</th>
+                    <th>前年客数</th>
+                    <th>修正</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td>企画名</td>
-                    <td>aaa</td>
+                    <td>1日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
                                 
                 </tr>
                 <tr>
-                    <td>企画趣旨</td>
-                    <td>aaa</td>
-                           
+                     <td>2日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
                 </tr>
                 <tr>
-                    <td>対象</td>
-                   <td>aaa</td>
-                              
+                     <td>3日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
                 </tr>
                 <tr>
-                    <td>ターゲットアイテム</td>
-                   <td>aaa</td>
-                              
+                     <td>4日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
                 </tr>
                 <tr>
-                    <td>予算</td>
-                   <td>aaa</td>
-                               
+                     <td>5日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
                 </tr>
                 <tr>
-                    <td>実施期間</td>
-                   <td>aaa</td>
-                               
+                     <td>6日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>  
                 </tr>
 
                 <tr>
-                    <td>告知日</td>
-                   <td>aaa</td>
-                               
+                     <td>7日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+
+                <tr>
+                     <td>8日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+
+                <tr>
+                     <td>9日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+
+                <tr>
+                     <td>10日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+
+                <tr>
+                    <td>11日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+
+                <tr>
+                     <td>12日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+
+                <tr>
+                    <td>13日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                                
+                </tr>
+                <tr>
+                     <td>14日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+                <tr>
+                     <td>15日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+                <tr>
+                     <td>16日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+                <tr>
+                     <td>17日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+                <tr>
+                     <td>18日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>  
+                </tr>
+
+                <tr>
+                     <td>19日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+
+                <tr>
+                     <td>20日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+
+                <tr>
+                     <td>21日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+
+                <tr>
+                     <td>22日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+
+                <tr>
+                    <td>23日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+
+                <tr>
+                     <td>24日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+
+                <tr>
+                    <td>25日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                                
+                </tr>
+                <tr>
+                     <td>26日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+                <tr>
+                     <td>27日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+                <tr>
+                     <td>28日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+                <tr>
+                     <td>29日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
+                </tr>
+                <tr>
+                     <td>30日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>  
+                </tr>
+
+                <tr>
+                     <td>31日</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td>10,000,000</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>
                 </tr>
 
                 
@@ -268,8 +542,6 @@
               <div class="dropdown-header">menu:</div>
               <a class="dropdown-item"data-toggle="modal" data-target="#Modal3">期間選択</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">編集</a>
-               <a class="dropdown-item" href="#">削除</a>
               <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
@@ -284,7 +556,7 @@
       <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">アイテム別予算・実績</h6>
+          <h6 class="m-0 font-weight-bold text-primary">売上履歴</h6>
           <div class="dropdown no-arrow">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -293,6 +565,8 @@
               <div class="dropdown-header">menu:</div>
               <a class="dropdown-item"data-toggle="modal" data-target="#Modal4">期間選択</a>
               <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">編集</a>
+               <a class="dropdown-item" href="#">削除</a>
               <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
@@ -305,80 +579,66 @@
                 <thead>
                 <tr>
                     <th>No</th>
-                    <th>品番</th>
-                    <th>品名</th>
-                    <th>売上</th>
-                    <th>数量</th>
-                    <th>予算比</th>
+                    <th>企画名</th>
+                    <th>ターゲットアイテム</th>
+                    <th>CV率</th>
                     <th>詳細</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td>1</td>
-                    <td>150005</td>
-                    <td>肌着</td>
-                    <td>500,000</td>
-                    <td>500</td>
-                    <td>150%</td>
+                    <td>Tシャツキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
                     <td><a href="#" class="btn btn-info btn-circle btn-sm">
                         <i class="fas fa-info-circle"></i>
                       </a></td>                
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>150005</td>
-                    <td>肌着</td>
-                    <td>500,000</td>
-                    <td>500</td>
-                    <td>150%</td>
+                    <td>Tシャツキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
                     <td><a href="#" class="btn btn-info btn-circle btn-sm">
                         <i class="fas fa-info-circle"></i>
-                      </a></td>             
+                      </a></td>           
                 </tr>
                 <tr>
                     <td>3</td>
-                   <td>150005</td>
-                    <td>肌着</td>
-                    <td>500,000</td>
-                    <td>500</td>
-                    <td>150%</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
                     <td><a href="#" class="btn btn-info btn-circle btn-sm">
                         <i class="fas fa-info-circle"></i>
-                      </a></td>                
+                      </a></td>              
                 </tr>
                 <tr>
                     <td>4</td>
-                   <td>150005</td>
-                    <td>肌着</td>
-                    <td>500,000</td>
-                    <td>500</td>
-                    <td>150%</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
                     <td><a href="#" class="btn btn-info btn-circle btn-sm">
                         <i class="fas fa-info-circle"></i>
-                      </a></td>                
+                      </a></td>              
                 </tr>
                 <tr>
                     <td>5</td>
-                   <td>150005</td>
-                    <td>肌着</td>
-                    <td>500,000</td>
-                    <td>500</td>
-                    <td>150%</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
                     <td><a href="#" class="btn btn-info btn-circle btn-sm">
                         <i class="fas fa-info-circle"></i>
-                      </a></td>                  
+                      </a></td>               
                 </tr>
                 <tr>
                     <td>6</td>
-                   <td>150005</td>
-                    <td>肌着</td>
-                    <td>500,000</td>
-                    <td>500</td>
-                    <td>150%</td>
+                   <td>UGCキャンペーン</td>
+                    <td><a href="#">リスト１</a></td>
+                    <td>50%</td>
                     <td><a href="#" class="btn btn-info btn-circle btn-sm">
                         <i class="fas fa-info-circle"></i>
-                      </a></td>                 
+                      </a></td>               
                 </tr>
 
                 
@@ -511,7 +771,7 @@
             data: {
                 labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
                 datasets: [{
-                    label: 'リーチ数',
+                    label: '予算',
                     type: "bar",
                    
                     data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
@@ -519,7 +779,7 @@
 　　　　　　　　　　    borderWidth: 2, 
                     yAxisID: "y-axis-1",
                 }, {
-                    label: '開封数',
+                    label: '実績',
                     type: "bar",
                     
                     data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
@@ -527,7 +787,7 @@
 　　　　　　　　　　    borderWidth: 2, 
                     yAxisID: "y-axis-1",
                 }, {
-                    label: '開封率',
+                    label: '予算比',
                     type: "line",
                     fill: false,
                     data: [22, 23, 10, 15, 40, 35, 30],
@@ -575,29 +835,4 @@
     $("#table1").DataTable(); 
 }); 
 </script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
-<script type="text/javascript">
-  var mySwiper = new Swiper('.swiper-container', {
-  effect: 'flip',
-  autoplay: {
-    delay: 3000,
-    stopOnLastSlide: false,
-    disableOnInteraction: false,
-    reverseDirection: false
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true
-  }
-});
-</script>
-
-
 @endsection

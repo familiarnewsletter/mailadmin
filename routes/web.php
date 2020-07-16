@@ -61,7 +61,10 @@ Route::post('/shops/list/{shop_id}/delete', 'ShopController@shopDelete')->name('
 
 Route::get('/shops/budgets/index', 'ShopController@budgetsIndex')->name('shop_budgets.index');
 
-Route::get('/shops/budgets/show/{budget_id}', 'ShopController@budgetsShow')->name('shop_budgets.show');
+//Route::get('/shops/budgets/show/{budget_id}', 'ShopController@budgetsShow')->name('shop_budgets.show');
+Route::get('/shops/budgets/show_monthly_budget', 'ShopController@budgetShowMonthlyBudget')->name('shop_budgets.show_monthly_budget');
+Route::get('/shops/budgets/show_daily_budget', 'ShopController@budgetShowDailyBudget')->name('shop_budgets.show_daily_budget');
+
 
 Route::get('/shops/budgets/create', 'ShopController@budgetsCreate')->name('shop_budgets.create');
 Route::post('/shops/budgets/create', 'ShopController@budgetsStore')->name('shop_budgets.store');
@@ -84,22 +87,6 @@ Route::post('/shops/budgets/{budget_id}/delete', 'ShopController@budgetsDelete')
 // Route::post('/shop_stock/{shop_id}/edit', 'ShopController@stockUpdate')->name('shop_stock.update');
 
 // Route::post('/shop_stock/{shop_id}/', 'ShopController@stockDelete')->name('shop_stock.delete'); 
-
-
-
-Route::get('/shops/orders/index', 'ShopController@ordersIndex')->name('shop_orders.index');
-
-Route::get('/shops/orders/show/{shop_id}', 'ShopController@ordersShow')->name('shop_orders.show');
-
-Route::get('/shops/orders/create', 'ShopController@ordersCreate')->name('shop_orders.create');
-Route::post('/shops/orders/create', 'ShopController@ordersStore')->name('shop_orders.store');
-
-Route::get('/shops/orders/{shop_id}/edit/{shop_order_id}', 'ShopController@ordersEdit')->name('shop_orders.edit');
-Route::post('/shops/orders/{shop_id}/edit/{shop_order_id}', 'ShopController@ordersUpdate')->name('shop_orders.update');
-
-Route::post('/shops/orders/{shop_id}/delete/{shop_order_id}', 'ShopController@ordersDelete')->name('shop_orders.delete'); 
-
-
 
 
 
@@ -137,7 +124,10 @@ Route::post('/corporations/budgets/{corporation_id}/delete', 'CorporationControl
 
 Route::get('/corporations/orders/index', 'CorporationController@ordersIndex')->name('corporation_orders.index');
 
-Route::get('/corporations/orders/show/{corporation_id}', 'CorporationController@ordersShow')->name('corporation_orders.show');
+//Route::get('/corporations/orders/show/{corporation_id}', 'CorporationController@ordersShow')->name('corporation_orders.show');
+Route::get('/corporations/orders/show', 'CorporationController@ordersShow')->name('corporation_orders.show');
+
+
 
 Route::get('/corporations/orders/create', 'CorporationController@ordersCreate')->name('corporation_orders.create');
 Route::post('/corporations/orders/create', 'CorporationController@ordersStore')->name('corporation_orders.store');
@@ -148,9 +138,25 @@ Route::post('/corporations/orders/{corporation_id}/edit', 'CorporationController
 Route::post('/corporations/orders/{corporation_id}/delete', 'CorporationController@ordersDelete')->name('corporation_orders.delete'); 
 
 
+
+
+Route::get('/corporations/orderlist/show', 'CorporationController@ordersListShow')->name('corporation_orderslist.show');
+
+Route::get('/corporations/orderslist/create', 'CorporationController@ordersListCreate')->name('corporation_orderslist.create');
+Route::post('/corporations/orderslist/create', 'CorporationController@ordersListStore')->name('corporation_orderslist.store');
+
+Route::get('/corporations/orders/{orderslist_id}/edit', 'CorporationController@ordersListEdit')->name('corporation_orderslist.edit');
+Route::post('/corporations/orders/{orderslist_id}/edit', 'CorporationController@ordersListUpdate')->name('corporation_orderslist.update');
+
+Route::post('/corporations/orders/{orderslist_id}/delete', 'CorporationController@ordersListDelete')->name('corporation_oorderslist.delete'); 
+
+
+
+
 Route::get('/corporations/invoices/index', 'CorporationController@invoicesIndex')->name('corporation_invoices.index');
 
-Route::get('/corporations/invoices/show/{corporation_id}', 'CorporationController@invoicesShow')->name('corporation_invoices.show');
+//Route::get('/corporations/invoices/show/{corporation_id}', 'CorporationController@invoicesShow')->name('corporation_invoices.show');
+Route::get('/corporations/invoices/show', 'CorporationController@invoicesShow')->name('corporation_invoices.show');
 
 Route::get('/corporations/invoices/create', 'CorporationController@invoicesCreate')->name('corporation_invoices.create');
 Route::post('/corporations/invoices/create', 'CorporationController@invoicesStore')->name('corporation_invoices.store');
@@ -159,7 +165,6 @@ Route::get('/corporations/invoices/{corporation_id}/edit', 'CorporationControlle
 Route::post('/corporations/invoices/{corporation_id}/edit', 'CorporationController@invoicesUpdate')->name('corporation_invoices.update');
 
 Route::post('/corporations/invoices/{corporation_id}/delete', 'CorporationController@invoicesDelete')->name('corporation_invoices.delete'); 
-
 
 
 

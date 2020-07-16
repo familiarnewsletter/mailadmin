@@ -43,7 +43,7 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
               <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">期間選択</a>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">絞り込み</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/promotion/list/create">新規作成</a>
               <a class="dropdown-item" href="#">エクスポート</a>
@@ -53,6 +53,7 @@
         <table id="table1" class="table table-bordered">
             <thead>
             <tr>
+                <th>ID</th>
                 <th>品番</th>
                 <th>品名</th>
                 <th>カテゴリ</th>
@@ -62,15 +63,17 @@
             </thead>
             <tbody>
             <tr>
+                <td>1</td>
                 <td>100200</td>
-                <td>Tシャツ</td>
-                <td>トップス</td>
+                <td>ネックレス</td>
+                <td>雑貨</td>
                 <td>5,000</td>
                 <td><a href="/products/list/show" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
                   </a></td>                
             </tr>
             <tr>
+                <td>2</td>
                  <td>100200</td>
                 <td>Tシャツ</td>
                 <td>トップス</td>
@@ -80,6 +83,7 @@
                   </a></td>         
             </tr>
             <tr>
+                  <td>3</td>
                  <td>100200</td>
                 <td>Tシャツ</td>
                 <td>トップス</td>
@@ -89,6 +93,7 @@
                   </a></td>      
             </tr>
             <tr>
+                  <td>4</td>
                 <td>100200</td>
                 <td>Tシャツ</td>
                 <td>トップス</td>
@@ -98,6 +103,7 @@
                   </a></td>       
             </tr>
             <tr>
+                  <td>5</td>
                  <td>100200</td>
                 <td>Tシャツ</td>
                 <td>トップス</td>
@@ -107,15 +113,17 @@
                   </a></td>       
             </tr>
             <tr>
+                  <td>6</td>
                  <td>100200</td>
-                <td>Tシャツ</td>
-                <td>トップス</td>
+                <td>パンツ</td>
+                <td>ボトムス</td>
                 <td>5,000</td>
                 <td><a href="#" class="btn btn-info btn-circle btn-sm">
                     <i class="fas fa-info-circle"></i>
                   </a></td>        
             </tr>
             <tr>
+                  <td>7</td>
                  <td>100200</td>
                 <td>Tシャツ</td>
                 <td>トップス</td>
@@ -125,6 +133,7 @@
                   </a></td>       
             </tr>
             <tr>
+                  <td>8</td>
                 <td>100200</td>
                 <td>Tシャツ</td>
                 <td>トップス</td>
@@ -133,57 +142,13 @@
                     <i class="fas fa-info-circle"></i>
                   </a></td>    
             </tr>
-            <tr>
-                 <td>100200</td>
-                <td>Tシャツ</td>
-                <td>トップス</td>
-                <td>5,000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>    
-            </tr>
-            <tr>
-                 <td>100200</td>
-                <td>Tシャツ</td>
-                <td>トップス</td>
-                <td>5,000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>       
-            </tr>
-            <tr>
-                 <td>100200</td>
-                <td>Tシャツ</td>
-                <td>トップス</td>
-                <td>5,000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>         
-            </tr>
-            <tr>
-                 <td>100200</td>
-                <td>Tシャツ</td>
-                <td>トップス</td>
-                <td>5,000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>        
-            </tr>
-            <tr>
-                 <td>100200</td>
-                <td>Tシャツ</td>
-                <td>トップス</td>
-                <td>5,000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>         
-            </tr>
+           
             </tbody>
         </table>
     </div>
 </div>
-  </div>
-  </div>
+  
+  
   </div>
   <div class="tab-content" id="products_create">
   	 <div class="container"> 

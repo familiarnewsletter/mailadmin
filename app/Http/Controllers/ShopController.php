@@ -51,18 +51,30 @@ class ShopController extends Controller
 	}
 
 
+	public function budgetShowMonthlyBudget(){
+
+		
+		return view ('sales.shops.budgets.show_monthly_budget', [
+
+			
+        
+		]);
+	}
 
 
 
+	public function budgetShowDailyBudget(){
 
-	public function ordersIndex(){
-
-		return view ('sales.shops.orders.index', [
+		return view ('sales.shops.budgets.show_daily_budget', [
 
 			// 'shops' => $shops,
         
 		]);
 	}
+
+
+
+	
 
 	
 

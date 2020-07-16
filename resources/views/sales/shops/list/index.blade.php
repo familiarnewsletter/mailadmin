@@ -24,10 +24,7 @@
     <li class="tab-item">
       <a href="#shops_create" data-toggle>店舗登録</a>
     </li>
-    <li class="tab-item">
-      <a href="#action_index" data-toggle>アクションシート</a>
-    </li>
- 
+
   </ul>
 
   <div class="tab-content is-open" id="shops_index">
@@ -35,155 +32,155 @@
     
 
 
-<div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">店舗一覧</h6>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
-                      <div class="dropdown-header">menu:</div>
-                      <a class="dropdown-item"data-toggle="modal" data-target="#Modal4">期間選択</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">エクスポート</a>
-                    </div>
+  <div class="card shadow mb-4">
+              <!-- Card Header - Dropdown -->
+              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">店舗一覧</h6>
+                <div class="dropdown no-arrow">
+                  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+                    <div class="dropdown-header">menu:</div>
+                    <a class="dropdown-item"data-toggle="modal" data-target="#Modal4">期間選択</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">エクスポート</a>
                   </div>
                 </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                
-        <table id="table1" class="table table-bordered">
-            <thead>
-            <tr>
-                <th>No</th>
-                <th>店名</th>
-                <th>エリア</th>
-                <th>年間予算</th>
-                <th>詳細</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>1</td>
-                <td>銀座店</td>
-                <td>東京</td>
-                <td>300000</td>
-                <td><a href="/shops/list/show" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>                
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>大阪阪急</td>
-                <td>大阪</td>
-                <td>700000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>3</td>
-               <td>西宮店</td>
-                <td>兵庫</td>
-                <td>300000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>神戸店</td>
-                <td>兵庫</td>
-                <td>1000000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>横浜本町店</td>
-                <td>横浜</td>
-                <td>50000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>自由が丘店</td>
-                <td>東京</td>
-                <td>43000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>金沢店</td>
-                <td>北陸中部</td>
-                <td>55000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>仙台店</td>
-                <td>北海道東北</td>
-                <td>44000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>博多店</td>
-                <td>九州</td>
-                <td>60000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>奈良店</td>
-                <td>近畿</td>
-                <td>70000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>高松店</td>
-                <td>四国</td>
-                <td>30000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>札幌店</td>
-                <td>北海道東北</td>
-                <td>30000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>名古屋店</td>
-                <td>愛知</td>
-                <td>65000</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            </tbody>
-        </table>
+              </div>
+              <!-- Card Body -->
+              <div class="card-body">
+              
+      <table id="table1" class="table table-bordered">
+          <thead>
+          <tr>
+              <th>No</th>
+              <th>店名</th>
+              <th>エリア</th>
+              <th>年間予算</th>
+              <th>詳細</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+              <td>1</td>
+              <td>銀座店</td>
+              <td>東京</td>
+              <td>300000</td>
+              <td><a href="/shops/list/show" class="btn btn-info btn-circle btn-sm">
+                  <i class="fas fa-info-circle"></i>
+                </a></td>                
+          </tr>
+          <tr>
+              <td>2</td>
+              <td>大阪阪急</td>
+              <td>大阪</td>
+              <td>700000</td>
+              <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                  <i class="fas fa-info-circle"></i>
+                </a></td>     
+          </tr>
+          <tr>
+              <td>3</td>
+             <td>西宮店</td>
+              <td>兵庫</td>
+              <td>300000</td>
+              <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                  <i class="fas fa-info-circle"></i>
+                </a></td>     
+          </tr>
+          <tr>
+              <td>4</td>
+              <td>神戸店</td>
+              <td>兵庫</td>
+              <td>1000000</td>
+              <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                  <i class="fas fa-info-circle"></i>
+                </a></td>     
+          </tr>
+          <tr>
+              <td>5</td>
+              <td>横浜本町店</td>
+              <td>横浜</td>
+              <td>50000</td>
+              <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                  <i class="fas fa-info-circle"></i>
+                </a></td>     
+          </tr>
+          <tr>
+              <td>6</td>
+              <td>自由が丘店</td>
+              <td>東京</td>
+              <td>43000</td>
+              <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                  <i class="fas fa-info-circle"></i>
+                </a></td>     
+          </tr>
+          <tr>
+              <td>7</td>
+              <td>金沢店</td>
+              <td>北陸中部</td>
+              <td>55000</td>
+              <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                  <i class="fas fa-info-circle"></i>
+                </a></td>     
+          </tr>
+          <tr>
+              <td>8</td>
+              <td>仙台店</td>
+              <td>北海道東北</td>
+              <td>44000</td>
+              <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                  <i class="fas fa-info-circle"></i>
+                </a></td>     
+          </tr>
+          <tr>
+              <td>9</td>
+              <td>博多店</td>
+              <td>九州</td>
+              <td>60000</td>
+              <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                  <i class="fas fa-info-circle"></i>
+                </a></td>     
+          </tr>
+          <tr>
+              <td>10</td>
+              <td>奈良店</td>
+              <td>近畿</td>
+              <td>70000</td>
+              <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                  <i class="fas fa-info-circle"></i>
+                </a></td>     
+          </tr>
+          <tr>
+              <td>11</td>
+              <td>高松店</td>
+              <td>四国</td>
+              <td>30000</td>
+              <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                  <i class="fas fa-info-circle"></i>
+                </a></td>     
+          </tr>
+          <tr>
+              <td>12</td>
+              <td>札幌店</td>
+              <td>北海道東北</td>
+              <td>30000</td>
+              <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                  <i class="fas fa-info-circle"></i>
+                </a></td>     
+          </tr>
+          <tr>
+              <td>12</td>
+              <td>名古屋店</td>
+              <td>愛知</td>
+              <td>65000</td>
+              <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                  <i class="fas fa-info-circle"></i>
+                </a></td>     
+          </tr>
+          </tbody>
+      </table>
     </div>
 </div>
 
@@ -241,114 +238,6 @@
     </div>
   </div>
   
-      
-  <div class="tab-content" id="action_index">
-    <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">店舗スタッフ取組一覧</h6>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
-                      <div class="dropdown-header">menu:</div>
-                      <a class="dropdown-item"data-toggle="modal" data-target="#Modal4">期間選択</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">エクスポート</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                
-
-    <div class="col-xs-12">
-        <table id="table2" class="table table-bordered">
-            <thead>
-            <tr>
-                <th>No</th>
-                <th>店名</th>
-                <th>アクション</th>
-                <th>予算</th>
-                <th>記入日</th>
-                <th>詳細</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>1</td>
-                <td>銀座店</td>
-                <td>夏物ディスプレイ強化</td>
-                <td>30000</td>
-                <td>2020.6.30</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>                
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>大阪店</td>
-                <td>ギフト強化</td>
-                <td>30000</td>
-                <td>2020.6.30</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>3</td>
-               <td>博多店</td>
-                <td>接客ロープレ実施</td>
-                <td>30000</td>
-                <td>2020.6.30</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>札幌店</td>
-                <td>トップスフェア</td>
-                <td>30000</td>
-                <td>2020.6.30</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>横浜店</td>
-                <td>DM送付</td>
-                <td>30000</td>
-                <td>2020.6.30</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>自由が丘店</td>
-                <td>夏物ディスプレイ強化</td>
-                <td>30000</td>
-                <td>2020.6.30</td>
-                <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                    <i class="fas fa-info-circle"></i>
-                  </a></td>     
-            </tr>
-            
-            </tbody>
-        </table>
-    </div>
-</div>
-
-
-  </div>
-    
-
-
- 
-
 </div>
 
 

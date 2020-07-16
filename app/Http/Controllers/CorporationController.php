@@ -44,6 +44,9 @@ class CorporationController extends Controller
 	}
 
 
+
+
+
 	public function ordersIndex(){
 
 		return view ('sales.corporations.orders.index', [
@@ -54,9 +57,66 @@ class CorporationController extends Controller
 	}
 
 
+	public function ordersShow(){
+
+		return view ('sales.corporations.orders.show', [
+
+			// 'shops' => $shops,
+        
+		]);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public function ordersListShow(){
+
+		return view ('sales.corporations.orders.show_orderlist', [
+
+			// 'shops' => $shops,
+        
+		]);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	public function invoicesIndex(){
 
 		return view ('sales.corporations.invoices.index', [
+
+			// 'shops' => $shops,
+        
+		]);
+	}
+
+
+	public function invoicesShow(){
+
+		return view ('sales.corporations.invoices.show', [
 
 			// 'shops' => $shops,
         

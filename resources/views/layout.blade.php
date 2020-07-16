@@ -19,7 +19,7 @@
   <!-- Custom styles for this template-->
   <link href="/sb_admin_2/css/sb-admin-2.css" rel="stylesheet">
 
-  
+
   @yield('styles')
 </head>
 
@@ -70,7 +70,6 @@
             <a class="collapse-item" href="/shops/list/index">店舗マスタ</a>
             <a class="collapse-item" href="/shops/budgets/index">予算管理</a>
             <a class="collapse-item" href="#">在庫管理</a>
-            <a class="collapse-item" href="/shops/orders/index">客注管理</a>
           </div>
         </div>
       </li>
@@ -86,7 +85,7 @@
             <h6 class="collapse-header">業務選択:</h6>
             <a class="collapse-item" href="/corporations/clients/index">法人マスタ</a>
             <a class="collapse-item" href="/corporations/budgets/index">予算管理</a>
-            <a class="collapse-item" href="/corporations/orders/index">出荷管理</a>
+            <a class="collapse-item" href="/corporations/orders/index">受注管理</a>
             <a class="collapse-item" href="/corporations/invoices/index">請求管理</a>
           </div>
         </div>
@@ -127,6 +126,7 @@
             <h6 class="collapse-header">業務選択:</h6>
             <a class="collapse-item" href="/products/list/index">商品マスタ</a>
             <a class="collapse-item" href="#">生産管理</a><!-- リンク先に/products/process/indexが入る予定 -->
+            <a class="collapse-item" href="#">在庫管理</a>
             <a class="collapse-item" href="#">出荷管理</a><!-- リンク先に/products/delivery/index入る予定 -->
         </div>
       </li>
@@ -389,7 +389,7 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Fujishima</span>
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                <img class="img-profile rounded-circle" src="/images/ginza2.jpg">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

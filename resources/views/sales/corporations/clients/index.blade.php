@@ -26,7 +26,7 @@
       <a href="#clients_create" data-toggle>法人登録</a>
     </li>
     <li class="tab-item">
-      <a href="#meetinglog_index" data-toggle>業務ログ</a>
+      <a href="#meetinglog_index" data-toggle>新規営業</a>
     </li>
     
  
@@ -47,6 +47,8 @@
               <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">エリア選択</a>
               <a class="dropdown-item"data-toggle="modal" data-target="#Modal2">カテゴリ選択</a>
               <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">編集</a>
+               <a class="dropdown-item" href="#">削除</a>
               <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
@@ -274,7 +276,7 @@
         	<div class="card shadow mb-4">
               <!-- Card Header - Dropdown -->
               <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">ログ</h6>
+                <h6 class="m-0 font-weight-bold text-primary">アタックログ</h6>
                 <div class="dropdown no-arrow">
                   <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -283,8 +285,9 @@
                     <div class="dropdown-header">menu:</div>
                     <a class="dropdown-item" href="#">追加</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">月別</a>
-                    <a class="dropdown-item" href="#">週別</a>
+                    <a class="dropdown-item" href="#">編集</a>
+                    <a class="dropdown-item" href="#">削除</a>
+              　　　<a class="dropdown-item" href="#">エクスポート</a>
                   </div>
                 </div>
               </div>
@@ -297,7 +300,8 @@
                         <tr>
                           <th>日時</th>
                           <th>法人名</th>
-                          <th>内容</th>
+                          <th>進捗</th>
+                          <th>担当</th>
                           <th>詳細</th>
                         </tr>
 
@@ -307,28 +311,52 @@
                       
                         <tr>
                           <td>2019.1.10</td>
-                          <td>A商事</td>
-                          <td>新規取引</td>
+                          <td>Sバックス</td>
+                          <td>TELアポ</td>
+                          <td>坂本</td>
                           <td><a href="#" class="btn btn-info btn-circle btn-sm">
                               <i class="fas fa-info-circle"></i>
                             </a></td>     
                         </tr>
                          <tr>
                           <td>2020.2.10</td>
-                          <td>B高校</td>
-                          <td>取引条件変更</td>
+                          <td>Tリーズ</td>
+                          <td>提案書送付</td>
+                          <td>今村</td>
                           <td><a href="#" class="btn btn-info btn-circle btn-sm">
                               <i class="fas fa-info-circle"></i>
                             </a></td>     
                         </tr>
                         <tr>
                           <td>2020.3.10</td>
-                          <td>B高校</td>
-                          <td>発注頻度</td>
+                          <td>U島珈琲</td>
+                          <td>面談</td>
+                          <td>坂本</td>
                           <td><a href="#" class="btn btn-info btn-circle btn-sm">
                               <i class="fas fa-info-circle"></i>
-                            </a></td>     
+                            </a></td>      
                         </tr>
+
+                        <tr>
+                          <td>2020.5.10</td>
+                          <td>Nスレ</td>
+                          <td>取引条件交渉</td>
+                          <td>今村</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>      
+                        </tr>
+
+                        <tr>
+                          <td>2020.6.10</td>
+                          <td>Sマルク</td>
+                          <td>成約</td>
+                          <td>坂本</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>      
+                        </tr>
+
 
                       </tbody>
                     </table>

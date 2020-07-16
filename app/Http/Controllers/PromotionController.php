@@ -65,7 +65,7 @@ class PromotionController extends Controller
 
 	public function budgetShow(){
 
-		return view ('promotion.budget.show', [
+		return view ('promotion.budget.index', [
 
 			// 'shops' => $shops,
         

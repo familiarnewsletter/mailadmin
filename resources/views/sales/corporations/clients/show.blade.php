@@ -54,6 +54,9 @@ height: 100%;
     <li class="tab-item">
       <a href="#budget_show" data-toggle>予算・実績</a>
     </li>
+    <li class="tab-item">
+      <a href="#meeting_show" data-toggle>商談ログ</a>
+    </li>
   </ul>
 
 
@@ -72,9 +75,10 @@ height: 100%;
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
               <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">期間選択</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">エクスポート</a>
+               <a class="dropdown-item" href="#">編集</a>
+               <a class="dropdown-item" href="#">削除</a>
+               <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
         </div>
@@ -124,8 +128,9 @@ height: 100%;
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
               <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item"data-toggle="modal" data-target="#Modal2">期間選択</a>
               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">編集</a>
+               <a class="dropdown-item" href="#">削除</a>
               <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
@@ -180,90 +185,6 @@ height: 100%;
     </div>
   </div>
  
-<div class="modal fade" id="Modal1" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="card shadow mb-4">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
-        </div>
-        <div class="card-body">
-          
-          <nav class="panel panel-default">
-            
-           
-              
-              
-               
-                <div class="form-group">
-                  <label for="title">企画名</label>
-                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
-                    <option>Tシャツキャンペーン</option>
-                  </select>
-                </div>
-        
-                <div class="form-group">
-                <label for="logstart_date">期限</label>
-                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
-                </div>
-                <div class="form-group">
-                  <label for="logend_date">検証終了日</label>
-                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
-                </div>
-                <div class="text-right">
-                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
-                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
-                </div>
-                   
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> 
-
-<div class="modal fade" id="Modal2" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="card shadow mb-4">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
-        </div>
-        <div class="card-body">
-          
-          <nav class="panel panel-default">
-            
-           
-              
-              
-               
-                <div class="form-group">
-                  <label for="title">企画名</label>
-                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
-                    <option>Tシャツキャンペーン</option>
-                  </select>
-                </div>
-        
-                <div class="form-group">
-                <label for="logstart_date">期限</label>
-                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
-                </div>
-                <div class="form-group">
-                  <label for="logend_date">検証終了日</label>
-                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
-                </div>
-                <div class="text-right">
-                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
-                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
-                </div>
-                   
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> 
-
 
 <!--------------------- Budget and Sales ---------------------------------->
  
@@ -279,8 +200,10 @@ height: 100%;
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
               <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item"data-toggle="modal" data-target="#Modal3">期間選択</a>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">期間選択</a>
               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">編集</a>
+               <a class="dropdown-item" href="#">削除</a>
               <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
@@ -302,8 +225,10 @@ height: 100%;
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
               <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item"data-toggle="modal" data-target="#Modal4">期間選択</a>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal2">期間選択</a>
               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">編集</a>
+               <a class="dropdown-item" href="#">削除</a>
               <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
@@ -383,7 +308,7 @@ height: 100%;
 
   </div>
 
-<div class="modal fade" id="Modal3" tabindex="-1">
+<div class="modal fade" id="Modal1" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="card shadow mb-4">
@@ -394,23 +319,22 @@ height: 100%;
           
           <nav class="panel panel-default">
             
-           
-              
-              
-               
                 <div class="form-group">
-                  <label for="title">企画名</label>
+                  <label for="title">年度選択</label>
                   <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
-                    <option>Tシャツキャンペーン</option>
+                    <option>2020</option>
+                    <option>2019</option>
+                    <option>2018</option>
+                    <option>2017</option>
                   </select>
                 </div>
         
                 <div class="form-group">
-                <label for="logstart_date">期限</label>
+                <label for="logstart_date">開始日</label>
                 <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
                 </div>
                 <div class="form-group">
-                  <label for="logend_date">検証終了日</label>
+                  <label for="logend_date">終了日</label>
                   <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
                 </div>
                 <div class="text-right">
@@ -425,7 +349,7 @@ height: 100%;
   </div>
 </div> 
 
-<div class="modal fade" id="Modal4" tabindex="-1">
+<div class="modal fade" id="Modal2" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="card shadow mb-4">
@@ -436,23 +360,22 @@ height: 100%;
           
           <nav class="panel panel-default">
             
-           
-              
-              
-               
                 <div class="form-group">
-                  <label for="title">企画名</label>
+                  <label for="title">年度選択</label>
                   <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
-                    <option>Tシャツキャンペーン</option>
+                    <option>2020</option>
+                    <option>2019</option>
+                    <option>2018</option>
+                    <option>2017</option>
                   </select>
                 </div>
         
                 <div class="form-group">
-                <label for="logstart_date">期限</label>
+                <label for="logstart_date">開始日</label>
                 <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
                 </div>
                 <div class="form-group">
-                  <label for="logend_date">検証終了日</label>
+                  <label for="logend_date">終了日</label>
                   <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
                 </div>
                 <div class="text-right">
@@ -467,6 +390,189 @@ height: 100%;
   </div>
 </div> 
 
+<!--------------------- Meeting ---------------------------------->
+ 
+  <div class="tab-content" id="meeting_show">
+    <div class="container">
+     
+      <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">商談履歴</h6>
+          <div class="dropdown no-arrow">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+              <div class="dropdown-header">menu:</div>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal2">期間選択</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">エクスポート</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+            
+                  <table class="table">
+                      <thead>
+
+                        <tr>
+                          <th>日時</th>
+                          <th>法人名</th>
+                          <th>内容</th>
+                          <th>詳細</th>
+                        </tr>
+
+                      </thead>
+
+                      <tbody>
+                      
+                        <tr>
+                          <td>2019.1.10</td>
+                          <td>A商事</td>
+                          <td>新規取引</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>     
+                        </tr>
+                         <tr>
+                          <td>2020.2.10</td>
+                          <td>B高校</td>
+                          <td>取引条件変更</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>     
+                        </tr>
+                        <tr>
+                          <td>2020.3.10</td>
+                          <td>B高校</td>
+                          <td>発注頻度</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>     
+                        </tr>
+
+                        <tr>
+                          <td>2020.4.10</td>
+                          <td>B高校</td>
+                          <td>発注頻度</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>     
+                        </tr>
+
+                        <tr>
+                          <td>2020.5.10</td>
+                          <td>B高校</td>
+                          <td>発注頻度</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>     
+                        </tr>
+
+                        <tr>
+                          <td>2020.6.10</td>
+                          <td>B高校</td>
+                          <td>発注頻度</td>
+                          <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                              <i class="fas fa-info-circle"></i>
+                            </a></td>     
+                        </tr>
+
+                      </tbody>
+                    </table>
+                
+            
+          </nav>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </div>
+
+<div class="modal fade" id="Modal1" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+            
+                <div class="form-group">
+                  <label for="title">年度選択</label>
+                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
+                    <option>2020</option>
+                    <option>2019</option>
+                    <option>2018</option>
+                    <option>2017</option>
+                  </select>
+                </div>
+        
+                <div class="form-group">
+                <label for="logstart_date">開始日</label>
+                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
+                </div>
+                <div class="form-group">
+                  <label for="logend_date">終了日</label>
+                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
+                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
+                </div>
+                   
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<div class="modal fade" id="Modal2" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+            
+                <div class="form-group">
+                  <label for="title">年度選択</label>
+                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
+                    <option>2020</option>
+                    <option>2019</option>
+                    <option>2018</option>
+                    <option>2017</option>
+                  </select>
+                </div>
+        
+                <div class="form-group">
+                <label for="logstart_date">開始日</label>
+                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
+                </div>
+                <div class="form-group">
+                  <label for="logend_date">終了日</label>
+                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
+                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
+                </div>
+                   
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 

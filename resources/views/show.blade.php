@@ -86,6 +86,31 @@
 @endsection
 
 @section('content')
+<div class="container">
+ <div class="card shadow mb-4">
+    <!-- Card Header - Dropdown -->
+    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+      <h6 class="m-0 font-weight-bold text-primary">お知らせ</h6>
+      <div class="dropdown no-arrow">
+        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" >
+          <div class="dropdown-header">menu:</div>
+          <a class="dropdown-item"data-toggle="modal" data-target="#sampleModal">期間選択</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">投稿</a>
+          <a class="dropdown-item" href="#">編集</a>
+          <a class="dropdown-item" href="#">削除</a>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      
+      <nav class="panel panel-default">
+        
+               
+         <div class="container">
 
 <!-- Slider main container -->
 
@@ -100,33 +125,19 @@
 
       <div class="swiper-slide">
         <div class="sample02-inner">
-          <canvas id="chart2"></canvas>
+          <img src="/images/summersale.jpg" width="850" height="500" alt="">
         </div>
       </div>
 
       <div class="swiper-slide">
         <div class="sample02-inner">
-          <canvas id="chart3"></canvas>
+          <h1><font color="black">配信情報を添付（リンクで飛ぶ）</font></h1>
         </div>
       </div>
 
       <div class="swiper-slide">
         <div class="sample02-inner">
-         <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">当月実績（累計）</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">400,000</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-yen-sign fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+         <h1><font color="black">火曜メールの代わりに使う</font></h1>
         </div>
       </div>
 
@@ -152,13 +163,16 @@
     <div class="swiper-pagination"></div>
   </div>
 </div>
-
+</div>
+</nav>
+</div>
+</div>
 
 <div class="container">
  <div class="card shadow mb-4">
     <!-- Card Header - Dropdown -->
     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-      <h6 class="m-0 font-weight-bold text-primary">お知らせ</h6>
+      <h6 class="m-0 font-weight-bold text-primary">依頼事項</h6>
       <div class="dropdown no-arrow">
         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -167,8 +181,9 @@
           <div class="dropdown-header">menu:</div>
           <a class="dropdown-item"data-toggle="modal" data-target="#sampleModal">期間選択</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">検索</a>
           <a class="dropdown-item" href="#">投稿</a>
+          <a class="dropdown-item" href="#">編集</a>
+          <a class="dropdown-item" href="#">削除</a>
         </div>
       </div>
     </div>
@@ -185,15 +200,23 @@
                     <tr>
                         <th>タイトル</th>
                         <th>内容</th>
-                        <th>期日</th>
-                        <th>詳細</th>
+                        <th>表示期限</th>
+                        <th>詳細表示</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
                         <td>セールが始まります</td>
                         <td>各店対象品の発送をお願いします</td>
-                        <td>2020.2.19</td>
+                        <td>2020.7.19</td>
+                        <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                            <i class="fas fa-info-circle"></i>
+                          </a></td>                
+                    </tr>
+                    <tr>
+                        <td>イベントマッチングのお願い</td>
+                        <td>POPUPイベントの応援をお願いします</td>
+                        <td>2020.8.19</td>
                         <td><a href="#" class="btn btn-info btn-circle btn-sm">
                             <i class="fas fa-info-circle"></i>
                           </a></td>                
@@ -231,16 +254,19 @@
                 <div class="form-group">
                   <label for="title">企画名</label>
                   <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
-                    <option>Tシャツキャンペーン</option>
+                    <option>2020</option>
+                    <option>2019</option>
+                    <option>2018</option>
+                    <option>2017</option>
                   </select>
                 </div>
         
                 <div class="form-group">
-                <label for="logstart_date">期限</label>
+                <label for="logstart_date">開始日</label>
                 <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
                 </div>
                 <div class="form-group">
-                  <label for="logend_date">検証終了日</label>
+                  <label for="logend_date">終了日</label>
                   <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
                 </div>
                 <div class="text-right">
@@ -279,7 +305,7 @@
             data: {
                 labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
                 datasets: [{
-                    label: 'リーチ数',
+                    label: '予算',
                     type: "bar",
                    
                     data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
@@ -287,18 +313,18 @@
 　　　　　　　　　　    borderWidth: 2, 
                     yAxisID: "y-axis-1",
                 }, {
-                    label: '開封数',
+                    label: '実績',
                     type: "bar",
                     
-                    data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
+                    data: [12000, 9000, 11000, 8000, 12000, 15000, 11000],
                     borderColor: "blue",                         // 棒の枠線の色
 　　　　　　　　　　    borderWidth: 2, 
                     yAxisID: "y-axis-1",
                 }, {
-                    label: '開封率',
+                    label: '予算比',
                     type: "line",
                     fill: false,
-                    data: [22, 23, 10, 15, 40, 35, 30],
+                    data: [110, 80, 70, 60, 80, 75, 110],
                     borderColor: "pink",
                     
                     yAxisID: "y-axis-2",
@@ -322,7 +348,7 @@
                         
                         position: "right",
                         ticks: {
-                            max: 100,
+                            max: 200,
                             min: 0,
                             stepSize: 20
                         },
@@ -333,151 +359,11 @@
         });
 </script>
 
-<script>
-        var ctx = document.getElementById('chart2').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'pie',
-            data: {
-                labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
-                datasets: [{
-                    label: 'リーチ数',
-                    type: "pie",
-                   
-                    data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
-                    borderColor: "black",                         // 棒の枠線の色
-　　　　　　　　　　    borderWidth: 2, 
-                    yAxisID: "y-axis-1",
-                }, {
-                    label: '開封数',
-                    type: "pie",
-                    
-                    data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
-                    borderColor: "blue",                         // 棒の枠線の色
-　　　　　　　　　　    borderWidth: 2, 
-                    yAxisID: "y-axis-1",
-                }, {
-                    label: '開封率',
-                    type: "pie",
-                    fill: false,
-                    data: [22, 23, 10, 15, 40, 35, 30],
-                    borderColor: "pink",
-                    
-                    yAxisID: "y-axis-2",
-                }]
-            },
-            options: {
-                
-                responsive: true,
-                scales: {
-                    yAxes: [{
-                        id: "y-axis-1",
-                        
-                        position: "left",
-                        ticks: {
-                            max: 15000,
-                            min: 0,
-                            stepSize: 1000
-                        },
-                    }, {
-                        id: "y-axis-2",
-                        
-                        position: "right",
-                        ticks: {
-                            max: 100,
-                            min: 0,
-                            stepSize: 20
-                        },
-                        
-                    }],
-                },
-            }
-        });
-</script>
 
-<script>
-        var ctx = document.getElementById('chart3').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
-                datasets: [{
-                    label: 'リーチ数',
-                    type: "line",
-                   
-                    data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
-                    borderColor: "black",                         // 棒の枠線の色
-　　　　　　　　　　    borderWidth: 2, 
-                    yAxisID: "y-axis-1",
-                }, {
-                    label: '開封数',
-                    type: "line",
-                    
-                    data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
-                    borderColor: "blue",                         // 棒の枠線の色
-　　　　　　　　　　    borderWidth: 2, 
-                    yAxisID: "y-axis-1",
-                }, {
-                    label: '開封率',
-                    type: "line",
-                    fill: false,
-                    data: [22, 23, 10, 15, 40, 35, 30],
-                    borderColor: "pink",
-                    
-                    yAxisID: "y-axis-2",
-                }]
-            },
-            options: {
-                
-                responsive: true,
-                scales: {
-                    yAxes: [{
-                        id: "y-axis-1",
-                        
-                        position: "left",
-                        ticks: {
-                            max: 15000,
-                            min: 0,
-                            stepSize: 1000
-                        },
-                    }, {
-                        id: "y-axis-2",
-                        
-                        position: "right",
-                        ticks: {
-                            max: 100,
-                            min: 0,
-                            stepSize: 20
-                        },
-                        
-                    }],
-                },
-            }
-        });
-</script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
  
-<script type="text/javascript">
-  var mySwiper = new Swiper ('.swiper-container', {
-  loop: true,
-  slidesPerView: 2,
-  spaceBetween: 10,
-  centeredSlides : true,
-  pagination: '.swiper-pagination',
-  nextButton: '.swiper-button-next',
-  prevButton: '.swiper-button-prev'
-})
-</script>
-
-<script type="text/javascript">
-  var mySwiper = new Swiper ('.swiper-container2', {
-  effect: "flip",
-  loop: true,
-  pagination: '.swiper-pagination',
-  nextButton: '.swiper-button-next',
-  prevButton: '.swiper-button-prev',
-})
-</script>
 
 <script type="text/javascript">
     window.addEventListener('DOMContentLoaded', function() {
