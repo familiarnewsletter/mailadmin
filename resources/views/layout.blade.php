@@ -174,12 +174,12 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">業務選択:</h6>
             <a class="collapse-item" href="/promotion/list/index">販促マスタ</a>
-            <a class="collapse-item" href="/promotion/newsletter/index">ニュースレター分析</a>
-            <a class="collapse-item" href="/promotion/instagram/index">Instagram分析</a>
-            <a class="collapse-item" href="/promotion/movie/index">動画コンテンツ分析</a>
-            <a class="collapse-item" href="/promotion/line/index">LINE分析</a>
-            <a class="collapse-item" href="/promotion/blog/index">ブログ分析</a>
-            <a class="collapse-item" href="/promotion/facebook/index">facebook分析</a>
+            <a class="collapse-item" href="/promotion/newsletter/index">NewsLetter管理</a>
+            <a class="collapse-item" href="/promotion/instagram/index">Instagram管理</a>
+            <a class="collapse-item" href="/promotion/movie/index">動画コンテンツ管理</a>
+            <a class="collapse-item" href="/promotion/line/index">LINE管理</a>
+            <a class="collapse-item" href="/promotion/blog/index">ブログ管理</a>
+            <a class="collapse-item" href="/promotion/facebook/index">Facebook管理</a>
         </div>
       </li>
 

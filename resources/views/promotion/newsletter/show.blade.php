@@ -18,7 +18,6 @@ a:link,a:visited,a:active{color:#555555;text-decoration:underline;}a:hover{text-
 @endsection
 
 @section('content')
-
 <body bgcolor="#ffffff" style="margin:0px auto 0px auto;font-family:YuGothic,'Yu Gothic','ＭＳ Ｐゴシック','MS PGothic','メイリオ', Meiryo,'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;" text="#000000" link="#555555" vlink="#555555" alink="#555555" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0">
 
 <!-- プリヘッダーテキスト -->

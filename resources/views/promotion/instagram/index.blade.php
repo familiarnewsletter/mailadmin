@@ -117,7 +117,7 @@
      <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">インタラクション数</h6>
+          <h6 class="m-0 font-weight-bold text-primary">インプレッション数</h6>
           <div class="dropdown no-arrow">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -295,7 +295,7 @@
                     <td>Tシャツキャンペーン</td>
                     <td>2020.2.19</td>
                     <td>投稿済み</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <td><a href="/promotion/instagram/show" class="btn btn-info btn-circle btn-sm">
                         <i class="fas fa-info-circle"></i>
                       </a></td>                
                 </tr>

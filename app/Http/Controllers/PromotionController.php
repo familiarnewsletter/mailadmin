@@ -79,6 +79,37 @@ class PromotionController extends Controller
 
 
 
+	public function newsletterIndex(){
+
+		return view ('promotion.newsletter.index', [
+
+			
+        
+		]);
+	}
+
+
+	
+
+	public function newsletterShow(){
+
+		return view ('promotion.newsletter.show', [
+
+			
+        
+		]);
+	}
+
+
+
+	public function newsletterCreate(){
+
+		return view ('promotion.newsletter.create', [
+
+			
+        
+		]);
+	}
 
 
 
@@ -88,6 +119,32 @@ class PromotionController extends Controller
 
 
 
+
+
+
+
+
+
+
+
+	public function instagramIndex(){
+
+		return view ('promotion.instagram.index', [
+
+			
+        
+		]);
+	}
+
+
+	public function instagramShow(){
+
+		return view ('promotion.instagram.show', [
+
+			
+        
+		]);
+	}
 
 
 
@@ -103,14 +160,7 @@ class PromotionController extends Controller
 		]);
 	}
 
-	public function newsletterIndex(){
-
-		return view ('promotion.newsletter.index', [
-
-			// 'shops' => $shops,
-        
-		]);
-	}
+	
 
 	public function facebookIndex(){
 
@@ -142,14 +192,7 @@ class PromotionController extends Controller
 		]);
 	}
 
-	public function instagramIndex(){
-
-		return view ('promotion.instagram.index', [
-
-			// 'shops' => $shops,
-        
-		]);
-	}
+	
 
 	public function show(){
 

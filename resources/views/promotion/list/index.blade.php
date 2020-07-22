@@ -28,9 +28,6 @@
       <a href="#ap_index" data-toggle>AP管理</a>
     </li>
     <li class="tab-item">
-      <a href="#log_index" data-toggle>企画ログ</a>
-    </li>
-    <li class="tab-item">
       <a href="#budget_index" data-toggle>予算設定</a>
     </li>
  
@@ -409,202 +406,7 @@
   </div>
 </div> 
 
-  <div class="tab-content" id="log_index">
-    <div class="container">
-  	 <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">企画経緯</h6>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
-                      <div class="dropdown-header">menu:</div>
-                       <a class="dropdown-item"data-toggle="modal" data-target="#Modal3">期間選択</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="/promotion/list/create">新規作成</a>
-                      <a class="dropdown-item" href="#">エクスポート</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card Body -->
-              <div class="container">
-
-                <div class="col-xs-12">
-                    <table id="table3" class="table table-bordered">
-                        <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>企画名</th>
-                            <th>タスク名</th>
-                            <th>実施日</th>
-                            <th>詳細</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Tシャツキャンペーン</td>
-                            <td>内容策定</td>
-                            <td>2020.2.19</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>                
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Yシャツキャンペーン</td>
-                            <td>画像依頼</td>
-                            <td>2020.2.19</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>          
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                           <td>UGCキャンペーン</td>
-                            <td>投稿開始</td>
-                            <td>2020.10.2</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>              
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>デザイン体験</td>
-                            <td>集客</td>
-                            <td>2020.6.2</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>             
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>UGCキャンペーン</td>
-                            <td>投稿開始</td>
-                            <td>2020.10.2</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>            
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>UGCキャンペーン</td>
-                            <td>投稿開始</td>
-                            <td>2020.10.2</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>              
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>UGCキャンペーン</td>
-                            <td>投稿開始</td>
-                            <td>2020.10.2</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>              
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>UGCキャンペーン</td>
-                            <td>投稿開始</td>
-                            <td>2020.10.2</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>              
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>UGCキャンペーン</td>
-                            <td>投稿開始</td>
-                            <td>2020.10.2</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>              
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>UGCキャンペーン</td>
-                            <td>投稿開始</td>
-                            <td>2020.10.2</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>              
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td>UGCキャンペーン</td>
-                            <td>投稿開始</td>
-                            <td>2020.10.2</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>             
-                        </tr>
-                        <tr>
-                            <td>12</td>
-                            <td>UGCキャンペーン</td>
-                            <td>投稿開始</td>
-                            <td>2020.10.2</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>            
-                        </tr>
-                        <tr>
-                            <td>13</td>
-                            <td>UGCキャンペーン</td>
-                            <td>投稿開始</td>
-                            <td>2020.10.2</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>         
-                        </tr>
-                        </tbody>
-                    </table>
-                  </div>
-              </div>
-        </div>
-    </div>
-  </div>
-
-<div class="modal fade" id="Modal3" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="card shadow mb-4">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
-        </div>
-        <div class="card-body">
-          
-          <nav class="panel panel-default">
-      
-                <div class="form-group">
-                  <label for="title">企画名</label>
-                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
-                    <option>Tシャツキャンペーン</option>
-                  </select>
-                </div>
-        
-                <div class="form-group">
-                <label for="logstart_date">期限</label>
-                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
-                </div>
-                <div class="form-group">
-                  <label for="logend_date">検証終了日</label>
-                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
-                </div>
-                <div class="text-right">
-                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
-                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
-                </div>
-                   
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> 
+ 
 
 
 
@@ -640,11 +442,11 @@
                   <input type="number" step="1000" class="form-control" name="target_budget" id="target_budget" value="{{ old('target_budget') }}" >
                 </div>
                 <div class="form-group">
-                <label for="due_date">期限</label>
-                <input type="text" class="form-control" name="due_date" id="due_date" value="{{ old('due_date') }}" />
+                <label for="due_date">開始日</label>
+                <input type="text" class="form-control" name="start_date" id="start_date" value="{{ old('start_date') }}" >
                 </div>
                 <div class="form-group">
-                  <label for="end_date">検証終了日</label>
+                  <label for="end_date">終了日</label>
                   <input type="text" class="form-control" name="end_date" id="end_date" value="{{ old('end_date') }}" >
                 </div>
                 <div class="text-right">

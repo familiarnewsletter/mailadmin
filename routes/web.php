@@ -407,6 +407,44 @@ Route::post('/promotion/log/{budget_id}/delete', 'PromotionController@budgetDele
 
 
 
+
+
+
+
+Route::get('/promotion/newsletter/index', 'PromotionController@newsletterIndex')->name('newsletter.index');
+
+//Route::get('/promotion/newsletter/show/{newsletter_id}', 'PromotionController@newsletterShow')->name('newsletter.show');
+Route::get('/promotion/newsletter/show', 'PromotionController@newsletterShow')->name('newsletter.show');
+
+
+Route::get('/promotion/newsletter/create', 'PromotionController@newsletterCreate')->name('newsletter.create');
+Route::post('/promotion/newsletter/create', 'PromotionController@newsletterStore')->name('newsletter.store');
+
+Route::get('/promotion/newsletter/{newsletter_id}/edit', 'PromotionController@newsletterEdit')->name('newsletter.edit');
+Route::post('/promotion/newsletter/{newsletter_id}/edit', 'PromotionController@newsletterUpdate')->name('newsletter.update');
+
+Route::post('/promotion/newsletter/{newsletter_id}/delete', 'PromotionController@newsletterDelete')->name('newsletter.delete');
+
+
+
+Route::get('/promotion/instagram/index', 'PromotionController@instagramIndex')->name('instagram.index');
+
+//Route::get('/promotion/instagram/show/{instagram_id}', 'PromotionController@instagramShow')->name('instagram.show');
+Route::get('/promotion/instagram/show', 'PromotionController@instagramShow')->name('instagram.show');
+
+Route::get('/promotion/instagram/create', 'PromotionController@instagramCreate')->name('instagram.create');
+Route::post('/promotion/instagram/create', 'PromotionController@instagramStore')->name('instagram.store');
+
+Route::get('/promotion/instagram/{instagram_id}/edit', 'PromotionController@instagramEdit')->name('instagram.edit');
+Route::post('/promotion/instagram/{instagram_id}/edit', 'PromotionController@instagramUpdate')->name('instagram.update');
+
+Route::post('/promotion/instagram/{instagram_id}/delete', 'PromotionController@instagramDelete')->name('instagram.delete');
+
+
+
+
+
+
 Route::get('/promotion/movie/index', 'PromotionController@movieIndex')->name('movie.index');
 
 Route::get('/promotion/movie/show/{movie_id}', 'PromotionController@movieShow')->name('movie.show');
@@ -422,17 +460,10 @@ Route::post('/promotion/movie/{movie_id}/delete', 'PromotionController@movieDele
 
 
 
-Route::get('/promotion/newsletter/index', 'PromotionController@newsletterIndex')->name('newsletter.index');
 
-Route::get('/promotion/newsletter/show/{newsletter_id}', 'PromotionController@newsletterShow')->name('newsletter.show');
 
-Route::get('/promotion/newsletter/create', 'PromotionController@newsletterCreate')->name('newsletter.create');
-Route::post('/promotion/newsletter/create', 'PromotionController@newsletterStore')->name('newsletter.store');
 
-Route::get('/promotion/newsletter/{newsletter_id}/edit', 'PromotionController@newsletterEdit')->name('newsletter.edit');
-Route::post('/promotion/newsletter/{newsletter_id}/edit', 'PromotionController@newsletterUpdate')->name('newsletter.update');
 
-Route::post('/promotion/newsletter/{newsletter_id}/delete', 'PromotionController@newsletterDelete')->name('newsletter.delete');
 
 
 
@@ -477,18 +508,6 @@ Route::post('/promotion/line/{line_id}/edit', 'PromotionController@lineUpdate')-
 Route::post('/promotion/line/{line_id}/delete', 'PromotionController@lineDelete')->name('line.delete');
 
 
-
-Route::get('/promotion/instagram/index', 'PromotionController@instagramIndex')->name('instagram.index');
-
-Route::get('/promotion/instagram/show/{instagram_id}', 'PromotionController@instagramShow')->name('instagram.show');
-
-Route::get('/promotion/instagram/create', 'PromotionController@instagramCreate')->name('instagram.create');
-Route::post('/promotion/instagram/create', 'PromotionController@instagramStore')->name('instagram.store');
-
-Route::get('/promotion/instagram/{instagram_id}/edit', 'PromotionController@instagramEdit')->name('instagram.edit');
-Route::post('/promotion/instagram/{instagram_id}/edit', 'PromotionController@instagramUpdate')->name('instagram.update');
-
-Route::post('/promotion/instagram/{instagram_id}/delete', 'PromotionController@instagramDelete')->name('instagram.delete');
 
 
 

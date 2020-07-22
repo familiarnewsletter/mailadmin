@@ -76,12 +76,8 @@
         <div class="card-body">
           
           <nav class="panel panel-default">
-            
-           
-              
-              
-               
-                <div class="form-group">
+
+           <div class="form-group">
                   <label for="title">企画名</label>
                   <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
                     <option>Tシャツキャンペーン</option>
@@ -445,6 +441,7 @@
               <div class="dropdown-header">menu:</div>
               <a class="dropdown-item"data-toggle="modal" data-target="#Modal4">期間選択</a>
               <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/promotion/newsletter/create">新規作成</a>
               <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
@@ -456,11 +453,13 @@
         <table id="table3" class="table table-bordered">
                 <thead>
                 <tr>
-                    <th>No</th>
                     <th>タイトル</th>
-                    <th>配信日</th>
+                    <th>企画名</th>
+                    <th>配信日時</th>
                     <th>ステータス</th>
                     <th>詳細</th>
+                    <th></th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -469,8 +468,14 @@
                     <td>Tシャツキャンペーン</td>
                     <td>2020.2.19</td>
                     <td>1200000</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <td><a href="/promotion/newsletter/show" class="btn btn-info btn-circle btn-sm">
                         <i class="fas fa-info-circle"></i>
+                      </a></td>
+                      <td><a href="#" class="btn btn-primary btn-circle btn-sm">
+                        <i class="fas fa-edit"></i>
+                      </a></td>
+                     <td><a href="#" class="btn btn-danger btn-circle btn-sm">
+                        <i class="fas fa-trash-alt"></i>
                       </a></td>                
                 </tr>
                 <tr>
@@ -480,7 +485,13 @@
                     <td>10000</td>
                     <td><a href="#" class="btn btn-info btn-circle btn-sm">
                         <i class="fas fa-info-circle"></i>
-                      </a></td>          
+                      </a></td>
+                    <td><a href="#" class="btn btn-primary btn-circle btn-sm">
+                        <i class="fas fa-edit"></i>
+                      </a></td>
+                     <td><a href="#" class="btn btn-danger btn-circle btn-sm">
+                        <i class="fas fa-trash-alt"></i>
+                      </a></td>
                 </tr>
                 <tr>
                     <td>3</td>
