@@ -117,7 +117,7 @@
      <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">インプレッション数</h6>
+          <h6 class="m-0 font-weight-bold text-primary">リーチ数</h6>
           <div class="dropdown no-arrow">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -271,6 +271,7 @@
               <div class="dropdown-header">menu:</div>
               <a class="dropdown-item"data-toggle="modal" data-target="#Modal4">期間選択</a>
               <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">新規作成</a>
               <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
@@ -287,6 +288,8 @@
                     <th>投稿日</th>
                     <th>ステータス</th>
                     <th>詳細</th>
+                    <th>編集</th>
+                    <th>削除</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -297,7 +300,12 @@
                     <td>投稿済み</td>
                     <td><a href="/promotion/instagram/show" class="btn btn-info btn-circle btn-sm">
                         <i class="fas fa-info-circle"></i>
-                      </a></td>                
+                      </a></td>
+                    <td><a href="#" class="btn btn-primary btn-circle btn-sm">
+                      <i class="fas fa-edit"></i>
+                      </a></td>
+                     <td><a href="#" class="btn btn-danger btn-circle btn-sm">
+                      <i class="fas fa-trash-alt"></i></a></td>                
                 </tr>
                 <tr>
                     <td>2</td>
@@ -486,7 +494,7 @@
             data: {
                 labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
                 datasets: [{
-                    label: 'リーチ数',
+                    label: '予算',
                     type: "bar",
                    
                     data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
@@ -494,7 +502,7 @@
 　　　　　　　　　　    borderWidth: 2, 
                     yAxisID: "y-axis-1",
                 }, {
-                    label: '開封数',
+                    label: '実績',
                     type: "bar",
                     
                     data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
@@ -502,7 +510,7 @@
 　　　　　　　　　　    borderWidth: 2, 
                     yAxisID: "y-axis-1",
                 }, {
-                    label: '開封率',
+                    label: '達成率',
                     type: "line",
                     fill: false,
                     data: [22, 23, 10, 15, 40, 35, 30],
@@ -547,7 +555,7 @@
             data: {
                 labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
                 datasets: [{
-                    label: '開封数',
+                    label: '予算',
                     type: "bar",
                    
                     data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
@@ -555,7 +563,7 @@
 　　　　　　　　　　    borderWidth: 2, 
                     yAxisID: "y-axis-1",
                 }, {
-                    label: 'セッション数',
+                    label: '実績',
                     type: "bar",
                     
                     data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
@@ -563,7 +571,7 @@
 　　　　　　　　　　    borderWidth: 2, 
                     yAxisID: "y-axis-1",
                 }, {
-                    label: '新規セッション率',
+                    label: '達成率',
                     type: "line",
                     fill: false,
                     data: [22, 23, 10, 15, 40, 35, 30],

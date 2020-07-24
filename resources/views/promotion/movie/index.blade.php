@@ -23,13 +23,10 @@
   <ul class="tab-list" id="tab-1">
  
     <li class="tab-item is-open">
-      <a href="#igtv_index" data-toggle>IGTV分析</a>
+      <a href="#igtv_index" data-toggle>数値管理</a>
     </li>
     <li class="tab-item">
-      <a href="#zoom_index" data-toggle>Zoom分析</a>
-    </li>
-    <li class="tab-item">
-      <a href="#logs_index" data-toggle>企画ログ</a>
+      <a href="#ap_index" data-toggle>AP管理</a>
     </li>
     <li class="tab-item">
       <a href="#contents_index" data-toggle>配信内容一覧</a>
@@ -55,6 +52,7 @@
               <div class="dropdown-header">menu:</div>
               <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">期間選択</a>
               <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">新規作成</a>
               <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
@@ -82,6 +80,7 @@
               <div class="dropdown-header">menu:</div>
               <a class="dropdown-item"data-toggle="modal" data-target="#Modal2">期間選択</a>
               <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">新規作成</a>
               <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
@@ -251,14 +250,18 @@
 </div> 
 
 
-<!--------------------- Zoom ---------------------------------->
+
  
-  <div class="tab-content" id="zoom_index">
+
+ <!--------------------- AP ---------------------------------->
+
+  
+  <div class="tab-content" id="ap_index">
     <div class="container">
      <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">参加数</h6>
+          <h6 class="m-0 font-weight-bold text-primary">AP</h6>
           <div class="dropdown no-arrow">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -267,149 +270,7 @@
               <div class="dropdown-header">menu:</div>
               <a class="dropdown-item"data-toggle="modal" data-target="#Modal3">期間選択</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">エクスポート</a>
-            </div>
-          </div>
-        </div>
-        <div class="card-body">
-          
-          <nav class="panel panel-default">
-              <canvas id="chart2"></canvas>
-          </nav>
-        </div>
-      </div>
-      <div class="card shadow mb-4">
-        <!-- Card Header - Dropdown -->
-        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">CV率</h6>
-          <div class="dropdown no-arrow">
-            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
-              <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item"data-toggle="modal" data-target="#Modal4">期間選択</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">エクスポート</a>
-            </div>
-          </div>
-        </div>
-        <div class="card-body">
-          
-          <nav class="panel panel-default">
-            
-              <canvas id="chart3"></canvas>
-          
-          </nav>
-        </div>
-      </div>
-    </div>
-    </div>
-
-  </div>
-
-<div class="modal fade" id="Modal3" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="card shadow mb-4">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
-        </div>
-        <div class="card-body">
-          
-          <nav class="panel panel-default">
-            
-           
-              
-              
-               
-                <div class="form-group">
-                  <label for="title">企画名</label>
-                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
-                    <option>Tシャツキャンペーン</option>
-                  </select>
-                </div>
-        
-                <div class="form-group">
-                <label for="logstart_date">期限</label>
-                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
-                </div>
-                <div class="form-group">
-                  <label for="logend_date">検証終了日</label>
-                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
-                </div>
-                <div class="text-right">
-                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
-                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
-                </div>
-                   
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> 
-
-<div class="modal fade" id="Modal4" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="card shadow mb-4">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
-        </div>
-        <div class="card-body">
-          
-          <nav class="panel panel-default">
-            
-           
-              
-              
-               
-                <div class="form-group">
-                  <label for="title">企画名</label>
-                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
-                    <option>Tシャツキャンペーン</option>
-                  </select>
-                </div>
-        
-                <div class="form-group">
-                <label for="logstart_date">期限</label>
-                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
-                </div>
-                <div class="form-group">
-                  <label for="logend_date">検証終了日</label>
-                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
-                </div>
-                <div class="text-right">
-                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
-                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
-                </div>
-                   
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> 
- 
-
- <!--------------------- Logs ---------------------------------->
-
-  
-  <div class="tab-content" id="logs_index">
-    <div class="container">
-     <div class="card shadow mb-4">
-        <!-- Card Header - Dropdown -->
-        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">企画経緯</h6>
-          <div class="dropdown no-arrow">
-            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
-              <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item"data-toggle="modal" data-target="#Modal5">期間選択</a>
-              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">新規作成</a>
               <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
@@ -427,6 +288,8 @@
                     <th>業務フェイズ</th>
                     <th>タスク消化率</th>
                     <th>詳細</th>
+                    <th>編集</th>
+                    <th>削除</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -437,7 +300,12 @@
                     <td>1200000</td>
                     <td><a href="#" class="btn btn-info btn-circle btn-sm">
                         <i class="fas fa-info-circle"></i>
-                      </a></td>                
+                      </a></td>
+                      <td><a href="#" class="btn btn-primary btn-circle btn-sm">
+                        <i class="fas fa-edit"></i>
+                        </a></td>
+                       <td><a href="#" class="btn btn-danger btn-circle btn-sm">
+                        <i class="fas fa-trash-alt"></i></a></td>                
                 </tr>
                 <tr>
                     <td>2</td>
@@ -559,7 +427,7 @@
   </div>
     
 
-<div class="modal fade" id="Modal5" tabindex="-1">
+<div class="modal fade" id="Modal3" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="card shadow mb-4">
@@ -615,8 +483,9 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
               <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item"data-toggle="modal" data-target="#Modal6">期間選択</a>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal4">期間選択</a>
               <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">新規作成</a>
               <a class="dropdown-item" href="#">エクスポート</a>
             </div>
           </div>
@@ -633,6 +502,8 @@
                           <th>立ち上がり日</th>
                           <th>予算</th>
                           <th>詳細</th>
+                          <th>編集</th>
+                          <th>削除</th>
                       </tr>
                       </thead>
                       <tbody>
@@ -643,7 +514,12 @@
                           <td>1200000</td>
                           <td><a href="#" class="btn btn-info btn-circle btn-sm">
                               <i class="fas fa-info-circle"></i>
-                            </a></td>                
+                            </a></td>
+                         <td><a href="#" class="btn btn-primary btn-circle btn-sm">
+                            <i class="fas fa-edit"></i>
+                            </a></td>
+                           <td><a href="#" class="btn btn-danger btn-circle btn-sm">
+                            <i class="fas fa-trash-alt"></i></a></td>                
                       </tr>
                       <tr>
                           <td>2</td>
@@ -761,7 +637,7 @@
       </div>
     </div>
 
-<div class="modal fade" id="Modal6" tabindex="-1">
+<div class="modal fade" id="Modal4" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="card shadow mb-4">
@@ -774,9 +650,12 @@
             
             
                 <div class="form-group">
-                  <label for="title">企画名</label>
+                  <label for="title">カテゴリ</label>
                   <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
-                    <option>Tシャツキャンペーン</option>
+                    <option>PickUp Items</option>
+                    <option>StyleBook</option>
+                    <option>Seminar</option>
+                    <option>Events</option>
                   </select>
                 </div>
         
@@ -828,7 +707,7 @@
             data: {
                 labels: ['1w', '2w', '3w', '4w', '5w', '6w', '7w'],
                 datasets: [{
-                    label: 'リーチ数',
+                    label: '予算',
                     type: "bar",
                    
                     data: [10000, 11000, 15000, 12000, 9000, 12000, 13000],
@@ -836,7 +715,7 @@
 　　　　　　　　　　    borderWidth: 2, 
                     yAxisID: "y-axis-1",
                 }, {
-                    label: '開封数',
+                    label: '実績',
                     type: "bar",
                     
                     data: [8000, 9000, 10000, 9000, 6000, 8000, 7000],
@@ -844,7 +723,7 @@
 　　　　　　　　　　    borderWidth: 2, 
                     yAxisID: "y-axis-1",
                 }, {
-                    label: '開封率',
+                    label: '達成率',
                     type: "line",
                     fill: false,
                     data: [22, 23, 10, 15, 40, 35, 30],

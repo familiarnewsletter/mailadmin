@@ -28,7 +28,7 @@
       <a href="#ap_index" data-toggle>AP管理</a>
     </li>
     <li class="tab-item">
-      <a href="#budget_index" data-toggle>予算設定</a>
+      <a href="#budget_index" data-toggle>予算管理</a>
     </li>
  
   </ul>
@@ -69,6 +69,8 @@
                             <th>終了日</th>
                             <th>予算</th>
                             <th>詳細</th>
+                            <th>編集</th>
+                            <th>削除</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -80,7 +82,12 @@
                             <td>1200000</td>
                             <td><a href="/promotion/list/show" class="btn btn-info btn-circle btn-sm">
                                 <i class="fas fa-info-circle"></i>
-                              </a></td>                
+                              </a></td>
+                              <td><a href="#" class="btn btn-primary btn-circle btn-sm">
+                              <i class="fas fa-edit"></i>
+                              </a></td>
+                             <td><a href="#" class="btn btn-danger btn-circle btn-sm">
+                              <i class="fas fa-trash-alt"></i></a></td>                
                         </tr>
                         <tr>
                             <td>2</td>
@@ -294,6 +301,8 @@
                           <th>未完了タスク数</th>
                           <th>タスク消化率</th>
                           <th>詳細</th>
+                          <th>編集</th>
+                          <th>削除</th>
                       </tr>
                       </thead>
                       <tbody>
@@ -304,7 +313,13 @@
                           <td>50%</td>
                           <td><a href="/promotion/list/show" class="btn btn-info btn-circle btn-sm">
                               <i class="fas fa-info-circle"></i>
-                            </a></td>                
+                            </a></td> 
+
+                          <td><a href="#" class="btn btn-primary btn-circle btn-sm">
+                            <i class="fas fa-edit"></i>
+                            </a></td>
+                           <td><a href="#" class="btn btn-danger btn-circle btn-sm">
+                            <i class="fas fa-trash-alt"></i></a></td>               
                       </tr>
                       <tr>
                           <td>2</td>
@@ -411,10 +426,23 @@
 
 
   <div class="tab-content" id="budget_index">
-     <div class="container"> 
-      <div class="card shadow mb-4">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">予算登録</h6>
+     <div class="container">
+     <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">企画一覧</h6>
+          <div class="dropdown no-arrow">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+              <div class="dropdown-header">menu:</div>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">期間選択</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/promotion/list/create">新規作成</a>
+              <a class="dropdown-item" href="#">エクスポート</a>
+            </div>
+          </div>
         </div>
         <div class="card-body">
           
