@@ -25,17 +25,9 @@ class ProductController extends Controller
 	}
 
 
+	public function productsCreate(){
 
-
-
-
-
-
-
-
-	public function processIndex(){
-
-		return view ('products.process.index', [
+		return view ('products.list.create', [
 
 			// 'shops' => $shops,
         
@@ -43,9 +35,54 @@ class ProductController extends Controller
 	}
 
 
-	public function deliveryIndex(){
 
-		return view ('products.delivery.index', [
+
+
+	public function consumptionIndex(){
+
+		return view ('products.consumption.index', [
+
+			// 'shops' => $shops,
+        
+		]);
+	}
+
+
+	public function consumptionShow(){
+
+		return view ('products.consumption.show', [
+
+			// 'shops' => $shops,
+        
+		]);
+	}
+
+
+	public function consumptionCreate(){
+
+		return view ('products.consumption.create', [
+
+			// 'shops' => $shops,
+        
+		]);
+	}
+
+
+
+
+	public function deliveryShow(){
+
+		return view ('products.delivery.show', [
+
+			// 'shops' => $shops,
+        
+		]);
+	}
+
+
+	public function deliveryCreate(){
+
+		return view ('products.delivery.create', [
 
 			// 'shops' => $shops,
         

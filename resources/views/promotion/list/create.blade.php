@@ -39,12 +39,11 @@
                 </div>
                 <div class="form-group">
                   <label for="purpose">目的</label>
-                  <input type="text" class="form-control" name="purpose" id="purpose" value="{{ old('purpose') }}" >
+                  <textarea type="text" class="form-control" name="purpose" id="purpose" value="{{ old('purpose') }}" ></textarea>
                 </div>
                 <div class="form-group">
-                  <label for="detail">詳細</label>
-                  <input type="text" class="form-control" name="detail" id="detail" value="{{ old('detail') }}" >
-                </div>
+                  <label for="detail">概要</label>
+                   <textarea type="text" class="form-control" name="overview" id="overview" value="{{ old('purpose') }}" ></textarea>
                 <div class="form-group">
                   <label for="target1">ターゲット1</label>
                   <input type="text" class="form-control" name="target1" id="target1" value="{{ old('target1') }}" >

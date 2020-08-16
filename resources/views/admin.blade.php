@@ -90,7 +90,7 @@
  <div class="card shadow mb-4">
     <!-- Card Header - Dropdown -->
     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-      <h6 class="m-0 font-weight-bold text-primary">お知らせ</h6>
+      <h6 class="m-0 font-weight-bold text-primary">月間トピックス</h6>
       <div class="dropdown no-arrow">
         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -99,7 +99,7 @@
           <div class="dropdown-header">menu:</div>
           <a class="dropdown-item"data-toggle="modal" data-target="#sampleModal">期間選択</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">投稿</a>
+          <a class="dropdown-item" href="#">登録</a>
           <a class="dropdown-item" href="#">編集</a>
           <a class="dropdown-item" href="#">削除</a>
         </div>
@@ -131,19 +131,19 @@
 
       <div class="swiper-slide">
         <div class="sample02-inner">
-          <h1><font color="black">配信情報を添付（リンクで飛ぶ）</font></h1>
+          <h1><font color="black">プロモーション設定</font></h1>
         </div>
       </div>
 
       <div class="swiper-slide">
         <div class="sample02-inner">
-         <h1><font color="black">火曜メールの代わりに使う</font></h1>
+         <h1><font color="black">月間トピックスを強調</font></h1>
         </div>
       </div>
 
       <div class="swiper-slide">
         <div class="sample02-inner">
-          <iframe src="https://calendar.google.com/calendar/embed?src=testersampler258%40gmail.com&ctz=Asia%2FTokyo" style="border: 0" width="570" height="340" frameborder="0" scrolling="no"></iframe>
+          <iframe src="https://calendar.google.com/calendar/embed?src=testersampler258%40gmail.com&ctz=Asia%2FTokyo" style="border: 0" width="650" height="420" frameborder="0" scrolling="no"></iframe>
         </div>
       </div>
 
@@ -172,7 +172,7 @@
  <div class="card shadow mb-4">
     <!-- Card Header - Dropdown -->
     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-      <h6 class="m-0 font-weight-bold text-primary">依頼事項</h6>
+      <h6 class="m-0 font-weight-bold text-primary">共有事項</h6>
       <div class="dropdown no-arrow">
         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -182,8 +182,6 @@
           <a class="dropdown-item"data-toggle="modal" data-target="#sampleModal">期間選択</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">投稿</a>
-          <a class="dropdown-item" href="#">編集</a>
-          <a class="dropdown-item" href="#">削除</a>
         </div>
       </div>
     </div>
@@ -200,26 +198,38 @@
                     <tr>
                         <th>タイトル</th>
                         <th>内容</th>
-                        <th>表示期限</th>
-                        <th>詳細表示</th>
+                        <th>日付</th>
+                        <th>詳細</th>
+                        <th>編集</th>
+                        <th>削除</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>セールが始まります</td>
-                        <td>各店対象品の発送をお願いします</td>
+                        <td>9月の販促企画</td>
+                        <td>販促管理画面に追加しております。</td>
                         <td>2020.7.19</td>
                         <td><a href="#" class="btn btn-info btn-circle btn-sm">
                             <i class="fas fa-info-circle"></i>
-                          </a></td>                
+                          </a></td> 
+                        <td><a href="#" class="btn btn-primary btn-circle btn-sm">
+                              <i class="fas fa-edit"></i>
+                              </a></td>
+                         <td><a href="#" class="btn btn-danger btn-circle btn-sm">
+                          <i class="fas fa-trash-alt"></i></a></td>               
                     </tr>
                     <tr>
-                        <td>イベントマッチングのお願い</td>
-                        <td>POPUPイベントの応援をお願いします</td>
+                        <td>プレママフェス詳細決定</td>
+                        <td>詳細確認の上、配信スケジュールを設定お願いします。</td>
                         <td>2020.8.19</td>
                         <td><a href="#" class="btn btn-info btn-circle btn-sm">
                             <i class="fas fa-info-circle"></i>
-                          </a></td>                
+                          </a></td> 
+                      　<td><a href="#" class="btn btn-primary btn-circle btn-sm">
+                              <i class="fas fa-edit"></i>
+                              </a></td>
+                       <td><a href="#" class="btn btn-danger btn-circle btn-sm">
+                        <i class="fas fa-trash-alt"></i></a></td>               
                     </tr>
                        
                     </tbody>
@@ -380,6 +390,16 @@
   });
 }, false);
 </script>
+
+
+<script>
+    jQuery(function($){ 
+    $("#table1").DataTable(); 
+}); 
+</script>
+
+  <script src="/sb_admin_2/vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="/sb_admin_2/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
 
 

@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Stork.com</title>
+  <title>Promotion_Admin.com</title>
 
   <!-- Custom fonts for this template-->
   <link href="/sb_admin_2/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -36,7 +36,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-feather-alt"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Stork.com </div>
+        <div class="sidebar-brand-text mx-3">PA.com </div>
       </a>
 
       <!-- Divider -->
@@ -49,139 +49,69 @@
           <span>ホーム</span></a>
       </li>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        販売部門
-      </div>
-
-      <!-- Nav Item - Pages Collapse Menu -->
       
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-fw fa-store-alt"></i>
-          <span>店舗管理</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">業務選択:</h6>
-            <a class="collapse-item" href="/shops/list/index">店舗マスタ</a>
-            <a class="collapse-item" href="/shops/budgets/index">予算管理</a>
-            <a class="collapse-item" href="#">在庫管理</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-fw fa-building"></i>
-          <span>法人管理</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">業務選択:</h6>
-            <a class="collapse-item" href="/corporations/clients/index">法人マスタ</a>
-            <a class="collapse-item" href="/corporations/budgets/index">予算管理</a>
-            <a class="collapse-item" href="/corporations/orders/index">受注管理</a>
-            <a class="collapse-item" href="/corporations/invoices/index">請求管理</a>
-          </div>
-        </div>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-          <i class="fas fa-fw fa-shopping-cart"></i>
-          <span>EC管理</span>
-        </a>
-        <div id="collapseThree" class="collapse" aria-labelledby="collapseThree" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">業務選択:</h6>
-            <a class="collapse-item" href="#">予算管理</a>
-            <a class="collapse-item" href="#">在庫管理</a>
-            <a class="collapse-item" href="#">注文管理</a>
-            <a class="collapse-item" href="#">出荷管理</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
+     
+      
       <!-- Heading -->
       <div class="sidebar-heading">
-        商品部門
-      </div>
-
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage1" aria-expanded="true" aria-controls="collapsePage1">
-          <i class="fas fa-fw fa-tshirt"></i>
-          <span>商品管理</span>
-        </a>
-        <div id="collapsePage1" class="collapse" aria-labelledby="headingPage1" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">業務選択:</h6>
-            <a class="collapse-item" href="/products/list/index">商品マスタ</a>
-            <a class="collapse-item" href="#">生産管理</a><!-- リンク先に/products/process/indexが入る予定 -->
-            <a class="collapse-item" href="#">在庫管理</a>
-            <a class="collapse-item" href="#">出荷管理</a><!-- リンク先に/products/delivery/index入る予定 -->
-        </div>
-      </li>
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        営業部門
+        企画部門
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>売上管理</span>
+          <i class="fas fa-fw fa-calendar-plus"></i>
+          <span>販促管理</span>
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">チャネル別:</h6>
-            <a class="collapse-item" href="/earnings/shops/index">店舗分析</a>
-            <a class="collapse-item" href="/earnings/corporations/index">法人分析</a>
-            <a class="collapse-item" href="/earnings/ec/index">EC分析</a>
-            <div class="collapse-divider"></div><br>
-            <h6 class="collapse-header">カテゴリ別:</h6>
-            <a class="collapse-item" href="/earnings/promotions/index">プロモーション効果分析</a>
-            <a class="collapse-item" href="/earnings/categories/index">カテゴリ別分析</a>
-            <a class="collapse-item" href="/earnings/brands/index">ブランド別分析</a>
-            <a class="collapse-item" href="/earnings/sizes/index">サイズ別分析</a>
-            <a class="collapse-item" href="/earnings/ages/index">年齢別分析</a>
-            <a class="collapse-item" href="/earnings/areas/index">エリア別分析</a>
+            <a class="collapse-item" href="/promotion/list/index">販促マスタ</a>
+            <a class="collapse-item" href="/promotion/budget/index">予実管理</a>
           </div>
         </div>
       </li>
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        販促部門
+        配信部門
       </div>
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage3" aria-expanded="true" aria-controls="collapsePage3">
-          <i class="fas fa-fw fa-calendar-plus"></i>
-          <span>プロモーション管理</span>
+          <i class="fas fa-fw fa-mobile-alt"></i>
+          <span>配信管理</span>
         </a>
         <div id="collapsePage3" class="collapse" aria-labelledby="headingPage3" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">業務選択:</h6>
-            <a class="collapse-item" href="/promotion/list/index">販促マスタ</a>
-            <a class="collapse-item" href="/promotion/newsletter/index">NewsLetter管理</a>
-            <a class="collapse-item" href="/promotion/instagram/index">Instagram管理</a>
-            <a class="collapse-item" href="/promotion/movie/index">動画コンテンツ管理</a>
-            <a class="collapse-item" href="/promotion/line/index">LINE管理</a>
-            <a class="collapse-item" href="/promotion/blog/index">ブログ管理</a>
-            <a class="collapse-item" href="/promotion/facebook/index">Facebook管理</a>
+            <a class="collapse-item" href="/media/newsletter/index">NewsLetter管理</a>
+            <a class="collapse-item" href="/media/instagram/index">Instagram管理</a>
+            <a class="collapse-item" href="/media/movie/index">動画管理</a>
+            <a class="collapse-item" href="/media/facebook/index">Facebook管理</a>
         </div>
       </li>
+
+            <!-- Heading -->
+      <div class="sidebar-heading">
+        在庫部門
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage4" aria-expanded="true" aria-controls="collapsePage4">
+          <i class="fas fa-fw fa-tshirt"></i>
+          <span>在庫管理</span>
+        </a>
+        <div id="collapsePage4" class="collapse" aria-labelledby="headingPage4" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">業務選択:</h6>
+            <a class="collapse-item" href="/products/list/index">商品マスタ</a>
+            <a class="collapse-item" href="/products/consumption/index">販売管理</a>
+          </div>
+        </div>
+      </li>
+      
+
 
             <!-- Heading -->
       <div class="sidebar-heading">
@@ -190,29 +120,30 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage4" aria-expanded="true" aria-controls="collapsePage4">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage5" aria-expanded="true" aria-controls="collapsePage5">
           <i class="fas fa-fw fa-user"></i>
-          <span>ユーザー設定</span>
-        </a>
-        <div id="collapsePage4" class="collapse" aria-labelledby="headingPage4" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">業務選択:</h6>
-            <a class="collapse-item" href="/show">ユーザー管理</a>
-            <a class="collapse-item" href="#">画面設定</a>
-          </div>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage5" aria-expanded="true" aria-controls="collapsePage4">
-          <i class="fas fa-fw fa-question-circle"></i>
-          <span>ヘルプ</span>
+          <span>共通設定</span>
         </a>
         <div id="collapsePage5" class="collapse" aria-labelledby="headingPage5" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">業務選択:</h6>
+            <a class="collapse-item" href="/common/users/index">ユーザー管理</a>
+            <a class="collapse-item" href="/common/chat/index">チャット管理</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage6" aria-expanded="true" aria-controls="collapsePage6">
+          <i class="fas fa-fw fa-question-circle"></i>
+          <span>ヘルプ</span>
+        </a>
+        <div id="collapsePage6" class="collapse" aria-labelledby="headingPage6" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">内容:</h6>
-            <a class="collapse-item" href="#">各メニューについて</a>
-            <a class="collapse-item" href="#">アカウントについて</a>
-            <a class="collapse-item" href="#">お問い合わせ</a>
+            <a class="collapse-item" href="/help/tutorial">チュートリアル</a>
+            <a class="collapse-item" href="/help/question">よくある質問</a>
+            <a class="collapse-item" href="/help/inquiry">お問い合わせ</a>
           </div>
         </div>
       </li>
@@ -309,7 +240,7 @@
                   </div>
                   <div>
                     <div class="small text-gray-500">June 28, 2020</div>
-                    当月予算達成まで残り¥9,000,000です
+                    WEB予算達成まで残り¥9,000,000です
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -320,7 +251,7 @@
                   </div>
                   <div>
                     <div class="small text-gray-500">June 25, 2020</div>
-                     販促イベント経費が予算オーバーしています
+                     月間トピックスに追加コンテンツがあります。
                   </div>
                 </a>
                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
@@ -345,8 +276,8 @@
                     <div class="status-indicator bg-success"></div>
                   </div>
                   <div class="font-weight-bold">
-                    <div class="text-truncate">各店、6月29日中に7月予算を入力完了してください。</div>
-                    <div class="small text-gray-500">山田花子</div>
+                    <div class="text-truncate">レポート機能の改修を行います。本日17：00～18：00はログインしないでください。</div>
+                    <div class="small text-gray-500">藤嶋</div>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -355,8 +286,8 @@
                     <div class="status-indicator"></div>
                   </div>
                   <div>
-                    <div class="text-truncate">販促企画を追加しました。該当ページを確認ください。</div>
-                    <div class="small text-gray-500">田中太郎</div>
+                    <div class="text-truncate">NLの配信時間を13：00⇒15：00に変更します。</div>
+                    <div class="small text-gray-500">柴咲</div>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -365,8 +296,8 @@
                     <div class="status-indicator bg-warning"></div>
                   </div>
                   <div>
-                    <div class="text-truncate">頑張れ</div>
-                    <div class="small text-gray-500">鈴木一郎</div>
+                    <div class="text-truncate">9/1配信のNL配信内容をご確認ください。</div>
+                    <div class="small text-gray-500">駒田</div>
                   </div>
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -375,8 +306,8 @@
                     <div class="status-indicator bg-success"></div>
                   </div>
                   <div>
-                    <div class="text-truncate">札幌店が予算達成しました。</div>
-                    <div class="small text-gray-500">札幌店スタッフ</div>
+                    <div class="text-truncate">70周年企画の掲載画像を依頼致します</div>
+                    <div class="small text-gray-500">福原</div>
                   </div>
                 </a>
                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
@@ -426,7 +357,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Stork.com 2020</span>
+            <span>Copyright &copy; Promotion_Admin.com 2020</span>
           </div>
         </div>
       </footer>
@@ -510,18 +441,34 @@
 </script>
 
 <script>
-  flatpickr(document.getElementById('logend_date'), {
+  flatpickr(document.getElementById('blog_date'), {
     locale: 'ja',
     dateFormat: "Y/m/d",
-    defaultDate: ["2016-2-1", new Date()]
+    minDate:  ["2020-2-1"]
   });
 </script>
 
 <script>
-  flatpickr(document.getElementById('logend_date2'), {
+  flatpickr(document.getElementById('blog_date2'), {
     locale: 'ja',
     dateFormat: "Y/m/d",
-    defaultDate: ["2016-2-1", new Date()]
+    minDate:  ["2020-2-1"]
+  });
+</script>
+
+<script>
+  flatpickr(document.getElementById('blog_date3'), {
+    locale: 'ja',
+    dateFormat: "Y/m/d",
+    minDate:  ["2020-2-1"]
+  });
+</script>
+
+<script>
+  flatpickr(document.getElementById('deliver_date'), {
+    locale: 'ja',
+    dateFormat: "Y/m/d",
+    minDate: new Date()
   });
 </script>
  

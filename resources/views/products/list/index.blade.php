@@ -15,17 +15,19 @@
 @section('content')
 
 <div class="container-fluid">
-<h1 class="h3 mb-2 text-gray-800">商品管理</h1>
-<div class="container">
+<h1 class="h3 mb-2 text-gray-800">
+  <i class="fas fa-fw fa-tshirt"></i>
+  <span>商品マスタ</span>
+</h1>
 
 
   <ul class="tab-list" id="tab-1">
  
     <li class="tab-item is-open">
-      <a href="#products_index" data-toggle>商品一覧</a>
+      <a href="#products_index" data-toggle>商品管理</a>
     </li>
     <li class="tab-item">
-      <a href="#products_create" data-toggle>商品登録</a>
+      <a href="#list_index" data-toggle>リスト管理</a>
     </li>
     
  
@@ -36,24 +38,40 @@
      <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">企画一覧</h6>
+          <h6 class="m-0 font-weight-bold text-primary">商品一覧</h6>
           <div class="dropdown no-arrow">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
               <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">絞り込み</a>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">
+                  <i class="fas fa-fw fa-plus-square"></i>
+                  <span>販促選択</span>
+              </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/promotion/list/create">新規作成</a>
-              <a class="dropdown-item" href="#">エクスポート</a>
+                <a class="dropdown-item" href="/products/list/create">
+                    <i class="fas fa-fw fa-plus-square"></i>
+                   <span>新規作成</span>
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-fw fa-file-csv"></i>
+                  <span>CSV出力</span>
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-fw fa-file-pdf"></i>
+                  <span>PDF出力</span>
+                </a>
             </div>
           </div>
         </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
         <table id="table1" class="table table-bordered">
             <thead>
             <tr>
-                <th>ID</th>
+                
                 <th>品番</th>
                 <th>品名</th>
                 <th>カテゴリ</th>
@@ -63,7 +81,7 @@
             </thead>
             <tbody>
             <tr>
-                <td>1</td>
+               
                 <td>100200</td>
                 <td>ネックレス</td>
                 <td>雑貨</td>
@@ -73,7 +91,7 @@
                   </a></td>                
             </tr>
             <tr>
-                <td>2</td>
+                
                  <td>100200</td>
                 <td>Tシャツ</td>
                 <td>トップス</td>
@@ -83,7 +101,7 @@
                   </a></td>         
             </tr>
             <tr>
-                  <td>3</td>
+                 
                  <td>100200</td>
                 <td>Tシャツ</td>
                 <td>トップス</td>
@@ -93,7 +111,7 @@
                   </a></td>      
             </tr>
             <tr>
-                  <td>4</td>
+                  
                 <td>100200</td>
                 <td>Tシャツ</td>
                 <td>トップス</td>
@@ -103,7 +121,7 @@
                   </a></td>       
             </tr>
             <tr>
-                  <td>5</td>
+                  
                  <td>100200</td>
                 <td>Tシャツ</td>
                 <td>トップス</td>
@@ -113,7 +131,7 @@
                   </a></td>       
             </tr>
             <tr>
-                  <td>6</td>
+                  
                  <td>100200</td>
                 <td>パンツ</td>
                 <td>ボトムス</td>
@@ -123,7 +141,7 @@
                   </a></td>        
             </tr>
             <tr>
-                  <td>7</td>
+                  
                  <td>100200</td>
                 <td>Tシャツ</td>
                 <td>トップス</td>
@@ -133,7 +151,7 @@
                   </a></td>       
             </tr>
             <tr>
-                  <td>8</td>
+                  
                 <td>100200</td>
                 <td>Tシャツ</td>
                 <td>トップス</td>
@@ -147,94 +165,147 @@
         </table>
     </div>
 </div>
-  
-  
+  </nav>
+</div>
   </div>
-  <div class="tab-content" id="products_create">
-  	 <div class="container"> 
-      <div class="card shadow mb-4">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">商品登録</h6>
+  </div>
+  <div class="tab-content" id="list_index">
+  	 <div class="container">
+     <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">リスト一覧</h6>
+          <div class="dropdown no-arrow">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+              <div class="dropdown-header">menu:</div>
+                <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">
+                   <i class="fas fa-fw fa-plus-square"></i>
+                    <span>販促選択</span>
+                </a>
+              <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/products/list/create">
+                  <i class="fas fa-fw fa-plus-square"></i>
+                  <span>新規作成</span>
+                </a>
+               <a class="dropdown-item" href="#">
+                  <i class="fas fa-fw fa-file-csv"></i>
+                  <span>CSV出力</span>
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-fw fa-file-pdf"></i>
+                  <span>PDF出力</span>
+                </a>
+            </div>
+          </div>
+        
+
         </div>
         <div class="card-body">
           
           <nav class="panel panel-default">
-            
+        <table id="table2" class="table table-bordered">
+            <thead>
+            <tr>
+                
+                <th>リスト名</th>
+                <th>関連企画</th>
+                <th>カテゴリ</th>
+                <th>商品数</th>
+                <th>詳細</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+               
+                <td>100200</td>
+                <td>ネックレス</td>
+                <td>雑貨</td>
+                <td>5,000</td>
+                <td><a href="/products/list/show" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>                
+            </tr>
+            <tr>
+                
+                 <td>100200</td>
+                <td>Tシャツ</td>
+                <td>トップス</td>
+                <td>5,000</td>
+                <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>         
+            </tr>
+            <tr>
+                 
+                 <td>100200</td>
+                <td>Tシャツ</td>
+                <td>トップス</td>
+                <td>5,000</td>
+                <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>      
+            </tr>
+            <tr>
+                  
+                <td>100200</td>
+                <td>Tシャツ</td>
+                <td>トップス</td>
+                <td>5,000</td>
+                <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>       
+            </tr>
+            <tr>
+                  
+                 <td>100200</td>
+                <td>Tシャツ</td>
+                <td>トップス</td>
+                <td>5,000</td>
+                <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>       
+            </tr>
+            <tr>
+                  
+                 <td>100200</td>
+                <td>パンツ</td>
+                <td>ボトムス</td>
+                <td>5,000</td>
+                <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>        
+            </tr>
+            <tr>
+                  
+                 <td>100200</td>
+                <td>Tシャツ</td>
+                <td>トップス</td>
+                <td>5,000</td>
+                <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>       
+            </tr>
+            <tr>
+                  
+                <td>100200</td>
+                <td>Tシャツ</td>
+                <td>トップス</td>
+                <td>5,000</td>
+                <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                    <i class="fas fa-info-circle"></i>
+                  </a></td>    
+            </tr>
            
-              
-              <form action="#" method="POST">
-                @csrf
-                <div class="form-group">
-                  <label for="title">品名</label>
-                  <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="product_number">品番</label>
-                  <input type="text" class="form-control" name="product_number" id="product_number" value="{{ old('product_number') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="category">カテゴリ</label>
-                  <input type="text" class="form-control" name="category" id="category" value="{{ old('category') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="price">価格</label>
-                  <input type="text" class="form-control" name="price" id="price" value="{{ old('price') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="size">サイズ</label>
-                  <input type="text" class="form-control" name="size" id="size" value="{{ old('size') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="color">カラー</label>
-                  <input type="text" class="form-control" name="color" id="color" value="{{ old('color') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="age">対象年齢</label>
-                  <select type="text" class="form-control" name="age" id="age" value="{{ old('age') }}" />
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="maker_id">メーカー</label>
-                  <select type="text" class="form-control" name="maker_id" id="maker_id" value="{{ old('maker_id') }}" />
-                    <option>A工場</option>
-                    <option>B工場</option>
-                    <option>C工場</option>
-                    <option>D工場</option>
-                    <option>E工場</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="status">ステータス</label>
-                  <select type="text" class="form-control" name="status" id="status" value="{{ old('status') }}" />
-                    <option>正価</option>
-                    <option>セール（３０％OFF)</option>
-                    <option>セール（５０％OFF)</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="image">画像</label>
-                  <div class="custom-file">
-                        <input type="file" name="image" class="custom-file-input">
-                        <label class="custom-file-label">File</label>
-                    </div>
-                </div>
-                <div class="text-right">
-                  <button type="submit" class="btn btn-primary">登録</button>
-                </div>
-              </form>        
-          </nav>
-        </div>
-      </div>
+            </tbody>
+        </table>
     </div>
-  
+  </nav>
   </div>
- 
-
+ </div>
+</div>
 </div>
 
 
@@ -246,10 +317,10 @@
   <!-- Core plugin JavaScript-->
   <script src="/sb_admin_2/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Custom scripts for all pages-->
+  <!-- Custom scripts for all ptypes-->
   <script src="/sb_admin_2/js/sb-admin-2.min.js"></script>
 
-  <!-- Page level plugins -->
+  <!-- Ptype level plugins -->
   <script src="/sb_admin_2/vendor/datatables/jquery.dataTables.min.js"></script>
   <script src="/sb_admin_2/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
@@ -257,6 +328,7 @@
 <script>
     jQuery(function($){ 
     $("#table1").DataTable(); 
+    $("#table2").DataTable();
 }); 
 </script>
 

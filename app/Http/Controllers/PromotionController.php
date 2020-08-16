@@ -50,11 +50,9 @@ class PromotionController extends Controller
 
 
 
+	public function apCreate(){
 
-
-	public function logShow(){
-
-		return view ('promotion.log.show', [
+		return view ('promotion.ap.create', [
 
 			// 'shops' => $shops,
         
@@ -63,7 +61,8 @@ class PromotionController extends Controller
 
 
 
-	public function budgetShow(){
+
+	public function budgetIndex(){
 
 		return view ('promotion.budget.index', [
 
@@ -71,126 +70,35 @@ class PromotionController extends Controller
         
 		]);
 	}
+	
 
 
 
+	public function budgetShow(){
 
+		return view ('promotion.budget.show', [
 
-
-
-
-	public function newsletterIndex(){
-
-		return view ('promotion.newsletter.index', [
-
-			
+			// 'shops' => $shops,
         
 		]);
 	}
+
+
+	public function budgetCreate(){
+
+		return view ('promotion.budget.create', [
+
+			// 'shops' => $shops,
+        
+		]);
+	}
+
+
+
+
 
 
 	
-
-	public function newsletterShow(){
-
-		return view ('promotion.newsletter.show', [
-
-			
-        
-		]);
-	}
-
-
-
-	public function newsletterCreate(){
-
-		return view ('promotion.newsletter.create', [
-
-			
-        
-		]);
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public function instagramIndex(){
-
-		return view ('promotion.instagram.index', [
-
-			
-        
-		]);
-	}
-
-
-	public function instagramShow(){
-
-		return view ('promotion.instagram.show', [
-
-			
-        
-		]);
-	}
-
-
-
-
-
-
-	public function movieIndex(){
-
-		return view ('promotion.movie.index', [
-
-			// 'shops' => $shops,
-        
-		]);
-	}
-
-	
-
-	public function facebookIndex(){
-
-		return view ('promotion.facebook.index', [
-
-			// 'shops' => $shops,
-        
-		]);
-	}
-
-
-	public function lineIndex(){
-
-		return view ('promotion.line.index', [
-
-			// 'shops' => $shops,
-        
-		]);
-	}
-
-
-
-	public function blogIndex(){
-
-		return view ('promotion.blog.index', [
-
-			// 'shops' => $shops,
-        
-		]);
-	}
 
 	
 

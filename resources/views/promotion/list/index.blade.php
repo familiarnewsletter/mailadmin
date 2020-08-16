@@ -16,19 +16,19 @@
 @section('content')
 
 <div class="container-fluid">
-<h1 class="h3 mb-2 text-gray-800">販促企画</h1>
+<h1 class="h3 mb-2 text-gray-800">
+  <i class="far fa-calendar-alt"></i>
+  <span>販促選択</span>
+</h1>
 
 
   <ul class="tab-list" id="tab-1">
  
     <li class="tab-item is-open">
-      <a href="#promotion_index" data-toggle>企画一覧</a>
+      <a href="#promotion_index" data-toggle>企画管理</a>
     </li>
     <li class="tab-item">
       <a href="#ap_index" data-toggle>AP管理</a>
-    </li>
-    <li class="tab-item">
-      <a href="#budget_index" data-toggle>予算管理</a>
     </li>
  
   </ul>
@@ -45,10 +45,23 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
               <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">期間選択</a>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">
+                <i class="fas fa-fw fa-calendar-alt"></i>
+                <span>期間選択</span>
+              </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/promotion/list/create">新規作成</a>
-              <a class="dropdown-item" href="#">エクスポート</a>
+              <a class="dropdown-item" href="/promotion/list/create">
+                <i class="fas fa-fw fa-plus-square"></i>
+                <span>新規作成</span>
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-fw fa-file-csv"></i>
+                <span>CSV出力</span>
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-fw fa-file-pdf"></i>
+                <span>PDF出力</span>
+              </a>
             </div>
           </div>
         </div>
@@ -60,157 +73,66 @@
              <div class="container">
 
                 <div class="col-xs-12">
-                    <table id="table1" class="table table-bordered">
+                     <table id="table1" class="table table-bordered">
                         <thead>
                         <tr>
-                            <th>No</th>
                             <th>企画名</th>
+                            <th>予算</th>
                             <th>開始日</th>
                             <th>終了日</th>
-                            <th>予算</th>
                             <th>詳細</th>
-                            <th>編集</th>
-                            <th>削除</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <td>1</td>
-                            <td>タオル＆ファブリックDay</td>
-                            <td>2020.2.19</td>
-                            <td>2020.2.19</td>
-                            <td>1200000</td>
+                            <td>デニムバッグ</td>
+                            <td>300,000</td>
+                            <td>2020.8.20</td>
+                            <td>2020.8.22</td>
                             <td><a href="/promotion/list/show" class="btn btn-info btn-circle btn-sm">
                                 <i class="fas fa-info-circle"></i>
-                              </a></td>
-                              <td><a href="#" class="btn btn-primary btn-circle btn-sm">
-                              <i class="fas fa-edit"></i>
-                              </a></td>
-                             <td><a href="#" class="btn btn-danger btn-circle btn-sm">
-                              <i class="fas fa-trash-alt"></i></a></td>                
+                              </a></td>                
+                        </tr>
+                       <tr>
+                            <td>デニムバッグ</td>
+                            <td>300,000</td>
+                            <td>2020.8.20</td>
+                            <td>2020.8.22</td>
+                            <td><a href="/shops/list/show" class="btn btn-info btn-circle btn-sm">
+                                <i class="fas fa-info-circle"></i>
+                              </a></td>                
                         </tr>
                         <tr>
-                            <td>2</td>
-                            <td>Yシャツキャンペーン</td>
-                            <td>2020.12.2</td>
-                            <td>2020.2.19</td>
-                            <td>10000</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                            <td>デニムバッグ</td>
+                            <td>300,000</td>
+                            <td>2020.8.20</td>
+                            <td>2020.8.22</td>
+                            <td><a href="/shops/list/show" class="btn btn-info btn-circle btn-sm">
                                 <i class="fas fa-info-circle"></i>
-                              </a></td>          
+                              </a></td>                
                         </tr>
                         <tr>
-                            <td>3</td>
-                           <td>UGCキャンペーン</td>
-                            <td>2020.10.2</td>
-                            <td>2020.2.19</td>
-                            <td>30000</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                            <td>デニムバッグ</td>
+                            <td>300,000</td>
+                            <td>2020.8.20</td>
+                            <td>2020.8.22</td>
+                            <td><a href="/shops/list/show" class="btn btn-info btn-circle btn-sm">
                                 <i class="fas fa-info-circle"></i>
-                              </a></td>              
+                              </a></td>                
                         </tr>
                         <tr>
-                            <td>4</td>
-                            <td>デザイン体験</td>
-                            <td>2020.6.2</td>
-                            <td>2020.2.19</td>
-                            <td>300000</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                            <td>デニムバッグ</td>
+                            <td>300,000</td>
+                            <td>2020.8.20</td>
+                            <td>2020.8.22</td>
+                            <td><a href="/shops/list/show" class="btn btn-info btn-circle btn-sm">
                                 <i class="fas fa-info-circle"></i>
-                              </a></td>             
+                              </a></td>                
                         </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Tシャツキャンペーン</td>
-                            <td>2020.7.2</td>
-                            <td>2020.2.19</td>
-                            <td>9000</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>            
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Tシャツキャンペーン</td>
-                            <td>2020.9.9</td>
-                            <td>2020.2.19</td>
-                            <td>80000</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>              
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Tシャツキャンペーン</td>
-                            <td>2020.1.2</td>
-                            <td>2020.2.19</td>
-                            <td>780000</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>              
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>Tシャツキャンペーン</td>
-                            <td>2020.2.2</td>
-                            <td>2020.2.19</td>
-                            <td>110000</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>              
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>Tシャツキャンペーン</td>
-                            <td>2020.2.2</td>
-                            <td>2020.2.19</td>
-                            <td>1110000</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>              
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>Tシャツキャンペーン</td>
-                            <td>2020.2.2</td>
-                            <td>2020.2.19</td>
-                            <td>300000</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>              
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td>Tシャツキャンペーン</td>
-                            <td>2020.3.2</td>
-                            <td>2020.2.19</td>
-                            <td>3090000</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>             
-                        </tr>
-                        <tr>
-                            <td>12</td>
-                            <td>Tシャツキャンペーン</td>
-                            <td>2020.2.5</td>
-                            <td>2020.2.19</td>
-                            <td>200000</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>            
-                        </tr>
-                        <tr>
-                            <td>13</td>
-                            <td>Tシャツキャンペーン</td>
-                            <td>2020.2.9</td>
-                            <td>2020.2.19</td>
-                            <td>60000</td>
-                            <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                                <i class="fas fa-info-circle"></i>
-                              </a></td>         
-                        </tr>
+                        
                         </tbody>
                     </table>
+
                 </div>
 
               </div>
@@ -267,7 +189,7 @@
 </div> 
 
   <div class="tab-content" id="ap_index">
-  	 <div class="container">
+     <div class="container">
      <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -278,10 +200,23 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
               <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item"data-toggle="modal" data-target="#Modal2">期間選択</a>
+              <a class="dropdown-item"data-toggle="modal" data-target="#Modal2">
+                <i class="fas fa-fw fa-calendar-alt"></i>
+                <span>期間選択</span>
+              </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/promotion/list/create">新規作成</a>
-              <a class="dropdown-item" href="#">エクスポート</a>
+              <a class="dropdown-item" href="/promotion/ap/create">
+                <i class="fas fa-fw fa-plus-square"></i>
+                <span>新規作成</span>
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-fw fa-file-csv"></i>
+                <span>CSV出力</span>
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-fw fa-file-pdf"></i>
+                <span>PDF出力</span>
+              </a>
             </div>
           </div>
         </div>
@@ -294,81 +229,74 @@
 
               <div class="col-xs-12">
                   <table id="table2" class="table table-bordered">
-                      <thead>
-                      <tr>
-                          <th>No</th>
-                          <th>企画名</th>
-                          <th>未完了タスク数</th>
-                          <th>タスク消化率</th>
-                          <th>詳細</th>
-                          <th>編集</th>
-                          <th>削除</th>
-                      </tr>
-                      </thead>
-                      <tbody>
-                      <tr>
-                          <td>1</td>
-                          <td>Tシャツキャンペーン</td>
-                          <td>5</td>
-                          <td>50%</td>
-                          <td><a href="/promotion/list/show" class="btn btn-info btn-circle btn-sm">
-                              <i class="fas fa-info-circle"></i>
-                            </a></td> 
+                <thead>
+                <tr>
+                    <th>企画名</th>
+                    <th>実施日</th>
+                    <th>残タスク</th>
+                    <th>タスク消化率</th>
+                    <th>詳細</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>デニムバッグ</td>
+                    <td>2020.2.8</td>
+                    <td>5</td>
+                    <td>50</td>
+                    <td><a href="/promotion/ap/show" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>                
+                </tr>
+                <tr>
+                    <td>デニムバッグ</td>
+                    <td>2020.2.8</td>
+                    <td>5</td>
+                    <td>50</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>                
+                </tr>
+                <tr>
+                    <td>デニムバッグ</td>
+                    <td>2020.2.8</td>
+                    <td>5</td>
+                    <td>50</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>                
+                </tr>
+                <tr>
+                    <td>デニムバッグ</td>
+                    <td>2020.2.8</td>
+                    <td>5</td>
+                    <td>50</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>                
+                </tr>
+               <tr>
+                    <td>デニムバッグ</td>
+                    <td>2020.2.8</td>
+                    <td>5</td>
+                    <td>50</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>                
+                </tr>
+                <tr>
+                    <td>デニムバッグ</td>
+                    <td>2020.2.8</td>
+                    <td>5</td>
+                    <td>50</td>
+                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
+                        <i class="fas fa-info-circle"></i>
+                      </a></td>                
+                </tr>
 
-                          <td><a href="#" class="btn btn-primary btn-circle btn-sm">
-                            <i class="fas fa-edit"></i>
-                            </a></td>
-                           <td><a href="#" class="btn btn-danger btn-circle btn-sm">
-                            <i class="fas fa-trash-alt"></i></a></td>               
-                      </tr>
-                      <tr>
-                          <td>2</td>
-                          <td>Yシャツキャンペーン</td>
-                          <td>5</td>
-                          <td>50%</td>
-                          <td><a href="/promotion/list/show" class="btn btn-info btn-circle btn-sm">
-                              <i class="fas fa-info-circle"></i>
-                            </a></td>      
-                      </tr>
-                      <tr>
-                          <td>3</td>
-                         <td>UGCキャンペーン</td>
-                          <td>5</td>
-                          <td>50%</td>
-                          <td><a href="/promotion/list/show" class="btn btn-info btn-circle btn-sm">
-                              <i class="fas fa-info-circle"></i>
-                            </a></td>           
-                      </tr>
-                      <tr>
-                          <td>4</td>
-                          <td>デザイン体験</td>
-                          <td>5</td>
-                          <td>50%</td>
-                          <td><a href="/promotion/list/show" class="btn btn-info btn-circle btn-sm">
-                              <i class="fas fa-info-circle"></i>
-                            </a></td>          
-                      </tr>
-                      <tr>
-                          <td>5</td>
-                          <td>Tシャツキャンペーン</td>
-                          <td>5</td>
-                          <td>50%</td>
-                          <td><a href="/promotion/list/show" class="btn btn-info btn-circle btn-sm">
-                              <i class="fas fa-info-circle"></i>
-                            </a></td>         
-                      </tr>
-                      <tr>
-                          <td>6</td>
-                          <td>Tシャツキャンペーン</td>
-                          <td>5</td>
-                          <td>50%</td>
-                          <td><a href="/promotion/list/show" class="btn btn-info btn-circle btn-sm">
-                              <i class="fas fa-info-circle"></i>
-                            </a></td>             
-                      </tr>
-                      
-                      </tbody>
-                  </table>
+                
+                </tbody>
+            </table>
               </div>
 
             </div>
@@ -421,71 +349,6 @@
   </div>
 </div> 
 
- 
-
-
-
-  <div class="tab-content" id="budget_index">
-     <div class="container">
-     <div class="card shadow mb-4">
-        <!-- Card Header - Dropdown -->
-        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">企画一覧</h6>
-          <div class="dropdown no-arrow">
-            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
-              <div class="dropdown-header">menu:</div>
-              <a class="dropdown-item"data-toggle="modal" data-target="#Modal1">期間選択</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/promotion/list/create">新規作成</a>
-              <a class="dropdown-item" href="#">エクスポート</a>
-            </div>
-          </div>
-        </div>
-        <div class="card-body">
-          
-          <nav class="panel panel-default">
-            
-           
-              
-              <form action="#" method="POST">
-                @csrf
-                <div class="form-group">
-                  <label for="title">企画名</label>
-                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
-                    <option>Tシャツキャンペーン</option>
-                    <option>Yシャツキャンペーン</option>
-                    <option>UGCキャンペーン</option>
-                    <option>セール</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="target_item_list">ターゲットアイテム</label>
-                  <input type="text" class="form-control" name="target_item_list" id="target_item_list" value="{{ old('target_item') }}" >
-                </div>
-                <div class="form-group">
-                  <label for="target_budget">予算</label>
-                  <input type="number" step="1000" class="form-control" name="target_budget" id="target_budget" value="{{ old('target_budget') }}" >
-                </div>
-                <div class="form-group">
-                <label for="due_date">開始日</label>
-                <input type="text" class="form-control" name="start_date" id="start_date" value="{{ old('start_date') }}" >
-                </div>
-                <div class="form-group">
-                  <label for="end_date">終了日</label>
-                  <input type="text" class="form-control" name="end_date" id="end_date" value="{{ old('end_date') }}" >
-                </div>
-                <div class="text-right">
-                  <button type="submit" class="btn btn-primary">登録</button>
-                </div>
-              </form>        
-          </nav>
-        </div>
-      </div>
-  </div>
-
 </div>
 
 
@@ -494,25 +357,27 @@
 
 @section('scripts')
 
-<!-- Page level plugins -->
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
 <script src="/sb_admin_2/vendor/jquery/jquery.min.js"></script>
   
-  <!-- Core plugin JavaScript-->
-  <script src="/sb_admin_2/vendor/jquery-easing/jquery.easing.min.js"></script>
-
+  
   <!-- Custom scripts for all pages-->
-  <script src="/sb_admin_2/js/sb-admin-2.js"></script>
+  <script src="/sb_admin_2/js/sb-admin-2.min.js"></script>
 
-  <script>
-    jQuery(function($){ 
-    $("#table1").DataTable(); 
-    $("#table2").DataTable();
-    $("#table3").DataTable();
-}); 
-</script>
-
+  <!-- Page level plugins -->
   <script src="/sb_admin_2/vendor/datatables/jquery.dataTables.min.js"></script>
   <script src="/sb_admin_2/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
+  
+<script>
+    jQuery(function($){ 
+    $("#table1").DataTable(); 
+    $("#table2").DataTable(); 
+}); 
+</script>
+
+
+ 
 @endsection
