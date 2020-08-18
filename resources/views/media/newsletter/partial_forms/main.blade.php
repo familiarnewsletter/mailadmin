@@ -41,7 +41,7 @@
           	<form action="#" method="POST">
              <div class="form-group">
            	<label for="title">見出し名</label>
-              <div id="editor"></div>
+              <div id="editor"><input type="text" name="maintitle"></div>
             </div>
                 
          	</div> 

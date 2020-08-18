@@ -58,11 +58,14 @@
 @include('media.newsletter.partial_forms.banner')
 <!--▲▲ BANNER ▲▲-->
 
-<!--▼▼ FOOTER ▼▼-->
+<!--▼▼ FOOTER & COPYRIGHT ▼▼-->
 @include('media.newsletter.partial_forms.footertocopylight')
-<!--▲▲ COPYRIGHT ▲▲-->
-
-
+<!--▲▲ FOOTER & COPYRIGHT ▲▲-->
+<br>
+	<div class="text-center">
+	  <a href="#"><button type="submit" class="btn btn-primary">Preview</button></a>
+	</div>
+<br>
 </body>
 @endsection
 

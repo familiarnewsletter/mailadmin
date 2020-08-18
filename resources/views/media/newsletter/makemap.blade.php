@@ -34,8 +34,8 @@
             
            
               
-              <form action="#" method="POST">
-                @csrf
+             <!--  <form action="#" method="POST">
+                @csrf -->
                 <div class="form-group">
                   <label for="lettertitle">仮タイトル</label>
                   <input type="text" class="form-control" name="lettertitle" id="lettertitle" value="{{ old('lettertitle') }}" />
@@ -45,10 +45,11 @@
                   <input type="text" class="form-control" name="deliver_date" id="deliver_date" value="{{ old('deliver_date') }}" />
                 </div>
                 <div class="form-group">
-                  <label for="status">レイアウト</label>
+                  <label for="status">カテゴリ</label>
                   <select type="text" class="form-control" name="status" id="status" value="{{ old('status') }}">
-                  	<option>Full</option>
-                  	<option>Select Contents</option>
+                  	<option>本会員</option>
+                  	<option>NL会員</option>
+                    <option>セグメント</option>
                   </select> 
                 </div>
 
@@ -56,82 +57,74 @@
 
                 <div>コンテンツ</div>      
                 <div>
-                 <label class="checkbox" for="newsandtopics">
-                 	<input type="checkbox"  name="newsandtopics" id="newsandtopics" value="newsandtopics">
-                 	News&Topics
-                 </label>
+                  <table>
+                  <div class="form-group">
+                    <td>
+                   	<input type="checkbox"  name="newsandtopics" id="newsandtopics" value="newsandtopics">
+                   	ShopNews&Event
+                    <label class="number" for="newsandtopics">
+                    ×
+                    <input type="number" step="1" min="0" max="5" style="width: 100px;" name="newsandtopics" id="newsandtopics" value="newsandtopics">
+                   </label>
+                   </td>
+                   <td>
+                    <input type="checkbox"  name="newsandtopics" id="newsandtopics" value="newsandtopics">
+                    News&Topics
+                    <label class="number" for="newsandtopics">
+                    ×
+                    <input type="number" step="1" min="0" max="3" style="width: 100px;" name="newsandtopics" id="newsandtopics" value="newsandtopics">
+                   </label>
+                   </td>
+                   <td>
+                  
+                    <input type="checkbox"  name="newsandtopics" id="newsandtopics" value="newsandtopics">
+                    Pickup Item
+                    <label class="number" for="newsandtopics">
+                    ×
+                    <input type="number" step="1" min="0" max="3" style="width: 100px;" name="newsandtopics" id="newsandtopics" value="newsandtopics">
+                   </label>
+                   </td>
+                   <td>
+                  
+                  
+                    <input type="checkbox"  name="newsandtopics" id="newsandtopics" value="newsandtopics">
+                    Shop Blog
+                    <label class="number" for="newsandtopics">
+                    ×
+                    <input type="number" step="1" min="0" max="3" style="width: 100px;" name="newsandtopics" id="newsandtopics" value="newsandtopics">
+                   </label>
+                   </td>
+                   <td>
                 
-                 <label class="checkbox" for="newsandevent">
-                  <input type="checkbox"  name="newsandevent" id="newsandevent" value="newsandevent">
-                  ShopNews&Event
-              	 </label>
-                
-                 <label class="checkbox" for="pickupitem">
-                  	<input type="checkbox" name="pickupitem" id="pickupitem" value="pickupitem">
-                  	PickupItem
-                 </label>
-               	
-               	 <label class="checkbox" for="shopblog">
-                  <input type="checkbox" name="shopblog" id="shopblog" value="shopblog">
-                  ShopBlog
-              	</label>
-              	
-              	<label class="checkbox" for="stylebook">
-                  <input type="checkbox" name="stylebook" id="stylebook" value="stylebook">
-                  StyleBook
-              	</label>
+                  
+                    <input type="checkbox"  name="newsandtopics" id="newsandtopics" value="newsandtopics">
+                    Style Book
+                    <label class="number" for="newsandtopics">
+                    ×
+                    <input type="number" step="3" min="3" max="6" style="width: 100px;" name="newsandtopics" id="newsandtopics" value="newsandtopics">
+                   </label>
+                   </td>
+                   <td>
+                  
+                    <input type="checkbox"  name="newsandtopics" id="newsandtopics" value="newsandtopics">
+                    Banner
+                    <label class="number" for="newsandtopics">
+                    ×
+                    <input type="number" step="1" min="0" max="5" style="width: 100px;" name="newsandtopics" id="newsandtopics" value="newsandtopics">
+                   </label>
+                   </td>
+                   
+                   </table>
+                </div>
 
-              	<label class="checkbox" for="banner">
-                  <input type="checkbox" name="banner" id="banner" value="banner">
-                  Banner
-                </label>
                 </div>
                 
                 <hr>
 
-                <div class="form-group">
-                  <label for="top"><strong>Topics</strong></label><br>
-                  <hr>
-                  <label for="toptitle">TOPタイトル</label>
-                  <input type="text" class="form-control" name="toptitle" id="toptitle" value="{{ old('toptitle') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="topimage">TOP画像URL</label>
-                  <div class="input-group">
-                    <div class="custom-file">
-                        <input type="file" name="image" class="custom-file-input">
-                        <label class="custom-file-label">File</label>
-                    </div>
-                </div>
-                
-                <hr>
-                
-               <div class="form-group">
-                  <label for="top"><strong>Topics</strong></label><br>
-                  <hr>
-                  <label for="toptitle">TOPタイトル</label>
-                  <input type="text" class="form-control" name="toptitle" id="toptitle" value="{{ old('toptitle') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="topimage">TOP画像URL</label>
-                  <input type="text" class="form-control" name="topimage" id="topimage" value="{{ old('topimage') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="topimage">TOP遷移先URL</label>
-                  <input type="text" class="form-control" name="topimage" id="topimage" value="{{ old('topimage') }}" />
-                </div>
-                <div class="form-group">
-                  <label for="topimage">TOPテキスト</label>
-                  <input type="text" class="form-control" name="topimage" id="topimage" value="{{ old('topimage') }}" />
-                </div>
-                
-                <hr>
-                
-                
                 <div class="text-right">
-                  <button type="submit" class="btn btn-primary">Preview</button>
+                  <a href="/media/newsletter/create"><button class="btn btn-primary">記事作成</button></a>
                 </div>
-              </form>        
+              <!-- </form>  -->       
           </nav>
         </div>
       </div>
