@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/test', function () {
+    return view('test');
+});
 
 Route::get('/layout', function () {
     return view('layout');
@@ -41,7 +44,7 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/promotion/list/index', 'PromotionController@promotionIndex')->name('promotion.index');
 
-//Route::get('/media/list/show/{media_id}', 'mediaController@mediaShow')->name('media.show');
+//Route::get('/media/list/show/{media_id}', 'MediaController@mediaShow')->name('media.show');
 Route::get('/promotion/list/show', 'PromotionController@promotionShow')->name('promotion.show');
 
 Route::get('/promotion/list/create', 'PromotionController@promotionCreate')->name('promotion.create');
@@ -138,55 +141,23 @@ Route::post('/products/delivery/{delivery_id}/delete', 'ProductController@delive
 
 
 
-Route::get('/media/newsletter/index', 'mediaController@newsletterIndex')->name('newsletter.index');
+Route::get('/media/newsletter/index', 'MediaController@newsletterIndex')->name('newsletter.index');
 
-//Route::get('/media/newsletter/show/{newsletter_id}', 'mediaController@newsletterShow')->name('newsletter.show');
-Route::get('/media/newsletter/show', 'mediaController@newsletterShow')->name('newsletter.show');
-
-
-Route::get('/media/newsletter/makemap', 'mediaController@newsletterMakemap')->name('newsletter.makemap');
+Route::get('/media/newsletter/show/{id}', 'MediaController@newsletterShow')->name('newsletter.show')->where('id', '[0-9]+');
+//Route::get('/media/newsletter/show', 'MediaController@newsletterShow')->name('newsletter.show');
 
 
-
-Route::get('/media/newsletter/create', 'mediaController@newsletterCreate')->name('newsletter.create');
-Route::post('/media/newsletter/create', 'mediaController@newsletterStore')->name('newsletter.store');
-
-Route::get('/media/newsletter/{newsletter_id}/edit', 'mediaController@newsletterEdit')->name('newsletter.edit');
-Route::post('/media/newsletter/{newsletter_id}/edit', 'mediaController@newsletterUpdate')->name('newsletter.update');
-
-Route::post('/media/newsletter/{newsletter_id}/delete', 'mediaController@newsletterDelete')->name('newsletter.delete');
-
-
-
-Route::get('/media/instagram/index', 'mediaController@instagramIndex')->name('instagram.index');
-
-//Route::get('/media/instagram/show/{instagram_id}', 'mediaController@instagramShow')->name('instagram.show');
-Route::get('/media/instagram/show', 'mediaController@instagramShow')->name('instagram.show');
-
-Route::get('/media/instagram/create', 'mediaController@instagramCreate')->name('instagram.create');
-Route::post('/media/instagram/create', 'mediaController@instagramStore')->name('instagram.store');
-
-Route::get('/media/instagram/{instagram_id}/edit', 'mediaController@instagramEdit')->name('instagram.edit');
-Route::post('/media/instagram/{instagram_id}/edit', 'mediaController@instagramUpdate')->name('instagram.update');
-
-Route::post('/media/instagram/{instagram_id}/delete', 'mediaController@instagramDelete')->name('instagram.delete');
+Route::get('/media/newsletter/create', 'MediaController@newsletterCreate')->name('newsletter.create');
+Route::post('/media/newsletter/create', 'MediaController@newsletterStore')->name('newsletter.store');
 
 
 
 
 
+Route::get('/media/newsletter/edit/{id}', 'MediaController@newsletterEdit')->name('newsletter.edit');
+Route::post('/media/newsletter/edit/{id}', 'MediaController@newsletterUpdate')->name('newsletter.update');
 
-Route::get('/media/movie/index', 'mediaController@movieIndex')->name('movie.index');
-
-Route::get('/media/movie/show/{movie_id}', 'mediaController@movieShow')->name('movie.show');
-
-Route::get('/media/movie/create', 'mediaController@movieCreate')->name('movie.create');
-Route::post('/media/movie/create', 'mediaController@movieStore')->name('movie.store');
-
-Route::get('/media/movie/{movie_id}/edit', 'mediaController@movieEdit')->name('movie.edit');
-Route::post('/media/movie/{movie_id}/edit', 'mediaController@movieUpdate')->name('movie.update');
-
-Route::post('/media/movie/{movie_id}/delete', 'mediaController@movieDelete')->name('movie.delete'); 
+Route::get('/media/newsletter/delete/{id}', 'MediaController@newsletterDelete')->name('newsletter.delete')->where('id', '[0-9]+');
 
 
 
@@ -194,17 +165,91 @@ Route::post('/media/movie/{movie_id}/delete', 'mediaController@movieDelete')->na
 
 
 
-Route::get('/media/facebook/index', 'mediaController@facebookIndex')->name('facebook.index');
 
-Route::get('/media/facebook/show/{facebook_id}', 'mediaController@facebookShow')->name('facebook.show');
+Route::post('/media/newsletter/createmap/{id}', 'MediaController@newsletterMapStore')->name('newsletter.storemap')->where('id', '[0-9]+');
 
-Route::get('/media/facebook/create', 'mediaController@facebookCreate')->name('facebook.create');
-Route::post('/media/facebook/create', 'mediaController@facebookStore')->name('facebook.store');
 
-Route::get('/media/facebook/{facebook_id}/edit', 'mediaController@facebookEdit')->name('facebook.edit');
-Route::post('/media/facebook/{facebook_id}/edit', 'mediaController@facebookUpdate')->name('facebook.update');
+Route::post('/media/newsletter/sortmap/{id}', 'MediaController@newsletterMapSort')->name('newsletter.sortmap');
 
-Route::post('/media/facebook/{facebook_id}/delete', 'mediaController@facebookDelete')->name('facebook.delete');
+Route::get('/media/newsletter/editmap/{newsletter_parts_admin_id}', 'MediaController@newsletterMapEdit')->name('newsletter.editmap');
+Route::post('/media/newsletter/editmap/{newsletter_parts_admin_id}', 'MediaController@newsletterMapUpdate')->name('newsletter.updatemap');
+
+Route::get('/media/newsletter/deletemap/{newsletter_parts_admin_id}', 'MediaController@newsletterMapDelete')->name('newsletter.deletemap');
+
+
+
+
+
+Route::get('/media/newsletter/createparts/{newsletter_parts_admin_id}', 'MediaController@newsletterPartsCreate')->name('newsletter.createparts');
+Route::post('/media/newsletter/createparts/{newsletter_parts_admin_id}', 'MediaController@newsletterPartsStore')->name('newsletter.storeparts');
+
+
+Route::get('/media/newsletter/editparts/{newsletter_parts_id}', 'MediaController@newsletterPartsEdit')->name('newsletter.editparts');
+Route::post('/media/newsletter/editparts/{newsletter_parts_id}', 'MediaController@newsletterPartsUpdate')->name('newsletter.updateparts');
+
+Route::get('/media/newsletter/deleteparts/{newsletter_parts_id}', 'MediaController@newsletterPartsDelete')->name('newsletter.deleteparts');
+
+
+
+
+
+
+
+Route::get('/media/newsletter/createlink/{newsletter_id}', 'MediaController@newsletterLinkCreate')->name('newsletter.createlink');
+Route::post('/media/newsletter/createlink/{newsletter_id}', 'MediaController@newsletterLinkStore')->name('newsletter.storelink');
+
+
+Route::get('/media/newsletter/editlink/{newsletter_link_id}', 'MediaController@newsletterLinkEdit')->name('newsletter.editlink');
+Route::post('/media/newsletter/editlink/{newsletter_link_id}', 'MediaController@newsletterLinkUpdate')->name('newsletter.updatelink');
+
+Route::get('/media/newsletter/deletelink/{newsletter_link_id}', 'MediaController@newsletterLinkDelete')->name('newsletter.deletelink');
+
+
+
+
+
+
+
+Route::get('/media/newsletter/preview', 'MediaController@newsletterPreview')->name('newsletter.preview');
+
+Route::get('/media/newsletter/source_code', 'MediaController@newsletterSourceCode')->name('newsletter.source_code');
+
+
+
+
+
+
+
+
+Route::get('/media/directory/index', 'MediaController@DirectoryIndex')->name('directory.index');
+
+//Route::get('/media/directory/show/{directory_id}', 'MediaController@DirectoryShow')->name('directory.show');
+Route::get('/media/directory/show', 'MediaController@DirectoryShow')->name('directory.show');
+
+Route::get('/media/directory/create', 'MediaController@DirectoryCreate')->name('directory.create');
+Route::post('/media/directory/create', 'MediaController@DirectoryStore')->name('directory.store');
+
+Route::get('/media/directory/{directory_id}/edit', 'MediaController@DirectoryEdit')->name('directory.edit');
+Route::post('/media/directory/{directory_id}/edit', 'MediaController@DirectoryUpdate')->name('directory.update');
+
+Route::post('/media/directory/{directory_id}/delete', 'MediaController@DirectoryDelete')->name('directory.delete');
+
+
+
+
+
+
+Route::get('/media/movie/index', 'MediaController@movieIndex')->name('movie.index');
+
+Route::get('/media/movie/show/{movie_id}', 'MediaController@movieShow')->name('movie.show');
+
+Route::get('/media/movie/create', 'MediaController@movieCreate')->name('movie.create');
+Route::post('/media/movie/create', 'MediaController@movieStore')->name('movie.store');
+
+Route::get('/media/movie/{movie_id}/edit', 'MediaController@movieEdit')->name('movie.edit');
+Route::post('/media/movie/{movie_id}/edit', 'MediaController@movieUpdate')->name('movie.update');
+
+Route::post('/media/movie/{movie_id}/delete', 'MediaController@movieDelete')->name('movie.delete'); 
 
 
 
@@ -261,4 +306,4 @@ Route::get('/help/inquiry', function () {
 
 
 
-Route::get('/show', 'mediaController@show')->name('show');
+Route::get('/show', 'MediaController@show')->name('show');

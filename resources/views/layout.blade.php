@@ -43,22 +43,22 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
+      <!-- <li class="nav-item active">
         <a class="nav-link" href="/admin">
           <i class="fas fa-fw fa-home"></i>
           <span>ホーム</span></a>
-      </li>
+      </li> -->
 
       
      
       
       <!-- Heading -->
-      <div class="sidebar-heading">
+      <!-- <div class="sidebar-heading">
         企画部門
-      </div>
+      </div> -->
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-calendar-plus"></i>
           <span>販促管理</span>
@@ -69,7 +69,7 @@
             <a class="collapse-item" href="/promotion/budget/index">予実管理</a>
           </div>
         </div>
-      </li>
+      </li> -->
 
       <!-- Heading -->
       <div class="sidebar-heading">
@@ -78,26 +78,26 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage3" aria-expanded="true" aria-controls="collapsePage3">
-          <i class="fas fa-fw fa-mobile-alt"></i>
-          <span>配信管理</span>
+          <i class="fas fa-fw fa-envelope"></i>
+          <span>Newsletter管理</span>
         </a>
         <div id="collapsePage3" class="collapse" aria-labelledby="headingPage3" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">業務選択:</h6>
             <a class="collapse-item" href="/media/newsletter/index">NewsLetter管理</a>
-            <a class="collapse-item" href="/media/instagram/index">Instagram管理</a>
-            <a class="collapse-item" href="/media/movie/index">動画管理</a>
-            <a class="collapse-item" href="/media/facebook/index">Facebook管理</a>
+            <a class="collapse-item" href="#">ディレクトリ管理</a>
+            <!-- <a class="collapse-item" href="/media/movie/index">動画管理</a>
+            <a class="collapse-item" href="/media/facebook/index">Facebook管理</a> -->
         </div>
       </li>
 
             <!-- Heading -->
-      <div class="sidebar-heading">
+      <!-- <div class="sidebar-heading">
         在庫部門
-      </div>
+      </div> -->
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage4" aria-expanded="true" aria-controls="collapsePage4">
           <i class="fas fa-fw fa-tshirt"></i>
           <span>在庫管理</span>
@@ -109,7 +109,7 @@
             <a class="collapse-item" href="/products/consumption/index">販売管理</a>
           </div>
         </div>
-      </li>
+      </li> -->
       
 
 
@@ -128,7 +128,6 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">業務選択:</h6>
             <a class="collapse-item" href="/common/users/index">ユーザー管理</a>
-            <a class="collapse-item" href="/common/chat/index">チャット管理</a>
           </div>
         </div>
       </li>
@@ -175,7 +174,7 @@
           </button>
 
           <!-- Topbar Search -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+          <!-- <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
               <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
@@ -184,7 +183,7 @@
                 </button>
               </div>
             </div>
-          </form>
+          </form> -->
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
@@ -209,111 +208,7 @@
               </div>
             </li>
 
-            <!-- Nav Item - Alerts -->
-            <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-bell fa-fw"></i>
-                <!-- Counter - Alerts -->
-                <span class="badge badge-danger badge-counter">3+</span>
-              </a>
-              <!-- Dropdown - Alerts -->
-              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-                <h6 class="dropdown-header">
-                  Alerts Center
-                </h6>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-primary">
-                      <i class="fas fa-file-alt text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="small text-gray-500">June 29, 2020</div>
-                    <span class="font-weight-bold">週次レポートがダウンロード可能です</span>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-success">
-                      <i class="fas fa-donate text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="small text-gray-500">June 28, 2020</div>
-                    WEB予算達成まで残り¥9,000,000です
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-warning">
-                      <i class="fas fa-exclamation-triangle text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="small text-gray-500">June 25, 2020</div>
-                     月間トピックスに追加コンテンツがあります。
-                  </div>
-                </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-              </div>
-            </li>
-
-            <!-- Nav Item - Chats -->
-            <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-comment fa-fw"></i>
-                <!-- Counter - Messages -->
-                <span class="badge badge-danger badge-counter">7</span>
-              </a>
-              <!-- Dropdown - Messages -->
-              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
-                <h6 class="dropdown-header">
-                  Message Center<i class="fas fa-plus fa-fw"></i>
-                </h6>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
-                    <div class="status-indicator bg-success"></div>
-                  </div>
-                  <div class="font-weight-bold">
-                    <div class="text-truncate">レポート機能の改修を行います。本日17：00～18：00はログインしないでください。</div>
-                    <div class="small text-gray-500">藤嶋</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/AU4VPcFN4LE/60x60" alt="">
-                    <div class="status-indicator"></div>
-                  </div>
-                  <div>
-                    <div class="text-truncate">NLの配信時間を13：00⇒15：00に変更します。</div>
-                    <div class="small text-gray-500">柴咲</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/CS2uCrpNzJY/60x60" alt="">
-                    <div class="status-indicator bg-warning"></div>
-                  </div>
-                  <div>
-                    <div class="text-truncate">9/1配信のNL配信内容をご確認ください。</div>
-                    <div class="small text-gray-500">駒田</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">
-                    <div class="status-indicator bg-success"></div>
-                  </div>
-                  <div>
-                    <div class="text-truncate">70周年企画の掲載画像を依頼致します</div>
-                    <div class="small text-gray-500">福原</div>
-                  </div>
-                </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-              </div>
-            </li>
-
+            
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <!-- Nav Item - User Information -->
@@ -328,14 +223,14 @@
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
-                <a class="dropdown-item" href="#">
+                <!-- <a class="dropdown-item" href="#">
                   <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                   Settings
                 </a>
                 <a class="dropdown-item" href="#">
                   <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                   Activity Log
-                </a>
+                </a> -->
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -398,9 +293,19 @@
 <script src="/sb_admin_2/vendor/jquery/jquery.js"></script>
 <script src="/sb_admin_2/vendor/bootstrap/js/bootstrap.bundle.js"></script>
 
+<!-- jQuery UI 1.12.1 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+ 
+
+
+
+
+
+
 <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
 <script src="https://npmcdn.com/flatpickr/dist/l10n/ja.js"></script>
-<script>
+<!-- <script>
   flatpickr(document.getElementById('due_date'), {
     locale: 'ja',
     dateFormat: "Y/m/d",
@@ -462,12 +367,13 @@
     dateFormat: "Y/m/d",
     minDate:  ["2020-2-1"]
   });
-</script>
+</script> -->
 
 <script>
-  flatpickr(document.getElementById('deliver_date'), {
+  flatpickr(document.getElementById('delivery_date'), {
     locale: 'ja',
-    dateFormat: "Y/m/d",
+    enableTime: true,
+    dateFormat: "Y/m/d H:i",
     minDate: new Date()
   });
 </script>

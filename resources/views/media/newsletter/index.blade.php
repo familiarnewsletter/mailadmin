@@ -25,6 +25,9 @@
   <ul class="tab-list" id="tab-1">
  
     <li class="tab-item is-open">
+      <a href="#newsletter_index" data-toggle>配信管理</a>
+    </li>
+    <li class="tab-item">
       <a href="#openingrate_index" data-toggle>開封率管理</a>
     </li>
     <li class="tab-item">
@@ -33,13 +36,66 @@
     <li class="tab-item">
       <a href="#cvr_index" data-toggle>収益管理</a>
     </li>
-    <li class="tab-item">
-      <a href="#newsletter_index" data-toggle>配信管理</a>
-    </li>
  
   </ul>
-
-  <div class="tab-content is-open" id="openingrate_index">
+<div class="tab-content is-open" id="newsletter_index">
+    <div class="container">
+     <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">配信内容</h6>
+          <div class="dropdown no-arrow">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+              <div class="dropdown-header">menu:</div>
+              <a class="dropdown-item" href="/media/newsletter/create">
+                    <i class="fas fa-fw fa-plus-square"></i>
+                    <span>新規作成</span>
+                </a>
+              
+                 <div class="dropdown-divider"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+  
+            <table id="table4" class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>配信日時</th>
+                    <th>タイトル</th>
+                    <th>ステータス</th>
+                    <th>カテゴリ</th>
+                    <th>詳細</th>
+                </tr>
+                </thead>
+                <tbody>
+                  @foreach($newsletters as $newsletter)
+                  <tr>
+                      <td>{{ $newsletter->delivery_date }}</td>
+                      <td>{{ $newsletter->title }}</td>
+                      <td><span class="label {{ $newsletter->status_class }}">{{ $newsletter->status_label }}</span></td>
+                      <td>{{ $newsletter->category }}</td>
+                      <td><a href="/media/newsletter/show/{{ $newsletter->id }}" class="btn btn-info btn-circle btn-sm">
+                          <i class="fas fa-info-circle"></i>
+                        </a></td>                
+                  </tr>
+                  @endforeach
+               
+                </tbody>
+            </table>
+  
+          </nav>
+        </div>
+      </div>
+    </div>
+   
+</div> 
+  <div class="tab-content" id="openingrate_index">
      <div class="container">
      <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
@@ -271,7 +327,7 @@
         <div class="card-body">
           
           <nav class="panel panel-default">
-            <table id="table1" class="table table-bordered">
+            <table id="table2" class="table table-bordered">
                         <thead>
                         <tr>
                             <th>配信日</th>
@@ -432,7 +488,7 @@
         <div class="card-body">
           
           <nav class="panel panel-default">
-              <table id="table2" class="table table-bordered">
+              <table id="table3" class="table table-bordered">
                 <thead>
                 <tr>
                     <th>配信日</th>
@@ -544,159 +600,7 @@
   </div>
 </div> 
     
-  <div class="tab-content" id="newsletter_index">
-    <div class="container">
-     <div class="card shadow mb-4">
-        <!-- Card Header - Dropdown -->
-        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">配信内容</h6>
-          <div class="dropdown no-arrow">
-            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
-              <div class="dropdown-header">menu:</div>
-                <a class="dropdown-item"data-toggle="modal" data-target="#Modal4">
-                    <i class="fas fa-fw fa-calendar-alt"></i>
-                    <span>期間選択</span>
-                </a>
-              <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/media/newsletter/makemap">
-                    <i class="fas fa-fw fa-plus-square"></i>
-                    <span>配置図作成</span>
-                </a>
-                <a class="dropdown-item" href="/media/newsletter/create">
-                    <i class="fas fa-fw fa-file"></i>
-                    <span>原稿作成</span>
-                </a>
-                <a class="dropdown-item" href="#">
-                    <i class="fas fa-fw fa-file-csv"></i>
-                    <span>CSV出力</span>
-                </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-fw fa-file-pdf"></i>
-                  <span>PDF出力</span>
-                </a>
-            </div>
-          </div>
-        </div>
-        <div class="card-body">
-          
-          <nav class="panel panel-default">
   
-       <table id="table3" class="table table-bordered">
-                <thead>
-                <tr>
-                    <th>配信日時</th>
-                    <th>タイトル</th>
-                    <th>ステータス</th>
-                    <th>カテゴリ</th>
-                    <th>詳細</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>2020.8.9 11:00</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>配置図作成中</td>
-                    <td>本会員</td>
-                    <td><a href="/media/newsletter/show" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>                
-                </tr>
-                <tr>
-                    <td>2020.8.9 11:00</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>原稿作成中</td>
-                    <td>セグメント</td>
-                    <td><a href="/show" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>        
-                </tr>
-                <tr>
-                   <td>2020.8.9 11:00</td>
-                    <td>本日から予約受付 1000daysプログラム</td>
-                    <td>配置図作成中</td>
-                    <td>NL会員</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>               
-                </tr>
-                <tr>
-                    <td>2020.8.9 11:00</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>配信済み</td>
-                    <td>本会員</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>             
-                </tr>
-                <tr>
-                    <td>2020.8.9 11:00</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>配信スタンバイ</td>
-                    <td>本会員</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>               
-                </tr>
-                <tr>
-                    <td>2020.8.9 11:00</td>
-                    <td>Tシャツキャンペーン</td>
-                    <td>配置図作成中</td>
-                    <td>セグメント</td>
-                    <td><a href="#" class="btn btn-info btn-circle btn-sm">
-                        <i class="fas fa-info-circle"></i>
-                      </a></td>
-                
-                </tbody>
-            </table>
-  
-          </nav>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="Modal4" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="card shadow mb-4">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">期間選択</h6>
-        </div>
-        <div class="card-body">
-          
-          <nav class="panel panel-default">
-            
-           
-              
-              
-               
-                <div class="form-group">
-                  <label for="title">企画名</label>
-                  <select type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" >
-                    <option>Tシャツキャンペーン</option>
-                  </select>
-                </div>
-        
-                <div class="form-group">
-                <label for="logstart_date">期限</label>
-                <input type="text" class="form-control" name="logstart_date" id="logstart_date" value="{{ old('logstart_date') }}" >
-                </div>
-                <div class="form-group">
-                  <label for="logend_date">検証終了日</label>
-                  <input type="text" class="form-control" name="logend_date" id="logend_date" value="{{ old('logend_date') }}" >
-                </div>
-                <div class="text-right">
-                  <button type="submit" class="btn btn-primary btn-sm">選択</button>
-                  <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
-                </div>
-                   
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> 
 </div>
 
 @endsection
@@ -704,15 +608,6 @@
 @section('scripts')
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-<script src="/sb_admin_2/vendor/jquery/jquery.min.js"></script>
-  
-  <!-- Core plugin JavaScript-->
-  <script src="/sb_admin_2/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="/sb_admin_2/js/sb-admin-2.min.js"></script>
-
-  
 
 <script src="/sb_admin_2/js/sb-admin-2.js"></script>
 <script src="/sb_admin_2/vendor/chart.js/Chart.js"></script>
@@ -912,6 +807,7 @@
     $("#table1").DataTable(); 
     $("#table2").DataTable();
     $("#table3").DataTable(); 
+    $("#table4").DataTable(); 
 }); 
 </script>
 
