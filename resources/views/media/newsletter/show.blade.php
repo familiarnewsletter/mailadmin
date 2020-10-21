@@ -140,16 +140,16 @@
                <a class="dropdown-item" >
                  <a class="dropdown-item" data-toggle="modal" data-target="#Modal1">
                     <i class="fas fa-fw fa-plus"></i>
-                    <input type="button" id="create_parts" value="作成">
+                    <input type="button" id="create_parts" value="カテゴリ登録">
                   </a>
                 </a>
                 <a class="dropdown-item" data-toggle="modal" data-target="#Modal2">
                     <i class="fas fa-fw fa-edit"></i>
-                    <input type="button" id="edit_parts" value="編集">
+                    <input type="button" id="edit_parts" value="カテゴリ編集">
                 </a>
                 <a class="dropdown-item" data-toggle="modal" data-target="#Modal3">
                     <i class="fas fa-fw fa-trash"></i>
-                   <input type="button" id="delete_parts" value="削除">
+                   <input type="button" id="delete_parts" value="カテゴリ削除">
                 </a>
             </div>
           </div>
@@ -201,12 +201,6 @@
 
                     </div>
  
-                   
-
-                    <div class="text-right">
-                      <!-- <input type="submit" id="submit" value="配置を更新"> -->
-                      <a href="/media/newsletter/index"><button class="button">戻る</button></a>
-                    </div>
                 </form>      
               </div>
               </nav>
@@ -221,7 +215,7 @@
     <div class="modal-content">
       <div class="card shadow mb-4">
         <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">パーツ選択</h6>
+          <h6 class="m-0 font-weight-bold text-primary">カテゴリ選択</h6>
         </div>
         <div class="card-body">
           
@@ -253,7 +247,7 @@
                 </div>
         
                 <div class="text-right">
-                  <button type="submit" class="btn btn-primary btn-sm">コンテンツ追加</button>
+                  <button type="submit" class="btn btn-primary btn-sm">カテゴリ追加</button>
                   <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
                 </div>
                    
@@ -502,9 +496,9 @@
           <!--▲▲ 配置図により可変 ▲▲-->
 
 
-				<!--▼▼ FOOTER ▼▼-->
+				
 				@include('media.newsletter.partials.footertocopylight')
-				<!--▲▲ COPYRIGHT ▲▲-->
+				
 
 
           </nav>

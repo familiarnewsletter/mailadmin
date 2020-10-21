@@ -27,7 +27,7 @@
     <li class="tab-item is-open">
       <a href="#newsletter_index" data-toggle>配信管理</a>
     </li>
-    <li class="tab-item">
+    <!-- <li class="tab-item">
       <a href="#openingrate_index" data-toggle>開封率管理</a>
     </li>
     <li class="tab-item">
@@ -35,7 +35,7 @@
     </li>
     <li class="tab-item">
       <a href="#cvr_index" data-toggle>収益管理</a>
-    </li>
+    </li> -->
  
   </ul>
 <div class="tab-content is-open" id="newsletter_index">
@@ -52,7 +52,7 @@
               <div class="dropdown-header">menu:</div>
               <a class="dropdown-item" href="/media/newsletter/create">
                     <i class="fas fa-fw fa-plus-square"></i>
-                    <span>新規作成</span>
+                    <span>新規配信登録</span>
                 </a>
               
                  <div class="dropdown-divider"></div>

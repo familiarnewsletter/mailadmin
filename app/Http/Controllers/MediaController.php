@@ -756,15 +756,13 @@ class MediaController extends Controller
 
 
 
-
-
 	public function newsletterLinkDelete(Request $request, int $newsletter_link_id){
 
 
 		$nl = NewsletterLink::find($newsletter_link_id);
 
 		$newsletter = Newsletter::find($nl->newsletter_id);
-		//削除対象レコードを検索
+		
         NewsletterLink::find($newsletter_link_id)->delete();
         
 
@@ -774,10 +772,9 @@ class MediaController extends Controller
 		$newsletter_parts = NewsletterParts::where('newsletter_id', $newsletter->id)->get();
 
 		$newsletter_link = NewsletterLink::where('newsletter_id', $newsletter->id)->get();
-
         
         $newsletters = Newsletter::all(); 
-        //リダイレクト
+  
         return redirect()->route('newsletter.show', [
 
         	'newsletter' => $newsletter,
@@ -810,31 +807,6 @@ class MediaController extends Controller
         
 		]);
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

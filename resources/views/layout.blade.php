@@ -85,7 +85,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">業務選択:</h6>
             <a class="collapse-item" href="/media/newsletter/index">NewsLetter管理</a>
-            <a class="collapse-item" href="#">ディレクトリ管理</a>
+            <!-- <a class="collapse-item" href="#">ディレクトリ管理</a> -->
             <!-- <a class="collapse-item" href="/media/movie/index">動画管理</a>
             <a class="collapse-item" href="/media/facebook/index">Facebook管理</a> -->
         </div>
@@ -114,12 +114,12 @@
 
 
             <!-- Heading -->
-      <div class="sidebar-heading">
+      <!-- <div class="sidebar-heading">
         共通部門
-      </div>
+      </div> -->
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage5" aria-expanded="true" aria-controls="collapsePage5">
           <i class="fas fa-fw fa-user"></i>
           <span>共通設定</span>
@@ -145,7 +145,7 @@
             <a class="collapse-item" href="/help/inquiry">お問い合わせ</a>
           </div>
         </div>
-      </li>
+      </li> -->
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -214,7 +214,7 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Fujishima</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">ユーザーメニュー</span>
                 <img class="img-profile rounded-circle" src="/images/ginza2.jpg">
               </a>
               <!-- Dropdown - User Information -->
@@ -282,7 +282,18 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="#">Logout</a>
+          
+              <a class="dropdown-item" href="{{ route('logout') }}"
+                 onclick="event.preventDefault();
+                               document.getElementById('logout-form').submit();">
+                  {{ __('Logout') }}
+              </a>
+
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  @csrf
+              </form>
+          
+
         </div>
       </div>
     </div>
@@ -305,69 +316,6 @@
 
 <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
 <script src="https://npmcdn.com/flatpickr/dist/l10n/ja.js"></script>
-<!-- <script>
-  flatpickr(document.getElementById('due_date'), {
-    locale: 'ja',
-    dateFormat: "Y/m/d",
-    minDate: new Date()
-  });
-</script>
-
-<script>
-  flatpickr(document.getElementById('announce_date'), {
-    locale: 'ja',
-    dateFormat: "Y/m/d",
-    minDate: new Date()
-  });
-</script>
-
-<script>
-  flatpickr(document.getElementById('start_date'), {
-    locale: 'ja',
-    dateFormat: "Y/m/d",
-    minDate: new Date()
-  });
-</script>
-
-<script>
-  flatpickr(document.getElementById('end_date'), {
-    locale: 'ja',
-    dateFormat: "Y/m/d",
-    minDate: new Date()
-  });
-</script>
-
-<script>
-  flatpickr(document.getElementById('logstart_date'), {
-    locale: 'ja',
-    dateFormat: "Y/m/d",
-    defaultDate: ["2016-2-1", new Date()]
-  });
-</script>
-
-<script>
-  flatpickr(document.getElementById('blog_date'), {
-    locale: 'ja',
-    dateFormat: "Y/m/d",
-    minDate:  ["2020-2-1"]
-  });
-</script>
-
-<script>
-  flatpickr(document.getElementById('blog_date2'), {
-    locale: 'ja',
-    dateFormat: "Y/m/d",
-    minDate:  ["2020-2-1"]
-  });
-</script>
-
-<script>
-  flatpickr(document.getElementById('blog_date3'), {
-    locale: 'ja',
-    dateFormat: "Y/m/d",
-    minDate:  ["2020-2-1"]
-  });
-</script> -->
 
 <script>
   flatpickr(document.getElementById('delivery_date'), {

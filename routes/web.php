@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/test', function () {
     return view('test');
@@ -40,6 +40,25 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/', 'HomeController@index')->name('home');
+
+
+
+
+// Route::get('/auth/login', 'HomeController@login')->name('login');
+
+
+Auth::routes();
+
+
+
+
+
+
+
+
+
+
+
 
 
 Route::get('/promotion/list/index', 'PromotionController@promotionIndex')->name('promotion.index');
@@ -307,3 +326,10 @@ Route::get('/help/inquiry', function () {
 
 
 Route::get('/show', 'MediaController@show')->name('show');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
