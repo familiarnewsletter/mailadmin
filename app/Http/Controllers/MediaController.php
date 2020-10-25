@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
-use App\NewsletterAdmin;
 use App\Newsletter;
 use App\NewsletterPartsAdmin;
 use App\NewsletterParts;
@@ -14,7 +13,7 @@ use Request as SaveRequest;
 use Request as MapRequest;
 use App\Http\Requests\CreateNewsletter;
 use App\Http\Requests\CreateNewsletterParts;
-
+use App\Http\Requests\CreateNewsletterLink;
 
 
 class MediaController extends Controller
@@ -60,31 +59,49 @@ class MediaController extends Controller
 
 
 
-  //   public function newsletterMapSort(int $id){
+  public function newsletterClone(int $id)
+	{
+	   $newsletter = Newsletter::find($id);
+	   $new_newsletter = $newsletter->replicate(); 
+	   $new_newsletter->title = $newsletter->title . '(copy)'; 
+	   $new_newsletter->save();
+	   
+	   $newsletter_parts_admin = NewsletterPartsAdmin::where('newsletter_id', $newsletter->id)->get();
+	   foreach ($newsletter_parts_admin as $npa) { 
+	       $new_npa = $npa->replicate(); 
+	       $new_npa->newsletter_id = $new_newsletter->id; 
+	       $new_npa->save(); 
+	      } 
 
 
-  //   	$newsletter = Newsletter::find($id);
-		// $newsletter_parts_admin = $newsletter->newsletterPartsAdmin()->get();
-		
+	   $newsletter_parts = NewsletterParts::where('newsletter_id', $newsletter->id)->get();
 
-  //       $i = 0;
+	   foreach ($newsletter_parts as $np) { 
+	       $new_np = $np->replicate(); 
+	       $new_np->newsletter_id = $new_newsletter->id; 
+	       $new_np->save(); 
+	      } 
 
-  //       foreach ($_POST as $value) {
-  //           // Execute statement:
-  //           // UPDATE [Table] SET [Position] = $i WHERE [EntityId] = $value
-  //           $i++;
-  //           DB::table('newsletter_parts_admin')->where('order', '=', $value)->update([ 'order' => $i ]);
-  //       }
 
-  //       $newsletter_parts_admin = NewsletterPartsAdmin::orderBy('id', 'ASC')->where('newsletter_id', $newsletter->id)->get();
 
-  //       return redirect()->route('newsletter.show', [
-        
-  //       	'id' => $id,
-		// 	'newsletter_parts_admin' => $newsletter_parts_admin
 
-  //       ]);
-  //   }
+	   $newsletter_link = NewsletterLink::where('newsletter_id', $newsletter->id)->get();
+
+	   foreach ($newsletter_link as $nl) { 
+	       $new_nl = $nl->replicate(); 
+	       $new_nl->newsletter_id = $new_newsletter->id; 
+	       $new_nl->save(); 
+	      }
+
+	   $newsletters = Newsletter::all();
+
+	 return redirect()->route('newsletter.index', [
+
+	 		'newsletters' => $newsletters
+
+		]);
+	  
+	}
 
 
 
@@ -113,7 +130,7 @@ class MediaController extends Controller
         $newsletter->preheader_text = $request->preheader_text;
         $newsletter->delivery_date = $request->delivery_date;
         $newsletter->category = $request->category;
-
+        $newsletter->header_type = $request->header_type;
 
 
         $newsletter->save();
@@ -156,6 +173,7 @@ class MediaController extends Controller
         $newsletter->preheader_text = $request->preheader_text;
         $newsletter->delivery_date = $request->delivery_date;
         $newsletter->category = $request->category;
+        $newsletter->header_type = $request->header_type;
         $newsletter->status = $request->status;
         
 
@@ -230,6 +248,7 @@ class MediaController extends Controller
 
 
         return redirect()->route('newsletter.show', [
+
 
         		'id' => $newsletter->id
 
@@ -676,13 +695,14 @@ class MediaController extends Controller
 
 
 
-	public function newsletterLinkStore(int $newsletter_id, Request $request){
+	public function newsletterLinkStore(int $newsletter_id, CreateNewsletterLink $request){
 
 
 		$newsletter_link = new NewsletterLink;
         $newsletter_link->type_id = $request->type_id;
         $newsletter_link->newsletter_id = $newsletter_id;
         $newsletter_link->link_url = $request->link_url;
+
         
         $newsletter_link->save();
 
@@ -723,7 +743,7 @@ class MediaController extends Controller
 
 
 
-	public function newsletterLinkUpdate(Request $request, int $newsletter_link_id){
+	public function newsletterLinkUpdate(CreateNewsletterLink $request, int $newsletter_link_id){
 
 
 		$newsletter_link = NewsletterLink::find($newsletter_link_id);

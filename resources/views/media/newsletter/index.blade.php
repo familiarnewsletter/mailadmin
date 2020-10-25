@@ -70,6 +70,7 @@
                     <th>タイトル</th>
                     <th>ステータス</th>
                     <th>カテゴリ</th>
+                    <th>ヘッダー</th>
                     <th>詳細</th>
                 </tr>
                 </thead>
@@ -80,9 +81,10 @@
                       <td>{{ $newsletter->title }}</td>
                       <td><span class="label {{ $newsletter->status_class }}">{{ $newsletter->status_label }}</span></td>
                       <td>{{ $newsletter->category }}</td>
+                      <td>{{ $newsletter->header_type }}</td>
                       <td><a href="/media/newsletter/show/{{ $newsletter->id }}" class="btn btn-info btn-circle btn-sm">
                           <i class="fas fa-info-circle"></i>
-                        </a></td>                
+                        </a></td>             
                   </tr>
                   @endforeach
                

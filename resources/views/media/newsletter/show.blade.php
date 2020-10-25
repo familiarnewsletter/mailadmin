@@ -20,8 +20,16 @@
         cursor: move;
     }
     
+    xmp {
+    user-select: all;
+    }
+
+
     </style>
     
+
+
+
 @endsection
 
 @section('content')
@@ -42,7 +50,7 @@
 
   <ul class="tab-list" id="tab-1">
  
-    <li class="tab-item is-open">
+    <li class="tab-item">
       <a href="#info_show" data-toggle>配信情報</a>
     </li>
     <li class="tab-item">
@@ -80,6 +88,13 @@
                     <input type="submit" value="削除" onclick='return confirm("本当に削除しますか？");'/>
                 </a>
               </form>
+              <form action="{{ route('newsletter.clone', ['id' => $newsletter->id ])}}"　method="POST">
+                  @csrf
+                <a class="dropdown-item">
+                     <i class="fas fa-copy"></i>
+                    <input type="submit" value="コピー" onclick='return confirm("このファイルを複製します");'/>
+                </a>
+              </form>
             </div>
           </div>
         </div>
@@ -95,14 +110,18 @@
                 <div class="form-group">
                   <label for="preheader">プリヘッダーテキスト</label>
                   <input type="text" class="form-control" name="preheader" id="preheader" value="{{ $newsletter->preheader_text }}" readonly />
-                </div>                
+                </div>   
+                <div class="form-group">
+                  <label for="deliver_date">配信日時</label>
+                  <input type="text" class="form-control" name="deliver_date" id="deliver_date" value="{{ $newsletter->delivery_date }}" readonly />
+                </div>             
                 <div class="form-group">
                   <label for="status">カテゴリ</label>
                   <input type="text" class="form-control" name="status" id="status" value="{{ $newsletter->category }}" readonly > 
                 </div>
                 <div class="form-group">
-                  <label for="deliver_date">配信日時</label>
-                  <input type="text" class="form-control" name="deliver_date" id="deliver_date" value="{{ $newsletter->delivery_date }}" readonly />
+                  <label for="header_type">ヘッダー</label>
+                  <input type="text" class="form-control" name="header_type" id="header_type" value="{{ $newsletter->header_type }}" readonly />
                 </div>
                 <div class="form-group">
                   <label for="status">ステータス</label>
@@ -498,7 +517,7 @@
 
 				
 				@include('media.newsletter.partials.footertocopylight')
-				
+				<!--▲▲ COPYRIGHT ▲▲-->
 
 
           </nav>
@@ -767,33 +786,27 @@
           
           <nav class="panel panel-default">
             
-           
-              
-             
                
                 <div class="form-group">
-                 
+                 <p><input type="button" value="コードの選択" onClick="text_select()"></p>
                   <pre>
-                   
-                  <xmp id="source">
                   
+                  <xmp id="source">
+                 
                   
                  </xmp>
-                 
+                
                  </pre>
                 </div>
+                
+               
+     
           </nav>
         </div>
       </div>
     </div>
   </div>
 </div> 
-
-
-
-
-
-
 
 
   <!-- <div class="tab-content" id="data_show">
@@ -875,5 +888,20 @@ $(function(){
   });
 });
 </script>
+
+  <script type="text/javascript">
+    <!--
+  function text_select() {
+      //要素の取得
+      var element = document.getElementById("source");
+      //rangeオブジェクトの作成
+      var range = document.createRange();
+      //取得した要素の内側を範囲とする
+      range.selectNodeContents(element);
+      //範囲を選択状態にする
+      window.getSelection().addRange(range);
+  }
+    //-->
+  </script>
 
 @endsection

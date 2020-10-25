@@ -32,7 +32,7 @@
                 <div class="form-group">
                   <label for="type_id">リンク配置</label>
                   <select type="text" class="form-control" name="type_id" id="type_id" value="{{ $newsletter_link->type_id_label }}">
-                    <option>リンク設置箇所を選択</option>
+                   
                     <option value="0">「正しく表示されない方はこちらをクリック」</option>
                   
                     @foreach($newsletter_parts_admin as $newsletter_parts_ad)
@@ -64,7 +64,16 @@
           
 
             
-          </form>        
+          </form>       
+          @if($errors->any())
+            <div class="alert alert-danger">
+              <ul>
+                @foreach($errors->all() as $message)
+                  <p>{{ $message }}</p>
+                @endforeach
+              </ul>
+            </div>
+          @endif        
       </nav>
     </div>
 

@@ -33,6 +33,7 @@
                   <label for="type_id">リンク配置</label>
                   <select type="text" class="form-control" name="type_id" id="type_id">
                     <option>リンク設置箇所を選択</option>
+                    
                     <option value="0">「正しく表示されない方はこちらをクリック」</option>
                   @foreach($newsletter_parts_admin as $newsletter_parts_ad)
                   
@@ -55,14 +56,23 @@
 
             <hr>
             <div class="text-right">
-              <input type="submit" name="save" value="保存">
+              <input type="submit" value="保存">
             </div>
             
             </div>
           
 
             
-          </form>        
+          </form> 
+          @if($errors->any())
+            <div class="alert alert-danger">
+              <ul>
+                @foreach($errors->all() as $message)
+                  <p>{{ $message }}</p>
+                @endforeach
+              </ul>
+            </div>
+          @endif       
       </nav>
     </div>
 

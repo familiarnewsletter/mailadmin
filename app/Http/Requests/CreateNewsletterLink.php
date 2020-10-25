@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateNewsletter extends FormRequest
+class CreateNewsletterLink extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,20 +24,18 @@ class CreateNewsletter extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required',
-            'preheader_text' => 'required',
-            'delivery_date' => 'required',
-            'header_type' => 'required',
+
+            'type_id' => 'required',
+            'link_url' => 'required',
+
         ];
+       
     }
 
     public function attributes()
     {
         return [
-            'title' => 'タイトル',
-            'preheader_text' => 'プリヘッダーテキスト',
-            'delivery_date' => '配信日',
-            'header_type' => 'ヘッダー',
+            'link_url' => 'リンク先URL',
         ];
     }
 }

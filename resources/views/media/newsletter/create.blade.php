@@ -45,38 +45,54 @@
 
                 <div class="form-group">
                   <label for="title">タイトル</label>
-                  <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" />
+                  <input type="text" class="form-control" name="title" id="title"/>
                 </div>
                 <div class="form-group">
                   <label for="preheader_text">プリヘッダーテキスト</label>
-                  <input type="text" class="form-control" name="preheader_text" id="preheader_text" value="{{ old('preheader_text') }}" />
+                  <input type="text" class="form-control" name="preheader_text" id="preheader_text"/>
                 </div>
                 <div class="form-group">
                   <label for="delivery_date">配信日時</label>
-                  <input type="text" class="form-control" name="delivery_date" id="delivery_date" value="{{ old('delivery_date') }}" />
+                  <input type="text" class="form-control" name="delivery_date" id="delivery_date"/>
                 </div>
                 <div class="form-group">
                   <label for="category">カテゴリ</label>
-                  <select type="text" class="form-control" name="category" id="category" value="{{ old('category') }}">
-                  	<option>本会員</option>
-                  	<option>NL会員</option>
-                    <option>セグメント</option>
+                  <select type="text" class="form-control" name="category" id="category"/>
+                  	<option value="本会員">本会員</option>
+                  	<option value="NL会員">NL会員</option>
                   </select> 
                 </div>
-
+                <div class="form-group">
+                  <label for="type">フッター</label><br>
+                  <div class="form-group row">
+   
+                       <div class="col-md-6">
+                          <div class="form-check form-check-inline">
+                             <input class="form-check-input" type="radio" id="header_type" name="header_type" value="配信用" @if(old('header_type')==='配信用')checked="checked"@endif >
+                             <label class="form-check-label" for="header_type">配信用</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                             <input class="form-check-input" type="radio" id="header_type"  name="header_type" value="アップロード用" @if(old('header_type')==='アップロード用')checked="checked"@endif>
+                             <label class="form-check-label" for="header_type">アップロード用</label>
+                          </div>
+                          
+                       </div>
+                    </div>
+                </div>
+                
                 <hr>
                 
                 </div>
                 
-              @if($errors->any())
-                <div class="alert alert-danger">
-                  <ul>
-                    @foreach($errors->all() as $message)
-                      <p>{{ $message }}</p>
-                    @endforeach
-                  </ul>
-                </div>
-              @endif
+                  @if($errors->any())
+                    <div class="alert alert-danger">
+                      <ul>
+                        @foreach($errors->all() as $message)
+                          <p>{{ $message }}</p>
+                        @endforeach
+                      </ul>
+                    </div>
+                  @endif
                
 
                 <div class="text-right">

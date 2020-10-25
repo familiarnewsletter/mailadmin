@@ -111,4 +111,4 @@
 </table>
 @endif
 @endforeach
-<!--▲▲ PICKUP ITEM ▲▲
+<!--▲▲ PICKUP ITEM ▲▲ -->

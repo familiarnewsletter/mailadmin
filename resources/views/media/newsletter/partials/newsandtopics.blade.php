@@ -20,7 +20,7 @@
 			<a href="{{ $np->link_url }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 			<!--▲▲ 画像タップ時のリンク ▲▲-->
 			<!--▼▼ 画像 ▼▼-->
-			<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020{{ $np->img_url }}" width="250" height="175" border="0" style="display:block;">
+			<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/{{ $np->img_url }}" width="250" height="175" border="0" style="display:block;">
 			<!--▲▲ 画像 ▲▲-->
 			</a>
 		</td>

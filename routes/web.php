@@ -163,7 +163,7 @@ Route::post('/products/delivery/{delivery_id}/delete', 'ProductController@delive
 Route::get('/media/newsletter/index', 'MediaController@newsletterIndex')->name('newsletter.index');
 
 Route::get('/media/newsletter/show/{id}', 'MediaController@newsletterShow')->name('newsletter.show')->where('id', '[0-9]+');
-//Route::get('/media/newsletter/show', 'MediaController@newsletterShow')->name('newsletter.show');
+Route::get('/media/newsletter/clone/{id}', 'MediaController@newsletterClone')->name('newsletter.clone')->where('id', '[0-9]+');
 
 
 Route::get('/media/newsletter/create', 'MediaController@newsletterCreate')->name('newsletter.create');

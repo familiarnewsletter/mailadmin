@@ -19,12 +19,14 @@ class Newsletter extends Model
 	    2 => [ 'label' => '配置図作成中', 'class' => 'btn-info' ],
 	    3 => [ 'label' => '原稿作成中', 'class' => 'btn-primary' ],
 	    4 => [ 'label' => '配信完了', 'class' => '' ],
-    ];
+	];
+	
+	
     
 
     public function newsletterPartsAdmin()
 	{
-	    return $this->belongsTo('App\NewsletterPartsAdmin');
+	    return $this->hasMany('App\NewsletterPartsAdmin');
 	}
 
 	/**

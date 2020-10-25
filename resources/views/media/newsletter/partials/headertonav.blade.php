@@ -6,6 +6,7 @@
 				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x16.gif" width="600" height="16" border="0" style="display:block;">
 			</td>
 		</tr>
+		@if($newsletter->header_type == "配信用")
 		@foreach($newsletter_link as $nl)
 		@if(isset($nl) && $nl->type_id == 0)
 
@@ -22,6 +23,7 @@
 		</tr>
 		@endif
 		@endforeach
+		@endif
 		<tr>
 			<td colspan="3" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x30.gif" width="600" height="30" border="0" style="display:block;">

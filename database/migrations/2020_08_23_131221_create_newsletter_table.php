@@ -20,6 +20,7 @@ class CreateNewsletterTable extends Migration
             $table->datetime('delivery_date');
             $table->integer('status')->default(1);
             $table->string('category');
+            $table->string('header_type');
             $table->timestamps();
         });
     }
