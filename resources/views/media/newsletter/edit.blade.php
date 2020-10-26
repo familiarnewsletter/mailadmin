@@ -59,21 +59,21 @@
                 <div class="form-group">
                   <label for="category">カテゴリ</label>
                   <select type="text" class="form-control" name="category" id="category" value="{{ $newsletter->category }}" > 
-                      <option value="本会員">本会員</option>
-                    <option value="NL会員">NL会員</option>
+                      <option value="本会員" @if(old('category',"$newsletter->category")!='NL会員')selected="selected"@endif>本会員</option>
+                    <option value="NL会員" @if(old('category',"$newsletter->category")=='NL会員')selected="selected"@endif>NL会員</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="type">フッター</label><br>
+                  <label for="type">ヘッダー</label><br>
                   <div class="form-group row">
    
                        <div class="col-md-6">
                           <div class="form-check form-check-inline">
-                             <input class="form-check-input" type="radio" id="header_type" name="header_type" value="配信用" @if(old('header_type')==='配信用')checked="checked"@endif >
+                             <input class="form-check-input" type="radio" id="header_type" name="header_type" value="配信用" @if(old('header_type',"$newsletter->header_type")!='アップロード用')checked="checked"@endif>
                              <label class="form-check-label" for="header_type">配信用</label>
                           </div>
                           <div class="form-check form-check-inline">
-                             <input class="form-check-input" type="radio" id="header_type"  name="header_type" value="アップロード用" @if(old('header_type')==='アップロード用')checked="checked"@endif>
+                             <input class="form-check-input" type="radio" id="header_type"  name="header_type" value="アップロード用" @if(old('header_type',"$newsletter->header_type")=='アップロード用')checked="checked"@endif>
                              <label class="form-check-label" for="header_type">アップロード用</label>
                           </div>
                           
