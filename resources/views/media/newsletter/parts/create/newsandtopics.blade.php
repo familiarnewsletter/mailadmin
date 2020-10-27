@@ -30,7 +30,7 @@
                 @csrf
 
                 <div class="form-group">
-                  <label for="title">タイトル</label>
+                  <label for="title">カテゴリ</label>
                   <select type="text" class="form-control" name="title" list="categorytab"　id="title" />
                     <option label="NEWS" value="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_news.gif"></option>
                   　<option label="PRODUCTS" value="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_products.gif"></option>

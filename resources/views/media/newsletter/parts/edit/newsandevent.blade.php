@@ -28,13 +28,8 @@
                 @csrf
 
                 <div class="form-group">
-                  <label for="title">タイトル</label>
+                  <label for="title">店名</label>
                   <input type="text" class="form-control" name="title" list="categorytab"　id="title" value="{{ $newsletter_parts->title }}">
-                  <datalist id="categorytab">
-                    <option label="NEWS" value="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_news.gif"></option>
-                  　<option label="NEWS" value="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_products.gif"></option>
-                  　<option label="NEWS" value="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_event.gif"></option>
-                  </datalist>
                 </div>
                 <div class="form-group">
                   <label for="img_url">画像URL</label>

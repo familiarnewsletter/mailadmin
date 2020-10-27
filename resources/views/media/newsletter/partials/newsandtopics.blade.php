@@ -9,7 +9,7 @@
 		</tr>
 	<!-- 記事 -->
 
-@foreach($newsletter_parts as $np) 
+@foreach($newsletter_parts ->sortByDesc('id') as $np) 
 
 @if($np->newsletterPartsAdmin()->first()->type_id == 3)
 

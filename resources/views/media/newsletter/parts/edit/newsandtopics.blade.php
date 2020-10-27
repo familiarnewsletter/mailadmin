@@ -29,12 +29,12 @@
 
                 <div class="form-group">
                   <label for="title">タイトル</label>
-                  <input type="text" class="form-control" name="title" list="categorytab"　id="title" value="{{ $newsletter_parts->title }}">
-                  <datalist id="categorytab">
-                    <option label="NEWS" value="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_news.gif"></option>
-                  　<option label="NEWS" value="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_products.gif"></option>
-                  　<option label="NEWS" value="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_event.gif"></option>
-                  </datalist>
+                  <select type="text" class="form-control" name="title" list="categorytab"　id="title" >
+                  
+                    <option label="NEWS" value="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_news.gif" @if(old('category',"$newsletter_parts->title")!='https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_news.gif')selected="selected"@endif>NEWS</option>
+                  　<option label="PRODUCT" value="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_products.gif" @if(old('category',"$newsletter_parts->title")!='https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_products.gif')selected="selected"@endif></option>
+                  　<option label="EVENT" value="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_event.gif" @if(old('category',"$newsletter_parts->title")!='https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_event.gif')selected="selected"@endif></option>
+                  </select>
                 </div>
                 <div class="form-group">
                   <label for="img_url">画像URL</label>
