@@ -19,7 +19,7 @@
 
 
 	<tr>
-@foreach($newsletter_parts ->sortByDesc('id') as $np) 
+@foreach($newsletter_parts ->sortBy('id') as $np) 
 
 @if($np->newsletterPartsAdmin()->first()->type_id == 7)
 

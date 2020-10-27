@@ -8,7 +8,7 @@
 		</tr>
 	<!-- BANNER 2個 -->
 		@php
-		foreach($newsletter_parts as $nlp){
+		foreach($newsletter_parts ->sortBy('id') as $nlp){
 
 			if($nlp->newsletterPartsAdmin()->first()->type_id == 10){
 				$banners[] = $nlp;

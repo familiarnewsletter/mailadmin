@@ -397,7 +397,7 @@
                     <input type="button" id="create_content" value="リンク追加">
               </a>
               <a class="dropdown-item" data-toggle="modal" data-target="#Modal7">
-                    <i class="fas fa-fw fa-trash"></i>
+                    <i class="fas fa-fw fa-edit"></i>
                    <input type="button" id="test_content" value="リンク編集">
               </a>
               <a class="dropdown-item" data-toggle="modal" data-target="#Modal8">
@@ -406,7 +406,7 @@
               </a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" id="show_source" data-toggle="modal" data-target="#Modal9">
-                    <i class="fas fa-fw fa-edit"></i>
+                    <i class="fas fa-fw fa-code"></i>
                    <input type="button"  value="code表示">
               </a>
               

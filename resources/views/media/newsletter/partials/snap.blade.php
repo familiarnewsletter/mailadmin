@@ -10,7 +10,7 @@
 		</tr>
 
 		@php
-		foreach($newsletter_parts ->sortByDesc('id') as $nlp){
+		foreach($newsletter_parts ->sortBy('id') as $nlp){
 
 			if($nlp->newsletterPartsAdmin()->first()->type_id == 9){
 				$snaps[] = $nlp;
