@@ -28,7 +28,7 @@
 
 
 		<!--▼▼ 画像タップ時のリンク ▼▼-->
-		<a href="{{ $np->link_url }}" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none" target="_blank">
+		<a href="{{ $np->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none" target="_blank">
 		<!--▲▲ 画像タップ時のリンク ▲▲-->
 
 		<!--▼▼ 画像 ▼▼-->
@@ -70,7 +70,7 @@
 		
 		<div style="text-align:right">
 			<!--▼▼ ボタンタップ時のリンク ▼▼-->
-			<a href="{{ $np->link_url }}" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none" target="_blank">
+			<a href="{{ $np->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none" target="_blank">
 			<!--▲▲ ボタンタップ時のリンク ▲▲-->
 
 			<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/btn_176x40.png" width="176" height="40" border="0" style="display:inline-block">
@@ -120,8 +120,8 @@
 		<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 			
 
-					<!--▼▼ アイテム一覧のリンク ▼▼-->
-			<a href="{{ $nl->link_url }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
+			<!--▼▼ アイテム一覧のリンク ▼▼-->
+			<a href="{{ $nl->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $nl->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 			<!--▲▲ アイテム一覧のリンク ▲▲-->
 				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/btn_snaplist.png" width="240" height="56" border="0" style="display:block;">
 				

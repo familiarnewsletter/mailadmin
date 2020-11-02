@@ -225,6 +225,12 @@ Route::group(['middleware' => 'auth'], function() {
 
 	Route::get('/media/newsletter/source_code', 'MediaController@newsletterSourceCode')->name('newsletter.source_code');
 
+	Route::get('/media/newsletter/text/{newsletter_id}', 'MediaController@newsletterText')->name('newsletter.text');
+
+
+
+
+
 
 
 

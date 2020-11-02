@@ -1,4 +1,4 @@
-<!--▼▼ STYLE BOOK ▼▼-->
+
 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
 	<tbody>
 		<tr>
@@ -6,7 +6,7 @@
 				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ttl_stylebook.png" alt="STYLE BOOK" width="600" height="162" border="0" style="display:block;">
 			</td>
 		</tr>
-		<!-- ITEM 3個 -->
+		
 		<tr>
 
 		@php
@@ -36,7 +36,7 @@
 		
 		<p>
 			<!--▼▼ 画像タップ時のリンク ▼▼-->
-			<a href="{{ $stylebook->link_url }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
+			<a href="{{ $stylebook->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $stylebook->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 			<!--▲▲ 画像タップ時のリンク ▲▲-->
 			<!--▼▼ 画像 ▼▼-->
 			<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/item/2020SS/{{ $stylebook->img_url }}" width="188" height="282" border="0" style="display:inline-block;">
@@ -76,12 +76,12 @@
 				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x24.gif" width="600" height="24" border="0" style="display:block;">
 			</td>
 		</tr>
-		<!-- ITEM 3個 -->
+		
 
 	</tbody>
 </table>
 
-<!--▲▲ STYLE BOOK ▲▲-->
+
 @foreach($newsletter_link as $nl)
 @if(isset($nl->type_id) && $nl->type_id == 8)
 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
@@ -93,8 +93,8 @@
 		<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 			
 
-					<!--▼▼ アイテム一覧のリンク ▼▼-->
-			<a href="{{ $nl->link_url }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
+			<!--▼▼ アイテム一覧のリンク ▼▼-->
+			<a href="{{ $nl->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $nl->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 			<!--▲▲ アイテム一覧のリンク ▲▲-->
 				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/btn_snaplist.png" width="240" height="56" border="0" style="display:block;">
 				

@@ -27,6 +27,7 @@ class CreateNewsletterParts extends FormRequest
             'title' => 'required',
             'img_url' => 'required',
             'link_url' => 'required',
+            'utm_content_id' => 'required',
             'text' => 'required',
         ];
     }
@@ -37,6 +38,7 @@ class CreateNewsletterParts extends FormRequest
             'title' => 'タイトル',
             'img_url' => '画像名',
             'link_url' => 'リンク先URL',
+            'utm_content_id' => 'コンテンツID',
             'text' => 'テキスト',
         ];
     }

@@ -1,9 +1,15 @@
-<!--▼▼ PICKUP ITEM ▼▼-->
 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
 	<tbody>
 		<tr>
 			<td colspan="3" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ttl_pickupitem.png" alt="PICKUP ITEM" width="600" height="162" border="0" style="display:block;">
+				@foreach($newsletter_link as $nl)
+				@if(isset($nl->type_id) && $nl->type_id == 5 && $nl->link_type == "テキスト入力")
+				<p style="font-size:16px;color:#555555;text-align:center;line-height:1.7">
+                {{ $nl->link_url }}
+                </p>
+                @endif
+				@endforeach
 			</td>
 		</tr>
 		@php
@@ -33,7 +39,7 @@
 			<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 				<p>
 					<!--▼▼ 画像タップ時のリンク ▼▼-->
-					<a href="{{ $pickup_item->link_url }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
+					<a href="{{ $pickup_item->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $pickup_item->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 					<!--▲▲ 画像タップ時のリンク ▲▲-->
 					<!--▼▼ 画像 ▼▼-->
 					<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/item/2020SS/{{ $pickup_item->img_url }}" width="288" border="0" style="display:inline-block;">
@@ -80,7 +86,7 @@
 	</tbody>
 </table>
 @foreach($newsletter_link as $nl)
-@if(isset($nl->type_id) && $nl->type_id == 5)
+@if(isset($nl->type_id) && $nl->type_id == 5 && $nl->link_type != "テキスト入力")
 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
 	<tbody>
 		<tr>
@@ -89,13 +95,20 @@
 		</td>
 		<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 			
-
-					<!--▼▼ アイテム一覧のリンク ▼▼-->
-			<a href="{{ $nl->link_url }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
+			@if($nl->link_type != "「GOODS一覧」")
+			<!--▼▼ アイテム一覧のリンク ▼▼-->
+			<a href="{{ $nl->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $nl->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 			<!--▲▲ アイテム一覧のリンク ▲▲-->
 				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/btn_goodslist.png" width="240" height="56" border="0" style="display:block;">
 				
 			</a>
+			@elseif($nl->link_type != "「詳しくはこちら」")
+			<a href="{{ $nl->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $nl->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
+			<!--▲▲ アイテム一覧のリンク ▲▲-->
+				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/kuwashikuwa_banner_kai.png" width="240" height="56" border="0" style="display:block;">
+				
+			</a>
+			@endif
 		</td>
 			<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_180x56.gif" width="180" height="56" border="0" style="display:block;">
@@ -111,4 +124,3 @@
 </table>
 @endif
 @endforeach
-<!--▲▲ PICKUP ITEM ▲▲ -->

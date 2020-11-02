@@ -1,4 +1,4 @@
-<!--▼▼ FOOTER APP ▼▼-->
+
 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
 		<tbody><tr>
 		<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_112x52.gif" width="112" height="52" border="0" style="display:block;"></td>
@@ -10,4 +10,4 @@
 		<tr><td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x40.gif" width="600" height="40" border="0" style="display:block;"></td></tr>
 	</tbody>
 </table>
-	<!--▲▲ FOOTER APP ▲▲-->
+	

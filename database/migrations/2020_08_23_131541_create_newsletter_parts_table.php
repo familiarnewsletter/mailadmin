@@ -19,6 +19,7 @@ class CreateNewsletterPartsTable extends Migration
             $table->string('img_url');
             $table->longText('link_url');
             $table->longText('text');
+            $table->string('utm_content_id');
             $table->bigInteger('newsletter_parts_admin_id')->unsigned();
             $table->bigInteger('newsletter_id')->unsigned();
             $table->timestamps();

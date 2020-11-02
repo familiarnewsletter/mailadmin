@@ -56,6 +56,10 @@
                   <input type="text" class="form-control" name="delivery_date" id="delivery_date"/>
                 </div>
                 <div class="form-group">
+                  <label for="utm_campaign_id">キャンペーンコード（6桁）</label>
+                  <input type="text" class="form-control" name="utm_campaign_id" id="utm_campaign_id"/>
+                </div>
+                <div class="form-group">
                   <label for="category">カテゴリ</label>
                   <select type="text" class="form-control" name="category" id="category"/>
                   	<option value="本会員">本会員</option>

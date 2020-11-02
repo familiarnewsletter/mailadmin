@@ -1,7 +1,3 @@
-
-
-
-<!--▼▼ SHOP NEWS & EVENT ▼▼-->
 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
 	<tbody>
 		<tr>
@@ -16,10 +12,10 @@
 		<tr>
 			<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 				<!--▼▼ 画像タップ時のリンク ▼▼-->
-				<a href="{{ $np->link_url }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
+				<a href="{{ $np->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 				<!--▲▲ 画像タップ時のリンク ▲▲-->
 				<!--▼▼ 画像 ▼▼-->
-				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020{{ $np->img_url }}" width="250" height="175" border="0" style="display:block;">
+				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/{{ $np->img_url }}" width="250" height="175" border="0" style="display:block;">
 				<!--▲▲ 画像 ▲▲-->
 			</a>
 		</td>
@@ -48,7 +44,7 @@
 			</p>
 			<p style="text-align:right;">
 				<!--▼▼ ボタンタップ時のリンク ▼▼-->
-				<a href="{{ $np->link_url }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
+				<a href="{{ $np->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 				<!--▲▲ ボタンタップ時のリンク ▲▲-->
 
 				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/btn_176x40.png" width="176" height="40" border="0" style="display:inline-block;">
@@ -65,4 +61,3 @@
 @endforeach
 		</tbody>
 </table>
-<!--▲▲ SHOP NEWS & EVENT ▲▲-->

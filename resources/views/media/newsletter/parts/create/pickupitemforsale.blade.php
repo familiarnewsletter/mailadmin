@@ -43,6 +43,10 @@
                   <input type="text" class="form-control" name="link_url" id="link_url"/>
                 </div>
                 <div class="form-group">
+                  <label for="utm_content_id">キャンペーンコード(２桁)</label>
+                  <input type="text" class="form-control" name="utm_content_id" id="utm_content_id" />
+                </div>
+                <div class="form-group">
                   <label for="text">テキスト</label>
                   <nav class="panel panel-default">
                     

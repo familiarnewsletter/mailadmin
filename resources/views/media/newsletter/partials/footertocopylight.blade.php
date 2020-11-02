@@ -1,4 +1,3 @@
-<!--▼▼ FOOTER NAV ▼▼-->
 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
 	<tbody>
 		<tr>
@@ -11,11 +10,8 @@
 		<tr><td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/line_600x82.gif" width="600" height="82" border="0" style="display:block;"></td></tr>
 	</tbody>
 </table>
-	<!--▲▲ FOOTER NAV ▲▲-->
-
 	
-
-	<!--▼▼ FOOTER ▼▼-->
+	
 	<table width="600" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="f7f5f1">
 		<tbody>
 			<tr>
@@ -96,9 +92,8 @@
 			</tr>
 		</tbody>
 	</table>
-	<!--▲▲ FOOTER ▲▲-->
-
-	<!--▼▼ COPYRIGHT ▼▼-->
+	
+	
 	<table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
 		<tbody>
 			<tr>
@@ -108,4 +103,3 @@
 			</tr>
 		</tbody>
 	</table>
-<!--▲▲ COPYRIGHT ▲▲-->

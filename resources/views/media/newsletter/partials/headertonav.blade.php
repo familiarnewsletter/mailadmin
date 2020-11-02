@@ -1,4 +1,3 @@
-<!-- HEADER -->
   <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="ffffff">
 	<tbody>
 		<tr>
@@ -8,7 +7,7 @@
 		</tr>
 		@if($newsletter->header_type == "配信用")
 		@foreach($newsletter_link as $nl)
-		@if(isset($nl) && $nl->type_id == 0)
+		@if(isset($nl) && $nl->type_id == 1)
 
 		<tr>
 			<td colspan="3" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
@@ -49,10 +48,10 @@
 		</tr>
 		</tbody>
 	</table>
-	<!-- /HEADER -->
+	
 
 
-	<!-- NAV -->
+	
 	<table width="600" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="ffffff">
 		<tbody>
 			<tr>
@@ -79,4 +78,3 @@
 			</tr>
 		</tbody>
 	</table>
-<!-- /NAV -->

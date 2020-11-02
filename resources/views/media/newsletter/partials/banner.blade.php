@@ -34,7 +34,7 @@
 		<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 			<p>
 				<!--▼▼ 画像タップ時のリンク ▼▼-->
-				<a href="{{ $banner->link_url }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
+				<a href="{{ $banner->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 				<!--▲▲ 画像タップ時のリンク ▲▲-->
 				<!--▼▼ 画像 ▼▼-->
 				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/{{ $banner->img_url }}" width="288" height="126" border="0" style="display:inline-block;">

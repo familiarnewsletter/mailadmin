@@ -30,11 +30,6 @@
                 <div class="form-group">
                   <label for="title">タイトル</label>
                   <input type="text" class="form-control" name="title" list="categorytab"　id="title" value="{{ $newsletter_parts->title }}">
-                  <datalist id="categorytab">
-                    <option label="NEWS" value="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_news.gif"></option>
-                  　<option label="NEWS" value="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_products.gif"></option>
-                  　<option label="NEWS" value="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_event.gif"></option>
-                  </datalist>
                 </div>
                 <div class="form-group">
                   <label for="img_url">画像URL</label>
@@ -43,6 +38,10 @@
                 <div class="form-group">
                   <label for="link_url">リンク先URL</label>
                   <input type="text" class="form-control" name="link_url" id="link_url" value="{{ $newsletter_parts->link_url }}"/>
+                </div>
+                <div class="form-group">
+                  <label for="utm_content_id">キャンペーンコード(２桁)</label>
+                  <input type="text" class="form-control" name="utm_content_id" id="utm_content_id" value="{{ $newsletter_parts->utm_content_id }}"/>
                 </div>
                 <div class="form-group">
                   <label for="text">テキスト</label>

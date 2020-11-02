@@ -18,6 +18,7 @@ class CreateNewsletterTable extends Migration
             $table->string('title');
             $table->string('preheader_text');
             $table->datetime('delivery_date');
+            $table->string('utm_campaign_id');
             $table->integer('status')->default(1);
             $table->string('category');
             $table->string('header_type');

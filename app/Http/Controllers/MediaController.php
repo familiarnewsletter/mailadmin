@@ -129,6 +129,7 @@ class MediaController extends Controller
         $newsletter->title = $request->title;
         $newsletter->preheader_text = $request->preheader_text;
         $newsletter->delivery_date = $request->delivery_date;
+        $newsletter->utm_campaign_id = $request->utm_campaign_id;
         $newsletter->category = $request->category;
         $newsletter->header_type = $request->header_type;
 
@@ -172,6 +173,7 @@ class MediaController extends Controller
         $newsletter->title = $request->title;
         $newsletter->preheader_text = $request->preheader_text;
         $newsletter->delivery_date = $request->delivery_date;
+        $newsletter->utm_campaign_id = $request->utm_campaign_id;
         $newsletter->category = $request->category;
         $newsletter->header_type = $request->header_type;
         $newsletter->status = $request->status;
@@ -307,6 +309,9 @@ class MediaController extends Controller
 
         
         $newsletter_parts_ad = NewsletterPartsAdmin::find($newsletter_parts_admin_id);
+        $newsletter_parts = NewsletterParts::where('newsletter_parts_admin_id', $newsletter_parts_ad->id)->get();
+        
+
         $newsletter_parts_ad->delete();
 
 
@@ -443,15 +448,7 @@ class MediaController extends Controller
 			]);
 		}
 
-		elseif ($newsletter_parts_ad->type_id == 12) {
-
-			return view ('media.newsletter.parts.create.pickupitemforsale', [
-
-				'newsletter' => $newsletter,
-				'newsletter_parts_ad' => $newsletter_parts_ad
-	        
-			]);
-		}
+		
 	}
 
 	// if (SaveRequest::get('save')) {
@@ -475,9 +472,11 @@ class MediaController extends Controller
         $newsletter_parts->title = $request->title;
         $newsletter_parts->img_url = $request->img_url;
         $newsletter_parts->link_url = $request->link_url;
+        $newsletter_parts->utm_content_id = $request->utm_content_id;
         $newsletter_parts->text = $request->text;
         
-
+        
+        
         $newsletter_parts->newsletter_parts_admin_id = $newsletter_parts_admin_id;
         $newsletter_parts->newsletter_id = $newsletter->id;
 
@@ -503,13 +502,7 @@ class MediaController extends Controller
 
 		$newsletter_parts = NewsletterParts::find($newsletter_parts_id);
 		$type_id = $newsletter_parts->newsletterPartsAdmin()->first()->type_id;
-        // return view('media.newsletter.parts.edit', [ 
-
-
-        // 	'newsletter_parts' => $newsletter_parts
-
-
-        // ]);
+        
     
         if ($type_id == 1) {
 
@@ -611,14 +604,6 @@ class MediaController extends Controller
 			]);
 		}
 
-		elseif ($type_id == 12) {
-
-			return view ('media.newsletter.parts.edit.pickupitemforsale', [
-
-				'newsletter_parts' => $newsletter_parts,
-	        
-			]);
-		}
     }
 
 
@@ -680,17 +665,20 @@ class MediaController extends Controller
 	public function newsletterLinkCreate(int $newsletter_id){
 
 
-		
-    	$newsletter = Newsletter::find($newsletter_id);
-
-    	$newsletter_parts_admin = NewsletterPartsAdmin::where('newsletter_id', $newsletter->id)->get();
+		$newsletter = Newsletter::find($newsletter_id);
+    	$newsletter_parts_admin = NewsletterPartsAdmin::where('newsletter_id', $newsletter_id)->get();
+    	
+    	
     	
 		return view ('media.newsletter.link.create', [
 
 			'newsletter' => $newsletter,
-			'newsletter_parts_admin' => $newsletter_parts_admin
+
+			'newsletter_parts_admin' => $newsletter_parts_admin,
         
 		]);
+		
+
 	}
 
 
@@ -701,8 +689,10 @@ class MediaController extends Controller
 		$newsletter_link = new NewsletterLink;
         $newsletter_link->type_id = $request->type_id;
         $newsletter_link->newsletter_id = $newsletter_id;
+        $newsletter_link->link_type = $request->link_type;
         $newsletter_link->link_url = $request->link_url;
-
+        
+       	$newsletter_link->utm_content_id = $request->utm_content_id;
         
         $newsletter_link->save();
 
@@ -731,13 +721,13 @@ class MediaController extends Controller
 		$newsletter_link = NewsletterLink::find($newsletter_link_id);
 		$newsletter_parts_admin = NewsletterPartsAdmin::where('newsletter_id', $newsletter_link->newsletter_id)->get();
 		
-		
-      
 		return view ('media.newsletter.link.edit', [
 
 			'newsletter_link' => $newsletter_link,
 			'newsletter_parts_admin' => $newsletter_parts_admin
+        
 		]);
+		
 	}
 
 
@@ -750,6 +740,7 @@ class MediaController extends Controller
 
  		$newsletter_link->type_id = $request->type_id;
         
+        $newsletter_link->link_type = $request->link_type;
         $newsletter_link->link_url = $request->link_url;
         
         $newsletter_link->save();
@@ -828,7 +819,24 @@ class MediaController extends Controller
 		]);
 	}
 
+	public function newsletterText(int $newsletter_id){
 
+		$newsletter = Newsletter::find($newsletter_id);
+
+		$newsletter_parts_admin = NewsletterPartsAdmin::orderBy('id', 'ASC')->where('newsletter_id', $newsletter->id)->get();
+
+		$newsletter_parts = NewsletterParts::where('newsletter_id', $newsletter->id)->get();
+
+		$newsletter_link = NewsletterLink::where('newsletter_id', $newsletter->id)->get();
+
+		return view ('media.newsletter.text', [
+
+			'newsletter' => $newsletter,
+        	'newsletter_parts_admin' => $newsletter_parts_admin,
+			'newsletter_parts' => $newsletter_parts,
+			'newsletter_link' => $newsletter_link
+		]);
+	}
 
 	
 

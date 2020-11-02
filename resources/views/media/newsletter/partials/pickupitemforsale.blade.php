@@ -1,4 +1,3 @@
-<!--▼▼ STYLE BOOK ▼▼-->
 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
 	<tbody>
 		<tr>
@@ -36,7 +35,7 @@
 		
 		<p>
 			<!--▼▼ 画像タップ時のリンク ▼▼-->
-			<a href="{{ $pickupitemforsale->link_url }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
+			<a href="{{ $pickupitemforsale->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $pickupitemforsale->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 			<!--▲▲ 画像タップ時のリンク ▲▲-->
 			<!--▼▼ 画像 ▼▼-->
 			<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/{{ $pickupitemforsale->img_url }}" width="188" height="188" border="0" style="display:inline-block;">
@@ -112,4 +111,4 @@
 </table>
 @endif
 @endforeach
-<!--▲▲ STYLE BOOK ▲▲-->
+

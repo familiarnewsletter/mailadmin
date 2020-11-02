@@ -17,7 +17,9 @@ class CreateNewsletterLinkTable extends Migration
             $table->id();
             $table->integer('type_id');
             $table->bigInteger('newsletter_id')->unsigned();
+            $table->longText('link_type');
             $table->longText('link_url');
+            $table->string('utm_content_id');
             $table->timestamps();
 
             $table->foreign('newsletter_id')->references('id')->on('newsletter');

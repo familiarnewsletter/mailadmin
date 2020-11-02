@@ -23,8 +23,8 @@ class NewsletterPartsAdmin extends Model
 		8 => [ 'label' => 'STYLE BOOK(3列)'],
 		9 => [ 'label' => 'SNAP'],
 		10 => [ 'label' => 'BANNER'],
-		11 => [ 'label' => 'NEWS ＆ TOPICS(セール用)'],
-		12 => [ 'label' => 'PICKUP ITEM(セール用)'],
+		11 => [ 'label' => 'PICKUP ITEM(セール用)'],
+		11 => [ 'label' => 'PICKUP ITEM(セール用)'],
 	];
 	
 	public function getTypeidClassAttribute()

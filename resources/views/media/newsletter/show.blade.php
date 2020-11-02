@@ -114,7 +114,11 @@
                 <div class="form-group">
                   <label for="deliver_date">配信日時</label>
                   <input type="text" class="form-control" name="deliver_date" id="deliver_date" value="{{ $newsletter->delivery_date }}" readonly />
-                </div>             
+                </div>     
+                <div class="form-group">
+                  <label for="utm_campaign_id">キャンペーンコード（６桁）</label>
+                  <input type="text" class="form-control" name="utm_campaign_id" id="utm_campaign_id" value="{{ $newsletter->utm_campaign_id }}" readonly />
+                </div>        
                 <div class="form-group">
                   <label for="status">カテゴリ</label>
                   <input type="text" class="form-control" name="status" id="status" value="{{ $newsletter->category }}" readonly > 
@@ -259,8 +263,9 @@
                       <option value="8"><label>STYLE BOOK 3列</label></option>
                       <option value="9"><label>SNAP</label></option>
                       <option value="10"><label>BANNER</label></option>
-                      <option value="11"><label>NEWS ＆ TOPICS(セール用)</label></option>
-                      <option value="12"><label>PICKUP ITEM(セール用)</label></option>
+                      <option value="11"><label>PICKUP ITEM(セール用)</label></option>
+                      <option value="12"><label>CATEGORY(セール用)</label></option>
+                      <option value="13"><label>SIZE(セール用)</label></option>
                     
                   </select>
                 </div>
@@ -396,18 +401,22 @@
                     <i class="fas fa-fw fa-link"></i>
                     <input type="button" id="create_content" value="リンク追加">
               </a>
-              <a class="dropdown-item" data-toggle="modal" data-target="#Modal7">
+              <a class="dropdown-item" data-toggle="modal" data-target="#Modal8">
                     <i class="fas fa-fw fa-edit"></i>
                    <input type="button" id="test_content" value="リンク編集">
               </a>
-              <a class="dropdown-item" data-toggle="modal" data-target="#Modal8">
+              <a class="dropdown-item" data-toggle="modal" data-target="#Modal9">
                     <i class="fas fa-fw fa-trash"></i>
                    <input type="button" id="test_content" value="リンク削除">
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" id="show_source" data-toggle="modal" data-target="#Modal9">
+              <a class="dropdown-item" id="show_source" data-toggle="modal" data-target="#Modal10">
                     <i class="fas fa-fw fa-code"></i>
                    <input type="button"  value="code表示">
+              </a>
+              <a class="dropdown-item" href="/media/newsletter/text/{{ $newsletter->id }}">
+                    <i class="fas fa-fw fa-file-alt"></i>
+                    <input type="button" id="create_content" value="text表示">
               </a>
               
             </div>
@@ -663,6 +672,7 @@
                 <div class="text-right">
                  
                   <input type="submit" value="削除" class="btn btn-danger btn-sm" onclick='return confirm("本当に削除しますか？");'>
+
                 </div>
                    
               </form>
@@ -675,6 +685,62 @@
 </div> 
 
 <div class="modal fade" id="Modal7" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">リンクsette</h6>
+        </div>
+        <div class="card-body">
+          
+          <nav class="panel panel-default">
+           
+                  
+                  <select id="target5">
+                    <option>リンク設置箇所を選択</option>
+                    
+                    <option value="/media/newsletter/createlink/1">「正しく表示されない方はこちらをクリック」</option>
+                  @foreach($newsletter_parts_admin as $newsletter_parts_ad)
+                  
+                    @if(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 4 || isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 5 || isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 7 || isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 8 || isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 9 || isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 11)
+                    <option value="/media/newsletter/createlink/{{ $newsletter_parts_ad->id }}">{{ $newsletter_parts_ad->type_id_label }}</option>
+                    @endif
+
+                  @endforeach
+                   </select>
+               
+              <script src="/sb_admin_2/vendor/jquery/jquery.js"></script>
+
+                  <script type="text/javascript">
+                  $(document).ready(function(){
+                    $('#target5').bind('change', function() {
+                      var linkurl5 = $('#target5 option:selected').val();
+                      $('#link5').attr({href:linkurl5});
+                    });
+
+                  });
+                  </script>
+                
+                   
+              </nav>
+              
+            
+
+            <hr>
+            <div class="text-right">
+             <a href="" id="link5"><button type="button" class="btn btn-primary btn-sm">リンクを追加</button></a>
+             <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
+            </div>
+             
+           
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<div class="modal fade" id="Modal8" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="card shadow mb-4">
@@ -726,7 +792,7 @@
   </div>
 </div> 
 
-<div class="modal fade" id="Modal8" tabindex="-1">
+<div class="modal fade" id="Modal9" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="card shadow mb-4">
@@ -775,7 +841,7 @@
     </div>
   </div>
 </div> 
-<div class="modal fade" id="Modal9" tabindex="-1">
+<div class="modal fade" id="Modal10" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="card shadow mb-4">

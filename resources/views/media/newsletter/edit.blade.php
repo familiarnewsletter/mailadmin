@@ -55,6 +55,10 @@
                 <div class="form-group">
                   <label for="delivery_date">配信日時</label>
                   <input type="text" class="form-control" name="delivery_date" id="delivery_date" value="{{ $newsletter->delivery_date }}" />
+                </div>
+                 <div class="form-group">
+                  <label for="utm_campaign_id">キャンペーンコード（6桁）</label>
+                  <input type="text" class="form-control" name="utm_campaign_id" id="utm_campaign_id" value="{{ $newsletter->utm_campaign_id }}"/>
                 </div>                
                 <div class="form-group">
                   <label for="category">カテゴリ</label>

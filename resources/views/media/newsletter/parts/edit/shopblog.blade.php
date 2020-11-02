@@ -40,6 +40,10 @@
                   <input type="text" class="form-control" name="link_url" id="link_url" value="{{ $newsletter_parts->link_url }}"/>
                 </div>
                 <div class="form-group">
+                  <label for="utm_content_id">キャンペーンコード(２桁)</label>
+                  <input type="text" class="form-control" name="utm_content_id" id="utm_content_id" value="{{ $newsletter_parts->utm_content_id }}"/>
+                </div>
+                <div class="form-group">
                   <label for="text">テキスト</label>
                   <input type="text" class="form-control" name="text" id="text" hidden="" value="{{ $newsletter_parts->text }}"/>
                   <trix-editor input="text" placeholder="入力欄" ></trix-editor>

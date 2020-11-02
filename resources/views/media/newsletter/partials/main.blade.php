@@ -1,8 +1,7 @@
 @foreach($newsletter_parts as $np) 
-	@if($np->newsletterPartsAdmin()->first()->type_id == 1)
+@if($np->newsletterPartsAdmin()->first()->type_id == 1)
 
 
-<!--▼▼ MAIN ▼▼-->
 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="f6f4f2">
 
 	<tbody>
@@ -16,7 +15,7 @@
 			<td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;text-align:center;" valign="top">
 
 				<!--▼▼ 画像タップ時のリンク ▼▼-->
-				<a href="{{ $np->link_url }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
+				<a href="{{ $np->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 				<!--▲▲ 画像タップ時のリンク ▲▲-->
 
 				<!--▼▼ 画像 ▼▼-->
@@ -85,7 +84,7 @@
 			<td colspan="1" width="384" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 
 				<!--▼▼ ボタンタップ時のリンク ▼▼-->
-				<a href="{{ $np->link_url}}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
+				<a href="{{ $np->link_url}}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 				<!--▲▲ ボタンタップ時のリンク ▲▲-->
 
 					<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/btn_384x64.png" width="384" height="64" border="0" style="display:block;">
@@ -105,7 +104,6 @@
 	</tbody>
 
 </table>
-<!--▲▲ MAIN ▲▲-->
 @endif
 @endforeach
 
