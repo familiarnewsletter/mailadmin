@@ -11,6 +11,15 @@
 
 @if($np->newsletterPartsAdmin()->first()->type_id == 3)
 
+<?php 
+
+	foreach ($directorys as $directory) {
+		if($directory->type_id === 3){
+			$newsandtopics_path = $directory->path;
+		}
+	}
+
+?>
 
 	<tr>
 		<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
@@ -18,7 +27,7 @@
 			<a href="{{ $np->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 			<!--▲▲ 画像タップ時のリンク ▲▲-->
 			<!--▼▼ 画像 ▼▼-->
-			<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/{{ $np->img_url }}" width="250" height="175" border="0" style="display:block;">
+			<img src="{{ $newsandtopics_path }}{{ $np->img_url }}" width="250" height="175" border="0" style="display:block;">
 			<!--▲▲ 画像 ▲▲-->
 			</a>
 		</td>

@@ -30,6 +30,19 @@
 			   }
 			   
 		@endphp
+
+		<?php 
+
+			foreach ($directorys as $directory) {
+				if($directory->type_id === 9){
+					$snap_path = $directory->path;
+				}
+			}
+
+		?>
+
+
+
 			<td style="margin:0;padding:0;vertical-align:top;font-size:0" valign="top">
 
 			<div>
@@ -37,7 +50,7 @@
 				<a href="{{ $snap->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $snap->utm_content_id }}" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none" target="_blank">
 				<!--▲▲ 画像タップ時のリンク ▲▲-->
 				<!--▼▼ 画像 ▼▼-->
-				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/item/2020SS/{{ $snap->img_url }}" width="288" border="0" style="display:inline-block">
+				<img src="{{ $snap_path }}{{ $snap->img_url }}" width="288" border="0" style="display:inline-block">
 				<!--▲▲ 画像 ▲▲-->
 
 				</a>

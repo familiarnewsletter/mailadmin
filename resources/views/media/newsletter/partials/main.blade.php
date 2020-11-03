@@ -1,6 +1,14 @@
 @foreach($newsletter_parts as $np) 
 @if($np->newsletterPartsAdmin()->first()->type_id == 1)
+<?php 
 
+	foreach ($directorys as $directory) {
+		if($directory->type_id === 1){
+			$top_path = $directory->path;
+		}
+	}
+
+?>
 
 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="f6f4f2">
 
@@ -19,7 +27,7 @@
 				<!--▲▲ 画像タップ時のリンク ▲▲-->
 
 				<!--▼▼ 画像 ▼▼-->
-				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/{{ $np->img_url }}" width="500" border="0" style="display:inline-block;"></a>
+				<img src="{{$top_path}}{{ $np->img_url }}" width="500" border="0" style="display:inline-block;"></a>
 				<!--▲▲ 画像 ▲▲-->
 			</td>
 		</tr>

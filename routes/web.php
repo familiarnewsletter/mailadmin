@@ -234,18 +234,16 @@ Route::group(['middleware' => 'auth'], function() {
 
 
 
-	Route::get('/media/directory/index', 'MediaController@DirectoryIndex')->name('directory.index');
+	Route::get('/media/directory/index', 'MediaController@directoryIndex')->name('directory.index');
 
-	//Route::get('/media/directory/show/{directory_id}', 'MediaController@DirectoryShow')->name('directory.show');
-	Route::get('/media/directory/show', 'MediaController@DirectoryShow')->name('directory.show');
+	
+	Route::get('/media/directory/create', 'MediaController@directoryCreate')->name('directory.create');
+	Route::post('/media/directory/create', 'MediaController@directoryStore')->name('directory.store');
 
-	Route::get('/media/directory/create', 'MediaController@DirectoryCreate')->name('directory.create');
-	Route::post('/media/directory/create', 'MediaController@DirectoryStore')->name('directory.store');
+	Route::get('/media/directory/edit/{directory_id}', 'MediaController@directoryEdit')->name('directory.edit');
+	Route::post('/media/directory/edit/{directory_id}', 'MediaController@directoryUpdate')->name('directory.update');
 
-	Route::get('/media/directory/{directory_id}/edit', 'MediaController@DirectoryEdit')->name('directory.edit');
-	Route::post('/media/directory/{directory_id}/edit', 'MediaController@DirectoryUpdate')->name('directory.update');
-
-	Route::post('/media/directory/{directory_id}/delete', 'MediaController@DirectoryDelete')->name('directory.delete');
+	Route::post('/media/directory/delete/{directory_id}', 'MediaController@directoryDelete')->name('directory.delete');
 
 
 });

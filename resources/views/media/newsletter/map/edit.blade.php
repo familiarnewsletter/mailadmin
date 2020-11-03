@@ -85,6 +85,9 @@
                       <option value="8"><label>STYLE BOOK 3列</label></option>
                       <option value="9"><label>SNAP</label></option>
                       <option value="10"><label>BANNER</label></option>
+                      <option value="11"><label>PICKUP ITEM(セール用)</label></option>
+                      <option value="12"><label>CATEGORY(セール用)</label></option>
+                      <option value="13"><label>SIZE(セール用)</label></option>
                     
                   </select>
                 </div>

@@ -34,7 +34,15 @@
 			   
 		@endphp
 			
-			
+		<?php 
+
+			foreach ($directorys as $directory) {
+				if($directory->type_id === 5){
+					$pickupitem3row_path = $directory->path;
+				}
+			}
+
+		?>	
 
 			<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 				<p>
@@ -42,7 +50,7 @@
 					<a href="{{ $pickup_item->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $pickup_item->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 					<!--▲▲ 画像タップ時のリンク ▲▲-->
 					<!--▼▼ 画像 ▼▼-->
-					<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/item/2020SS/{{ $pickup_item->img_url }}" width="288" border="0" style="display:inline-block;">
+					<img src="{{ $pickupitem3row_path }}{{ $pickup_item->img_url }}" width="288" border="0" style="display:inline-block;">
 					<!--▲▲ 画像 ▲▲-->
 					</a>
 				</p>

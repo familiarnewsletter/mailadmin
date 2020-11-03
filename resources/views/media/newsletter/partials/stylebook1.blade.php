@@ -23,6 +23,16 @@
 
 @if($np->newsletterPartsAdmin()->first()->type_id == 7)
 
+<?php 
+
+	foreach ($directorys as $directory) {
+		if($directory->type_id === 7){
+			$stylebook1row_path = $directory->path;
+		}
+	}
+
+?>
+
 
 	<td style="margin:0;padding:0;vertical-align:top;font-size:0" valign="top">
 
@@ -32,7 +42,7 @@
 		<!--▲▲ 画像タップ時のリンク ▲▲-->
 
 		<!--▼▼ 画像 ▼▼-->
-		<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/item/2020SS/{{ $np->img_url }}" width="250" height="175" border="0" style="display:block">
+		<img src="{{ $stylebook1row_path }}{{ $np->img_url }}" width="250" height="175" border="0" style="display:block">
 		<!--▲▲ 画像 ▲▲-->
 
 

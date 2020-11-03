@@ -8,6 +8,7 @@ use App\Newsletter;
 use App\NewsletterPartsAdmin;
 use App\NewsletterParts;
 use App\NewsletterLink;
+use App\Directory;
 use Carbon\Carbon;
 use Request as SaveRequest;
 use Request as MapRequest;
@@ -45,12 +46,15 @@ class MediaController extends Controller
 
 		$newsletter_link = NewsletterLink::where('newsletter_id', $newsletter->id)->get();
 
+		$directorys = Directory::all();
+
 		return view ('media.newsletter.show', [
 
 			'newsletter' => $newsletter,
 			'newsletter_parts_admin' => $newsletter_parts_admin,
 			'newsletter_parts' => $newsletter_parts,
-			'newsletter_link' => $newsletter_link
+			'newsletter_link' => $newsletter_link,
+			'directorys' => $directorys
 			
 		]);
 	}
@@ -451,16 +455,7 @@ class MediaController extends Controller
 		
 	}
 
-	// if (SaveRequest::get('save')) {
-
- //            return redirect()->route('newsletter.show', [
-
- //            	'id' => $newsletter->id
-
- // 			]);
-        
-
- //        } 
+	
 
 
 	public function newsletterPartsStore(int $newsletter_parts_admin_id, CreateNewsletterParts $request){
@@ -837,6 +832,128 @@ class MediaController extends Controller
 			'newsletter_link' => $newsletter_link
 		]);
 	}
+
+
+
+
+
+
+
+
+	public function directoryIndex(){
+
+
+
+    	$directorys = Directory::all();
+
+		return view ('media.directory.index', [
+
+			'directorys' => $directorys
+        
+		]);
+	}
+
+
+	
+
+	
+
+	public function directoryCreate(){
+
+
+
+		return view ('media.directory.create', [
+
+        
+		]);
+	}
+
+
+
+	public function directoryStore(Request $request){
+
+
+		$directory = new Directory;
+        $directory->type_id = $request->type_id;
+        $directory->path = $request->path;
+
+
+        $directory->save();
+
+		$directory = Newsletter::all();        
+
+	
+
+        return redirect()->route('directory.index', [
+
+		]);
+
+
+		
+	}
+
+	public function directoryEdit(int $directory_id){
+
+
+		$directory = Directory::find($directory_id);
+		
+		return view ('media.directory.edit', [
+
+			'directory' => $directory,
+        
+		]);
+	}
+
+
+
+
+	public function directoryUpdate(Request $request, int $directory_id){
+
+
+		$directory = Directory::find($directory_id);
+
+       	$directory->type_id = $request->type_id;
+        $directory->path = $request->path;
+       
+        
+
+        $directory->save();
+
+        $directorys = Directory::all();
+
+        return view('media.directory.index', [
+
+        	'directorys' => $directorys
+
+		]);
+        
+       
+	}
+
+
+
+	public function directoryDelete(Request $request, int $id){
+
+
+
+		//削除対象レコードを検索
+        Directory::find($id)->delete();
+        
+
+        
+        $directorys = Newsletter::all(); 
+        //リダイレクト
+        return redirect()->route('directory.index', [
+
+        	'directorys' => $directorys
+
+        ]);
+	}
+
+
+
+
+
 
 	
 
