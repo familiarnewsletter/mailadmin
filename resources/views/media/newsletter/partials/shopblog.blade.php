@@ -21,10 +21,25 @@
 	}
 
 ?>
+
+@php
+
+
+	if(strpos($np->link_url, "?") != false){
+	  
+		$utm_code = "&utm_source=h_mail&utm_medium=email&utm_campaign=";
+
+	}else{
+
+		$utm_code = "?utm_source=h_mail&utm_medium=email&utm_campaign=";
+
+	}
+
+@endphp
 	<tr>
 	<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 		<!--▼▼ 画像タップ時のリンク ▼▼-->
-		<a href="{{ $np->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
+		<a href="{{ $np->link_url }}{{$utm_code}}{{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 		<!--▲▲ 画像タップ時のリンク ▲▲-->
 		<!--▼▼ 画像 ▼▼-->
 		<img src="{{ $shopblog_path }}{{ $np->img_url }}" width="200" height="200" border="0" style="display:block;">

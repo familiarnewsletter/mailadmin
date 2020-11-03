@@ -39,20 +39,35 @@
 				}
 			}
 
+
 		?>
 
+
+		@php
+
+
+		if(strpos($snap->link_url, "?") != false){
+		  
+			$utm_code = "&utm_source=h_mail&utm_medium=email&utm_campaign=";
+
+		}else{
+
+			$utm_code = "?utm_source=h_mail&utm_medium=email&utm_campaign=";
+
+		}
+
+		@endphp
 
 
 			<td style="margin:0;padding:0;vertical-align:top;font-size:0" valign="top">
 
 			<div>
 				<!--▼▼ 画像タップ時のリンク ▼▼-->
-				<a href="{{ $snap->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $snap->utm_content_id }}" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none" target="_blank">
+				<a href="{{ $snap->link_url }}{{$utm_code}}{{ $newsletter->utm_campaign_id }}&utm_content={{ $snap->utm_content_id }}" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none" target="_blank">
 				<!--▲▲ 画像タップ時のリンク ▲▲-->
 				<!--▼▼ 画像 ▼▼-->
 				<img src="{{ $snap_path }}{{ $snap->img_url }}" width="288" border="0" style="display:inline-block">
 				<!--▲▲ 画像 ▲▲-->
-
 				</a>
 			</div>
 
