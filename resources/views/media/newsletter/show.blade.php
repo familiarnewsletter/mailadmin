@@ -297,7 +297,7 @@
                  
                 <select id="target">
                     <option >コンテンツ選択</option>
-                  @foreach($newsletter_parts_admin as $newsletter_parts_ad) 
+                  @foreach($newsletter_parts_admin ->sortBy('id') as $newsletter_parts_ad) 
                     <option name="pulldown" value="/media/newsletter/editmap/{{ $newsletter_parts_ad->id }}">{{ $newsletter_parts_ad->type_id_label }}</option>
                   @endforeach 
                  </select>
@@ -339,7 +339,7 @@
           <nav class="panel panel-default">
             
            
-               @foreach($newsletter_parts_admin as $newsletter_parts_ad)    
+               @foreach($newsletter_parts_admin ->sortBy('id') as $newsletter_parts_ad)    
               <form action="{{ route('newsletter.deletemap', ['newsletter_parts_admin_id' => $newsletter_parts_ad->id]) }}" >
                 @csrf
                
@@ -548,7 +548,7 @@
                  
                 <select id="target2">
                     <option >コンテンツ選択</option>
-                  @foreach($newsletter_parts_admin as $newsletter_parts_ad) 
+                  @foreach($newsletter_parts_admin ->sortBy('id') as $newsletter_parts_ad) 
                     <option name="pulldown" value="/media/newsletter/createparts/{{ $newsletter_parts_ad->id }}">{{ $newsletter_parts_ad->type_id_label }}</option>
                   @endforeach 
                  </select>
@@ -592,7 +592,7 @@
                  
                 <select id="target3">
                     <option >コンテンツ選択</option>
-                  @foreach($newsletter_parts as $np) 
+                  @foreach($newsletter_parts ->sortBy('id') as $np) 
                     <option name="pulldown" value="/media/newsletter/editparts/{{ $np->id }}">
                       <?php 
 
@@ -684,61 +684,7 @@
   </div>
 </div> 
 
-<div class="modal fade" id="Modal7" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="card shadow mb-4">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">リンクsette</h6>
-        </div>
-        <div class="card-body">
-          
-          <nav class="panel panel-default">
-           
-                  
-                  <select id="target5">
-                    <option>リンク設置箇所を選択</option>
-                    
-                    <option value="/media/newsletter/createlink/1">「正しく表示されない方はこちらをクリック」</option>
-                  @foreach($newsletter_parts_admin as $newsletter_parts_ad)
-                  
-                    @if(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 4 || isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 5 || isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 7 || isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 8 || isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 9 || isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 11)
-                    <option value="/media/newsletter/createlink/{{ $newsletter_parts_ad->id }}">{{ $newsletter_parts_ad->type_id_label }}</option>
-                    @endif
 
-                  @endforeach
-                   </select>
-               
-              <script src="/sb_admin_2/vendor/jquery/jquery.js"></script>
-
-                  <script type="text/javascript">
-                  $(document).ready(function(){
-                    $('#target5').bind('change', function() {
-                      var linkurl5 = $('#target5 option:selected').val();
-                      $('#link5').attr({href:linkurl5});
-                    });
-
-                  });
-                  </script>
-                
-                   
-              </nav>
-              
-            
-
-            <hr>
-            <div class="text-right">
-             <a href="" id="link5"><button type="button" class="btn btn-primary btn-sm">リンクを追加</button></a>
-             <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
-            </div>
-             
-           
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> 
 
 <div class="modal fade" id="Modal8" tabindex="-1">
   <div class="modal-dialog">

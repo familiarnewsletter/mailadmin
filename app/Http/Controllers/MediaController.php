@@ -613,6 +613,7 @@ class MediaController extends Controller
         $newsletter_parts->title = $request->title;
         $newsletter_parts->img_url = $request->img_url;
         $newsletter_parts->link_url = $request->link_url;
+        $newsletter_parts->utm_content_id = $request->utm_content_id;
         $newsletter_parts->text = $request->text;
         
         
@@ -734,9 +735,11 @@ class MediaController extends Controller
 		$newsletter_link = NewsletterLink::find($newsletter_link_id);
 
  		$newsletter_link->type_id = $request->type_id;
-        
+        $newsletter_link->newsletter_id = $newsletter_id;
         $newsletter_link->link_type = $request->link_type;
         $newsletter_link->link_url = $request->link_url;
+        
+       	$newsletter_link->utm_content_id = $request->utm_content_id;
         
         $newsletter_link->save();
 
