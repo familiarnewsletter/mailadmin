@@ -39,7 +39,7 @@
 
                 <p><b> {{ $newsletter_parts_ad -> type_id_label }}</b> </p>
                  <hr  noshade="">
-                  @foreach($newsletter_parts as $nlp)
+                  @foreach($newsletter_parts ->sortBy('id') as $nlp)
                   
                    @if($nlp->newsletter_parts_admin_id == $newsletter_parts_ad->id)
                    <?php 
@@ -57,7 +57,7 @@
                   @endif
                   @endforeach
 
-                  @foreach($newsletter_link as $nll)
+                  @foreach($newsletter_link ->sortBy('id') as $nll)
                       @if($nll->type_id == $newsletter_parts_ad->type_id)
                       <p><b>関連リンク・コメント</b></p>
                       <hr>
