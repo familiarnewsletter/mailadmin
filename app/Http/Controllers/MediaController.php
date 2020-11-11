@@ -40,7 +40,8 @@ class MediaController extends Controller
 
 		$newsletter = Newsletter::find($id);
 		
-		$newsletter_parts_admin = NewsletterPartsAdmin::orderBy('id', 'ASC')->where('newsletter_id', $newsletter->id)->get();
+		$newsletter_parts_admin = NewsletterPartsAdmin::orderBy('order_id', 'ASC')->where('newsletter_id', $newsletter->id)->get();
+
 
 		$newsletter_parts = NewsletterParts::where('newsletter_id', $newsletter->id)->get();
 
@@ -248,6 +249,8 @@ class MediaController extends Controller
 		$newsletter_parts_admin = new NewsletterPartsAdmin();
 
 		$newsletter_parts_admin->type_id = $request->type_id;
+		$newsletter_parts_admin->order_id = $request->order_id;
+
         $newsletter_parts_admin->newsletter_id = $newsletter->id;
 
         $newsletter_parts_admin->save();
@@ -293,6 +296,7 @@ class MediaController extends Controller
 
 
         $newsletter_parts_ad->type_id = $request->type_id;
+        $newsletter_parts_ad->order_id = $request->order_id;
         
         $newsletter_parts_ad->save();
 
@@ -735,7 +739,7 @@ class MediaController extends Controller
 		$newsletter_link = NewsletterLink::find($newsletter_link_id);
 
  		$newsletter_link->type_id = $request->type_id;
-        $newsletter_link->newsletter_id = $newsletter_id;
+        
         $newsletter_link->link_type = $request->link_type;
         $newsletter_link->link_url = $request->link_url;
         

@@ -75,7 +75,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                  @foreach($newsletters as $newsletter)
+                  @foreach($newsletters->sortBy('id') as $newsletter)
                   <tr>
                       <td>{{ $newsletter->delivery_date }}</td>
                       <td>{{ $newsletter->title }}</td>

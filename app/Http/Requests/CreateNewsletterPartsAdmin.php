@@ -13,7 +13,7 @@ class CreateNewsletterPartsAdmin extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,16 @@ class CreateNewsletterPartsAdmin extends FormRequest
     public function rules()
     {
         return [
-            //
+            'type_id' => 'required'|'numeric',
+            'order_id' => 'required',
+        ];
+    }
+
+    public function attributes()
+    {
+        return [
+            'type_id' => '記事カテゴリ',
+            'order_id' => '表示順',
         ];
     }
 }

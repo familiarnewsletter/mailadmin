@@ -119,14 +119,14 @@
 		</td>
 		<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 			
-			@if($nl->link_type != "「GOODS一覧」")
+			@if($nl->link_type == "「GOODS一覧」")
 			<!--▼▼ アイテム一覧のリンク ▼▼-->
 			<a href="{{ $nl->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $nl->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 			<!--▲▲ アイテム一覧のリンク ▲▲-->
 				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/btn_goodslist.png" width="240" height="56" border="0" style="display:block;">
 				
 			</a>
-			@elseif($nl->link_type != "「詳しくはこちら」")
+			@elseif($nl->link_type == "「詳しくはこちら」")
 			<a href="{{ $nl->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $nl->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 			<!--▲▲ アイテム一覧のリンク ▲▲-->
 				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/kuwashikuwa_banner_kai.png" width="240" height="56" border="0" style="display:block;">

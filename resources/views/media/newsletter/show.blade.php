@@ -37,7 +37,7 @@
 <!-- Latest compiled and minified CSS -->
 @include('media.newsletter.partials.styles')
 
-<body bgcolor="#ffffff" style="margin:0px auto 0px auto;font-family:YuGothic,'Yu Gothic','ＭＳ Ｐゴシック','MS PGothic','メイリオ', Meiryo,'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;" text="#000000" link="#555555" vlink="#555555" alink="#555555" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0">
+
 
 
 <div class="container-fluid">
@@ -185,46 +185,24 @@
 
             <div>
                   
-               <form method="post" action="{{ route('newsletter.sortmap', ['id' => $newsletter->id]) }}">
-                @csrf
+              
                   <ul id="jquery-ui-sortable">
                   
                      
                     @foreach($newsletter_parts_admin as $newsletter_parts_ad) 
                       <li id="item" class="ui-state-default">
-                        {{ $newsletter_parts_ad->type_id_label }} 
+                         {{ $newsletter_parts_ad->order_id }}:{{ $newsletter_parts_ad->type_id_label }} 
                         <input type="hidden" name="sortable_[]" value="{{ $newsletter_parts_ad->id }}">
                       </li>
                      @endforeach 
                   
                   </ul>
                
-                   <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-                    
-                    <script type="text/javascript">
-                      
-                    function saveOrder() {
-                        var articleorder="";
-                        $("#sortable li").each(function(i) {
-                            if (articleorder=='')
-                                articleorder = $(this).attr('item');
-                            else
-                                articleorder += "," + $(this).attr('item');
-                        });
-                                //articleorder now contains a comma separated list of the ID's of the articles in the correct order.
-                        $.ajax({
-                                    data: articleorder,
-                                    type: 'POST',
-                                    url: '{{ route('newsletter.show', ['id' => $newsletter->id]) }}'
-                                });
-                    }
-                    </script>
                     
 
                     </div>
  
-                </form>      
+                
               </div>
               </nav>
             </div>
@@ -269,6 +247,10 @@
                     
                   </select>
                 </div>
+                <div class="form-group">
+                  <label for="order_id">表示順</label>
+                  <input type="number" class="form-control" name="order_id" id="order_id" />
+                </div>
         
                 <div class="text-right">
                   <button type="submit" class="btn btn-primary btn-sm">カテゴリ追加</button>
@@ -296,8 +278,8 @@
           <nav class="panel panel-default">
                  
                 <select id="target">
-                    <option >コンテンツ選択</option>
-                  @foreach($newsletter_parts_admin ->sortBy('id') as $newsletter_parts_ad) 
+                    <option disabled selected>カテゴリ選択</option>
+                  @foreach($newsletter_parts_admin as $newsletter_parts_ad) 
                     <option name="pulldown" value="/media/newsletter/editmap/{{ $newsletter_parts_ad->id }}">{{ $newsletter_parts_ad->type_id_label }}</option>
                   @endforeach 
                  </select>
@@ -317,7 +299,7 @@
                   </script>
 
                 <div class="text-right">
-                  <a href="" id="link"><button ype="button" class="btn btn-primary btn-sm">コンテンツを編集</button></a>
+                  <a href="" id="link"><button ype="button" class="btn btn-primary btn-sm">カテゴリを編集</button></a>
                   <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
                 </div> 
 
@@ -547,7 +529,7 @@
           <nav class="panel panel-default">
                  
                 <select id="target2">
-                    <option >コンテンツ選択</option>
+                    <option disabled selected>カテゴリ選択</option>
                   @foreach($newsletter_parts_admin ->sortBy('id') as $newsletter_parts_ad) 
                     <option name="pulldown" value="/media/newsletter/createparts/{{ $newsletter_parts_ad->id }}">{{ $newsletter_parts_ad->type_id_label }}</option>
                   @endforeach 
@@ -568,7 +550,7 @@
                   </script>
 
                 <div class="text-right">
-                  <a href="" id="link2"><button type="button" class="btn btn-primary btn-sm">要素を追加</button></a>
+                  <a href="" id="link2"><button type="button" class="btn btn-primary btn-sm">カテゴリを追加</button></a>
                   <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
                 </div> 
 
@@ -591,7 +573,7 @@
           <nav class="panel panel-default">
                  
                 <select id="target3">
-                    <option >コンテンツ選択</option>
+                    <option disabled selected>カテゴリ選択</option>
                   @foreach($newsletter_parts ->sortBy('id') as $np) 
                     <option name="pulldown" value="/media/newsletter/editparts/{{ $np->id }}">
                       <?php 
@@ -623,7 +605,7 @@
                   </script>
 
                 <div class="text-right">
-                  <a href="" id="link3"><button type="button" class="btn btn-primary btn-sm">コンテンツを編集</button></a>
+                  <a href="" id="link3"><button type="button" class="btn btn-primary btn-sm">カテゴリを編集</button></a>
                   <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
                 </div> 
 
@@ -801,6 +783,8 @@
                
                 <div class="form-group">
                  <p><input type="button" value="コードの選択" onClick="text_select()"></p>
+                 
+
                   <pre>
                   
                   <xmp id="source">
@@ -809,6 +793,9 @@
                  </xmp>
                 
                  </pre>
+
+
+
                 </div>
                 
                
@@ -821,69 +808,9 @@
 </div> 
 
 
-  <!-- <div class="tab-content" id="data_show">
-     <div class="container">
-     <div class="card shadow mb-4">
-        
-        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">数値データ</h6>
-          <div class="dropdown no-arrow">
-            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
-              <div class="dropdown-header">menu:</div>
-                 <a class="dropdown-item" href="/media/newsletter/index">
-                    <i class="fas fa-fw fa-edit"></i>
-                    <span>編集</span>
-                </a>
-                <a class="dropdown-item" href="/media/newsletter/index">
-                    <i class="fas fa-fw fa-trash"></i>
-                    <span>削除</span>
-                </a>
-              <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/media/newsletter/index">
-                    <i class="fas fa-fw fa-file-csv"></i>
-                    <span>CSV出力</span>
-                </a>
-                <a class="dropdown-item" href="/media/newsletter/index">
-                  <i class="fas fa-fw fa-file-pdf"></i>
-                  <span>PDF出力</span>
-                </a>
-            </div>
-          </div>
-        </div>
-        <div class="card-body">
-          
-          <nav class="panel panel-default">
-           
-                <div class="form-group">
-                  <label for="title">開封率</label>
-                  <input type="text" class="form-control" name="title" id="title" value="{{ $newsletter->title }}" readonly />
-                </div>
-                <div class="form-group">
-                  <label for="preheader">セッション</label>
-                  <input type="text" class="form-control" name="preheader" id="preheader" value="{{ $newsletter->preheader_text }}" readonly />
-                </div>                
-                <div class="form-group">
-                  <label for="status">収益</label>
-                  <input type="text" class="form-control" name="status" id="status" value="{{ $newsletter->category }}" readonly > 
-                </div>
-                
-                <hr>
-               
+  
 
-                <div class="text-right">
-                  <a href="/media/newsletter/index"><button class="button">戻る</button></a>
-                </div>
-              
-          </div>
-          </nav>
-        </div>
-      </div>
-</div>  -->
 
-</body>
 @endsection
 
 

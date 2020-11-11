@@ -75,21 +75,26 @@
                   <label for="type_id">記事カテゴリ</label>
                   <select type="integer" class="form-control" name="type_id" id="type_id" value="{{ $newsletter_parts_ad->type_id_label }}" >
                     
-                      <option value="1"><label>TOP</label></option>
-                      <option value="2"><label>SHOP NEWS ＆ EVENT</label></option>
-                      <option value="3"><label>NEWS ＆ TOPICS</label></option>
-                      <option value="4"><label>PICKUP ITEM 1列＋テキスト</label></option>
-                      <option value="5"><label>PICKUP ITEM 2列</label></option>
-                      <option value="6"><label>SHOP BLOG</label></option>
-                      <option value="7"><label>STYLE BOOK 1列＋テキスト</label></option>
-                      <option value="8"><label>STYLE BOOK 3列</label></option>
-                      <option value="9"><label>SNAP</label></option>
-                      <option value="10"><label>BANNER</label></option>
-                      <option value="11"><label>PICKUP ITEM(セール用)</label></option>
-                      <option value="12"><label>CATEGORY(セール用)</label></option>
-                      <option value="13"><label>SIZE(セール用)</label></option>
+                      <option value="1" @if(old('type_id',"$newsletter_parts_ad->type_id")=='1')selected="selected"@endif><label>TOP</label></option>
+                      <option value="2" @if(old('type_id',"$newsletter_parts_ad->type_id")=='2')selected="selected"@endif><label>SHOP NEWS ＆ EVENT</label></option>
+                      <option value="3" @if(old('type_id',"$newsletter_parts_ad->type_id")=='3')selected="selected"@endif><label>NEWS ＆ TOPICS</label></option>
+                      <option value="4" @if(old('type_id',"$newsletter_parts_ad->type_id")=='4')selected="selected"@endif><label>PICKUP ITEM 1列＋テキスト</label></option>
+                      <option value="5" @if(old('type_id',"$newsletter_parts_ad->type_id")=='5')selected="selected"@endif><label>PICKUP ITEM 2列</label></option>
+                      <option value="6" @if(old('type_id',"$newsletter_parts_ad->type_id")=='6')selected="selected"@endif><label>SHOP BLOG</label></option>
+                      <option value="7" @if(old('type_id',"$newsletter_parts_ad->type_id")=='7')selected="selected"@endif><label>STYLE BOOK 1列＋テキスト</label></option>
+                      <option value="8" @if(old('type_id',"$newsletter_parts_ad->type_id")=='8')selected="selected"@endif><label>STYLE BOOK 3列</label></option>
+                      <option value="9" @if(old('type_id',"$newsletter_parts_ad->type_id")=='9')selected="selected"@endif><label>SNAP</label></option>
+                      <option value="10" @if(old('type_id',"$newsletter_parts_ad->type_id")=='10')selected="selected"@endif><label>BANNER</label></option>
+                      <option value="11" @if(old('type_id',"$newsletter_parts_ad->type_id")=='11')selected="selected"@endif><label>PICKUP ITEM(セール用)</label></option>
+                      <option value="12" @if(old('type_id',"$newsletter_parts_ad->type_id")=='12')selected="selected"@endif><label>CATEGORY(セール用)</label></option>
+                      <option value="13" @if(old('type_id',"$newsletter_parts_ad->type_id")=='13')selected="selected"@endif><label>SIZE(セール用)</label></option>
                     
                   </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="order_id">表示順</label>
+                  <input type="number" class="form-control" name="order_id" id="order_id" value="{{ $newsletter_parts_ad->order_id }}" >
                 </div>
         
                     <div class="text-right">

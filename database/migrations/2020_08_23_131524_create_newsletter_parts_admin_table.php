@@ -16,6 +16,7 @@ class CreateNewsletterPartsAdminTable extends Migration
         Schema::create('newsletter_parts_admin', function (Blueprint $table) {
             $table->id();
             $table->integer('type_id');
+            $table->integer('order_id');
             $table->bigInteger('newsletter_id')->unsigned();
             $table->timestamps();
 
