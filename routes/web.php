@@ -88,54 +88,6 @@ Route::post('/promotion/ap/{ap_id}/delete', 'PromotionController@apDelete')->nam
 
 
 
-Route::get('/promotion/budget/index', 'PromotionController@budgetIndex')->name('budget.index');
-
-Route::get('/promotion/budget/create', 'PromotionController@budgetCreate')->name('budget.create');
-Route::post('/promotion/budget/create', 'PromotionController@budgetStore')->name('budget.store');
-
-Route::get('/promotion/budget/{budget_id}/edit', 'PromotionController@budgetEdit')->name('budget.edit');
-Route::post('/promotion/budget/{budget_id}/edit', 'PromotionController@budgetUpdate')->name('budget.update');
-
-Route::post('/promotion/budget/{budget_id}/delete', 'PromotionController@budgetDelete')->name('budget.delete'); 
-
-
-
-
-
-Route::get('/products/list/index', 'ProductController@productsIndex')->name('products.index');
-
-//Route::get('/products/list/show/{product_id}', 'ProductController@productsShow')->name('products.show');
-Route::get('/products/list/show', 'ProductController@productsShow')->name('products.show');
-
-
-Route::get('/products/list/create', 'ProductController@productsCreate')->name('products.create');
-Route::post('/products/list/create', 'ProductController@productsStore')->name('product.store');
-
-Route::get('/products/list/{product_id}/edit', 'ProductController@productsEdit')->name('pruducts.edit');
-Route::post('/products/list/{product_id}/edit', 'ProductController@productsUpdate')->name('products.update');
-
-Route::post('/products/list/{product_id}/delete', 'ProductController@productsDelete')->name('product.delete'); 
-
-
-
-
-Route::get('/products/consumption/index', 'ProductController@consumptionIndex')->name('consumption.index');
-
-//Route::get('/products/consumption/show/{consumption_id}', 'ProductController@consumptionShow')->name('consumption.show');
-Route::get('/products/consumption/show', 'ProductController@consumptionShow')->name('consumption.show');
-
-
-Route::get('/products/consumption/create', 'ProductController@consumptionCreate')->name('consumption.create');
-Route::post('/products/consumption/create', 'ProductController@consumptionStore')->name('consumption.store');
-
-Route::get('/products/consumption/{consumption_id}/edit', 'ProductController@consumptionEdit')->name('consumption.edit');
-Route::post('/products/consumption/{consumption_id}/edit', 'ProductController@consumptionUpdate')->name('consumption.update');
-
-Route::post('/products/consumption/{consumption_id}/delete', 'ProductController@consumptionDelete')->name('consumption.delete');
-
-
-
-
 
 Route::get('/products/delivery/index', 'ProductController@deliveryIndex')->name('delivery.index');
 
@@ -227,7 +179,7 @@ Route::group(['middleware' => 'auth'], function() {
 
 	Route::get('/media/newsletter/text/{newsletter_id}', 'MediaController@newsletterText')->name('newsletter.text');
 
-
+	Route::get('/media/newsletter/html/{newsletter_id}', 'MediaController@newsletterHtml')->name('newsletter.html');
 
 
 

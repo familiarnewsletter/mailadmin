@@ -17,9 +17,3 @@ a:link,a:visited,a:active{color:#555555;text-decoration:underline;}a:hover{text-
 </style>
 </head>
 <body bgcolor="#FFFFFF" style="margin:0px auto 0px auto;font-family:YuGothic,&#39;Yu Gothic&#39;,&#39;ＭＳ Ｐゴシック&#39;,&#39;MS PGothic&#39;,&#39;メイリオ&#39;, Meiryo,&#39;Hiragino Kaku Gothic ProN&#39;,&#39;ヒラギノ角ゴ ProN W3&#39;,sans-serif;" text="#000000" link="#555555" vlink="#555555" alink="#555555" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0">
-<!-- プリヘッダーテキスト -->
-<span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">
-アウトレット店舗でも同時開催中！
-</span>
-<!-- プリヘッダーテキスト -->
-

@@ -400,6 +400,10 @@
                     <i class="fas fa-fw fa-file-alt"></i>
                     <input type="button" id="create_content" value="text表示">
               </a>
+              <a class="dropdown-item" href="/media/newsletter/html/{{ $newsletter->id }}">
+                    <i class="fas fa-fw fa-file-alt"></i>
+                    <input type="button" value="code表示">
+              </a>
               
             </div>
           </div>
@@ -407,6 +411,8 @@
         <div class="card-body">
           
           <nav class="panel panel-default" id="document">
+
+
 
         @include('media.newsletter.partials.styles')        
         <!-- プリヘッダーテキスト -->

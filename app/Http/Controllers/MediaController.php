@@ -842,7 +842,27 @@ class MediaController extends Controller
 
 
 
+	public function newsletterHtml(int $newsletter_id){
 
+		$newsletter = Newsletter::find($newsletter_id);
+
+		$newsletter_parts_admin = NewsletterPartsAdmin::orderBy('id', 'ASC')->where('newsletter_id', $newsletter->id)->get();
+
+		$newsletter_parts = NewsletterParts::where('newsletter_id', $newsletter->id)->get();
+
+		$newsletter_link = NewsletterLink::where('newsletter_id', $newsletter->id)->get();
+
+		$directorys = Directory::all();
+
+		return view ('media.newsletter.html', [
+
+			'newsletter' => $newsletter,
+        	'newsletter_parts_admin' => $newsletter_parts_admin,
+			'newsletter_parts' => $newsletter_parts,
+			'newsletter_link' => $newsletter_link,
+			'directorys' => $directorys
+		]);
+	}
 
 
 
