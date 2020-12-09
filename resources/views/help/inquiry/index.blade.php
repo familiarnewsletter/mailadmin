@@ -36,12 +36,14 @@
 @endsection
 
 @section('scripts')
-<script src="https://cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/4.5.6/full/ckeditor.js"></script>
   <script>
     // エディタへの設定を適用する
     CKEDITOR.replace('editor', {
       uiColor: '#EEEEEE',
       height: 400,
+
     });
   </script>
+
 @endsection

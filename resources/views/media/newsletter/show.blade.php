@@ -65,7 +65,7 @@
  
   </ul>
 
-  <div class="tab-content is-open" id="info_show">
+  <div class="tab-content" id="info_show">
      <div class="container">
      <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
@@ -353,7 +353,7 @@
 
 
 
-  <div class="tab-content" id="document_show">
+  <div class="tab-content  is-open" id="document_show">
     <div class="container">
      <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
@@ -392,17 +392,14 @@
                    <input type="button" id="test_content" value="リンク削除">
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" id="show_source" data-toggle="modal" data-target="#Modal10">
-                    <i class="fas fa-fw fa-code"></i>
-                   <input type="button"  value="code表示">
-              </a>
+
               <a class="dropdown-item" href="/media/newsletter/text/{{ $newsletter->id }}">
                     <i class="fas fa-fw fa-file-alt"></i>
                     <input type="button" id="create_content" value="text表示">
               </a>
               <a class="dropdown-item" href="/media/newsletter/html/{{ $newsletter->id }}">
                     <i class="fas fa-fw fa-file-alt"></i>
-                    <input type="button" value="code表示">
+                    <input type="button" value="html表示">
               </a>
               
             </div>
@@ -775,43 +772,7 @@
     </div>
   </div>
 </div> 
-<div class="modal fade" id="Modal10" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="card shadow mb-4">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">ソースコードを表示</h6>
-        </div>
-        <div class="card-body">
-          
-          <nav class="panel panel-default">
-            
-               
-                <div class="form-group">
-                 <p><input type="button" value="コードの選択" onClick="text_select()"></p>
-                 
 
-                  <pre>
-                  
-                  <xmp id="source">
-                 
-                  
-                 </xmp>
-                
-                 </pre>
-
-
-
-                </div>
-                
-               
-     
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> 
 
 
   

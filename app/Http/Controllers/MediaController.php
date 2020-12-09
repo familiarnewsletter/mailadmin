@@ -44,6 +44,7 @@ class MediaController extends Controller
 
 
 		$newsletter_parts = NewsletterParts::where('newsletter_id', $newsletter->id)->get();
+		
 
 		$newsletter_link = NewsletterLink::where('newsletter_id', $newsletter->id)->get();
 

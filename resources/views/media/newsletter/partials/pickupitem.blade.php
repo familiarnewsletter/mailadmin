@@ -72,12 +72,12 @@
 				</p>
 				<p>
 					<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_288x14.gif" width="288" height="14" border="0" style="display:block;">
-				</p>
+				</p><center>
 				<p style="font-size:16px;color:#555555;text-align:center;">
 					<!--▼▼ 品名・品番 ▼▼-->
 					{!! $pickup_item->text !!}
 					<!--▲▲ 品名・品番 ▲▲-->
-				</p>
+				</p></center>
 				<p>
 					<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_288x20.gif" width="288" height="20" border="0" style="display:block;">
 				</p>
