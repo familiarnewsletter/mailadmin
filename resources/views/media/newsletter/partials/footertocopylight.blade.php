@@ -14,29 +14,32 @@
 	
 	<table width="600" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="f7f5f1">
 		<tbody>
-			<tr>
+		<tr>
 				<td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x32.gif" width="600" height="32" border="0" style="display:block;"></td></tr>
 			<tr>
 				<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 					<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_225x58.gif" width="225" height="58" border="0" style="display:block;">
 				</td>
 				<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
-					<a href="https://www.facebook.com/familiar1950?utm_source=h_mail&amp;utm_medium=email&amp;utm_content=footer" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
-						<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/btn_facebook.png" width="58" height="58" border="0" style="display:inline-block;">
-					</a>
+					<a href="https://page.line.me/317chcid?openQrModal=true?utm_source=h_mail&amp;utm_medium=email&amp;utm_content=footer" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
+						<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/LINE_APP.png" width="58" height="58" border="0" style="display:inline-block;">
+					</a><i class="fab fa-line"></i>
 				</td>
+
 				<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 					<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_34x34.gif" width="34" height="34" border="0" style="display:block;">
 				</td>
 				<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 					<a href="https://www.instagram.com/familiar_official?utm_source=h_mail&amp;utm_medium=email&amp;utm_content=footer" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
-						<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/btn_instagram.png" width="58" height="58" border="0" style="display:inline-block;">
+						<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/Instagram_AppIcon_Aug2017.png" width="58" height="58" border="0" style="display:inline-block;">
 					</a>
 				</td>
 				<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 					<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_225x58.gif" width="225" height="58" border="0" style="display:block;">
 				</td>
 			</tr>
+
+
 
 			@if($newsletter->category == "本会員")<!-- 本会員 -->
 			<tr>
