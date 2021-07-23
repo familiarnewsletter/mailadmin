@@ -85,9 +85,9 @@
 			<td colspan="3" width="560" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 
 				<!--▼▼ テキスト ▼▼-->
-				<p style="font-size:16px;color:#555555;text-align:center;line-height:1.7;"><center>
+				<p style="font-size:16px;color:#555555;text-align:center;line-height:1.7;">
 				{!! $np->text !!}
-				</center></p>
+				</p>
 				<!--▲▲ テキスト ▲▲-->
 
 			</td>

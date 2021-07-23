@@ -49,7 +49,35 @@
                    <hr>
                     <p>タイトル：{{ $title }}</p>
                     <!-- <p>画像名：{{ $nlp->img_url }}</p> -->
-                    <p>リンク先URL：{{ $nlp->link_url }}?utm_source=t_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $nlp->utm_content_id }}</p>
+                    @php
+
+
+                    if(strpos($nlp->link_url, "?") != false){
+                      
+                      $utm_code = "&utm_source=h_mail&utm_medium=email&utm_campaign=";
+
+                    }else{
+
+                      $utm_code = "?utm_source=h_mail&utm_medium=email&utm_campaign=";
+
+                    }
+
+                    
+                    $original_url = $nlp->link_url;
+                    if (strpos($original_url, '#') !== false) {
+                        //含まれている場合
+                        $url = strstr($original_url, "#" , true);
+                      $anchor_id = strstr($original_url, "#");
+                    }
+                    
+                    if (strpos($original_url, '#') === false) {
+                        //含まれていない場合
+                        $url = $original_url;
+                        $anchor_id = "/";
+                    }
+
+                    @endphp	
+                    <p>リンク先URL：{{ $url }}{{ $utm_code }}{{ $newsletter->utm_campaign_id }}&utm_content={{ $nlp->utm_content_id }}{{ $anchor_id }}</p>
                     <p>テキスト：{{ $text }}</p>
                     <hr>
                     
@@ -62,16 +90,27 @@
                       <p><b>関連リンク・コメント</b></p>
                       <hr>
                         <p>タイプ：{{ $nll->link_type }}</p>
-                        <?php 
+                        @php
                           if ($nll->link_type != "テキスト入力") {
                              $label = "リンク先URL";
                           }else {
                             $label = "テキスト";
                           }
-                            
 
-                         ?>
-                        <p>{{ $label }}：{{ $nll->link_url }}</p>
+
+                        if(strpos($nll->link_url, "?") != false){
+                          
+                          $utm_codeforlink = "&utm_source=h_mail&utm_medium=email&utm_campaign=";
+
+                        }else{
+
+                          $utm_codeforlink = "?utm_source=h_mail&utm_medium=email&utm_campaign=";
+
+                        }
+
+                        @endphp	
+
+                        <p>{{ $label }}：{{ $nll->link_url }}{{ $utm_codeforlink }}{{ $nll->utm_content_id }}</p>
                       <hr>
                       @endif
                     @endforeach

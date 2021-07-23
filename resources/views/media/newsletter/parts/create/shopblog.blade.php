@@ -30,7 +30,7 @@
                 @csrf
 
                 <div class="form-group">
-                  <label for="title">ブログ公開日</label>
+                  <label for="title">店舗名</label>
                   <input type="text" class="form-control" name="title" list="categorytab"　id="title" />
         
                 </div>

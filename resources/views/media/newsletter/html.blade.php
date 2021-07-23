@@ -95,7 +95,7 @@
           @endforeach
           <!--▲▲ 配置図により可変 ▲▲-->
 
-
+                @include('media.newsletter.partials.footerapp')
 				
 				@include('media.newsletter.partials.footertocopylight')
 				<!--▲▲ COPYRIGHT ▲▲-->

@@ -18,6 +18,16 @@
 		}
 	}
 
+	if(strpos($np->link_url, "?") != false){
+	  
+	  $utm_code = "&utm_source=h_mail&utm_medium=email&utm_campaign=";
+
+  }else{
+
+	  $utm_code = "?utm_source=h_mail&utm_medium=email&utm_campaign=";
+
+  }
+
 	if($np->link_url)
 		$original_url = $np->link_url;
 		if (strpos($original_url, '#') !== false) {
@@ -71,7 +81,7 @@
 			</p>
 			<p style="text-align:right;">
 				<!--▼▼ ボタンタップ時のリンク ▼▼-->
-				<a href="{{ $url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}{{ $anchor_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
+				<a href="{{ $url }}{{ $utm_code }}{{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}{{ $anchor_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 				<!--▲▲ ボタンタップ時のリンク ▲▲-->
 
 				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/btn_176x40.png" width="176" height="40" border="0" style="display:inline-block;">

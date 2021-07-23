@@ -28,11 +28,11 @@
                 @csrf
 
                 <div class="form-group">
-                  <label for="title">タイトル</label>
+                  <label for="title">店舗名</label>
                   <input type="text" class="form-control" name="title" list="categorytab"　id="title" value="{{ $newsletter_parts->title }}">
                 </div>
                 <div class="form-group">
-                  <label for="img_url">画像URL</label>
+                  <label for="img_url">画像名</label>
                   <input type="text" class="form-control" name="img_url" id="img_url" value="{{ $newsletter_parts->img_url }}"/>
                 </div>
                 <div class="form-group">
