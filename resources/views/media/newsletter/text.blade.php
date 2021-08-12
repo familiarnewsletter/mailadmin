@@ -54,11 +54,11 @@
 
                     if(strpos($nlp->link_url, "?") != false){
                       
-                      $utm_code = "&utm_source=h_mail&utm_medium=email&utm_campaign=";
+                      $utm_code = "&utm_source=t_mail&utm_medium=email&utm_campaign=";
 
                     }else{
 
-                      $utm_code = "?utm_source=h_mail&utm_medium=email&utm_campaign=";
+                      $utm_code = "?utm_source=t_mail&utm_medium=email&utm_campaign=";
 
                     }
 
@@ -100,11 +100,11 @@
 
                         if(strpos($nll->link_url, "?") != false){
                           
-                          $utm_codeforlink = "&utm_source=h_mail&utm_medium=email&utm_campaign=";
+                          $utm_codeforlink = "&utm_source=t_mail&utm_medium=email&utm_campaign=";
 
                         }else{
 
-                          $utm_codeforlink = "?utm_source=h_mail&utm_medium=email&utm_campaign=";
+                          $utm_codeforlink = "?utm_source=t_mail&utm_medium=email&utm_campaign=";
 
                         }
 

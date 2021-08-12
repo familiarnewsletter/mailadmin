@@ -49,7 +49,7 @@
 		<tr>
 			<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 				<!--▼▼ 画像タップ時のリンク ▼▼-->
-				<a href="{{ $url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}{{ $anchor_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
+				<a href="{{ $url }}{{ $utm_code }}{{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}{{ $anchor_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 				<!--▲▲ 画像タップ時のリンク ▲▲-->
 				<!--▼▼ 画像 ▼▼-->
 				<img src="{{ $newsandevent_path }}{{ $np->img_url }}" width="250" height="175" border="0" style="display:block;">
