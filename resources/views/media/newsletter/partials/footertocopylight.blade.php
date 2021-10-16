@@ -75,9 +75,9 @@
 メール配信停止をご希望の方は</a><a href="https://www.ec.familiar.co.jp/mypage/login.php?utm_source=h_mail&amp;utm_medium=email&amp;utm_content=footer" target="_blank">こちら</a>から
 <a>___BLOCKEND___</a>
 
-___BLOCK(cus_yobi001 = NL)___
-メール配信停止をご希望の方は<a href="https://www.ec.familiar.co.jp/entry/mailmaga.php?mrf=2?utm_source=h_mail&amp;utm_medium=email&amp;utm_content=footer" target="_blank">こちら</a>から
-___BLOCKEND___</p>
+<a>___BLOCK(cus_yobi001 = NL)___
+メール配信停止をご希望の方は</a><a href="https://www.ec.familiar.co.jp/entry/mailmaga.php?mrf=2?utm_source=h_mail&amp;utm_medium=email&amp;utm_content=footer" target="_blank">こちら</a>から
+<a>___BLOCKEND___</a></p>
 				</td>
 			</tr>
 
