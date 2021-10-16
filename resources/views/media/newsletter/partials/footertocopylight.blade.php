@@ -71,9 +71,9 @@
 			<tr>
 				<td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 					<p style="font-size:14px;color:#555555;text-align:center;">
-					___BLOCK(cus_yobi001 = 本会員)___
-メール配信停止をご希望の方は<a href="https://www.ec.familiar.co.jp/mypage/login.php?utm_source=h_mail&amp;utm_medium=email&amp;utm_content=footer" target="_blank">こちら</a>から
-___BLOCKEND___
+					<a>___BLOCK(cus_yobi001 = 本会員)___
+メール配信停止をご希望の方は</a><a href="https://www.ec.familiar.co.jp/mypage/login.php?utm_source=h_mail&amp;utm_medium=email&amp;utm_content=footer" target="_blank">こちら</a>から
+<a>___BLOCKEND___</a>
 
 ___BLOCK(cus_yobi001 = NL)___
 メール配信停止をご希望の方は<a href="https://www.ec.familiar.co.jp/entry/mailmaga.php?mrf=2?utm_source=h_mail&amp;utm_medium=email&amp;utm_content=footer" target="_blank">こちら</a>から
