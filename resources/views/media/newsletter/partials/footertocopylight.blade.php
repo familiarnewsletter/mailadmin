@@ -72,11 +72,11 @@
 				<td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 					<p style="font-size:14px;color:#555555;text-align:center;">
 					<code>___BLOCK(cus_yobi001 = 本会員)___
-メール配信停止ご希望の方は</code><a href="https://www.ec.familiar.co.jp/mypage/login.php?utm_source=h_mail&amp;utm_medium=email&amp;utm_content=footer" target="_blank">こちら</a>から
+メール配信停止をご希望の方は</code><a href="https://www.ec.familiar.co.jp/mypage/login.php?utm_source=h_mail&utm_medium=email&utm_content=footer" target="_blank">こちら</a>から
 <code>___BLOCKEND___</code>
 
 <code>___BLOCK(cus_yobi001 = NL)___
-メール配信停止をご希望の方は</code><a href="https://www.ec.familiar.co.jp/entry/mailmaga.php?mrf=2?utm_source=h_mail&amp;utm_medium=email&amp;utm_content=footer" target="_blank">こちら</a>から
+メール配信停止をご希望の方は</code><a href="https://www.ec.familiar.co.jp/entry/mailmaga.php?mrf=2?utm_source=h_mail&utm_medium=email&utm_content=footer" target="_blank">こちら</a>から
 <code>___BLOCKEND___</code></p>
 				</td>
 			</tr>
