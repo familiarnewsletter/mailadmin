@@ -37,7 +37,7 @@
 		</tr>
 
 		<tr>
-			<td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;text-align:center;" valign="top">
+			<td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 
 				<!--▼▼ 画像タップ時のリンク ▼▼-->
 				<a href="{{ $url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}{{ $anchor_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
