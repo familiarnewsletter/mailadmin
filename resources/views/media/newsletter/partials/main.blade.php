@@ -37,7 +37,7 @@
 		</tr>
 
 		<tr>
-			<td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
+			<td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;text-align:center;" valign="top">
 
 				<!--▼▼ 画像タップ時のリンク ▼▼-->
 				<a href="{{ $url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}{{ $anchor_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
@@ -58,7 +58,7 @@
 		<tr>
 			<td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 				<!--▼▼ タイトル ▼▼-->
-				<p style="font-size:25px;font-weight:bold;color:#827c72;text-align:center;line-height:1.7">
+				<p style="font-size:25px;font-weight:bold;color:#827c72;line-height:1.7">
 					<?php 
 						$str = strip_tags($np->title, '<br><strong>');
 					?>
@@ -85,7 +85,7 @@
 			<td colspan="3" width="560" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 
 				<!--▼▼ テキスト ▼▼-->
-				<p style="font-size:16px;color:#555555;line-height:1.7;">
+				<p style="font-size:16px;color:#555555;text-align:center;line-height:1.7;">
 				{!! $np->text !!}
 				</p>
 				<!--▲▲ テキスト ▲▲-->
