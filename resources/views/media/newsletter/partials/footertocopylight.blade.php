@@ -41,27 +41,7 @@
 
 
 
-			@if($newsletter->category == "本会員")<!-- 本会員 -->
-			<tr>
-				<td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
-					<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x28.gif" width="600" height="28" border="0" style="display:block;">
-				</td>
-			</tr>
 			
-			<tr>
-				<td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
-					<p style="font-size:14px;color:#555555;text-align:center;">メール配信停止をご希望の方は
-					<a href="https://www.ec.familiar.co.jp/mypage/login.php?utm_source=h_mail&amp;utm_medium=email&amp;utm_content=footer" target="_blank">こちら</a>から</p>
-				</td>
-			</tr>
-
-			
-			<tr>
-				<td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
-					<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x8.gif" width="600" height="8" border="0" style="display:block;">
-				</td>
-			</tr>
-			@elseif($newsletter->category == "NL会員")<!-- NL会員 -->
 			<tr>
 				<td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 					<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x28.gif" width="600" height="28" border="0" style="display:block;">
@@ -71,13 +51,13 @@
 			<tr>
 				<td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 					<p style="font-size:14px;color:#555555;text-align:center;">
-					<pre><code>___BLOCK(cus_yobi001 = 本会員)___
-メール配信停止をご希望の方は</code></pre><a href="https://www.ec.familiar.co.jp/mypage/login.php?utm_source=h_mail&utm_medium=email&utm_content=footer" target="_blank">こちら</a>から
-<pre><code>___BLOCKEND___</code></pre>
+					___BLOCK(cus_yobi001 = 本会員)___
+メール配信停止をご希望の方は<a href="https://www.ec.familiar.co.jp/mypage/login.php?utm_source=h_mail&utm_medium=email&utm_content=footer" target="_blank">こちら</a>から
+___BLOCKEND___
 
-<pre><code>___BLOCK(cus_yobi001 = NL)___
-メール配信停止をご希望の方は</code></pre><a href="https://www.ec.familiar.co.jp/entry/mailmaga.php?mrf=2?utm_source=h_mail&utm_medium=email&utm_content=footer" target="_blank">こちら</a>から
-<pre><code>___BLOCKEND___</code></pre>/p>
+___BLOCK(cus_yobi001 = NL)___
+メール配信停止をご希望の方は<a href="https://www.ec.familiar.co.jp/entry/mailmaga.php?mrf=2?utm_source=h_mail&utm_medium=email&utm_content=footer" target="_blank">こちら</a>から
+___BLOCKEND___</p>
 				</td>
 			</tr>
 
@@ -87,7 +67,7 @@
 					<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x8.gif" width="600" height="8" border="0" style="display:block;">
 				</td>
 			</tr>
-			@endif
+			
 			<tr>
 				<td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 				<p style="font-size:14px;color:#555555;text-align:center;">ファミリアへのお問い合わせは
