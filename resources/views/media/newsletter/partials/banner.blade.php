@@ -31,7 +31,7 @@
 			   
 		@endphp
 
-		<?php 
+		@php
 
 			foreach ($directorys as $directory) {
 				if($directory->type_id === 10){
@@ -39,7 +39,7 @@
 				}
 			}
 
-		?>
+			@endphp
 		
 		<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 			<p>
@@ -71,3 +71,12 @@
 	</tbody>
 </table>
 <!--▲▲ BANNER ▲▲-->
+
+
+
+
+
+
+
+
+

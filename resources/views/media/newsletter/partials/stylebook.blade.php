@@ -131,11 +131,7 @@
 				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_180x56.gif" width="180" height="56" border="0" style="display:block;">
 			</td>
 		</tr>
-		<tr>
-			<td colspan="3" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
-				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x16.gif" width="600" height="16" border="0" style="display:block;">
-			</td>
-		</tr>
+		<tr><td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x24.gif" width="600" height="24" border="0" style="display:block;"></td></tr>
 		
 	</tbody>
 </table>
