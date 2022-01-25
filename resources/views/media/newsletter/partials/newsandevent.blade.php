@@ -90,13 +90,12 @@
 		</td>
 		</tr>
 		
-		
+		<tr><td colspan="3" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x24.gif" width="600" height="24" border="0" style="display:block;"></td></tr>
 @endif
 
 @endforeach
 		</tbody>
 </table>
-
 
 
 
