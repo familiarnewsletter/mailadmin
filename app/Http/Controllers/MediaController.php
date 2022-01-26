@@ -449,7 +449,7 @@ class MediaController extends Controller
 
 		elseif ($newsletter_parts_ad->type_id == 11) {
 
-			return view ('media.newsletter.parts.create.newsandtopicsforsale', [
+			return view ('media.newsletter.parts.create.pickupitem3', [
 
 				'newsletter' => $newsletter,
 				'newsletter_parts_ad' => $newsletter_parts_ad
@@ -597,7 +597,7 @@ class MediaController extends Controller
 
 		elseif ($type_id == 11) {
 
-			return view ('media.newsletter.parts.edit.newsandtopicsforsale', [
+			return view ('media.newsletter.parts.edit.pickupitem3', [
 
 				'newsletter_parts' => $newsletter_parts,
 	        

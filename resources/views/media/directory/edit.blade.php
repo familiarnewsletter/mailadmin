@@ -56,9 +56,7 @@
                   <option value="8" @if(old('type_id',"$directory->type_id")==8)selected="selected"@endif><label>STYLE BOOK 3列</label></option>
                   <option value="9" @if(old('type_id',"$directory->type_id")==9)selected="selected"@endif><label>SNAP</label></option>
                   <option value="10" @if(old('type_id',"$directory->type_id")==10)selected="selected"@endif><label>BANNER</label></option>
-                  <option value="11" @if(old('type_id',"$directory->type_id")==11)selected="selected"@endif><label>PICKUP ITEM(セール用)</label></option>
-                  <option value="12" @if(old('type_id',"$directory->type_id")==12)selected="selected"@endif><label>CATEGORY(セール用)</label></option>
-                  <option value="13" @if(old('type_id',"$directory->type_id")==13)selected="selected"@endif><label>SIZE(セール用)</label></option>
+                  <option value="11" @if(old('type_id',"$directory->type_id")==11)selected="selected"@endif><label>PICKUP ITEM(３列)</label></option>
               </select> 
             </div>
             <div class="form-group">

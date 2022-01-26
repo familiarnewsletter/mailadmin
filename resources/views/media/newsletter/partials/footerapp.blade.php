@@ -36,7 +36,7 @@
 
 <td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_24x24.gif" width="24" height="24" border="0" style="display:block;"></td>
 
-<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><a href="https://play.google.com/store/apps/details?id=com.scubism.orangeclub&hl=ja?utm_source=h_mail&amp;utm_medium=email&amp;utm_campaign=20xxxx&amp;utm_content=footer" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/btn_googleplay.png" width="176" height="52" border="0" style="display:block;"></a></td>
+<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><a href="https://play.google.com/store/apps/details?id=jp.co.familiar.app" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/btn_googleplay.png" width="176" height="52" border="0" style="display:block;"></a></td>
 
 <td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_112x52.gif" width="112" height="52" border="0" style="display:block;"></td>
 

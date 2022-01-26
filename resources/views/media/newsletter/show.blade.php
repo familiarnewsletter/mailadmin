@@ -229,8 +229,7 @@
                
                 <div class="form-group">
                   <label for="type_id">記事カテゴリ</label>
-                  <select type="integer" class="form-control" name="type_id" id="type_id" >
-                    
+                  <select type="integer" class="form-control" name="type_id" id="type_id" >                    
                        <option value="1"><label>TOP</label></option>
                       <option value="2"><label>SHOP NEWS ＆ EVENT</label></option>
                       <option value="3"><label>NEWS ＆ TOPICS</label></option>
@@ -241,10 +240,7 @@
                       <option value="8"><label>STYLE BOOK 3列</label></option>
                       <option value="9"><label>SNAP</label></option>
                       <option value="10"><label>BANNER</label></option>
-                      <option value="11"><label>PICKUP ITEM(セール用)</label></option>
-                      <option value="12"><label>CATEGORY(セール用)</label></option>
-                      <option value="13"><label>SIZE(セール用)</label></option>
-                    
+                      <option value="11"><label>PICKUP ITEM 3列</label></option>                    
                   </select>
                 </div>
                 <div class="form-group">
@@ -493,15 +489,10 @@
 
             @elseif(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 11)
                 
-                <!--▼▼  NEWS & TOPICS ▼▼-->
-                @include('media.newsletter.partials.newsandtopicsforsale')
-                <!--▲▲ NEWS & TOPICS ▲▲-->
+                <!--▼▼  PICKUP ITEM 3row ▼▼-->
+                @include('media.newsletter.partials.pickupitem3')
+                <!--▲▲ PICKUP ITEM 3row ▲▲-->
 
-            @elseif(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 12)
-
-                <!--▼▼ PICKUP ITEM 2row ▼▼-->
-                @include('media.newsletter.partials.pickupitemforsale')
-                <!--▲▲ PICKUP ITEM 2row ▲▲-->
 
             @endif
 
@@ -579,7 +570,7 @@
                     <option disabled selected>カテゴリ選択</option>
                   @foreach($newsletter_parts ->sortBy('id') as $np) 
                     <option name="pulldown" value="/media/newsletter/editparts/{{ $np->id }}">
-                      <?php 
+                     @php
 
                             $type = $np->newsletterPartsAdmin()->first()->type_id_label;
 
@@ -588,7 +579,7 @@
 
 
 
-                            ?><!-- {{ $np->title }} -->
+                      @endphp<!-- {{ $np->title }} -->
                     </option>
                   @endforeach 
                  </select>
@@ -796,7 +787,7 @@ $(function(){
 </script>
 
   <script type="text/javascript">
-    <!--
+
   function text_select() {
       //要素の取得
       var element = document.getElementById("source");
@@ -807,7 +798,7 @@ $(function(){
       //範囲を選択状態にする
       window.getSelection().addRange(range);
   }
-    //-->
+   
   </script>
 
 @endsection

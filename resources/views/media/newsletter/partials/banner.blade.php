@@ -28,10 +28,6 @@ $i = 1;
 if( $i % 2 != 0){  
 		echo "<tr>";
 	}
-	
-@endphp
-
-@php
 
 foreach ($directorys as $directory) {
 	if($directory->type_id === 10){

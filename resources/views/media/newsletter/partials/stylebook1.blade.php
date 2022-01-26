@@ -23,15 +23,14 @@
 
 @if($np->newsletterPartsAdmin()->first()->type_id == 7)
 
-<?php 
+@php 
 
 	foreach ($directorys as $directory) {
 		if($directory->type_id === 7){
 			$stylebook1row_path = $directory->path;
 		}
 	}
-
-?>
+@endphp
 
 
 	<td style="margin:0;padding:0;vertical-align:top;font-size:0" valign="top">

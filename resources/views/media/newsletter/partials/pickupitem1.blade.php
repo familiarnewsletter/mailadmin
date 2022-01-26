@@ -15,7 +15,7 @@
 
 @if($np->newsletterPartsAdmin()->first()->type_id == 4)
 
-<?php 
+@php 
 
 	foreach ($directorys as $directory) {
 		if($directory->type_id === 4){
@@ -23,7 +23,7 @@
 		}
 	}
 
-?>
+@endphp
 
 
 			<tr>

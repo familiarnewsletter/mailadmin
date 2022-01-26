@@ -100,7 +100,7 @@
       </div> -->
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage5" aria-expanded="true" aria-controls="collapsePage5">
           <i class="fas fa-fw fa-user"></i>
           <span>共通設定</span>
@@ -120,13 +120,13 @@
         </a>
         <div id="collapsePage6" class="collapse" aria-labelledby="headingPage6" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">内容:</h6>
+            <h6 class="collapse-header">内容:</h6> -->
             <!-- <a class="collapse-item" href="/help/tutorial">チュートリアル</a> -->
-            <a class="collapse-item" href="/help/question">よくある質問</a>
+            <!-- <a class="collapse-item" href="/help/question">よくある質問</a>
             <a class="collapse-item" href="/help/inquiry">お問い合わせ</a>
           </div>
         </div>
-      </li>
+      </li> -->
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
