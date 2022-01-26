@@ -146,8 +146,7 @@
 				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x16.gif" width="600" height="16" border="0" style="display:block;">
 			</td>
 		</tr>
-		
+		@endif
+@endforeach		
 	</tbody>
 </table>
-@endif
-@endforeach

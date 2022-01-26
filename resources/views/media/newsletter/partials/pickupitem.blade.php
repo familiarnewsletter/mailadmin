@@ -93,13 +93,13 @@ $i++;
 @endif
 
 <!-- ITEM 2個 -->
-
-
-@foreach($newsletter_link as $nl)
-@if(isset($nl->type_id) && $nl->type_id == 5 && $nl->link_type != "テキスト入力")
 <tr><td colspan="3" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x16.gif" width="600" height="16" border="0" style="display:block;"></td></tr>
 
 </tbody></table>
+
+@foreach($newsletter_link as $nl)
+@if(isset($nl->type_id) && $nl->type_id == 5 && $nl->link_type != "テキスト入力")
+
 
 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
 
@@ -128,4 +128,3 @@ $i++;
 @endif
 @endforeach
 <!--▲▲ PICKUP ITEM ▲▲-->
-

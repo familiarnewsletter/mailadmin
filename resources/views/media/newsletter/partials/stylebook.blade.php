@@ -81,11 +81,11 @@ if( $i % 3 == 0){
 
 @endforeach
 @endif	
-
+</tbody></table>
 
 @foreach($newsletter_link as $nl)
 @if(isset($nl->type_id) && $nl->type_id == 8)
-</tbody></table>
+
 
 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
 
