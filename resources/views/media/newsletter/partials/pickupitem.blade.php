@@ -95,36 +95,33 @@ $i++;
 <!-- ITEM 2個 -->
 <tr><td colspan="3" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x16.gif" width="600" height="16" border="0" style="display:block;"></td></tr>
 
-</tbody></table>
+</tbody>
+</table>
+
 
 @foreach($newsletter_link as $nl)
 @if(isset($nl->type_id) && $nl->type_id == 5 && $nl->link_type != "テキスト入力")
-
-
 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
 
 <tbody><tr>
-
-<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_180x56.gif" width="180" height="56" border="0" style="display:block;"></td>
-
 @if($nl->link_type == "「GOODS一覧」")
-<a href="{{ $nl->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $nl->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
-<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/btn_goodslist.png" width="240" height="56" border="0" style="display:block;">
-</a>
+<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_180x56.gif" width="180" height="56" border="0" style="display:block;"></td>
 
-@elseif($nl->link_type == "「詳しくはこちら」")
-<a href="{{ $nl->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $nl->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
-<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/kuwashikuwa_banner_kai.png" width="240" height="56" border="0" style="display:block;">
-</a>
-@endif
-
-</td>
+<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><a href="{{ $nl->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $nl->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/btn_goodslist.png" width="240" height="56" border="0" style="display:block;"></a></td>
 
 <td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_180x56.gif" width="180" height="56" border="0" style="display:block;"></td>
+@elseif($nl->link_type == "「詳しくはこちら」")
+<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_180x56.gif" width="180" height="56" border="0" style="display:block;"></td>
+
+<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><a href="{{ $nl->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $nl->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/kuwashikuwa_banner_kai.png" width="240" height="56" border="0" style="display:block;"></a></td>
+
+<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_180x56.gif" width="180" height="56" border="0" style="display:block;"></td>
+@endif
 
 </tr>
 
 </tbody></table>
 @endif
 @endforeach
+
 <!--▲▲ PICKUP ITEM ▲▲-->

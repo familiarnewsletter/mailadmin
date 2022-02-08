@@ -418,7 +418,7 @@
 
 
 				<!--▼▼ 配置図により可変 ▼▼-->
-				@foreach($newsletter_parts_admin as $newsletter_parts_ad)   
+				@foreach($newsletter_parts_admin ->sortBy('order_id') as $newsletter_parts_ad)   
 
 
             @if(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 1)
