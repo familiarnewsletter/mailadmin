@@ -134,10 +134,7 @@ class MediaController extends Controller
 		$newsletter = new Newsletter;
         $newsletter->title = $request->title;
         $newsletter->preheader_text = $request->preheader_text;
-        $newsletter->delivery_date = $request->delivery_date;
         $newsletter->utm_campaign_id = $request->utm_campaign_id;
-        $newsletter->category = $request->category;
-        $newsletter->header_type = $request->header_type;
 
 
         $newsletter->save();
@@ -178,11 +175,7 @@ class MediaController extends Controller
 
         $newsletter->title = $request->title;
         $newsletter->preheader_text = $request->preheader_text;
-        $newsletter->delivery_date = $request->delivery_date;
         $newsletter->utm_campaign_id = $request->utm_campaign_id;
-        $newsletter->category = $request->category;
-        $newsletter->header_type = $request->header_type;
-        $newsletter->status = $request->status;
         
 
         $newsletter->save();

@@ -52,62 +52,6 @@ Auth::routes();
 
 
 
-
-
-
-
-
-
-
-
-
-Route::get('/promotion/list/index', 'PromotionController@promotionIndex')->name('promotion.index');
-
-//Route::get('/media/list/show/{media_id}', 'MediaController@mediaShow')->name('media.show');
-Route::get('/promotion/list/show', 'PromotionController@promotionShow')->name('promotion.show');
-
-Route::get('/promotion/list/create', 'PromotionController@promotionCreate')->name('promotion.create');
-Route::post('/promotion/list/create', 'PromotionController@promotionStore')->name('promotion.store');
-
-Route::get('/promotion/list/{promotion_id}/edit', 'PromotionController@promotionEdit')->name('promotion.edit');
-Route::post('/promotion/list/{promotion_id}/edit', 'PromotionController@promotionUpdate')->name('promotion.update');
-
-Route::post('/promotion/list/{promotion_id}/delete', 'PromotionController@promotionDelete')->name('promotion.delete'); 
-
-
-Route::get('/promotion/ap/show', 'PromotionController@apShow')->name('ap.show');
-
-Route::get('/promotion/ap/create', 'PromotionController@apCreate')->name('ap.create');
-Route::post('/promotion/ap/create', 'PromotionController@apStore')->name('ap.store');
-
-Route::get('/promotion/ap/{ap_id}/edit', 'PromotionController@apEdit')->name('ap.edit');
-Route::post('/promotion/ap/{ap_id}/edit', 'PromotionController@apUpdate')->name('ap.update');
-
-Route::post('/promotion/ap/{ap_id}/delete', 'PromotionController@apDelete')->name('ap.delete'); 
-
-
-
-
-
-Route::get('/products/delivery/index', 'ProductController@deliveryIndex')->name('delivery.index');
-
-//Route::get('/products/consumption/show/{consumption_id}', 'ProductController@consumptionShow')->name('consumption.show');
-Route::get('/products/delivery/show', 'ProductController@deliveryShow')->name('delivery.show');
-
-
-Route::get('/products/delivery/create', 'ProductController@deliveryCreate')->name('delivery.create');
-Route::post('/products/delivery/create', 'ProductController@deliveryStore')->name('delivery.store');
-
-Route::get('/products/delivery/{delivery_id}/edit', 'ProductController@deliveryEdit')->name('delivery.edit');
-Route::post('/products/delivery/{delivery_id}/edit', 'ProductController@deliveryUpdate')->name('delivery.update');
-
-Route::post('/products/delivery/{delivery_id}/delete', 'ProductController@deliveryDelete')->name('delivery.delete'); 
-
-
-
-
-
-
 Route::group(['middleware' => 'auth'], function() {
    
 
@@ -199,75 +143,6 @@ Route::group(['middleware' => 'auth'], function() {
 
 
 });
-
-
-
-
-
-
-
-Route::get('/media/movie/index', 'MediaController@movieIndex')->name('movie.index');
-
-Route::get('/media/movie/show/{movie_id}', 'MediaController@movieShow')->name('movie.show');
-
-Route::get('/media/movie/create', 'MediaController@movieCreate')->name('movie.create');
-Route::post('/media/movie/create', 'MediaController@movieStore')->name('movie.store');
-
-Route::get('/media/movie/{movie_id}/edit', 'MediaController@movieEdit')->name('movie.edit');
-Route::post('/media/movie/{movie_id}/edit', 'MediaController@movieUpdate')->name('movie.update');
-
-Route::post('/media/movie/{movie_id}/delete', 'MediaController@movieDelete')->name('movie.delete'); 
-
-
-
-
-
-
-Route::get('/common/users/index', 'CommonController@userIndex')->name('users.index');
-
-Route::get('/common/users/show', 'CommonController@userShow')->name('users.show');
-
-Route::get('/common/users/create', 'CommonController@userCreate')->name('users.create');
-Route::post('/common/users/create', 'CommonController@userStore')->name('users.store');
-
-Route::get('/common/users/{user_id}/edit', 'CommonController@userEdit')->name('users.edit');
-Route::post('/common/users/{user_id}/edit', 'CommonController@userUpdate')->name('users.update');
-
-Route::post('/common/users/{user_id}/delete', 'CommonController@userDelete')->name('users.delete'); 
-
-
-
-
-
-Route::get('/common/chat/index', 'CommonController@chatIndex')->name('chat.index');
-
-Route::get('/common/chat/show', 'CommonController@chatShow')->name('chat.show');
-
-Route::get('/common/chat/create', 'CommonController@chatCreate')->name('chat.create');
-Route::post('/common/chat/create', 'CommonController@chatStore')->name('chat.store');
-
-Route::get('/common/chat/{chat_id}/edit', 'CommonController@chatEdit')->name('chat.edit');
-Route::post('/common/chat/{chat_id}/edit', 'CommonController@chatUpdate')->name('chat.update');
-
-Route::post('/common/chat/{chat_id}/delete', 'CommonController@chatDelete')->name('chat.delete'); 
-
-
-
-Route::get('/help/tutorial', function () {
-    return view('help.tutorial.index');
-});
-
-
-Route::get('/help/question', function () {
-    return view('help.question.index');
-});
-
-
-
-Route::get('/help/inquiry', function () {
-    return view('help.inquiry.index');
-});
-
 
 
 

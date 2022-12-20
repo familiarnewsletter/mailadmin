@@ -52,51 +52,13 @@
                   <label for="preheader_text">プリヘッダーテキスト</label>
                   <input type="text" class="form-control" name="preheader_text" id="preheader_text" value="{{ $newsletter->preheader_text }}" />
                 </div>
-                <div class="form-group">
-                  <label for="delivery_date">配信日時</label>
-                  <input type="text" class="form-control" name="delivery_date" id="delivery_date" value="{{ $newsletter->delivery_date }}" />
-                </div>
+                
                  <div class="form-group">
                   <label for="utm_campaign_id">キャンペーンコード（6桁）</label>
                   <input type="text" class="form-control" name="utm_campaign_id" id="utm_campaign_id" value="{{ $newsletter->utm_campaign_id }}"/>
                 </div>                
-                <div class="form-group">
-                  <label for="category">カテゴリ</label>
-                  <select type="text" class="form-control" name="category" id="category" value="{{ $newsletter->category }}" > 
-                      <option value="本会員" @if(old('category',"$newsletter->category")!='NL会員')selected="selected"@endif>本会員</option>
-                    <option value="NL会員" @if(old('category',"$newsletter->category")=='NL会員')selected="selected"@endif>NL会員</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="type">ヘッダー</label><br>
-                  <div class="form-group row">
-   
-                       <div class="col-md-6">
-                          <div class="form-check form-check-inline">
-                             <input class="form-check-input" type="radio" id="header_type" name="header_type" value="配信用" @if(old('header_type',"$newsletter->header_type")!='アップロード用')checked="checked"@endif>
-                             <label class="form-check-label" for="header_type">配信用</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                             <input class="form-check-input" type="radio" id="header_type"  name="header_type" value="アップロード用" @if(old('header_type',"$newsletter->header_type")=='アップロード用')checked="checked"@endif>
-                             <label class="form-check-label" for="header_type">アップロード用</label>
-                          </div>
-                          
-                       </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                  <label for="status">ステータス</label>
-                  <select type="text" class="form-control" name="status" id="status" > 
-                    @foreach(\App\Newsletter::STATUS as $key => $val)
-                      <option
-                          value="{{ $key }}"
-                          {{ $key == old('status', $newsletter->status) ? 'selected' : '' }}
-                          >
-                        {{ $val['label'] }}
-                      </option>
-                    @endforeach
-                  </select>
-                </div>
+                
+                
 
 
                 <hr>

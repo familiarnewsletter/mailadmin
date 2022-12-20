@@ -51,38 +51,13 @@
                   <label for="preheader_text">プリヘッダーテキスト</label>
                   <input type="text" class="form-control" name="preheader_text" id="preheader_text"/>
                 </div>
+                
                 <div class="form-group">
-                  <label for="delivery_date">配信日時</label>
-                  <input type="text" class="form-control" name="delivery_date" id="delivery_date"/>
-                </div>
-                <div class="form-group">
-                  <label for="utm_campaign_id">キャンペーンコード（6桁）</label>
+                  <label for="utm_campaign_id">キャンペーンコード（配信日6桁）</label>
                   <input type="text" class="form-control" name="utm_campaign_id" id="utm_campaign_id"/>
                 </div>
-                <div class="form-group">
-                  <label for="category">カテゴリ</label>
-                  <select type="text" class="form-control" name="category" id="category"/>
-                  	<option value="本会員">本会員</option>
-                  	<option value="NL会員">NL会員</option>
-                  </select> 
-                </div>
-                <div class="form-group">
-                  <label for="type">フッター</label><br>
-                  <div class="form-group row">
-   
-                       <div class="col-md-6">
-                          <div class="form-check form-check-inline">
-                             <input class="form-check-input" type="radio" id="header_type" name="header_type" value="配信用" @if(old('header_type')==='配信用')checked="checked"@endif >
-                             <label class="form-check-label" for="header_type">配信用</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                             <input class="form-check-input" type="radio" id="header_type"  name="header_type" value="アップロード用" @if(old('header_type')==='アップロード用')checked="checked"@endif>
-                             <label class="form-check-label" for="header_type">アップロード用</label>
-                          </div>
-                          
-                       </div>
-                    </div>
-                </div>
+                
+                
                 
                 <hr>
                 
