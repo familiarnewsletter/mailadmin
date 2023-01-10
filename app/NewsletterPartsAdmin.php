@@ -21,7 +21,7 @@ class NewsletterPartsAdmin extends Model
 		6 => [ 'label' => 'SHOP BLOG'],
 		7 => [ 'label' => 'STYLE BOOK(1列＋テキスト)'],
 		8 => [ 'label' => 'STYLE BOOK(3列)'],
-		9 => [ 'label' => 'SNAP'],
+		9 => [ 'label' => 'CATEGORY'],
 		10 => [ 'label' => 'BANNER'],
 		11 => [ 'label' => 'PICKUP ITEM(3列)'],
 	];

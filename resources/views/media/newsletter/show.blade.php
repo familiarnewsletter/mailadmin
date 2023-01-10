@@ -171,7 +171,7 @@ body {
                             <option value="6"><label>SHOP BLOG</label></option>
                             <option value="7"><label>STYLE BOOK 1列＋テキスト</label></option>
                             <option value="8"><label>STYLE BOOK 3列</label></option>
-                            <option value="9"><label>SNAP</label></option>
+                            <option value="9"><label>CATEGORY</label></option>
                             <option value="10"><label>BANNER</label></option>
                             <option value="11"><label>PICKUP ITEM 3列</label></option>                    
                         </select>
@@ -776,7 +776,7 @@ body {
               @elseif(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 9)
 
                   <!--▼▼ SNAP ▼▼-->
-                  @include('media.newsletter.partials.snap')
+                  @include('media.newsletter.partials.category')
                   <!--▲▲ SNAP ▲▲-->
 
 

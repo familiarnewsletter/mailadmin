@@ -65,7 +65,8 @@
 
 <p><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_288x14.gif" width="288" height="14" border="0" style="display:block;"></p>
 
-<p style="font-size:16px;color:#555555;text-align:center;"><!--▼▼ タイトル ▼▼-->
+<p style="font-size:16px;color:#555555;text-align:center;">
+				<!--▼▼ タイトル ▼▼-->
 				<strong>{{ $snap->title }}</strong><br>
 				<!--▲▲ タイトル ▲▲-->
 				<!--▼▼ テキスト ▼▼-->
