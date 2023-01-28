@@ -68,7 +68,7 @@
                     @elseif(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 9)
 
                         <!--▼▼ SNAP ▼▼-->
-                        @include('media.newsletter.partials.snap')
+                        @include('media.newsletter.partials.category')
                         <!--▲▲ SNAP ▲▲-->
 
 

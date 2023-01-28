@@ -1,10 +1,27 @@
-<!--▼▼ BANNER ▼▼-->
 
-<table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
 
-<tbody><tr><td colspan="3" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x80.gif" width="600" height="80" border="0" style="display:block;"></td></tr>
+<!-- コンポーネント: バナー -->
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:720px;" width="720" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:720px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:0 14px 60px;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="720px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:692px;" width="692" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+              <div style="margin:0px auto;max-width:692px;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                  <tbody>
+                    <tr>
+                      <td style="direction:ltr;font-size:0px;padding:0;text-align:center;">
+                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:692px;" ><![endif]-->
+                        <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                            <tbody>
+                              <tr>
+                                <td style="vertical-align:top;padding:0;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
+                                    <tbody>
 
-<!-- BANNER 2個 -->
 
 
 @php
@@ -15,19 +32,16 @@ if($nlp->newsletterPartsAdmin()->first()->type_id == 10){
 }
 
 }
-$i = 1;
+
 @endphp
 
 @if(isset($banners))
 @foreach($banners as $banner)
 
-<!-- ITEM 2個 -->
-<!-- <tr> -->
+
 
 @php	
-if( $i % 2 != 0){  
-		echo "<tr>";
-	}
+
 
 foreach ($directorys as $directory) {
 	if($directory->type_id === 10){
@@ -37,9 +51,86 @@ foreach ($directorys as $directory) {
 
 @endphp
 
-<!-- BANNER 1個 -->
 
-<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
+
+
+<!-- バナー画像1 -->
+                                      <tr>
+                                        <td align="center" style="font-size:0px;padding:0 0 10px 0;word-break:break-word;">
+                                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                                            <tbody>
+                                              <tr>
+                                                <td style="width:692px;">
+                                                	<!-- 変数: 遷移先URL -->
+                                                  <a href="{{ $banner->link_url }}" target="_blank">
+                                                  	<!-- 変数: バナー画像URL -->
+                                                    <img height="auto" src="{{ $banner_path }}{{ $banner->img_url }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="692">
+                                                  </a>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <!-- バナー画像2 -->
+                                      <!-- <tr>
+                                        <td align="center" style="font-size:0px;padding:0 0 10px 0;word-break:break-word;">
+                                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                                            <tbody>
+                                              <tr>
+                                                <td style="width:692px;">
+                                                  <a href="" target="_blank">
+                                                    <img height="auto" src="" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="692">
+                                                  </a>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr> -->
+
+
+
+
+@endforeach
+@endif
+
+
+
+
+<!--▲▲ BANNER ▲▲-->
+
+
+
+
+
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+
+
+
+
+
+
+<!-- <td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
 
 <p><a href="{{ $banner->link_url }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
 
@@ -51,29 +142,4 @@ foreach ($directorys as $directory) {
 
 <td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_24x24.gif" width="24" height="24" border="0" style="display:block;"></td>
 
-
-@php	
-if( $i % 2 == 0){  
-		echo "</tr>";
-	}
-	$i++;
-@endphp
-
-<!-- </tr> -->
-<!-- ITEM 2個 -->
-
-@endforeach
-@endif
-
-
-<tr><td colspan="3" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x24.gif" width="600" height="24" border="0" style="display:block;"></td></tr>
-
-</tbody></table>
-
-<!--▲▲ BANNER ▲▲-->
-
-
-
-
-
-
+ 

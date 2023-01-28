@@ -32,9 +32,9 @@
                 <div class="form-group">
                   <label for="title">カテゴリ</label>
                   <select type="text" class="form-control" name="title" list="categorytab"　id="title" />
-                    <option label="NEWS" value="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_news.gif"></option>
-                  　<option label="PRODUCTS" value="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_products.gif"></option>
-                  　<option label="EVENT" value="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ico_event.gif"></option>
+                    <option label="NEWS" value="https://cdn.shopify.com/s/files/1/0640/3611/0585/files/tag_news.png"></option>
+                  　<option label="ITEM" value="https://cdn.shopify.com/s/files/1/0640/3611/0585/files/tag_item.png"></option>
+                  　<option label="EVENT" value="https://cdn.shopify.com/s/files/1/0640/3611/0585/files/tag_event.png"></option>
                  </select>
                 </div>
                 <div class="form-group">

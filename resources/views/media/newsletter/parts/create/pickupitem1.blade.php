@@ -50,8 +50,8 @@
                   <label for="text">テキスト</label>
                   <nav class="panel panel-default">
                     
-                    <input id="text" type="text" hidden="" placeholder="ここには何も入力しない" name="text"　>
-                    <trix-editor input="text" placeholder="入力欄" ></trix-editor>
+                    <input id="text" type="text" class="form-control" name="text"　>
+                   <!--  <trix-editor input="text" placeholder="入力欄" ></trix-editor> -->
               
                    
                   </nav>

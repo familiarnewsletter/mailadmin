@@ -166,14 +166,14 @@ body {
                              <option value="1"><label>TOP</label></option>
                             <option value="2"><label>SHOP NEWS ＆ EVENT</label></option>
                             <option value="3"><label>NEWS ＆ TOPICS</label></option>
-                            <option value="4"><label>PICKUP ITEM 1列＋テキスト</label></option>
-                            <option value="5"><label>PICKUP ITEM 2列</label></option>
+                            <option value="4"><label>PICKUP ITEM 1ブロック＋テキスト</label></option>
+                            <option value="5"><label>PICKUP ITEM 2ブロック</label></option>
                             <option value="6"><label>SHOP BLOG</label></option>
-                            <option value="7"><label>STYLE BOOK 1列＋テキスト</label></option>
-                            <option value="8"><label>STYLE BOOK 3列</label></option>
-                            <option value="9"><label>CATEGORY</label></option>
+                            <option value="7"><label>STYLE BOOK 1ブロック＋テキスト</label></option>
+                            <option value="8"><label>STYLE BOOK 3ブロック</label></option>
+                            <!-- <option value="9"><label>CATEGORY</label></option> -->
                             <option value="10"><label>BANNER</label></option>
-                            <option value="11"><label>PICKUP ITEM 3列</label></option>                    
+                            <!-- <option value="11"><label>PICKUP ITEM 3列</label></option> -->                    
                         </select>
                       </div>
                       <div class="form-group">

@@ -28,7 +28,7 @@
                 @csrf
 
                 <div class="form-group">
-                  <label for="title">タイトル</label>
+                  <label for="title">品名</label>
                   <input type="text" class="form-control" name="title" list="categorytab"　id="title" value="{{ $newsletter_parts->title }}">
                 </div>
                 <div class="form-group">
@@ -44,9 +44,9 @@
                   <input type="text" class="form-control" name="utm_content_id" id="utm_content_id" value="{{ $newsletter_parts->utm_content_id }}"/>
                 </div>
                 <div class="form-group">
-                  <label for="text">テキスト</label>
-                  <input type="text" class="form-control" name="text" id="text" hidden="" value="{{ $newsletter_parts->text }}"/>
-                  <trix-editor input="text" placeholder="入力欄" ></trix-editor>
+                  <label for="text">商品価格</label>
+                  <input type="text" class="form-control" name="text" id="text" value="{{ $newsletter_parts->text }}"/>
+                  <!-- <trix-editor input="text" placeholder="入力欄" ></trix-editor> -->
                 </div>
 
                 <hr>

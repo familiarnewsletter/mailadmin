@@ -31,8 +31,14 @@
 
                 <div class="form-group">
                   <label for="title">ブランド</label>
-                  <input type="text" class="form-control" name="title" list="categorytab"　id="title" />
-        
+                  <select type="text" class="form-control" name="title" list="categorytab"　id="title" />
+                    <option label="New born" value="New born"></option>
+                  　<option label="Baby" value="Baby"></option>
+                  　<option label="Toddler" value="Toddler"></option>
+                    <option label="School" value="School"></option>
+                  　<option label="Dress" value="Dress"></option>
+                    <option label="Others" value="Others"></option>
+                  </select>
                 </div>
                 <div class="form-group">
                   <label for="img_url">画像名</label>
@@ -50,8 +56,8 @@
                   <label for="text">テキスト</label>
                   <nav class="panel panel-default">
                     
-                    <input id="text" type="text" hidden="" placeholder="ここには何も入力しない" name="text"　>
-                    <trix-editor input="text" placeholder="入力欄" ></trix-editor>
+                    <input id="text" type="text" class="form-control" name="text"　>
+                    <!-- <trix-editor input="text" placeholder="入力欄" ></trix-editor> -->
               
                    
                   </nav>

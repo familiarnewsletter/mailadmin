@@ -28,8 +28,15 @@
                 @csrf
 
                 <div class="form-group">
-                  <label for="title">タイトル</label>
-                  <input type="text" class="form-control" name="title" list="categorytab"　id="title" value="{{ $newsletter_parts->title }}">
+                  <label for="title">ブランド</label>
+                  <select type="text" class="form-control" name="title" list="categorytab"　id="title" >
+                    <option label="New born" value="New born" @if(old('category',"$newsletter_parts->title")=='New born')selected="selected"@endif></option>
+                  　<option label="Baby" value="Baby" @if(old('category',"$newsletter_parts->title")=='Baby')selected="selected"@endif></option>
+                  　<option label="Toddler" value="Toddler" @if(old('category',"$newsletter_parts->title")=='Toddler')selected="selected"@endif></option>
+                    <option label="School" value="School" @if(old('category',"$newsletter_parts->title")=='School')selected="selected"@endif></option>
+                  　<option label="Dress" value="Dress" @if(old('category',"$newsletter_parts->title")=='Dress')selected="selected"@endif></option>
+                    <option label="Others" value="Others" @if(old('category',"$newsletter_parts->title")=='Others')selected="selected"@endif></option>
+                  </select>
                 </div>
                 <div class="form-group">
                   <label for="img_url">画像URL</label>
@@ -45,8 +52,8 @@
                 </div>
                 <div class="form-group">
                   <label for="text">テキスト</label>
-                  <input type="text" class="form-control" name="text" id="text" hidden="" value="{{ $newsletter_parts->text }}"/>
-                  <trix-editor input="text" placeholder="入力欄" ></trix-editor>
+                  <input type="text" class="form-control" name="text" id="text" value="{{ $newsletter_parts->text }}"/>
+                  <!-- <trix-editor input="text" placeholder="入力欄" ></trix-editor> -->
                 </div>
 
                 <hr>

@@ -25,14 +25,20 @@
           <nav class="panel panel-default">
             
            
-              
+             
              <form action="{{ route('newsletter.storeparts', ['newsletter_parts_admin_id' => $newsletter_parts_ad->id, 'id' => $newsletter->id]) }}" method="post">
                 @csrf
 
                 <div class="form-group">
-                  <label for="title">タイトル</label>
-                  <input type="text" class="form-control" name="title" list="categorytab"　id="title" />
-        
+                  <label for="title">ブランド</label>
+                  <select type="text" class="form-control" name="title" list="categorytab"　id="title" />
+                    <option label="New born" value="New born"></option>
+                  　<option label="Baby" value="Baby"></option>
+                  　<option label="Toddler" value="Toddler"></option>
+                    <option label="School" value="School"></option>
+                  　<option label="Dress" value="Dress"></option>
+                    <option label="Others" value="Others"></option>
+                  </select>       
                 </div>
                 <div class="form-group">
                   <label for="img_url">画像名</label>
@@ -47,11 +53,11 @@
                   <input type="text" class="form-control" name="utm_content_id" id="utm_content_id" />
                 </div>
                 <div class="form-group">
-                  <label for="text">テキスト</label>
+                  <label for="text">備考</label>
                   <nav class="panel panel-default">
                     
-                    <input id="text" type="text" hidden="" placeholder="ここには何も入力しない" name="text"　>
-                    <trix-editor input="text" placeholder="入力欄" ></trix-editor>
+                    <input id="text" type="text" class="form-control" name="text"　>
+                    <!-- <trix-editor input="text" placeholder="入力欄" ></trix-editor> -->
               
                    
                   </nav>

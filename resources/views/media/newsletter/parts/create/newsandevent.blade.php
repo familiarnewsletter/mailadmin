@@ -4,7 +4,7 @@
 
 @section('styles')
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-<style type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.0/trix.css" ></style>
+<!-- <style type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.0/trix.css" ></style> -->
   
  
 
@@ -50,8 +50,8 @@
                   <label for="text">テキスト</label>
                   <nav class="panel panel-default">
                     
-                    <input id="text" type="text" hidden="" placeholder="ここには何も入力しない" name="text"　>
-                    <trix-editor input="text" placeholder="入力欄" ></trix-editor>
+                    <input id="text" class="form-control" type="text" name="text"　>
+                    <!-- <trix-editor input="text" placeholder="入力欄" ></trix-editor> -->
               
                    
                   </nav>
@@ -86,7 +86,7 @@
 
 @section('scripts')
 
+<!-- 
 
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.0/trix.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.0/trix.js"></script> -->
 @endsection

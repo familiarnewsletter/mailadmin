@@ -1,47 +1,183 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!doctype html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
-<!-- saved from url=(0061)https://www.apparel-web.co.jp/familiar_mailmagazine/20200600/ -->
+<head>
+  <title> familiar </title>
+  <!--[if !mso]><!-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    #outlook a {
+      padding: 0;
+    }
 
-<html lang="ja"><head>
+    body {
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    table,
+    td {
+      border-collapse: collapse;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
 
-<meta name="robots" content="noindex , nofollow">
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
+    }
 
+    p {
+      display: block;
+      margin: 13px 0;
+    }
 
+  </style>
+  <!--[if mso]>
+    <noscript>
+    <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+    </noscript>
+    <![endif]-->
+  <!--[if lte mso 11]>
+    <style type="text/css">
+      .mj-outlook-group-fix { width:100% !important; }
+    </style>
+    <![endif]-->
+  <style type="text/css">
+    @media only screen and (min-width:480px) {
+      .mj-column-per-100 {
+        width: 100% !important;
+        max-width: 100%;
+      }
 
-<meta name="viewport" content="target-densitydpi=device-dpi,width=device-width,maximum-scale=1.0,user-scalable=yes">
+      .mj-column-per-33-333333333333336 {
+        width: 33.333333333333336% !important;
+        max-width: 33.333333333333336%;
+      }
 
+      .mj-column-per-70 {
+        width: 70% !important;
+        max-width: 70%;
+      }
 
+      .mj-column-per-30 {
+        width: 30% !important;
+        max-width: 30%;
+      }
 
-<meta name="color-scheme" content="light dark">
+      .mj-column-per-50 {
+        width: 50% !important;
+        max-width: 50%;
+      }
 
-<meta name="supported-color-schemes" content="light dark">
+      .mj-column-per-33 {
+        width: 33% !important;
+        max-width: 33%;
+      }
 
+      .mj-column-per-67 {
+        width: 67% !important;
+        max-width: 67%;
+      }
+    }
 
+  </style>
+  <style media="screen and (min-width:480px)">
+    .moz-text-html .mj-column-per-100 {
+      width: 100% !important;
+      max-width: 100%;
+    }
 
-<title>メールマガジン</title>
+    .moz-text-html .mj-column-per-33-333333333333336 {
+      width: 33.333333333333336% !important;
+      max-width: 33.333333333333336%;
+    }
 
+    .moz-text-html .mj-column-per-70 {
+      width: 70% !important;
+      max-width: 70%;
+    }
 
+    .moz-text-html .mj-column-per-30 {
+      width: 30% !important;
+      max-width: 30%;
+    }
 
-<style type="text/css">
+    .moz-text-html .mj-column-per-50 {
+      width: 50% !important;
+      max-width: 50%;
+    }
 
-html {color:#555555;background:#FFF;}
+    .moz-text-html .mj-column-per-33 {
+      width: 33% !important;
+      max-width: 33%;
+    }
 
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,th,td,hr{margin:0;padding:0;font-size:18px;font-weight:normal;font-style:normal;line-height:28px;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-o-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;font-family:YuGothic,'Yu Gothic','ＭＳ Ｐゴシック','MS PGothic','メイリオ', Meiryo,'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;}
+    .moz-text-html .mj-column-per-67 {
+      width: 67% !important;
+      max-width: 67%;
+    }
 
-a:link,a:visited,a:active{color:#555555;text-decoration:underline;}a:hover{text-decoration:none;}
+  </style>
+  <style type="text/css">
+    @media only screen and (max-width:480px) {
+      table.mj-full-width-mobile {
+        width: 100% !important;
+      }
 
-@media (prefers-color-scheme: dark) {body {background-color: #172430;color: #fff;}}
+      td.mj-full-width-mobile {
+        width: auto !important;
+      }
+    }
 
-:root {color-scheme: light dark;supported-color-schemes: light dark;}
+  </style>
+  <style type="text/css">
+    @media only screen and (min-width: 480px) {
+      .narrow-width-on-desktop>table>tbody>tr>td {
+        padding-left: 75px !important;
+        padding-right: 75px !important;
+      }
 
-</style>
+      .sale .mj-column-per-30 {
+        width: 25% !important;
+        max-width: 25% !important;
+      }
 
+      .sale .mj-column-per-60 {
+        width: 65% !important;
+        max-width: 65% !important;
+      }
+    }
 
+    .sale>table>tbody>tr>td {
+      border-radius: 4px !important;
+    }
 
+    .sale table,
+    .sale td {
+      border-collapse: separate !important;
+    }
+
+    .mv>table>tbody>tr>td>div>table {
+      border-radius: 10px !important;
+      overflow: hidden !important;
+    }
+
+  </style>
 </head>
 
-<body bgcolor="#ffffff" style="margin:0px auto 0px auto;font-family:YuGothic,&#39;Yu Gothic&#39;,&#39;ＭＳ Ｐゴシック&#39;,&#39;MS PGothic&#39;,&#39;メイリオ&#39;, Meiryo,&#39;Hiragino Kaku Gothic ProN&#39;,&#39;ヒラギノ角ゴ ProN W3&#39;,sans-serif;" text="#000000" link="#555555" vlink="#555555" alink="#555555" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0">
-
-
+<body style="word-spacing:normal;background-color:#ffffff;">

@@ -30,7 +30,7 @@
                 @csrf
 
                 <div class="form-group">
-                  <label for="title">品番</label>
+                  <label for="title">品名</label>
                   <input type="text" class="form-control" name="title" list="categorytab"　id="title" />
         
                 </div>
@@ -47,11 +47,11 @@
                   <input type="text" class="form-control" name="utm_content_id" id="utm_content_id" />
                 </div>
                 <div class="form-group">
-                  <label for="text">テキスト</label>
+                  <label for="text">商品価格</label>
                   <nav class="panel panel-default">
                     
-                    <input id="text" type="text" hidden="" placeholder="ここには何も入力しない" name="text"　>
-                    <trix-editor input="text" placeholder="入力欄" ></trix-editor>
+                    <input id="text" type="text" class="form-control" name="text"　>
+                   <!--  <trix-editor input="text" placeholder="入力欄" ></trix-editor> -->
               
                    
                   </nav>

@@ -24,7 +24,7 @@
           
           <nav class="panel panel-default">
             
-           
+      
               
              <form action="{{ route('newsletter.storeparts', ['newsletter_parts_admin_id' => $newsletter_parts_ad->id, 'id' => $newsletter->id]) }}" method="post">
                 @csrf

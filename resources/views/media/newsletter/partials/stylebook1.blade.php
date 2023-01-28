@@ -1,151 +1,317 @@
-<table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+
+<!-- コンポーネント: Style Book タイトル -->
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="narrow-width-on-desktop-outlook" role="presentation" style="width:720px;" width="720" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div class="narrow-width-on-desktop" style="margin:0px auto;max-width:720px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:0 30px 14px;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:660px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody>
+                    <tr>
+                      <td style="vertical-align:top;padding:0;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
+                          <tbody>
+                            <tr>
+                              <td align="left" style="font-size:0px;padding:0 0 14px 0;word-break:break-word;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                                  <tbody>
+                                    <tr>
+                                      <td style="width:99px;">
+                                        <img alt="Style Book" height="auto" src="https://cdn.shopify.com/s/files/1/0640/3611/0585/files/head_stylebook.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="99">
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                                <p style="border-top:solid 1px #e5e5e5;font-size:1px;margin:0px auto;width:100%;">
+                                </p>
+                                <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #e5e5e5;font-size:1px;margin:0px auto;width:660px;" role="presentation" width="660px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
 
 
 
-	<tbody>
-		<tr>
-			<td colspan="3" style="margin:0;padding:0;vertical-align:top;font-size:0" valign="top">
-				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ttl_stylebook.png" alt="NEWS &amp; TOPICS" width="600" height="162" border="0" style="display:block">
-			</td>
-		</tr>
 
 
+			@php
+			foreach($newsletter_parts ->sortBy('id') as $nlp){
 
-	<tr>
-		<td colspan="3" style="margin:0;padding:0;vertical-align:top;font-size:0" valign="top">
-			<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x24.gif" width="600" height="24" border="0" style="display:block">
-		</td>
-	</tr>
+				if($nlp->newsletterPartsAdmin()->first()->type_id == 7){
+					$stylebooks[] = $nlp;
+				}
 
+			}
+			$i = 1;
+			@endphp
 
-	<tr>
-@foreach($newsletter_parts ->sortBy('id') as $np) 
+			@if(isset($stylebooks))
+			@foreach($stylebooks as $stylebook)
 
-@if($np->newsletterPartsAdmin()->first()->type_id == 7)
-
-@php 
-
-	foreach ($directorys as $directory) {
-		if($directory->type_id === 7){
-			$stylebook1row_path = $directory->path;
-		}
-	}
-@endphp
-
-
-	<td style="margin:0;padding:0;vertical-align:top;font-size:0" valign="top">
-
-
-		<!--▼▼ 画像タップ時のリンク ▼▼-->
-		<a href="{{ $np->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none" target="_blank">
-		<!--▲▲ 画像タップ時のリンク ▲▲-->
-
-		<!--▼▼ 画像 ▼▼-->
-		<img src="{{ $stylebook1row_path }}{{ $np->img_url }}" width="250" height="175" border="0" style="display:block">
-		<!--▲▲ 画像 ▲▲-->
-
-
-		</a>
-	</td>
-
-
-
-		<td style="margin:0;padding:0;vertical-align:top;font-size:0" valign="top">
-			<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_32x32.gif" width="32" height="32" border="0" style="display:block">
-		</td>
-
-
-
-		<td style="margin:0;padding:0;vertical-align:middle;font-size:0" valign="middle">
-
-
-
-		<div style="text-align:left"></div>
-
-
-
-		<div><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_8x8.gif" width="8" height="8" border="0" style="display:block">
-		</div>
-
-
-		<!--▼▼ タイトル ▼▼-->
-		<div style="font-size:23px;color:#555555;text-align:left;line-height:1.7">{{ $np->title }}</div>
-		<!--▲▲ タイトル ▲▲-->
-
-
-		<div><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_20x20.gif" width="20" height="20" border="0" style="display:block"></div>
-
-
-		
-		<div style="text-align:right">
-			<!--▼▼ ボタンタップ時のリンク ▼▼-->
-			<a href="{{ $np->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none" target="_blank">
-			<!--▲▲ ボタンタップ時のリンク ▲▲-->
-
-			<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/btn_176x40.png" width="176" height="40" border="0" style="display:block;margin-left:auto;">
-
-			</a>
-	</div>
-
-
-
-	</td>
-
-
-
-	</tr>
-
-
-	<tr>
-		<td colspan="3" style="margin:0;padding:0;vertical-align:top;font-size:0" valign="top">
-			<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x24.gif" width="600" height="24" border="0" style="display:block">
-		</td>
-	</tr>
-
-@endif
-
-@endforeach
-
-
-	<tr>
-		<td colspan="3" style="margin:0;padding:0;vertical-align:top;font-size:0" valign="top">
-			<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x24.gif" width="600" height="24" border="0" style="display:block">
-		</td>
-	</tr>
-
-
-
-	</tbody>
-</table>
-
-@foreach($newsletter_link as $nl)
-@if(isset($nl->type_id) && $nl->type_id == 7)
-<table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
-	<tbody>
-		<tr>
-		<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
-			<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_180x56.gif" width="180" height="56" border="0" style="display:block;">
-		</td>
-		<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
+				
+			@php	
 			
 
-			<!--▼▼ アイテム一覧のリンク ▼▼-->
-			<a href="{{ $nl->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $nl->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
-			<!--▲▲ アイテム一覧のリンク ▲▲-->
-				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/btn_snaplist.png" width="240" height="56" border="0" style="display:block;">
+				foreach ($directorys as $directory) {
+					if($directory->type_id === 10){
+						$stylebook1row_path = $directory->path;
+					}
+				}
+
+
+			if(strpos($stylebook->link_url, "?") != false){
 				
-			</a>
-		</td>
-			<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
-				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_180x56.gif" width="180" height="56" border="0" style="display:block;">
-			</td>
-		</tr>
-		<tr>
-			<td colspan="3" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
-				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x16.gif" width="600" height="16" border="0" style="display:block;">
-			</td>
-		</tr>
-		@endif
-@endforeach		
-	</tbody>
-</table>
+				$utm_code = "&utm_source=h_mail&utm_medium=email&utm_campaign=";
+
+			}else{
+
+				$utm_code = "?utm_source=h_mail&utm_medium=email&utm_campaign=";
+
+			}
+
+
+			@endphp	
+
+
+			
+			
+
+			@if( $i % 2 != 0)
+
+
+
+
+
+
+
+	 <!-- コンポーネント: Style Book 左画像+右キャプション -->
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:720px;" width="720" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:720px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:0 14px 10px;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="width:692px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0;line-height:0;text-align:left;display:inline-block;width:100%;direction:ltr;background-color:#f5f5f5;">
+                <!--[if mso | IE]><table bgcolor="#f5f5f5" border="0" cellpadding="0" cellspacing="0" role="presentation" ><tr><td style="vertical-align:middle;width:346px;" ><![endif]-->
+                <div class="mj-column-per-50 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:50%;">
+                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                    <tbody>
+                      <tr>
+                        <td style="vertical-align:middle;padding:0;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
+                            <tbody>
+                              <tr>
+                                <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                                    <tbody>
+                                      <tr>
+                                        <td style="width:346px;">
+                                        	<!-- 変数: 遷移先URL -->
+                                          <a href="{{ $stylebook->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $stylebook->utm_content_id }}" target="_blank">
+                                          	<!-- 変数: 画像URL -->
+                                            <img height="auto" src="{{ $stylebook1row_path }}{{ $stylebook->img_url }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="346">
+                                          </a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!--[if mso | IE]></td><td style="vertical-align:middle;width:346px;" ><![endif]-->
+                <div class="mj-column-per-50 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:50%;">
+                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                    <tbody>
+                      <tr>
+                        <td style="vertical-align:middle;padding:0;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
+                            <tbody>
+                              <tr>
+                                <td align="left" style="font-size:0px;padding:20px;word-break:break-word;">
+                                  <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:14px;font-weight:600;line-height:28px;text-align:left;color:#555555;"><!-- 変数: テキスト -->{{ $stylebook->text }}</div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!--[if mso | IE]></td></tr></table><![endif]-->
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+
+
+ 	@elseif( $i % 2 == 0)	
+
+
+    <!-- コンポーネント: Style Book 右画像+左キャプション -->
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:720px;" width="720" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:720px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:0 14px 10px;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="width:692px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0;line-height:0;text-align:left;display:inline-block;width:100%;direction:ltr;background-color:#f5f5f5;">
+                <!--[if mso | IE]><table bgcolor="#f5f5f5" border="0" cellpadding="0" cellspacing="0" role="presentation" ><tr><td style="vertical-align:middle;width:346px;" ><![endif]-->
+                <div class="mj-column-per-50 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:50%;">
+                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                    <tbody>
+                      <tr>
+                        <td style="vertical-align:middle;padding:0;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
+                            <tbody>
+                              <tr>
+                                <td align="left" style="font-size:0px;padding:20px;word-break:break-word;">
+                                  <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:14px;font-weight:600;line-height:28px;text-align:left;color:#555555;"><!-- 変数: テキスト -->{{ $stylebook->text }}</div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!--[if mso | IE]></td><td style="vertical-align:middle;width:346px;" ><![endif]-->
+                <div class="mj-column-per-50 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:50%;">
+                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                    <tbody>
+                      <tr>
+                        <td style="vertical-align:middle;padding:0;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
+                            <tbody>
+                              <tr>
+                                <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                                    <tbody>
+                                      <tr>
+                                        <td style="width:346px;">
+                                        	<!-- 変数: 遷移先URL -->
+                                          <a href="{{ $stylebook->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $stylebook->utm_content_id }}" target="_blank">
+                                          	<!-- 変数: 画像URL -->
+                                            <img height="auto" src="{{ $stylebook1row_path }}{{ $stylebook->img_url }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="346">
+                                          </a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!--[if mso | IE]></td></tr></table><![endif]-->
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+             <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+	 @endif
+
+	@php			
+	$i++;
+	@endphp
+
+@endforeach
+@endif
+
+	
+
+
+
+
+		<!-- コンポーネント: Style Book ボタン -->
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:720px;" width="720" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:720px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:0 14px 70px;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:692px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody>
+                    <tr>
+                      <td style="vertical-align:top;padding:0;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
+                          <tbody>
+                            <tr>
+                              <td align="center" vertical-align="middle" style="font-size:0px;padding:0;word-break:break-word;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;width:100%;line-height:100%;">
+                                  <tbody>
+                                    <tr>
+                                      <td align="center" bgcolor="#d7d7d7" role="presentation" style="border:none;border-radius:3px;cursor:auto;height:50px;mso-padding-alt:0;background:#d7d7d7;" valign="middle" height="50px">
+                                        <a href="https://www.familiar.co.jp/pages/stylebook" style="display:inline-block;background:#d7d7d7;color:#555555;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:12px;font-weight:600;line-height:12px;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank"> もっと見る&nbsp;&nbsp;&nbsp;<img width="6" height="10" style="width: 6px !important; height: 10px !important;" src="https://cdn.shopify.com/s/files/1/0640/3611/0585/files/icon_arrow-right.png">
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+
+	 <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->

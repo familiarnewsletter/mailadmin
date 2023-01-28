@@ -4,7 +4,7 @@
 
 @section('styles')
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-<style type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.0/trix.css" ></style>
+<!-- <style type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.0/trix.css" ></style> -->
     
     
 @endsection
@@ -45,8 +45,8 @@
                 </div>
                 <div class="form-group">
                   <label for="text">テキスト</label>
-                  <input type="text" class="form-control" name="text" id="text" hidden="" value="{{ $newsletter_parts->text }}"/>
-                  <trix-editor input="text" placeholder="入力欄" ></trix-editor>
+                  <input type="text" class="form-control" name="text" id="text" value="{{ $newsletter_parts->text }}"/>
+                  <!-- <trix-editor input="text" placeholder="入力欄" ></trix-editor> -->
                 </div>
 
                 <hr>
@@ -74,5 +74,5 @@
 @endsection
 
 @section('scripts')
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.0/trix.js"></script>
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.0/trix.js"></script> -->
 @endsection

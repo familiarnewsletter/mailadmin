@@ -1,4 +1,4 @@
-<!--▼▼ FOOTER NAV ▼▼-->
+<!-- 
 
 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
 
@@ -20,11 +20,7 @@
 
 </tbody></table>
 
-<!--▲▲ FOOTER NAV ▲▲-->
 
-
-
-<!--▼▼ FOOTER APP ▼▼-->
 
 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
 
@@ -46,6 +42,7 @@
 
 </tbody></table>
 
-<!--▲▲ FOOTER APP ▲▲-->
 
 
+
+ -->
