@@ -54,6 +54,45 @@
                 </table>
               </div>
 
+
+         @foreach($newsletter_link as $nl)
+        @if(isset($nl->type_id) && $nl->type_id == 4 && $nl->link_type === "テキスト入力")
+
+              <!--[if mso | IE]></td></tr></table></td></tr><tr><td class="" width="720px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:660px;" width="660" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+              <div style="margin:0px auto;max-width:660px;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                  <tbody>
+                    <tr>
+                      <td style="direction:ltr;font-size:0px;padding:0 0 20px 0;text-align:center;">
+                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:660px;" ><![endif]-->
+                        <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                            <tbody>
+                              <tr>
+                                <td style="vertical-align:top;padding:0;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
+                                    <tbody>
+                                      <tr>
+                                        <td align="left" style="font-size:0px;padding:0;word-break:break-word;">
+                                          <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:14px;font-weight:300;line-height:28px;text-align:left;color:#555555;"><!-- 変数: 商品テキスト -->{{ $nl->link_url }}</div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              @endif
+        @endforeach
+
 @foreach($newsletter_parts ->sortBy('id') as $np) 
 
 @if($np->newsletterPartsAdmin()->first()->type_id == 4)
@@ -162,100 +201,61 @@
 			
 		
 @foreach($newsletter_link as $nl)
-@if(isset($nl->type_id) && $nl->type_id == 4)
+@if(isset($nl->type_id) && $nl->type_id == 4 && $nl->link_type != "テキスト入力")
 
 
 
+<!-- コンポーネント: PICKUP ボタン -->
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:720px;" width="720" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:720px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:0 14px 70px;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:692px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody>
+                    <tr>
+                      <td style="vertical-align:top;padding:0;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
+                          <tbody>
+                            <tr>
+                              <td align="center" vertical-align="middle" style="font-size:0px;padding:0;word-break:break-word;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;width:100%;line-height:100%;">
+                                  <tbody>
+                                    <tr>
+                                      <td align="center" bgcolor="#d7d7d7" role="presentation" style="border:none;border-radius:3px;cursor:auto;height:50px;mso-padding-alt:0;background:#d7d7d7;" valign="middle" height="50px">
+                                        <a href="{{ $nl->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $nl->utm_content_id }}" style="display:inline-block;background:#d7d7d7;color:#555555;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:12px;font-weight:600;line-height:12px;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank"> もっと見る&nbsp;&nbsp;&nbsp;<img width="6" height="10" style="width: 6px !important; height: 10px !important;" src="https://cdn.shopify.com/s/files/1/0640/3611/0585/files/icon_arrow-right.png">
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-
-
-             
 
 @endif
 @endforeach
 
 
-<!-- <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
-	<tbody>
-		<tr>
-		<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
-			<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_180x56.gif" width="180" height="56" border="0" style="display:block;">
-		</td>
-		<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
-			
-
-			
-			<a href="{{ $nl->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $nl->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
-			
-				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/btn_goodslist.png" width="240" height="56" border="0" style="display:block;">
-				
-			</a>
-		</td>
-			<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
-				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_180x56.gif" width="180" height="56" border="0" style="display:block;">
-			</td>
-		</tr>
-		<tr>
-			<td colspan="3" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
-				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x16.gif" width="600" height="16" border="0" style="display:block;">
-			</td>
-		</tr>
-
-
-		<tr>
-				<td style="margin:0;padding:0;vertical-align:top;font-size:0" valign="top">
-
-					
-					<a href="{{ $np->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none" target="_blank">
-
-					
-					<img src="{{ $pickupitem1row_path }}{{ $np->img_url }}" width="250" height="175" border="0" style="display:block">
-					
-					</a>
-				</td>
-
-				<td style="margin:0;padding:0;vertical-align:top;font-size:0" valign="top">
-					<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_32x32.gif" width="32" height="32" border="0" style="display:block">
-				</td>
-
-
-				<td style="margin:0;padding:0;vertical-align:middle;font-size:0" valign="middle">
-				<div style="text-align:left">
-					<p style="font-size:18px;color:#d98885;text-align:left;line-height:1.7;">
-				
-				{{ $np->title }}
-				
-			</p>
-				</div>
-				<div>
-					<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_8x8.gif" width="8" height="8" border="0" style="display:block">
-				</div>
-				<div style="font-size:18px;color:#555555;text-align:left;line-height:1.7">
-
-					
-					{!! $np->text !!}
-					
-				</div>
-				<div>
-					<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_20x20.gif" width="20" height="20" border="0" style="display:block">
-				</div>
-
-				<div style="text-align:right">
-
-					
-					<a href="{{ $np->link_url }}" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none" target="_blank">
-					
-					<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/btn_176x40.png" width="176" height="40" border="0" style="display:block;margin-left:auto;">
-					
-					</a>
-				</div>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
-					<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x24.gif" width="600" height="24" border="0" style="display:block;">
-				</td>
-			</tr>
-		
-	</tbody>
-</table> -->
+<!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>

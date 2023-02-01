@@ -28,7 +28,7 @@
                 @csrf
 
                 <div class="form-group">
-                  <label for="title">店名</label>
+                  <label for="title">店名（パラメータ）</label>
                   <input type="text" class="form-control" name="title" list="categorytab"　id="title" value="{{ $newsletter_parts->title }}">
                 </div>
                 <div class="form-group">
@@ -40,8 +40,12 @@
                   <input type="text" class="form-control" name="link_url" id="link_url" value="{{ $newsletter_parts->link_url }}"/>
                 </div>
                 <div class="form-group">
-                  <label for="utm_content_id">キャンペーンコード(２桁)</label>
-                  <input type="text" class="form-control" name="utm_content_id" id="utm_content_id" value="{{ $newsletter_parts->utm_content_id }}"/>
+                  <label for="utm_content_id">カテゴリ</label>
+                  <select type="text" class="form-control" name="utm_content_id" list="categorytab"　id="utm_content_id" >              
+                    <option label="NEWS" value="https://cdn.shopify.com/s/files/1/0640/3611/0585/files/tag_news.png" @if(old('category',"$newsletter_parts->title")=='https://cdn.shopify.com/s/files/1/0640/3611/0585/files/tag_news.png')selected="selected"@endif>NEWS</option>
+                  　<option label="ITEM" value="https://cdn.shopify.com/s/files/1/0640/3611/0585/files/tag_item.png" @if(old('category',"$newsletter_parts->title")=='https://cdn.shopify.com/s/files/1/0640/3611/0585/files/tag_item.png')selected="selected"@endif></option>
+                  　<option label="EVENT" value="https://cdn.shopify.com/s/files/1/0640/3611/0585/files/tag_event.png" @if(old('category',"$newsletter_parts->title")=='https://cdn.shopify.com/s/files/1/0640/3611/0585/files/tag_event.png')selected="selected"@endif></option>
+                  </select>
                 </div>
                 <div class="form-group">
                   <label for="text">テキスト</label>

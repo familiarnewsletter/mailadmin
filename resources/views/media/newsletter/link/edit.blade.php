@@ -34,7 +34,6 @@
                   <select type="text" class="form-control" name="type_id" id="type_id" onchange="createLink(this.value)">
 
                     <option disabled selected>タイプを選択</option>
-                    <option value="1">全体記事リンク</option>
                     
                     @foreach($newsletter_parts_admin as $newsletter_parts_ad)
                   
@@ -123,13 +122,12 @@
 <script type="text/javascript">
     const linkList = 
       {
-        "1": ["「正しく表示されない方はこちらをクリック」",],
-        "4": ["「詳しくはこちら」", "「GOODS一覧」","テキスト入力"],
-        "5": ["「詳しくはこちら」", "「GOODS一覧」","テキスト入力"],
-        "7": ["「詳しくはこちら」", "「SNAP一覧」"],
-        "8": ["「詳しくはこちら」", "「SNAP一覧」"],
-        "9": ["「詳しくはこちら」", "「SNAP一覧」"],
-        "11": ["「詳しくはこちら」", "「GOODS一覧」"],
+        "4": ["もっと見る","テキスト入力"],
+        "5": ["もっと見る","テキスト入力"],
+        "7": ["もっと見る"],
+        "8": ["もっと見る"],
+        "9": ["もっと見る"],
+        "11": ["もっと見る"],
       };
 
 

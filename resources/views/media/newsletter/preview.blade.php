@@ -1,158 +1,91 @@
-
-
-@extends('layout')
-
-@section('styles')
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
-  
- 
-
-</style>
-@endsection
-
-@section('content')
-
-<div class="container-fluid">
-<h1 class="h3 mb-2 text-gray-800">リンク設定</h1>
-
-      <div class="card shadow mb-4">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">設定項目</h6>
-        </div>
-        <div class="card-body">
-          
-          <nav class="panel panel-default">
-            
-           
-              
-             <form action="{{ route('newsletter.storelink', ['newsletter_id' => $newsletter->id]) }}" method="post">
-                @csrf
-
-                <div class="form-group">
-                  <label for="type_id">カテゴリ</label>
-                  <select type="text" class="form-control" name="type_id" id="type_id" onchange="createLink(this.value)">
-
-                    <option disabled selected>タイプを選択</option>
-                    <option value="1">全体記事リンク</option>
-                    
-                    @foreach($newsletter_parts_admin as $newsletter_parts_ad)
-                  
-                    @if(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 4 || isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 5 || isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 7 || isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 8 || isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 9 || isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 12)
-                    <option value="{{ $newsletter_parts_ad->type_id }}">{{ $newsletter_parts_ad->type_id_label }}</option>
-                    @endif
-
-                
-                  @endforeach
-                  </select>
-                 
-                  
-                    
+ <!-- コンポーネント: Style Book 画像×3 -->
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:720px;" width="720" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:720px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:0 14px 10px;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="width:692px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0;line-height:0;text-align:left;display:inline-block;width:100%;direction:ltr;">
+                <!--[if mso | IE]><table border="0" cellpadding="0" cellspacing="0" role="presentation" ><tr><td style="vertical-align:middle;width:228px;" ><![endif]-->
+                <div class="mj-column-per-33 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:33%;">
+                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                    <tbody>
+                      <tr>
+                        <td style="vertical-align:middle;padding:0 5px 0 0;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
+                            <tbody>
+                              <tr>
+                                <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                                    <tbody>
+                                      <tr>
+                                        <td style="width:223px;">
+                                          <a href="<!-- 変数: 遷移先URL -->" target="_blank">
+                                            <img height="auto" src="<!-- 変数: 左カラム画像URL -->" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="223">
+                                          </a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="font-size:0px;word-break:break-word;">
+                                  <div style="height:10px;line-height:10px;">&#8202;</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                                    <tbody>
+                                      <tr>
+                                        <td style="width:223px;">
+                                          <a href="<!-- 変数: 遷移先URL -->" target="_blank">
+                                            <img height="auto" src="<!-- 変数: 左カラム画像URL -->" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="223">
+                                          </a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <div class="form-group">
-                  <label for="link_type">タイプ</label>
-                  <select type="text" class="form-control"　name="link_type" id="link_type" onchange="Selc(this)">
-                    <option disabled selected>形式を選択してください</option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                  </select>
+                <!--[if mso | IE]></td><td style="vertical-align:middle;width:463px;" ><![endif]-->
+                <div class="mj-column-per-67 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:67%;">
+                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                    <tbody>
+                      <tr>
+                        <td style="vertical-align:middle;padding:0 0 0 5px;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
+                            <tbody>
+                              <tr>
+                                <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                                    <tbody>
+                                      <tr>
+                                        <td style="width:458px;">
+                                          <a href="<!-- 変数: 遷移先URL -->" target="_blank">
+                                            <img height="auto" src="<!-- 変数: 右カラム画像URL -->" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="458">
+                                          </a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-               
-
-                <div class="form-group">
-                   <p id="comt" >リンク先URL</p>
-                  <input type="text" class="form-control" name="link_url" id="link_url"/>
-                </div>
-              
-
-              </nav>
-              
-            </div>
-
-            <hr>
-            <div class="text-right">
-              <input type="submit" value="保存">
-            </div>
-            
-            </div>
-          
-
-            
-          </form> 
-          @if($errors->any())
-            <div class="alert alert-danger">
-              <ul>
-                @foreach($errors->all() as $message)
-                  <p>{{ $message }}</p>
-                @endforeach
-              </ul>
-            </div>
-          @endif       
-      </nav>
-    </div>
-
-</div>
-
-@endsection
-
-@section('scripts')
-
-
-<script language="Javascript">
-
-  function Selc(Obj){
-    O_value=Obj.options[Obj.selectedIndex].value;
-    
-  T_value = Obj.options[Obj.selectedIndex].text; //選択された項目のタイトルテキストを取得する
-  
-  if (T_value=="テキスト入力") {
-      msg="テキスト";
-      document.getElementById("comt").innerHTML = msg;
-    }else{
-      msg="リンク先URL";
-      document.getElementById("comt").innerHTML = msg;  
-    }
-  }
-
-</script>
-
-<script type="text/javascript">
-    const linkList = 
-      {
-        "1": ["「正しく表示されない方はこちらをクリック」",],
-        "4": ["「詳しくはこちら」", "「GOODS一覧」","テキスト入力"],
-        "5": ["「詳しくはこちら」", "「GOODS一覧」","テキスト入力"],
-        "7": ["「詳しくはこちら」", "「SNAP一覧」"],
-        "8": ["「詳しくはこちら」", "「SNAP一覧」"],
-        "9": ["「詳しくはこちら」", "「SNAP一覧」"],
-        "11": ["「詳しくはこちら」", "「GOODS一覧」"],
-      };
-
-
-  function createLink(selectlink_Type){
-    
-    let link_type = document.getElementById('link_type');
-
-    link_type.disabled = false;
-    link_type.innerHTML = '';
-    let option = document.createElement('option');
-    option.innerHTML = '形式を選択してください';
-    option.defaultSelected = true;
-    option.disabled = true;
-    link_type.appendChild(option);  
-    
-    linkList[selectlink_Type].forEach( menu => {
-      let option = document.createElement('option');
-      
-      option.innerHTML = menu;
-      link_type.appendChild(option);  
-    });    
-    
-  }
-  </script>
-
-    
-
-@endsection
+                <!--[if mso | IE]></td></tr></table><![endif]-->
+             

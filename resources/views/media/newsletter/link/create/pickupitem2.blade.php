@@ -34,7 +34,6 @@
                   <select type="text" class="form-control" name="type_id" id="type_id" onchange="createLink(this.value)">
 
                     <option disabled selected>タイプを選択</option>
-                    <option value="main">全体記事リンク</option>
                     <option value="pickupitem1row">PICKUP ITEM(1列＋テキスト)</option>
                     <option value="pickupitem2row">PICKUP ITEM(2列)</option>
                     <option value="stylebook1row">STYLE BOOK(1列＋テキスト)</option>

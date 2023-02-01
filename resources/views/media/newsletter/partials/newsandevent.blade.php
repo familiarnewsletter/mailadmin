@@ -118,7 +118,7 @@
                                               <tbody>
                                                 <tr>
                                                   <td style="width:40px;"><!-- 変数: タグ画像URL -->
-                                                    <img height="auto" src="https://cdn.shopify.com/s/files/1/0640/3611/0585/files/tag_news.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="40">
+                                                    <img height="auto" src="{{ $np->utm_content_id }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="40">
                                                   </td>
                                                 </tr>
                                               </tbody>
@@ -127,12 +127,12 @@
                                         </tr>
                                         <tr>
                                           <td align="left" style="font-size:0px;padding:0 0 10px 0;word-break:break-word;">
-                                            <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:12px;font-weight:600;line-height:19.2px;text-align:left;color:#555555;"><!-- 変数: タイトル -->{{ $np->title }}</div>
+                                            <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:12px;font-weight:600;line-height:19.2px;text-align:left;color:#555555;"><!-- 変数: タイトル -->{{ $np->text }}</div>
                                           </td>
                                         </tr>
                                         <tr>
                                           <td align="left" style="font-size:0px;padding:0 10px 0 0;word-break:break-word;">
-                                            <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:10px;font-weight:600;line-height:14px;text-align:left;color:#808080;"><!-- 変数: 店舗名 -->{{ $np->text }}</div>
+                                            <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:10px;font-weight:600;line-height:14px;text-align:left;color:#808080;"><!-- 変数: 店舗名 -->{{ $np->title }}</div>
                                           </td>
                                         </tr>
                                       </tbody>
@@ -156,7 +156,7 @@
                                               <tbody>
                                                 <tr>
                                                   <td style="width:102px;"><!-- 変数: 遷移先URL -->
-                                                    <a href="{{ $url }}{{ $utm_code }}{{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}{{ $anchor_id }}" target="_blank"><!-- 変数: 画像URL -->
+                                                    <a href="{{ $url }}{{ $utm_code }}{{ $newsletter->utm_campaign_id }}&utm_content={{ $np->title }}{{ $anchor_id }}" target="_blank"><!-- 変数: 画像URL -->
                                                       <img height="auto" src="{{ $newsandevent_path }}{{ $np->img_url }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="102">
                                                     </a>
                                                   </td>
