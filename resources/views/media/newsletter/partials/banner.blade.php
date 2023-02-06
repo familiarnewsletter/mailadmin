@@ -124,22 +124,3 @@ foreach ($directorys as $directory) {
       </table>
     </div>
     <!--[if mso | IE]></td></tr></table><![endif]-->
-
-
-
-
-
-
-<!-- <td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
-
-<p><a href="{{ $banner->link_url }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
-
-<img src="{{ $banner_path }}{{ $banner->img_url }}" width="288" height="126" border="0" style="display:block;">
-
-</a></p>
-
-</td>
-
-<td style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_24x24.gif" width="24" height="24" border="0" style="display:block;"></td>
-
- 
