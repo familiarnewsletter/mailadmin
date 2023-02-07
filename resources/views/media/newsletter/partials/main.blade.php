@@ -10,11 +10,11 @@
 
 	if(strpos($np->link_url, "?") != false){
 	  
-	  $utm_code = "&utm_source=h_mail&utm_medium=email&utm_campaign=";
+	  $utm_code = '&utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$';
 
 		}else{
 
-			$utm_code = "?utm_source=h_mail&utm_medium=email&utm_campaign=";
+			$utm_code = '?utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$';
 
 		}
 
@@ -36,68 +36,6 @@
 
 @endphp
 
-<!--▼▼ MAIN ▼▼-->
-
-<!-- <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="f6f4f2">
-
-<tbody><tr><td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x40.gif" width="600" height="40" border="0" style="display:block;"></td></tr>
-
-<tr><td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;text-align:center;" valign="top">
-
-<a href="{{ $url }}{{ $utm_code }}{{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}{{ $anchor_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
-
-<img src="{{$top_path}}{{ $np->img_url }}" width="500" border="0" style="display:block;margin:0 auto;"></a></td>
-
-</tr>
-
-<tr><td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x36.gif" width="600" height="36" border="0" style="display:block;"></td></tr>
-
-<tr><td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
-
-<p style="font-size:30px;font-weight:bold;color:#827c72;text-align:center;line-height:1.7;">
-@php
-	$str = strip_tags($np->title, '<br><strong>');
-@endphp
-{!! $str !!}
-</p>
-
-</td></tr>
-
-<tr><td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x20.gif" width="600" height="20" border="0" style="display:block;"></td></tr>
-
-<tr>
-
-<td colspan="1" width="20" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_24x24.gif" width="24" height="24" border="0" style="display:block;"></td>
-
-<td colspan="3" width="560" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><p style="font-size:16px;color:#555555;text-align:left;line-height:1.7;">
-
-{!! $np->text !!}
-
-</p></td>
-
-<td colspan="1" width="20" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_24x24.gif" width="24" height="24" border="0" style="display:block;"></td>
-
-</tr>
-
-<tr><td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x20.gif" width="600" height="20" border="0" style="display:block;"></td></tr>
-
-<tr>
-
-<td colspan="2" width="108" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_108x64.gif" width="108" height="64" border="0" style="display:block;"></td>
-
-<td colspan="1" width="384" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
-<a href="{{ $url}}{{ $utm_code }}{{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}{{ $anchor_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
-<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/btn_384x64.png" width="384" height="64" border="0" style="display:block;">
-</a>
-</td>
-
-<td colspan="2" width="108" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_108x64.gif" width="108" height="64" border="0" style="display:block;"></td>
-
-</tr>
-
-<tr><td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top"><img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x40.gif" width="600" height="40" border="0" style="display:block;"></td></tr>
-
-</tbody></table> -->
 
 
 <!-- コンポーネント: メインビジュアル パターンA（画像/テキスト/ボタン） -->
@@ -140,7 +78,7 @@
                           <tbody>
                             <tr>
                               <td align="center" bgcolor="#518FCC" role="presentation" style="border:none;border-radius:3px;cursor:auto;height:50px;mso-padding-alt:0;background:#518FCC;" valign="middle" height="50px"><!-- 変数: 遷移先URL -->
-                                <a href="{{ $url}}{{ $utm_code }}{{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}{{ $anchor_id }}" style="display:inline-block;background:#518FCC;color:#ffffff;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:14px;font-weight:600;line-height:14px;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank"> くわしくはこちら </a>
+                                <a href="{{ $url}}{{ $utm_code }}&utm_content={{ $np->utm_content_id }}{{ $anchor_id }}" style="display:inline-block;background:#518FCC;color:#ffffff;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:14px;font-weight:600;line-height:14px;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank"> くわしくはこちら </a>
                               </td>
                             </tr>
                           </tbody>

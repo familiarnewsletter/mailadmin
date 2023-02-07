@@ -38,7 +38,7 @@
                                     <tbody>
                                       <tr>
                                         <td style="width:223px;">
-                                          <a href="<!-- 変数: 遷移先URL -->" target="_blank">
+                                          <a href="[[[https://familiar.co.jp/]]]">
                                             <img height="auto" src="https://cdn.shopify.com/s/files/1/0640/3611/0585/files/infantG_11_18179846-03ae-4ae8-ae16-65167a8295c2.jpg" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="223">
                                           </a>
                                         </td>

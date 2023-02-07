@@ -65,53 +65,6 @@ class MediaController extends Controller
 
 
 
-  public function newsletterClone(int $id)
-	{
-	   $newsletter = Newsletter::find($id);
-	   $new_newsletter = $newsletter->replicate(); 
-	   $new_newsletter->title = $newsletter->title . '(copy)'; 
-	   $new_newsletter->save();
-	   
-	   $newsletter_parts_admin = NewsletterPartsAdmin::where('newsletter_id', $newsletter->id)->get();
-	   foreach ($newsletter_parts_admin as $npa) { 
-	       $new_npa = $npa->replicate(); 
-	       $new_npa->newsletter_id = $new_newsletter->id; 
-	       $new_npa->save(); 
-	      } 
-
-
-	   $newsletter_parts = NewsletterParts::where('newsletter_id', $newsletter->id)->get();
-
-	   foreach ($newsletter_parts as $np) { 
-	       $new_np = $np->replicate(); 
-	       $new_np->newsletter_id = $new_newsletter->id; 
-	       $new_np->save(); 
-	      } 
-
-
-
-
-	   $newsletter_link = NewsletterLink::where('newsletter_id', $newsletter->id)->get();
-
-	   foreach ($newsletter_link as $nl) { 
-	       $new_nl = $nl->replicate(); 
-	       $new_nl->newsletter_id = $new_newsletter->id; 
-	       $new_nl->save(); 
-	      }
-
-	   $newsletters = Newsletter::all();
-
-	 return redirect()->route('newsletter.index', [
-
-	 		'newsletters' => $newsletters
-
-		]);
-	  
-	}
-
-
-
-
 
 
 

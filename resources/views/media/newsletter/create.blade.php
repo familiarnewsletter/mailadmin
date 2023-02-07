@@ -53,7 +53,7 @@
                 </div>
                 
                 <div class="form-group">
-                  <label for="utm_campaign_id">キャンペーンコード（配信日6桁）</label>
+                  <label for="utm_campaign_id">配信日</label>
                   <input type="text" class="form-control" name="utm_campaign_id" id="utm_campaign_id"/>
                 </div>
                 
