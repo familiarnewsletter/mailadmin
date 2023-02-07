@@ -123,7 +123,7 @@
 				}
 
 
-  			if(strpos($np->link_url, "?") != false){
+  			if(strpos($pickup_item->link_url, "?") != false){
       
           $utm_code = '&utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$';
 

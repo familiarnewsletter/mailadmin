@@ -49,7 +49,7 @@ foreach ($directorys as $directory) {
 	}
 }
 
-if(strpos($np->link_url, "?") != false){
+if(strpos($banner->link_url, "?") != false){
       
         $utm_code = '&utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$';
 

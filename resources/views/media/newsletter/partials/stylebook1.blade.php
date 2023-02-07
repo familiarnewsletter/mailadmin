@@ -79,7 +79,7 @@
 				}
 
 
-			if(strpos($np->link_url, "?") != false){
+			if(strpos($stylebook->link_url, "?") != false){
       
         $utm_code = '&utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$';
 
