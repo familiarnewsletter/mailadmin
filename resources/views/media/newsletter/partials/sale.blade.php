@@ -13,6 +13,48 @@
                       <td style="vertical-align:top;padding:0;">
                         <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
                           <tbody>
+
+
+
+@php
+foreach($newsletter_parts ->sortBy('id') as $np){
+
+	if($np->newsletterPartsAdmin()->first()->type_id == 11){
+		$sales[] = $np;
+	}
+
+}
+$i = 1;
+@endphp
+
+@if(isset($sales))
+@foreach($sales as $sale)
+
+
+	
+@php	
+
+	foreach ($directorys as $directory) {
+		if($directory->type_id === 11){
+			$sale_path = $directory->path;
+		}
+	}
+
+	
+
+if(strpos($sale->link_url, "?") != false){
+	
+		$utm_code = '&utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$';
+
+	        }else{
+
+         $utm_code = '?utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$';
+
+      }
+
+@endphp
+
+
                             <!-- セール画像1 -->
                             <tr>
                               <td align="center" style="font-size:0px;padding:0 0 10px 0;word-break:break-word;">
@@ -20,8 +62,10 @@
                                   <tbody>
                                     <tr>
                                       <td style="width:692px;">
-                                        <a href="<!-- 変数: 遷移先URL -->" target="_blank">
-                                          <img height="auto" src="<!-- 変数: セール画像URL -->" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="692">
+                                      	<!-- 変数: 遷移先URL -->
+                                        <a href="{{ $sale->link_url }}{{$utm_code}}&utm_content={{ $sale->utm_content_id }}" target="_blank">
+                                        	<!-- 変数: セール画像URL -->
+                                          <img height="auto" src="{{ $sale_path }}{{ $sale->img_url }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="692">
                                         </a>
                                       </td>
                                     </tr>
@@ -77,7 +121,14 @@
                                 </table>
                               </td>
                             </tr>
-                          </tbody>
+                         
+
+@endforeach
+@endif	
+
+
+
+ 							</tbody>
                         </table>
                       </td>
                     </tr>

@@ -1,7 +1,9 @@
+
+
+
+
 @include('media.newsletter.partials.styles')        
-        <!-- プリヘッダーテキスト -->
-				@include('media.newsletter.partials.preheader')
-				<!-- プリヘッダーテキスト -->
+        
 
 				<!-- HEADER to NAV -->
 				@include('media.newsletter.partials.headertonav')
@@ -67,35 +69,42 @@
 
                     @elseif(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 9)
 
-                        <!--▼▼ SNAP ▼▼-->
-                        @include('media.newsletter.partials.category')
-                        <!--▲▲ SNAP ▲▲-->
+                  <!--▼▼ SIZE ▼▼-->
+                  @include('media.newsletter.partials.size')
+                  <!--▲▲ SIZE ▲▲-->
 
 
-                    @elseif(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 10)
+                  @elseif(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 10)
 
-                        <!--▼▼ BANNER ▼▼-->
-                        @include('media.newsletter.partials.banner')
-                        <!--▲▲ BANNER ▲▲-->
+                      <!--▼▼ BANNER ▼▼-->
+                      @include('media.newsletter.partials.banner')
+                      <!--▲▲ BANNER ▲▲-->
 
-                    @elseif(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 11)
-                        
-                        <!--▼▼  NEWS & TOPICS ▼▼-->
-                        @include('media.newsletter.partials.newsandtopicsforsale')
-                        <!--▲▲ NEWS & TOPICS ▲▲-->
+                  @elseif(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 11)
+                      
+                      <!--▼▼  SALE ▼▼-->
+                      @include('media.newsletter.partials.sale')
+                      <!--▲▲ SALE ▲▲-->
 
-                    @elseif(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 12)
 
-                        <!--▼▼ PICKUP ITEM 2row ▼▼-->
-                        @include('media.newsletter.partials.pickupitemforsale')
-                        <!--▲▲ PICKUP ITEM 2row ▲▲-->
+                  @elseif(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 12)
 
-                    @endif
+                      <!--▼▼ CATEGORY ▼▼-->
+                      @include('media.newsletter.partials.category')
+                      <!--▲▲ CATEGORY ▲▲-->
+
+
+                  @elseif(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 13)
+
+                      <!--▼▼ CATEGORY1 ▼▼-->
+                      @include('media.newsletter.partials.category1')
+
+                @endif
 
                 @endforeach
                 <!--▲▲ 配置図により可変 ▲▲-->
 
-                @include('media.newsletter.partials.footerapp')
+               
 				
 				@include('media.newsletter.partials.footertocopylight')
 				<!--▲▲ COPYRIGHT ▲▲-->

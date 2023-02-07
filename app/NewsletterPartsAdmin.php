@@ -21,9 +21,11 @@ class NewsletterPartsAdmin extends Model
 		6 => [ 'label' => 'SHOP BLOG'],
 		7 => [ 'label' => 'STYLE BOOK(1ブロック＋テキスト)'],
 		8 => [ 'label' => 'STYLE BOOK(3ブロック)'],
-		9 => [ 'label' => 'CATEGORY'],
+		9 => [ 'label' => 'SIZE'],
 		10 => [ 'label' => 'BANNER'],
-		11 => [ 'label' => 'PICKUP ITEM(3ブロック)'],
+		11 => [ 'label' => 'SALE'],
+		12 => [ 'label' => 'CATEGORY 2ブロック'],
+		13 => [ 'label' => 'CATEGORY 1ブロック'],
 	];
 	
 	public function getTypeidClassAttribute()

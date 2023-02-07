@@ -86,7 +86,6 @@ class MediaController extends Controller
 
 		$newsletter = new Newsletter;
         $newsletter->title = $request->title;
-        $newsletter->preheader_text = $request->preheader_text;
         $newsletter->utm_campaign_id = $request->utm_campaign_id;
 
 
@@ -127,7 +126,6 @@ class MediaController extends Controller
 		$newsletter = Newsletter::find($id);
 
         $newsletter->title = $request->title;
-        $newsletter->preheader_text = $request->preheader_text;
         $newsletter->utm_campaign_id = $request->utm_campaign_id;
         
 

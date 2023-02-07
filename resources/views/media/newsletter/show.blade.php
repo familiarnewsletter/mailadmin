@@ -163,17 +163,19 @@ body {
                       <div class="form-group">
                         <label for="type_id">記事カテゴリ</label>
                         <select type="integer" class="form-control" name="type_id" id="type_id" >                    
-                             <option value="1"><label>TOP</label></option>
-                            <option value="2"><label>SHOP NEWS ＆ EVENT</label></option>
-                            <option value="3"><label>NEWS ＆ TOPICS</label></option>
-                            <option value="4"><label>PICKUP ITEM 1ブロック＋テキスト</label></option>
-                            <option value="5"><label>PICKUP ITEM 2ブロック</label></option>
-                            <option value="6"><label>SHOP BLOG</label></option>
-                            <option value="7"><label>STYLE BOOK 1ブロック＋テキスト</label></option>
-                            <option value="8"><label>STYLE BOOK 3ブロック</label></option>
-                            <!-- <option value="9"><label>CATEGORY</label></option> -->
-                            <option value="10"><label>BANNER</label></option>
-                            <!-- <option value="11"><label>PICKUP ITEM 3列</label></option> -->                    
+                              <option value="1"><label>TOP</label></option>
+                              <option value="2"><label>SHOP NEWS ＆ EVENT</label></option>
+                              <option value="3"><label>NEWS ＆ TOPICS</label></option>
+                              <option value="4"><label>PICKUP ITEM 1ブロック＋テキスト</label></option>
+                              <option value="5"><label>PICKUP ITEM 2ブロック</label></option>
+                              <option value="6"><label>SHOP BLOG</label></option>
+                              <option value="7"><label>STYLE BOOK 1ブロック＋テキスト</label></option>
+                              <option value="8"><label>STYLE BOOK 3ブロック</label></option>
+                              <option value="9"><label>SIZE</label></option>
+                              <option value="10"><label>BANNER</label></option>
+                              <option value="11"><label>SALE</label></option>
+                              <option value="12"><label>CATEGORY 2ブロック</label></option>
+                              <option value="13"><label>CATEGORY 1ブロック(タイトルなし)</label></option>                    
                         </select>
                       </div>
                       <div class="form-group">
@@ -775,9 +777,9 @@ body {
 
               @elseif(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 9)
 
-                  <!--▼▼ SNAP ▼▼-->
-                  @include('media.newsletter.partials.category')
-                  <!--▲▲ SNAP ▲▲-->
+                  <!--▼▼ SIZE ▼▼-->
+                  @include('media.newsletter.partials.size')
+                  <!--▲▲ SIZE ▲▲-->
 
 
               @elseif(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 10)
@@ -788,9 +790,25 @@ body {
 
               @elseif(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 11)
                   
-                  <!--▼▼  PICKUP ITEM 3row ▼▼-->
-                  @include('media.newsletter.partials.pickupitem3')
-                  <!--▲▲ PICKUP ITEM 3row ▲▲-->
+                  <!--▼▼  SALE ▼▼-->
+                  @include('media.newsletter.partials.sale')
+                  <!--▲▲ SALE ▲▲-->
+
+
+              @elseif(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 12)
+
+                  <!--▼▼ CATEGORY ▼▼-->
+                  @include('media.newsletter.partials.category')
+                  <!--▲▲ CATEGORY ▲▲-->
+
+
+              @elseif(isset($newsletter_parts_ad->type_id) && $newsletter_parts_ad->type_id == 13)
+
+                  <!--▼▼ CATEGORY1 ▼▼-->
+                  @include('media.newsletter.partials.category1')
+                  <!--▲▲ CATEGORY1 ▲▲-->
+
+
 
 
               @endif
@@ -799,7 +817,7 @@ body {
             <!--▲▲ 配置図により可変 ▲▲-->
 
 
-            @include('media.newsletter.partials.footerapp')
+            
           @include('media.newsletter.partials.footertocopylight')
           <!--▲▲ COPYRIGHT ▲▲-->
 

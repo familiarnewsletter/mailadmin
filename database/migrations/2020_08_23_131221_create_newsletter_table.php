@@ -16,11 +16,7 @@ class CreateNewsletterTable extends Migration
         Schema::create('newsletter', function (Blueprint $table) {
             $table->id('id');
             $table->string('title');
-            $table->string('preheader_text');
             $table->string('utm_campaign_id');
-            // $table->integer('status')->default(1);
-            // $table->string('category');
-            // $table->string('header_type');
             $table->timestamps();
         });
     }

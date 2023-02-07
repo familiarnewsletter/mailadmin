@@ -25,7 +25,6 @@ class CreateNewsletter extends FormRequest
     {
         return [
             'title' => 'required',
-            'preheader_text' => 'required',
             'utm_campaign_id' => 'required',
             
         ];
@@ -35,8 +34,7 @@ class CreateNewsletter extends FormRequest
     {
         return [
             'title' => 'タイトル',
-            'preheader_text' => 'プリヘッダーテキスト',
-            'utm_campaign_id' => 'キャンペーンコード ',
+            'utm_campaign_id' => '配信日 ',
 
         ];
     }

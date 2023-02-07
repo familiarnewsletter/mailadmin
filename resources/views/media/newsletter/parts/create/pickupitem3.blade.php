@@ -30,7 +30,7 @@
                 @csrf
 
                 <div class="form-group">
-                  <label for="title">タイトル</label>
+                  <label for="title">タイト</label>
                   <input type="text" class="form-control" name="title" list="categorytab"　id="title" />
         
                 </div>

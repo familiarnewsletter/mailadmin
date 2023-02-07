@@ -13,14 +13,16 @@ class Directory extends Model
 	    1 => [ 'label' => 'TOP'],
 	    2 => [ 'label' => 'SHOP NEWS ＆ EVENT'],
 	    3 => [ 'label' => 'NEWS ＆ TOPICS'],
-		4 => [ 'label' => 'PICKUP ITEM（1列＋テキスト）'],
-		5 => [ 'label' => 'PICKUP ITEM(2列)'],
+		4 => [ 'label' => 'PICKUP ITEM（1ブロック＋テキスト）'],
+		5 => [ 'label' => 'PICKUP ITEM(2ブロック)'],
 		6 => [ 'label' => 'SHOP BLOG'],
-		7 => [ 'label' => 'STYLE BOOK(1列＋テキスト)'],
-		8 => [ 'label' => 'STYLE BOOK(3列)'],
-		9 => [ 'label' => 'SNAP'],
+		7 => [ 'label' => 'STYLE BOOK(1ブロック＋テキスト)'],
+		8 => [ 'label' => 'STYLE BOOK(3ブロック)'],
+		9 => [ 'label' => 'SIZE'],
 		10 => [ 'label' => 'BANNER'],
-		11 => [ 'label' => 'PICKUP ITEM(3列)'],
+		11 => [ 'label' => 'SALE'],
+		12 => [ 'label' => 'CATEGORY 2ブロック'],
+		13 => [ 'label' => 'CATEGORY 1ブロック'],
 	];
 	
 	public function getTypeidClassAttribute()
