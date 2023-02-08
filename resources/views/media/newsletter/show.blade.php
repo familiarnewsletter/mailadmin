@@ -702,6 +702,11 @@ body {
                           <i class="fas fa-fw fa-file-alt"></i>
                           <input type="button" value="html表示">
                     </a>
+
+                    <a class="dropdown-item" href="/media/newsletter/preview/{{ $newsletter->id }}">
+                          <i class="fas fa-fw fa-file-alt"></i>
+                          <input type="button" value="preview表示">
+                    </a>
                     
                   </div>
                 </div>

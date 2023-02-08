@@ -117,7 +117,7 @@ Route::group(['middleware' => 'auth'], function() {
 
 
 
-	Route::get('/media/newsletter/preview', 'MediaController@newsletterPreview')->name('newsletter.preview');
+	Route::get('/media/newsletter/preview/{newsletter_id}', 'MediaController@newsletterPreview')->name('newsletter.preview');
 
 	Route::get('/media/newsletter/source_code', 'MediaController@newsletterSourceCode')->name('newsletter.source_code');
 
