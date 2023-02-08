@@ -24,13 +24,13 @@
           
           <nav class="panel panel-default">
             
-           
+      
               
              <form action="{{ route('newsletter.storeparts', ['newsletter_parts_admin_id' => $newsletter_parts_ad->id, 'id' => $newsletter->id]) }}" method="post">
                 @csrf
 
                 <div class="form-group">
-                  <label for="title">タイトル</label>
+                  <label for="title">バナー名</label>
                   <input type="text" class="form-control" name="title" list="categorytab"　id="title" />
         
                 </div>
@@ -47,11 +47,11 @@
                   <input type="text" class="form-control" name="utm_content_id" id="utm_content_id" />
                 </div>
                 <div class="form-group">
-                  <label for="text">テキスト</label>
+                  <label for="text">備考</label>
                   <nav class="panel panel-default">
                     
-                    <input id="text" type="text" hidden="" placeholder="ここには何も入力しない" name="text"　>
-                    <trix-editor input="text" placeholder="入力欄" ></trix-editor>
+                    <input id="text" type="text" class="form-control" name="text"　>
+                   <!--  <trix-editor input="text" placeholder="入力欄" ></trix-editor> -->
               
                    
                   </nav>

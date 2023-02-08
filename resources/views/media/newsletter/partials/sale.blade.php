@@ -73,54 +73,7 @@ if(strpos($sale->link_url, "?") != false){
                                 </table>
                               </td>
                             </tr>
-                            <!-- セール画像2 -->
-                            <tr>
-                              <td align="center" style="font-size:0px;padding:0 0 10px 0;word-break:break-word;">
-                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
-                                  <tbody>
-                                    <tr>
-                                      <td style="width:692px;">
-                                        <a href="<!-- 変数: 遷移先URL -->" target="_blank">
-                                          <img height="auto" src="<!-- 変数: セール画像URL -->" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="692">
-                                        </a>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                            <!-- セール画像3 -->
-                            <tr>
-                              <td align="center" style="font-size:0px;padding:0 0 10px 0;word-break:break-word;">
-                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
-                                  <tbody>
-                                    <tr>
-                                      <td style="width:692px;">
-                                        <a href="<!-- 変数: 遷移先URL -->" target="_blank">
-                                          <img height="auto" src="<!-- 変数: セール画像URL -->" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="692">
-                                        </a>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                            <!-- セール画像4 -->
-                            <tr>
-                              <td align="center" style="font-size:0px;padding:0 0 10px 0;word-break:break-word;">
-                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
-                                  <tbody>
-                                    <tr>
-                                      <td style="width:692px;">
-                                        <a href="<!-- 変数: 遷移先URL -->" target="_blank">
-                                          <img height="auto" src="<!-- 変数: セール画像URL -->" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="692">
-                                        </a>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
+                           
                          
 
 @endforeach

@@ -373,7 +373,7 @@ class MediaController extends Controller
 
 		elseif ($newsletter_parts_ad->type_id == 9) {
 
-			return view ('media.newsletter.parts.create.snap', [
+			return view ('media.newsletter.parts.create.size', [
 
 				'newsletter' => $newsletter,
 				'newsletter_parts_ad' => $newsletter_parts_ad
@@ -393,7 +393,29 @@ class MediaController extends Controller
 
 		elseif ($newsletter_parts_ad->type_id == 11) {
 
-			return view ('media.newsletter.parts.create.pickupitem3', [
+			return view ('media.newsletter.parts.create.sale', [
+
+				'newsletter' => $newsletter,
+				'newsletter_parts_ad' => $newsletter_parts_ad
+	        
+			]);
+		}
+
+
+		elseif ($newsletter_parts_ad->type_id == 12) {
+
+			return view ('media.newsletter.parts.create.category', [
+
+				'newsletter' => $newsletter,
+				'newsletter_parts_ad' => $newsletter_parts_ad
+	        
+			]);
+		}
+
+
+		elseif ($newsletter_parts_ad->type_id == 13) {
+
+			return view ('media.newsletter.parts.create.category', [
 
 				'newsletter' => $newsletter,
 				'newsletter_parts_ad' => $newsletter_parts_ad
@@ -523,7 +545,7 @@ class MediaController extends Controller
 
 		elseif ($type_id == 9) {
 
-			return view ('media.newsletter.parts.edit.snap', [
+			return view ('media.newsletter.parts.edit.size', [
 
 				'newsletter_parts' => $newsletter_parts
 	        
@@ -541,7 +563,27 @@ class MediaController extends Controller
 
 		elseif ($type_id == 11) {
 
-			return view ('media.newsletter.parts.edit.pickupitem3', [
+			return view ('media.newsletter.parts.edit.sale', [
+
+				'newsletter_parts' => $newsletter_parts,
+	        
+			]);
+		}
+
+
+		elseif ($type_id == 12) {
+
+			return view ('media.newsletter.parts.edit.category', [
+
+				'newsletter_parts' => $newsletter_parts,
+	        
+			]);
+		}
+
+
+		elseif ($type_id == 13) {
+
+			return view ('media.newsletter.parts.edit.category', [
 
 				'newsletter_parts' => $newsletter_parts,
 	        

@@ -1,29 +1,111 @@
-<table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
-	<tbody>
-		<tr>
-			<td colspan="3" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
-				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/ttl_newsandtopics.png" alt="NEWS &amp; EVENT" width="600" height="162" border="0" style="display:block;">
-			</td>
-		</tr>
-		
-		@foreach($newsletter_parts ->sortBy('id') as $np) 
-		@if($np->newsletterPartsAdmin()->first()->type_id == 11)
-		<tr>
-			<td colspan="5" style="margin:0;padding:0;vertical-align:top;font-size:0;text-align:center;" valign="top">
-				<a href="{{ $np->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign={{ $newsletter->utm_campaign_id }}&utm_content={{ $np->utm_content_id }}" target="_blank" style="margin:0;padding:0;vertical-align:top;font-size:0;text-decoration:none;">
-				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/{{ $np->img_url }}" width="500" border="0" style="display:inline-block;">
-				</a>
-			</td>
+		@php
+		foreach($newsletter_parts ->sortBy('id') as $nlp){
 
-		</tr>
-		
-		<tr>
-			<td colspan="3" style="margin:0;padding:0;vertical-align:top;font-size:0;" valign="top">
-				<img src="https://www.ec.familiar.co.jp/user_data/packages/mail/content/2020/spacer_600x24.gif" width="600" height="24" border="0" style="display:block;">
-			</td>
-		</tr>
-		@endif
+			if($nlp->newsletterPartsAdmin()->first()->type_id == 13){
+				$categories1[] = $nlp;
+			}
 
-		@endforeach
-	</tbody>
-</table>
+		}
+		
+		@endphp
+
+		@if(isset($categories1))
+		@foreach($categories1 as $category1)
+		
+			
+		@php	
+		
+			   
+		
+
+			foreach ($directorys as $directory) {
+				if($directory->type_id === 13){
+					$category1_path = $directory->path;
+				}
+			}
+
+
+		
+
+		if(strpos($category1->link_url, "?") != false){
+		  
+			$utm_code = '&utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$';
+
+		    }else{
+
+		      $utm_code = '?utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$';
+
+	    }
+
+		@endphp
+
+
+
+<!-- コンポーネント: カテゴリ パターンC（カテゴリ数6） -->
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="narrow-width-on-desktop-outlook" role="presentation" style="width:720px;" width="720" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div class="narrow-width-on-desktop" style="margin:0px auto;max-width:720px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:0 30px 70px;text-align:center;">
+              
+              
+              <!--[if mso | IE]></td></tr></table></td></tr><tr><td class="" width="720px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:660px;" width="660" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+              <div style="margin:0px auto;max-width:660px;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                  <tbody>
+                    <tr>
+                      <td style="direction:ltr;font-size:0px;padding:0 0 10px 0;text-align:center;">
+                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="width:660px;" ><![endif]-->
+                        <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0;line-height:0;text-align:left;display:inline-block;width:100%;direction:ltr;">
+                          <!--[if mso | IE]><table border="0" cellpadding="0" cellspacing="0" role="presentation" ><tr><td style="vertical-align:top;width:660px;" ><![endif]-->
+                          <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                              <tbody>
+                                <tr>
+                                  <td style="vertical-align:top;padding:0;">
+                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
+                                      <tbody>
+                                        <tr>
+                                          <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                                              <tbody>
+                                                <tr>
+                                                  <td style="width:660px;">
+                                                  	<!-- 変数: 遷移先URL -->
+                                                    <a href="{{ $category1->link_url }}{{ $utm_code }}&utm_content={{ $category1->utm_content_id }}" target="_blank">
+                                                    	<!-- 変数: カテゴリ画像URL -->
+                                                      <img height="auto" src="{{ $category1_path }}{{ $category1->img_url }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="660">
+                                                    </a>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <!--[if mso | IE]></td></tr></table><![endif]-->
+                        </div>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+              <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+		
+	@endforeach
+			@endif
