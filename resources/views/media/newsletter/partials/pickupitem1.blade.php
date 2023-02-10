@@ -141,7 +141,7 @@
                                                 <tr>
                                                   <td style="width:324px;">
                                                   	<!-- 変数: 遷移先URL -->
-                                                    <a href="{{ $np->link_url }}{{ $utm_code }}&utm_content={{ $np->utm_content_id }}" target="_blank">
+                                                    <a href="[[[{{ $np->link_url }}{{ $utm_code }}&utm_content={{ $np->utm_content_id }}]]]" target="_blank">
                                                     	<!-- 変数: 商品画像URL -->
                                                       <img height="auto" src="{{ $pickupitem1row_path }}{{ $np->img_url }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="324">
                                                     </a>
@@ -237,7 +237,7 @@
                                   <tbody>
                                     <tr>
                                       <td align="center" bgcolor="#d7d7d7" role="presentation" style="border:none;border-radius:3px;cursor:auto;height:50px;mso-padding-alt:0;background:#d7d7d7;" valign="middle" height="50px">
-                                        <a href="{{ $nl->link_url }}{{ $utm_code }}&utm_content={{ $nl->utm_content_id }}" style="display:inline-block;background:#d7d7d7;color:#555555;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:12px;font-weight:600;line-height:12px;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank"> もっと見る&nbsp;&nbsp;&nbsp;<img width="6" height="10" style="width: 6px !important; height: 10px !important;" src="https://cdn.shopify.com/s/files/1/0640/3611/0585/files/icon_arrow-right.png">
+                                        <a href="[[[{{ $nl->link_url }}{{ $utm_code }}&utm_content={{ $nl->utm_content_id }}]]]" style="display:inline-block;background:#d7d7d7;color:#555555;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:12px;font-weight:600;line-height:12px;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank"> もっと見る&nbsp;&nbsp;&nbsp;<img width="6" height="10" style="width: 6px !important; height: 10px !important;" src="https://cdn.shopify.com/s/files/1/0640/3611/0585/files/icon_arrow-right.png">
                                         </a>
                                       </td>
                                     </tr>

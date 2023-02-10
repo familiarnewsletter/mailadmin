@@ -131,7 +131,7 @@
                                                 <tr>
                                                   <td style="width:102px;">
                                                   	<!-- 変数: 遷移先URL -->
-                                                    <a href="{{ $np->link_url }}{{$utm_code}}&utm_content={{ $np->utm_content_id }}" target="_blank">
+                                                    <a href="[[[{{ $np->link_url }}{{$utm_code}}&utm_content={{ $np->utm_content_id }}]]]" target="_blank">
                                                     	<!-- 変数: 画像URL -->
                                                       <img height="auto" src="{{ $shopblog_path }}{{ $np->img_url }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="102">
                                                     </a>

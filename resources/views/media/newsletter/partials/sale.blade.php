@@ -63,7 +63,7 @@ if(strpos($sale->link_url, "?") != false){
                                     <tr>
                                       <td style="width:692px;">
                                       	<!-- 変数: 遷移先URL -->
-                                        <a href="{{ $sale->link_url }}{{$utm_code}}&utm_content={{ $sale->utm_content_id }}" target="_blank">
+                                        <a href="[[[{{ $sale->link_url }}{{$utm_code}}&utm_content={{ $sale->utm_content_id }}]]]" target="_blank">
                                         	<!-- 変数: セール画像URL -->
                                           <img height="auto" src="{{ $sale_path }}{{ $sale->img_url }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="692">
                                         </a>

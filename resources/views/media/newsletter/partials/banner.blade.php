@@ -72,7 +72,7 @@ if(strpos($banner->link_url, "?") != false){
                                               <tr>
                                                 <td style="width:692px;">
                                                 	<!-- 変数: 遷移先URL -->
-                                                  <a href="{{ $banner->link_url }}{{$utm_code}}&utm_content={{ $banner->utm_content_id }}" target="_blank">
+                                                  <a href="[[[{{ $banner->link_url }}{{$utm_code}}&utm_content={{ $banner->utm_content_id }}]]]" target="_blank">
                                                   	<!-- 変数: バナー画像URL -->
                                                     <img height="auto" src="{{ $banner_path }}{{ $banner->img_url }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="692">
                                                   </a>
