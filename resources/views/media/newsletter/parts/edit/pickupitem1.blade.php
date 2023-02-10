@@ -28,7 +28,11 @@
                 @csrf
 
                 <div class="form-group">
-                  <label for="title">タイトル</label>
+                  <label for="utm_content_id">品名(キャンペーンコード)</label>
+                  <input type="text" class="form-control" name="utm_content_id" id="utm_content_id" value="{{ $newsletter_parts->utm_content_id }}"/>
+                </div>
+                <div class="form-group">
+                  <label for="title">価格</label>
                   <input type="text" class="form-control" name="title" list="categorytab"　id="title" value="{{ $newsletter_parts->title }}">
                 </div>
                 <div class="form-group">
@@ -38,11 +42,7 @@
                 <div class="form-group">
                   <label for="link_url">リンク先URL</label>
                   <input type="text" class="form-control" name="link_url" id="link_url" value="{{ $newsletter_parts->link_url }}"/>
-                </div>
-                <div class="form-group">
-                  <label for="utm_content_id">キャンペーンコード(２桁)</label>
-                  <input type="text" class="form-control" name="utm_content_id" id="utm_content_id" value="{{ $newsletter_parts->utm_content_id }}"/>
-                </div>
+                </div>            
                 <div class="form-group">
                   <label for="text">テキスト</label>
                   <input type="text" class="form-control" name="text" id="text" value="{{ $newsletter_parts->text }}"/>

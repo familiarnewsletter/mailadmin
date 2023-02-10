@@ -29,29 +29,27 @@
              <form action="{{ route('newsletter.storeparts', ['newsletter_parts_admin_id' => $newsletter_parts_ad->id, 'id' => $newsletter->id]) }}" method="post">
                 @csrf
 
-                <div class="form-group">
-                  <label for="title">品名</label>
-                  <input type="text" class="form-control" name="title" list="categorytab"　id="title" />
-        
+               <div class="form-group">
+                  <label for="utm_content_id">品名(キャンペーンコード)</label>
+                  <input type="text" class="form-control" name="utm_content_id" id="utm_content_id">
                 </div>
                 <div class="form-group">
-                  <label for="img_url">画像名</label>
-                  <input type="text" class="form-control" name="img_url" id="img_url" />
+                  <label for="title">価格</label>
+                  <input type="text" class="form-control" name="title" list="categorytab"　id="title">
+                </div>
+                <div class="form-group">
+                  <label for="img_url">画像URL</label>
+                  <input type="text" class="form-control" name="img_url" id="img_url">
                 </div>
                 <div class="form-group">
                   <label for="link_url">リンク先URL</label>
-                  <input type="text" class="form-control" name="link_url" id="link_url"/>
-                </div>
-                <div class="form-group">
-                  <label for="utm_content_id">キャンペーンコード(２桁)</label>
-                  <input type="text" class="form-control" name="utm_content_id" id="utm_content_id" />
-                </div>
+                  <input type="text" class="form-control" name="link_url" id="link_url">
+                </div>            
                 <div class="form-group">
                   <label for="text">テキスト</label>
-                  <nav class="panel panel-default">
-                    
-                    <input id="text" type="text" class="form-control" name="text"　>
-                   <!--  <trix-editor input="text" placeholder="入力欄" ></trix-editor> -->
+                  <input type="text" class="form-control" name="text" id="text">
+                  <!-- <trix-editor input="text" placeholder="入力欄" ></trix-editor> -->
+                </div>
               
                    
                   </nav>

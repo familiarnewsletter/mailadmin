@@ -168,17 +168,17 @@
                                       <tbody>
                                         <tr>
                                           <td align="left" style="font-size:0px;padding:0 0 15px 0;word-break:break-word;">
-                                            <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:14px;font-weight:600;line-height:21px;text-align:left;color:#555555;"><!-- 変数: 商品名 -->{{ $np->title }}</div>
+                                            <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:14px;font-weight:600;line-height:21px;text-align:left;color:#555555;"><!-- 変数: 商品名 -->{!! $np->utm_content_id !!}</div>
                                           </td>
                                         </tr>
                                         <tr>
                                           <td align="left" style="font-size:0px;padding:0 0 15px 0;word-break:break-word;">
-                                            <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:10px;font-weight:300;line-height:16px;text-align:left;color:#555555;"><!-- 変数: 商品テキスト -->{{ $np->text }}</div>
+                                            <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:10px;font-weight:300;line-height:16px;text-align:left;color:#555555;"><!-- 変数: 商品テキスト -->{!! $np->text !!}</div>
                                           </td>
                                         </tr>
                                         <tr>
                                           <td align="left" style="font-size:0px;padding:0;word-break:break-word;">
-                                            <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:12px;font-weight:600;line-height:12px;text-align:left;color:#555555;"><!-- 変数: 商品金額テキスト --><span style="font-size: 10px; color: #808080;">税込 {{ $np->title }}</span></div>
+                                            <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:12px;font-weight:600;line-height:12px;text-align:left;color:#555555;"><!-- 変数: 商品金額テキスト --><span style="font-size: 10px; color: #808080;">税込 {!! $np->title !!}</span></div>
                                           </td>
                                         </tr>
                                       </tbody>
