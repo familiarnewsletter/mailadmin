@@ -375,7 +375,7 @@
                                       </tr>
                                       <tr>
                                         <td align="left" style="font-size:0px;padding:0 0 14px 0;word-break:break-word;">
-                                          <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:13px;line-height:1;text-align:left;color:#000000;"><a href="[[[<!-- 変数: 遷移先URL -->]]]" class="footer-link" style="font-size: 12px; color: #555555; font-weight: 600; letter-spacing: 0.05em; font-family: Hiragino Kaku Gothic Pro, sans-serif;">メール配信停止をご希望の方</a></div>
+                                          <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:13px;line-height:1;text-align:left;color:#000000;"><a href="[[[https://familiar.co.jp/account/login]]]" class="footer-link" style="font-size: 12px; color: #555555; font-weight: 600; letter-spacing: 0.05em; font-family: Hiragino Kaku Gothic Pro, sans-serif;">メール配信停止をご希望の方</a></div>
                                         </td>
                                       </tr>
                                       <tr>
