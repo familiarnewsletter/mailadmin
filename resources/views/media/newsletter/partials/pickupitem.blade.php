@@ -165,7 +165,7 @@
                                               <tbody>
                                                 <tr>
                                                   <td style="width:324px;"><!-- 変数: 遷移先URL -->
-                                                    <a href="[[[{{ $pickup_item->link_url }}{{ $utm_code }}&utm_content={{ $pickup_item->utm_content_id }}]]]" target="_blank">
+                                                    <a href="[[[{{ $pickup_item->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$&utm_content={{ $pickup_item->utm_content_id }}]]]" target="_blank">
                                                     	<!-- 変数: 商品画像URL -->
                                                       <img height="auto" src="{{ $pickupitem2row_path }}{{ $pickup_item->img_url }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="324">
                                                     </a>

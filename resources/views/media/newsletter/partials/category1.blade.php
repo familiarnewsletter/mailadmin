@@ -73,7 +73,7 @@
                                                 <tr>
                                                   <td style="width:660px;">
                                                   	<!-- 変数: 遷移先URL -->
-                                                    <a href="[[[{{ $category1->link_url }}{{ $utm_code }}&utm_content={{ $category1->utm_content_id }}]]]" target="_blank">
+                                                    <a href="[[[{{ $category1->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$&utm_content={{ $category1->utm_content_id }}]]]" target="_blank">
                                                     	<!-- 変数: カテゴリ画像URL -->
                                                       <img height="auto" src="{{ $category1_path }}{{ $category1->img_url }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="660">
                                                     </a>

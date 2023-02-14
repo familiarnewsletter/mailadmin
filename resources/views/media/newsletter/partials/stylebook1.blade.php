@@ -128,7 +128,7 @@
                                       <tr>
                                         <td style="width:346px;">
                                         	<!-- 変数: 遷移先URL -->
-                                          <a href="[[[{{ $stylebook->link_url }}{{$utm_code}}&utm_content={{ $stylebook->utm_content_id }}]]]" target="_blank">
+                                          <a href="[[[{{ $stylebook->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$&utm_content={{ $stylebook->utm_content_id }}]]]" target="_blank">
                                           	<!-- 変数: 画像URL -->
                                             <img height="auto" src="{{ $stylebook1row_path }}{{ $stylebook->img_url }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="346">
                                           </a>
@@ -223,7 +223,7 @@
                                       <tr>
                                         <td style="width:346px;">
                                         	<!-- 変数: 遷移先URL -->
-                                          <a href="[[[{{ $stylebook->link_url }}{{$utm_code}}&utm_content={{ $stylebook->utm_content_id }}]]]" target="_blank">
+                                          <a href="[[[{{ $stylebook->link_url }}?utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$&utm_content={{ $stylebook->utm_content_id }}]]]" target="_blank">
                                           	<!-- 変数: 画像URL -->
                                             <img height="auto" src="{{ $stylebook1row_path }}{{ $stylebook->img_url }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="346">
                                           </a>
