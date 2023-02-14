@@ -8,15 +8,7 @@
 		}
 	}
 
-	if(strpos($np->link_url, "?") != false){
-	  
-	  $utm_code = '&utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$';
-
-		}else{
-
-			$utm_code = '?utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$';
-
-		}
+	
 
 	if($np->link_url)
 		$original_url = $np->link_url;
@@ -78,7 +70,7 @@
                           <tbody>
                             <tr>
                               <td align="center" bgcolor="#518FCC" role="presentation" style="border:none;border-radius:3px;cursor:auto;height:50px;mso-padding-alt:0;background:#518FCC;" valign="middle" height="50px"><!-- 変数: 遷移先URL -->
-                                <a href="[[[{{ $url}}{{ $utm_code }}&utm_content={{ $np->utm_content_id }}{{ $anchor_id }}]]]" style="display:inline-block;background:#518FCC;color:#ffffff;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:14px;font-weight:600;line-height:14px;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank"> くわしくはこちら </a>
+                                <a href="[[[{{ $url}}?utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$&utm_content={{ $np->utm_content_id }}{{ $anchor_id }}]]]" style="display:inline-block;background:#518FCC;color:#ffffff;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:14px;font-weight:600;line-height:14px;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank"> くわしくはこちら </a>
                               </td>
                             </tr>
                           </tbody>

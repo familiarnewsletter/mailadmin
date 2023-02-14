@@ -21,7 +21,7 @@
                                     <tbody>
                                       <tr>
                                         <td align="center" bgcolor="#f3f3f3" role="presentation" style="border:none;border-radius:3px;cursor:auto;height:66px;mso-padding-alt:0;background:#f3f3f3;" valign="middle" height="66px">
-                                          <a href="[[[https://www.familiar.co.jp/pages/stylebook]]]" title="Style Book" style="display:inline-block;background:#f3f3f3;color:#ffffff;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">
+                                          <a href="[[[https://www.familiar.co.jp/pages/stylebook?utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$&utm_content=stylebook]]]" title="Style Book" style="display:inline-block;background:#f3f3f3;color:#ffffff;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">
                                             <img height="66" src="https://cdn.shopify.com/s/files/1/0640/3611/0585/files/btn_stylebook.png" style="display: block; height: 66px; max-height: 66px;">
                                           </a>
                                         </td>
@@ -51,7 +51,7 @@
                                     <tbody>
                                       <tr>
                                         <td align="center" bgcolor="#f3f3f3" role="presentation" style="border:none;border-radius:3px;cursor:auto;height:66px;mso-padding-alt:0;background:#f3f3f3;" valign="middle" height="66px">
-                                          <a href="[[[https://www.familiar.co.jp/pages/1000days]]]" title="for the first 1000days" style="display:inline-block;background:#f3f3f3;color:#ffffff;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">
+                                          <a href="[[[https://www.familiar.co.jp/pages/1000days?utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$&utm_content=1000days]]]" title="for the first 1000days" style="display:inline-block;background:#f3f3f3;color:#ffffff;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">
                                             <img height="66" src="https://cdn.shopify.com/s/files/1/0640/3611/0585/files/btn_1000days.png" style="display: block; height: 66px; max-height: 66px;">
                                           </a>
                                         </td>
@@ -81,7 +81,7 @@
                                     <tbody>
                                       <tr>
                                         <td align="center" bgcolor="#f3f3f3" role="presentation" style="border:none;border-radius:3px;cursor:auto;height:66px;mso-padding-alt:0;background:#f3f3f3;" valign="middle" height="66px">
-                                          <a href="[[[https://blog.familiar.co.jp/brand/familiar]]]" title="Blogs" style="display:inline-block;background:#f3f3f3;color:#ffffff;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">
+                                          <a href="[[[https://blog.familiar.co.jp/brand/familiar?utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$&utm_content=blog]]]" title="Blogs" style="display:inline-block;background:#f3f3f3;color:#ffffff;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">
                                             <img height="66" src="https://cdn.shopify.com/s/files/1/0640/3611/0585/files/btn_blogs.png" style="display: block; height: 66px; max-height: 66px;">
                                           </a>
                                         </td>
@@ -375,12 +375,12 @@
                                       </tr>
                                       <tr>
                                         <td align="left" style="font-size:0px;padding:0 0 14px 0;word-break:break-word;">
-                                          <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:13px;line-height:1;text-align:left;color:#000000;"><a href="[[[https://familiar.co.jp/account/login]]]" class="footer-link" style="font-size: 12px; color: #555555; font-weight: 600; letter-spacing: 0.05em; font-family: Hiragino Kaku Gothic Pro, sans-serif;">メール配信停止をご希望の方</a></div>
+                                          <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:13px;line-height:1;text-align:left;color:#000000;"><a href="[[[https://familiar.co.jp/account/login?utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$&utm_content=login]]]" class="footer-link" style="font-size: 12px; color: #555555; font-weight: 600; letter-spacing: 0.05em; font-family: Hiragino Kaku Gothic Pro, sans-serif;">メール配信停止をご希望の方</a></div>
                                         </td>
                                       </tr>
                                       <tr>
                                         <td align="left" style="font-size:0px;padding:0 0 40px 0;word-break:break-word;">
-                                          <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:13px;line-height:1;text-align:left;color:#000000;"><a href="[[[https://familiar.co.jp/pages/contact]]]" class="footer-link" style="font-size: 12px; color: #555555; font-weight: 600; letter-spacing: 0.05em; font-family: Hiragino Kaku Gothic Pro, sans-serif;">お問い合わせ</a></div>
+                                          <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:13px;line-height:1;text-align:left;color:#000000;"><a href="[[[https://familiar.co.jp/pages/contact?utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$&utm_content=contact]]]" class="footer-link" style="font-size: 12px; color: #555555; font-weight: 600; letter-spacing: 0.05em; font-family: Hiragino Kaku Gothic Pro, sans-serif;">お問い合わせ</a></div>
                                         </td>
                                       </tr>
                                       <tr>

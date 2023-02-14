@@ -68,7 +68,7 @@
                                               <tbody>
                                                 <tr>
                                                   <td align="center" bgcolor="#f3f3f3" role="presentation" style="border:none;border-radius:3px;cursor:auto;height:44px;mso-padding-alt:0;background:#f3f3f3;" valign="middle" height="44px">
-                                                    <a href="[[[https://www.familiar.co.jp]]]" title="Top" style="display:inline-block;background:#f3f3f3;color:#ffffff;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">
+                                                    <a href="[[[https://www.familiar.co.jp?utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$&utm_content=official]]]" title="Top" style="display:inline-block;background:#f3f3f3;color:#ffffff;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">
                                                       <img height="44" src="https://cdn.shopify.com/s/files/1/0640/3611/0585/files/btn_top.png" style="display: block; height: 44px; max-height: 44px;">
                                                     </a>
                                                   </td>
@@ -98,7 +98,7 @@
                                               <tbody>
                                                 <tr>
                                                   <td align="center" bgcolor="#f3f3f3" role="presentation" style="border:none;border-radius:3px;cursor:auto;height:44px;mso-padding-alt:0;background:#f3f3f3;" valign="middle" height="44px">
-                                                    <a href="[[[https://www.familiar.co.jp/pages/onlineshop]]]" title="OnlineShop" style="display:inline-block;background:#f3f3f3;color:#ffffff;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">
+                                                    <a href="[[[https://www.familiar.co.jp/pages/onlineshop?utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$&utm_content=onlineshop]]]" title="OnlineShop" style="display:inline-block;background:#f3f3f3;color:#ffffff;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">
                                                       <img height="44" src="https://cdn.shopify.com/s/files/1/0640/3611/0585/files/btn_onlineshop.png" style="display: block; height: 44px; max-height: 44px;">
                                                     </a>
                                                   </td>
@@ -128,7 +128,7 @@
                                               <tbody>
                                                 <tr>
                                                   <td align="center" bgcolor="#f3f3f3" role="presentation" style="border:none;border-radius:3px;cursor:auto;height:44px;mso-padding-alt:0;background:#f3f3f3;" valign="middle" height="44px">
-                                                    <a href="[[[https://www.familiar.co.jp/a/shops]]]" title="Store" style="display:inline-block;background:#f3f3f3;color:#ffffff;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">
+                                                    <a href="[[[https://www.familiar.co.jp/a/shops?utm_source=h_mail&utm_medium=email&utm_campaign=$$$トラッキングコード$$$&utm_content=shop]]]" title="Store" style="display:inline-block;background:#f3f3f3;color:#ffffff;font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:13px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:0;mso-padding-alt:0px;border-radius:3px;" target="_blank">
                                                       <img height="44" src="https://cdn.shopify.com/s/files/1/0640/3611/0585/files/btn_store.png" style="display: block; height: 44px; max-height: 44px;">
                                                     </a>
                                                   </td>

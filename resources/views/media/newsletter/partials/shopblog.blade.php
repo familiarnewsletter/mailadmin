@@ -101,12 +101,12 @@
                                       <tbody>
                                         <tr>
                                           <td align="left" style="font-size:0px;padding:0 0 10px 0;word-break:break-word;">
-                                            <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:12px;font-weight:600;line-height:19.2px;text-align:left;color:#555555;"><!-- 変数: タイトル -->{{ $np->title }}</div>
+                                            <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:12px;font-weight:600;line-height:19.2px;text-align:left;color:#555555;"><!-- 変数: タイトル -->{{ $np->text }}</div>
                                           </td>
                                         </tr>
                                         <tr>
                                           <td align="left" style="font-size:0px;padding:0 10px 0 0;word-break:break-word;">
-                                            <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:10px;font-weight:600;line-height:14px;text-align:left;color:#808080;"><!-- 変数: 店舗名 -->{{ $np->text }}</div>
+                                            <div style="font-family:'ヒラギノ角ゴ Pro W3', Hiragino Kaku Gothic Pro, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', MS PGothic, sans-serif;font-size:10px;font-weight:600;line-height:14px;text-align:left;color:#808080;"><!-- 変数: 店舗名 -->{{ $np->title }}</div>
                                           </td>
                                         </tr>
                                       </tbody>

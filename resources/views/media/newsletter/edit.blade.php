@@ -48,10 +48,7 @@
                   <label for="title">タイトル</label>
                   <input type="text" class="form-control" name="title" id="title" value="{{ $newsletter->title }}" />
                 </div>
-                <div class="form-group">
-                  <label for="preheader_text">プリヘッダーテキスト</label>
-                  <input type="text" class="form-control" name="preheader_text" id="preheader_text" value="{{ $newsletter->preheader_text }}" />
-                </div>
+               
                 
                  <div class="form-group">
                   <label for="utm_campaign_id">キャンペーンコード（6桁）</label>
